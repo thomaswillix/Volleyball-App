@@ -1,0 +1,10 @@
+C:\Users\Lucía\Source\Repos\Practica1\Ejercicio8\bin\Debug\Ejercicio8.exe.config
+C:\Users\Lucía\Source\Repos\Practica1\Ejercicio8\bin\Debug\Ejercicio8.exe
+C:\Users\Lucía\Source\Repos\Practica1\Ejercicio8\bin\Debug\Ejercicio8.pdb
+C:\Users\Lucía\Source\Repos\Practica1\Ejercicio8\obj\Debug\Ejercicio8.csproj.AssemblyReference.cache
+C:\Users\Lucía\Source\Repos\Practica1\Ejercicio8\obj\Debug\Practica1.Ejercicio1.resources
+C:\Users\Lucía\Source\Repos\Practica1\Ejercicio8\obj\Debug\Ejercicio8.Properties.Resources.resources
+C:\Users\Lucía\Source\Repos\Practica1\Ejercicio8\obj\Debug\Ejercicio8.csproj.GenerateResource.cache
+C:\Users\Lucía\Source\Repos\Practica1\Ejercicio8\obj\Debug\Ejercicio8.csproj.CoreCompileInputs.cache
+C:\Users\Lucía\Source\Repos\Practica1\Ejercicio8\obj\Debug\Ejercicio8.exe
+C:\Users\Lucía\Source\Repos\Practica1\Ejercicio8\obj\Debug\Ejercicio8.pdb
