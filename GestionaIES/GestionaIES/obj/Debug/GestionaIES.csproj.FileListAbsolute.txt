@@ -1,0 +1,10 @@
+C:\Users\Lucía\Source\Repos\GestionaIES\GestionaIES\bin\Debug\GestionaIES.exe.config
+C:\Users\Lucía\Source\Repos\GestionaIES\GestionaIES\bin\Debug\GestionaIES.exe
+C:\Users\Lucía\Source\Repos\GestionaIES\GestionaIES\bin\Debug\GestionaIES.pdb
+C:\Users\Lucía\Source\Repos\GestionaIES\GestionaIES\obj\Debug\GestionaIES.csproj.AssemblyReference.cache
+C:\Users\Lucía\Source\Repos\GestionaIES\GestionaIES\obj\Debug\GestionaIES.GestionaIES.resources
+C:\Users\Lucía\Source\Repos\GestionaIES\GestionaIES\obj\Debug\GestionaIES.Properties.Resources.resources
+C:\Users\Lucía\Source\Repos\GestionaIES\GestionaIES\obj\Debug\GestionaIES.csproj.GenerateResource.cache
+C:\Users\Lucía\Source\Repos\GestionaIES\GestionaIES\obj\Debug\GestionaIES.csproj.CoreCompileInputs.cache
+C:\Users\Lucía\Source\Repos\GestionaIES\GestionaIES\obj\Debug\GestionaIES.exe
+C:\Users\Lucía\Source\Repos\GestionaIES\GestionaIES\obj\Debug\GestionaIES.pdb
