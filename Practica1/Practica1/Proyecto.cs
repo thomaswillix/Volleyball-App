@@ -17,6 +17,7 @@ namespace Practica1
         private Double presupuestoAct;
         private bool cambios;
         private int codigoCliente;
+        public static List<Proyecto> listaProyectos = new List<Proyecto>();
 
         public Proyecto(int codigo, string descripcion, DateTime fechaIni, DateTime fechaFin, bool estado, double presupuestoIni, double presupuestoAct, bool cambios, int codigoCliente)
         {
@@ -29,6 +30,16 @@ namespace Practica1
             this.PresupuestoAct = presupuestoAct;
             this.Cambios = cambios;
             this.CodigoCliente = codigoCliente;
+        }
+        public Proyecto(string descripcion, DateTime fechaIni, DateTime fechaFin)
+        {
+            this.Descripcion = descripcion;
+            this.FechaIni = fechaIni;
+            this.FechaFin = fechaFin;
+        }
+        public Proyecto(string descripcion)
+        {
+            this.Descripcion = descripcion;
         }
 
         public int Codigo { get => codigo; set => codigo = value; }

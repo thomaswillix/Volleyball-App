@@ -14,7 +14,6 @@ namespace Practica1
 {
     public partial class FrmProyectos : Form
     {
-        private List<Proyecto> listaProyectos = new List<Proyecto>();
         Proyecto p;
         DateTime fechaIni;
         DateTime fechaFin;
@@ -32,20 +31,20 @@ namespace Practica1
         {
             fechaIni = new DateTime(2021, 2, 3 , 13, 0, 0);
             fechaFin = DateTime.Today;
-            p = new Proyecto(1, "Best Proyecto", fechaIni, fechaFin, true, 1234.14, 9895.50, false, 1);
-            listaProyectos.Add(p);
+            p = new Proyecto("Hunter X Hunter", fechaIni, fechaFin);
+            Proyecto.listaProyectos.Add(p);
             fechaIni = new DateTime(2022, 5, 21, 8, 0, 0);
             fechaFin = new DateTime(2023, 9, 30, 9, 0, 0);
-            p = new Proyecto(2, "No muy buen Proyecto", fechaIni, fechaFin, false, 5555.89, 0, true, 2);
-            listaProyectos.Add(p);
+            p = new Proyecto("One Piece", fechaIni, fechaFin);
+            Proyecto.listaProyectos.Add(p);
             fechaIni = new DateTime(2020, 7, 14, 6, 0, 0);
             fechaFin = new DateTime(2020, 10, 3, 10, 0, 0);
-            p = new Proyecto(3, "Fatal", fechaIni, fechaFin, false, 62.0, 0, false, 2);
-            listaProyectos.Add(p);
+            p = new Proyecto("Death Note", fechaIni, fechaFin);
+            Proyecto.listaProyectos.Add(p);
             fechaIni = new DateTime(2023, 9, 21, 19, 0, 0);
             fechaFin = DateTime.Today;
-            p = new Proyecto(2, "Good Proyecto", fechaIni, fechaFin, true, 654.1, 1000.41, false, 3);
-            listaProyectos.Add(p);
+            p = new Proyecto("Steins Gate", fechaIni, fechaFin);
+            Proyecto.listaProyectos.Add(p);
         }
         private void button3_Click(object sender, EventArgs e)
         {
@@ -56,9 +55,9 @@ namespace Practica1
             groupBox1.Controls.Clear();
             int n = 1;
             int posicion = 10;
-            foreach (Proyecto project in listaProyectos)
+            foreach (Proyecto project in Proyecto.listaProyectos)
             {
-                crearEtiqueta(project.Descripcion, posicion, n);
+                crearCheckedLB(project.Descripcion, posicion, n);
                 posicion += 30;
                 n++;
             }
@@ -71,22 +70,22 @@ namespace Practica1
         private void ordenarProyectosFecha()
         {
             groupBox1.Controls.Clear();
-            listaProyectos.Sort();
+            Proyecto.listaProyectos.Sort();
             mostrarProyectos();
         }
-        private void crearEtiqueta(string proyectoText, int posicion, int contadorNombre)
+        private void crearCheckedLB(string proyectoText, int posicion, int contadorNombre)
         {
-            Label LblProyecto = new System.Windows.Forms.Label();
-            LblProyecto.AutoSize = true;
-            LblProyecto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F,
+            CheckedListBox clb = new System.Windows.Forms.CheckedListBox();
+            clb.Text = proyectoText + "\n";
+            clb.AutoSize = true;
+            clb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F,
             System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point,
             ((byte)(0)));
-            LblProyecto.Location = new System.Drawing.Point(75, posicion);
-            LblProyecto.Name = "lblProyecto" + contadorNombre;
-            LblProyecto.Size = new System.Drawing.Size(291, 20);
-            LblProyecto.TabIndex = 1;
-            LblProyecto.Text = proyectoText;
-            groupBox1.Controls.Add(LblProyecto);
+            clb.Location = new System.Drawing.Point(75, posicion);
+            clb.Name = "lblProyecto" + contadorNombre;
+            clb.Size = new System.Drawing.Size(291, 20);
+            clb.TabIndex = 1;
+            groupBox1.Controls.Add(clb);
         }
 
         private void FrmProyectos_Load(object sender, EventArgs e)
@@ -130,8 +129,13 @@ namespace Practica1
         
         private void ordenarProyectosNombre(Func<Proyecto,IComparable> aux)
         {
-            listaProyectos = listaProyectos.OrderBy(aux).ToList();
+            Proyecto.listaProyectos = Proyecto.listaProyectos.OrderBy(aux).ToList();
             
+        }
+
+        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

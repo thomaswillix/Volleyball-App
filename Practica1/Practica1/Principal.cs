@@ -43,7 +43,8 @@ namespace Practica1
 
         private void altaToolStripMenuItem2_Click(object sender, EventArgs e)
         {
-
+            Form1 alta =  new Form1();
+            alta.ShowDialog();
         }
     }
 }
