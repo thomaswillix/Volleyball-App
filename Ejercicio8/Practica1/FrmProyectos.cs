@@ -57,7 +57,7 @@ namespace Practica1
             int posicion = 10;
             foreach (Proyecto project in Proyecto.listaProyectos)
             {
-                crearChecked(project.Descripcion, posicion, n);
+                crearItem(project.Descripcion, posicion, n);
                 posicion += 30;
                 n++;
             }
@@ -91,7 +91,7 @@ namespace Practica1
         private void crearItems(String proyectoText, int posicion, int contadorNombre)
         {
             CheckedListBox clb = new CheckedListBox();
-            clb.Items.Add(proyectoText + "\n");
+            clb.Items.Add(proyectoText);
             clb.AutoSize = true;
             clb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F,
             System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point,
