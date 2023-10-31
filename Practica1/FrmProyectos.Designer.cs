@@ -30,10 +30,10 @@
         {
             this.titulo = new System.Windows.Forms.Label();
             this.botonCancelar = new System.Windows.Forms.Button();
-            this.botonOrdenar = new System.Windows.Forms.Button();
+            this.ordenarFecha = new System.Windows.Forms.Button();
             this.botonImprimir = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.ordenarFecha = new System.Windows.Forms.Button();
+            this.ordenarNombre = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // titulo
@@ -58,16 +58,16 @@
             this.botonCancelar.UseVisualStyleBackColor = true;
             this.botonCancelar.Click += new System.EventHandler(this.botonCancelar_Click);
             // 
-            // botonOrdenar
+            // ordenarFecha
             // 
-            this.botonOrdenar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonOrdenar.Location = new System.Drawing.Point(314, 387);
-            this.botonOrdenar.Name = "botonOrdenar";
-            this.botonOrdenar.Size = new System.Drawing.Size(171, 23);
-            this.botonOrdenar.TabIndex = 2;
-            this.botonOrdenar.Text = "Ordenar Fecha de Inicio";
-            this.botonOrdenar.UseVisualStyleBackColor = true;
-            this.botonOrdenar.Click += new System.EventHandler(this.button2_Click);
+            this.ordenarFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ordenarFecha.Location = new System.Drawing.Point(314, 387);
+            this.ordenarFecha.Name = "ordenarFecha";
+            this.ordenarFecha.Size = new System.Drawing.Size(171, 23);
+            this.ordenarFecha.TabIndex = 2;
+            this.ordenarFecha.Text = "Ordenar Fecha de Inicio";
+            this.ordenarFecha.UseVisualStyleBackColor = true;
+            this.ordenarFecha.Click += new System.EventHandler(this.button2_Click);
             // 
             // botonImprimir
             // 
@@ -90,25 +90,25 @@
             this.groupBox1.Text = "Proyectos";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // ordenarFecha
+            // ordenarNombre
             // 
-            this.ordenarFecha.Location = new System.Drawing.Point(332, 358);
-            this.ordenarFecha.Name = "ordenarFecha";
-            this.ordenarFecha.Size = new System.Drawing.Size(133, 23);
-            this.ordenarFecha.TabIndex = 5;
-            this.ordenarFecha.Text = "Ordenar Nombre";
-            this.ordenarFecha.UseVisualStyleBackColor = true;
-            this.ordenarFecha.Click += new System.EventHandler(this.ordenarNombre_Click);
+            this.ordenarNombre.Location = new System.Drawing.Point(332, 358);
+            this.ordenarNombre.Name = "ordenarNombre";
+            this.ordenarNombre.Size = new System.Drawing.Size(133, 23);
+            this.ordenarNombre.TabIndex = 5;
+            this.ordenarNombre.Text = "Ordenar Nombre";
+            this.ordenarNombre.UseVisualStyleBackColor = true;
+            this.ordenarNombre.Click += new System.EventHandler(this.ordenarNombre_Click);
             // 
             // FrmProyectos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.ordenarFecha);
+            this.Controls.Add(this.ordenarNombre);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.botonImprimir);
-            this.Controls.Add(this.botonOrdenar);
+            this.Controls.Add(this.ordenarFecha);
             this.Controls.Add(this.botonCancelar);
             this.Controls.Add(this.titulo);
             this.Name = "FrmProyectos";
@@ -123,9 +123,9 @@
 
         private System.Windows.Forms.Label titulo;
         private System.Windows.Forms.Button botonCancelar;
-        private System.Windows.Forms.Button botonOrdenar;
+        private System.Windows.Forms.Button ordenarFecha;
         private System.Windows.Forms.Button botonImprimir;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button ordenarFecha;
+        private System.Windows.Forms.Button ordenarNombre;
     }
 }

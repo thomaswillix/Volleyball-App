@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Practica1
 {
-    internal class Proyecto : IComparable<Proyecto>
+    internal class Proyecto 
     {
         private int codigo;
         private String descripcion;
@@ -31,7 +31,7 @@ namespace Practica1
             this.Cambios = cambios;
             this.CodigoCliente = codigoCliente;
         }
-        public Proyecto(string descripcion, DateTime fechaIni, DateTime fechaFin)
+        public Proyecto(int codigo,string descripcion, DateTime fechaIni, DateTime fechaFin)
         {
             this.Descripcion = descripcion;
             this.PresupuestoIni = presupuestoIni;
@@ -48,10 +48,6 @@ namespace Practica1
         public bool Cambios { get => cambios; set => cambios = value; }
         public int CodigoCliente { get => codigoCliente; set => codigoCliente = value; }
 
-        public int CompareTo(Proyecto other)
-        {
-            return DateTime.Compare(this.fechaIni, other.fechaIni);
-        }
        
         public override bool Equals(object obj)
         {

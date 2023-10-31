@@ -27,32 +27,20 @@ namespace Practica1
         {
 
         }
-        private void cargarProyectos()
+
+        private void ordenarProyectosNombre(Func<Proyecto, IComparable> aux)
         {
-            fechaIni = new DateTime(2021, 2, 3 , 13, 0, 0);
-            fechaFin = DateTime.Today;
-            p = new Proyecto("Best Proyecto", fechaIni, fechaFin);
-            Proyecto.listaProyectos.Add(p);
-            fechaIni = new DateTime(2022, 5, 21, 8, 0, 0);
-            fechaFin = new DateTime(2023, 9, 30, 9, 0, 0);
-            p = new Proyecto("No muy buen Proyecto", fechaIni, fechaFin);
-            Proyecto.listaProyectos.Add(p);
-            fechaIni = new DateTime(2020, 7, 14, 6, 0, 0);
-            fechaFin = new DateTime(2020, 10, 3, 10, 0, 0);
-            p = new Proyecto("Fatal", fechaIni, fechaFin);
-            Proyecto.listaProyectos.Add(p);
-            fechaIni = new DateTime(2023, 9, 21, 19, 0, 0);
-            fechaFin = DateTime.Today;
-            p = new Proyecto("Good Proyecto", fechaIni, fechaFin);
-            Proyecto.listaProyectos.Add(p);
+            Proyecto.listaProyectos = Proyecto.listaProyectos.OrderBy(aux).ToList();
+
         }
-        private void button3_Click(object sender, EventArgs e)
+        private void ordenarProyectosFecha(Func<Proyecto, IComparable> aux)
         {
-            
+            Proyecto.listaProyectos = Proyecto.listaProyectos.OrderBy(aux).ToList();
+
         }
+
         private void mostrarProyectos()
         {
-            groupBox1.Controls.Clear();
             int n = 1;
             int posicion = 10;
             foreach (Proyecto project in Proyecto.listaProyectos)
@@ -62,17 +50,39 @@ namespace Practica1
                 n++;
             }
         }
-        private void button2_Click(object sender, EventArgs e)
+
+        private void cargarProyectos()
         {
-            ordenarProyectosFecha();
+            fechaIni = new DateTime(2011, 2, 3 , 13, 0, 0);
+            fechaFin = DateTime.Today;
+            p = new Proyecto(1, "Proyecto Antiguo", fechaIni, fechaFin);
+            Proyecto.listaProyectos.Add(p);
+            fechaIni = new DateTime(2015, 5, 21, 8, 0, 0);
+            fechaFin = new DateTime(2023, 9, 30, 9, 0, 0);
+            p = new Proyecto(2, "Segundo Proyecto", fechaIni, fechaFin);
+            Proyecto.listaProyectos.Add(p);
+            fechaIni = new DateTime(2020, 7, 14, 6, 0, 0);
+            fechaFin = new DateTime(2020, 10, 3, 10, 0, 0);
+            p = new Proyecto(4, "Most Recent", fechaIni, fechaFin);
+            Proyecto.listaProyectos.Add(p);
+            fechaIni = new DateTime(2019, 9, 21, 19, 0, 0);
+            fechaFin = DateTime.Today;
+            p = new Proyecto(3, "Tercero", fechaIni, fechaFin);
+            Proyecto.listaProyectos.Add(p);
+        }
+        private void button3_Click(object sender, EventArgs e)
+        {
+            
         }
         
-        private void ordenarProyectosFecha()
+        private void button2_Click(object sender, EventArgs e)
         {
+            ordenarProyectosFecha(Proyecto => Proyecto.FechaIni);
             groupBox1.Controls.Clear();
-            Proyecto.listaProyectos.Sort();
             mostrarProyectos();
         }
+        
+        
         private void crearChecked(string proyectoText, int posicion, int contadorNombre)
         {
             CheckedListBox clb = new CheckedListBox();
@@ -83,21 +93,6 @@ namespace Practica1
             ((byte)(0)));
             clb.Location = new System.Drawing.Point(75, posicion);
             clb .Name = "clbProyectos" + contadorNombre;
-            clb.Size = new System.Drawing.Size(291, 20);
-            clb.TabIndex = 1;
-            clb.Text = proyectoText;
-            groupBox1.Controls.Add(clb);
-        }
-        private void crearItems(String proyectoText, int posicion, int contadorNombre)
-        {
-            CheckedListBox clb = new CheckedListBox();
-            clb.Items.Add(proyectoText + "\n");
-            clb.AutoSize = true;
-            clb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F,
-            System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point,
-            ((byte)(0)));
-            clb.Location = new System.Drawing.Point(75, posicion);
-            clb.Name = "clbProyectos" + contadorNombre;
             clb.Size = new System.Drawing.Size(291, 20);
             clb.TabIndex = 1;
             clb.Text = proyectoText;
@@ -142,11 +137,5 @@ namespace Practica1
             mostrarProyectos();
         }
 
-        
-        private void ordenarProyectosNombre(Func<Proyecto,IComparable> aux)
-        {
-            Proyecto.listaProyectos =  Proyecto.listaProyectos.OrderBy(aux).ToList();
-            
-        }
     }
 }
