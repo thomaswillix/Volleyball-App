@@ -31,7 +31,7 @@ namespace Practica1
             this.Cambios = cambios;
             this.CodigoCliente = codigoCliente;
         }
-        public Proyecto(int codigo,string descripcion, DateTime fechaIni, DateTime fechaFin)
+        public Proyecto(string descripcion, DateTime fechaIni, DateTime fechaFin)
         {
             this.Descripcion = descripcion;
             this.PresupuestoIni = presupuestoIni;

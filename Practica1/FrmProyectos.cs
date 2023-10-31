@@ -50,19 +50,19 @@ namespace Practica1
         {
             fechaIni = new DateTime(2011, 2, 3 , 13, 0, 0);
             fechaFin = DateTime.Today;
-            p = new Proyecto(1, "Proyecto Antiguo", fechaIni, fechaFin);
+            p = new Proyecto("Proyecto Antiguo", fechaIni, fechaFin);
             Proyecto.listaProyectos.Add(p);
             fechaIni = new DateTime(2015, 5, 21, 8, 0, 0);
             fechaFin = new DateTime(2023, 9, 30, 9, 0, 0);
-            p = new Proyecto(2, "Segundo Proyecto", fechaIni, fechaFin);
+            p = new Proyecto("Segundo Proyecto", fechaIni, fechaFin);
             Proyecto.listaProyectos.Add(p);
-            fechaIni = new DateTime(2018, 7, 14, 6, 0, 0);
+            fechaIni = new DateTime(2022, 7, 14, 6, 0, 0);
             fechaFin = new DateTime(2020, 10, 3, 10, 0, 0);
-            p = new Proyecto(4, "Most Recent", fechaIni, fechaFin);
+            p = new Proyecto("Most Recent", fechaIni, fechaFin);
             Proyecto.listaProyectos.Add(p);
-            fechaIni = new DateTime(2019, 9, 21, 19, 0, 0);
+            fechaIni = new DateTime(2018, 9, 21, 19, 0, 0);
             fechaFin = DateTime.Today;
-            p = new Proyecto(3, "Tercero", fechaIni, fechaFin);
+            p = new Proyecto("Tercero", fechaIni, fechaFin);
             Proyecto.listaProyectos.Add(p);
         }
         private void button3_Click(object sender, EventArgs e)
