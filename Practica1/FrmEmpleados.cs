@@ -12,6 +12,7 @@ namespace Practica1
 {
     public partial class FrmEmpleados : Form
     {
+        Empleado e;
         public FrmEmpleados()
         {
             InitializeComponent();

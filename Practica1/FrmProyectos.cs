@@ -28,12 +28,7 @@ namespace Practica1
 
         }
 
-        private void ordenarProyectosNombre(Func<Proyecto, IComparable> aux)
-        {
-            Proyecto.listaProyectos = Proyecto.listaProyectos.OrderBy(aux).ToList();
-
-        }
-        private void ordenarProyectosFecha(Func<Proyecto, IComparable> aux)
+        private void ordenarProyectos(Func<Proyecto, IComparable> aux)
         {
             Proyecto.listaProyectos = Proyecto.listaProyectos.OrderBy(aux).ToList();
 
@@ -61,7 +56,7 @@ namespace Practica1
             fechaFin = new DateTime(2023, 9, 30, 9, 0, 0);
             p = new Proyecto(2, "Segundo Proyecto", fechaIni, fechaFin);
             Proyecto.listaProyectos.Add(p);
-            fechaIni = new DateTime(2020, 7, 14, 6, 0, 0);
+            fechaIni = new DateTime(2018, 7, 14, 6, 0, 0);
             fechaFin = new DateTime(2020, 10, 3, 10, 0, 0);
             p = new Proyecto(4, "Most Recent", fechaIni, fechaFin);
             Proyecto.listaProyectos.Add(p);
@@ -77,7 +72,7 @@ namespace Practica1
         
         private void button2_Click(object sender, EventArgs e)
         {
-            ordenarProyectosFecha(Proyecto => Proyecto.FechaIni);
+            ordenarProyectos(Proyecto => Proyecto.FechaIni);
             groupBox1.Controls.Clear();
             mostrarProyectos();
         }
@@ -132,7 +127,7 @@ namespace Practica1
 
         private void ordenarNombre_Click(object sender, EventArgs e)
         {
-            ordenarProyectosNombre(Proyecto => Proyecto.Descripcion);
+            ordenarProyectos(Proyecto => Proyecto.Descripcion);
             groupBox1.Controls.Clear();
             mostrarProyectos();
         }
