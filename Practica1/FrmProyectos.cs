@@ -17,6 +17,8 @@ namespace Practica1
         Proyecto p;
         DateTime fechaIni;
         DateTime fechaFin;
+        private static CheckedListBox clb = new CheckedListBox();
+
 
         public FrmProyectos()
         {
@@ -80,7 +82,6 @@ namespace Practica1
         
         private void crearChecked(string proyectoText, int posicion, int contadorNombre)
         {
-            CheckedListBox clb = new CheckedListBox();
             clb.Items.Add(proyectoText);
             clb.AutoSize = true;
             clb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F,
@@ -132,5 +133,16 @@ namespace Practica1
             mostrarProyectos();
         }
 
+        private void btElim_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i<= Proyecto.listaProyectos.Count; i++)
+            {
+                if (p.Descripcion[i] == clb.CheckedItems.ToString().Trim()[i])
+                {
+                    Proyecto.listaProyectos.Remove(p);
+                }
+            }
+            clb.CheckedItems.ToString().Trim();
+        }
     }
 }

@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProyectos));
             this.titulo = new System.Windows.Forms.Label();
             this.botonCancelar = new System.Windows.Forms.Button();
             this.ordenarFecha = new System.Windows.Forms.Button();
             this.botonImprimir = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.ordenarNombre = new System.Windows.Forms.Button();
+            this.btElim = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // titulo
@@ -61,7 +63,7 @@
             // ordenarFecha
             // 
             this.ordenarFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ordenarFecha.Location = new System.Drawing.Point(314, 387);
+            this.ordenarFecha.Location = new System.Drawing.Point(197, 397);
             this.ordenarFecha.Name = "ordenarFecha";
             this.ordenarFecha.Size = new System.Drawing.Size(171, 23);
             this.ordenarFecha.TabIndex = 2;
@@ -100,11 +102,25 @@
             this.ordenarNombre.UseVisualStyleBackColor = true;
             this.ordenarNombre.Click += new System.EventHandler(this.ordenarNombre_Click);
             // 
+            // btElim
+            // 
+            this.btElim.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btElim.Location = new System.Drawing.Point(475, 397);
+            this.btElim.Name = "btElim";
+            this.btElim.Size = new System.Drawing.Size(75, 23);
+            this.btElim.TabIndex = 6;
+            this.btElim.Text = "Eliminar";
+            this.btElim.UseVisualStyleBackColor = true;
+            this.btElim.Click += new System.EventHandler(this.btElim_Click);
+            // 
             // FrmProyectos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(830, 446);
+            this.Controls.Add(this.btElim);
             this.Controls.Add(this.ordenarNombre);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.botonImprimir);
@@ -127,5 +143,6 @@
         private System.Windows.Forms.Button botonImprimir;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button ordenarNombre;
+        private System.Windows.Forms.Button btElim;
     }
 }

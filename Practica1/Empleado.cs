@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 public class Empleado
 {
@@ -36,6 +37,14 @@ public class Empleado
         this.puesto = puesto;
         this.fechaNac = fechaNac;
     }
+    public bool esJefe()
+    {
+        if (this.puesto == "jefe")
+        {
+            return true;
+        }
+        return false;
+    }
 
     public int Id { get => id; set => id = value; }
     public string Dni { get => dni; set => dni = value; }
@@ -48,4 +57,37 @@ public class Empleado
     public DateTime FechaNac { get => fechaNac; set => fechaNac = value; }
     public int NumSS { get => numSS; set => numSS = value; }
     public string Comentarios { get => comentarios; set => comentarios = value; }
+
+    public override bool Equals(object obj)
+    {
+        return obj is Empleado empleado &&
+               id == empleado.id &&
+               dni == empleado.dni &&
+               nombre == empleado.nombre &&
+               apellido1 == empleado.apellido1 &&
+               apellido2 == empleado.apellido2 &&
+               puesto == empleado.puesto &&
+               telefono == empleado.telefono &&
+               correo == empleado.correo &&
+               fechaNac == empleado.fechaNac &&
+               numSS == empleado.numSS &&
+               comentarios == empleado.comentarios;
+    }
+
+    public override int GetHashCode()
+    {
+        int hashCode = -920621640;
+        hashCode = hashCode * -1521134295 + id.GetHashCode();
+        hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(dni);
+        hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(nombre);
+        hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(apellido1);
+        hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(apellido2);
+        hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(puesto);
+        hashCode = hashCode * -1521134295 + telefono.GetHashCode();
+        hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(correo);
+        hashCode = hashCode * -1521134295 + fechaNac.GetHashCode();
+        hashCode = hashCode * -1521134295 + numSS.GetHashCode();
+        hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(comentarios);
+        return hashCode;
+    }
 }
