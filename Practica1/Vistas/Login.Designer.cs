@@ -51,7 +51,7 @@
             // accept
             // 
             this.accept.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.accept.Location = new System.Drawing.Point(401, 202);
+            this.accept.Location = new System.Drawing.Point(416, 205);
             this.accept.Name = "accept";
             this.accept.Size = new System.Drawing.Size(75, 23);
             this.accept.TabIndex = 0;
@@ -62,7 +62,7 @@
             // cancel
             // 
             this.cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.cancel.Location = new System.Drawing.Point(274, 202);
+            this.cancel.Location = new System.Drawing.Point(304, 205);
             this.cancel.Name = "cancel";
             this.cancel.Size = new System.Drawing.Size(75, 23);
             this.cancel.TabIndex = 1;
@@ -95,9 +95,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(72, 68);
+            this.pictureBox1.Location = new System.Drawing.Point(48, 38);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(83, 81);
+            this.pictureBox1.Size = new System.Drawing.Size(137, 135);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
@@ -144,7 +144,7 @@
             // 
             this.disclaimer.AutoSize = true;
             this.disclaimer.Font = new System.Drawing.Font("MV Boli", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.disclaimer.Location = new System.Drawing.Point(44, 270);
+            this.disclaimer.Location = new System.Drawing.Point(150, 273);
             this.disclaimer.Name = "disclaimer";
             this.disclaimer.Size = new System.Drawing.Size(496, 105);
             this.disclaimer.TabIndex = 9;
@@ -155,7 +155,7 @@
             this.IblError.AutoSize = true;
             this.IblError.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IblError.ForeColor = System.Drawing.Color.Red;
-            this.IblError.Location = new System.Drawing.Point(256, 242);
+            this.IblError.Location = new System.Drawing.Point(270, 245);
             this.IblError.Name = "IblError";
             this.IblError.Size = new System.Drawing.Size(221, 19);
             this.IblError.TabIndex = 10;
@@ -163,14 +163,16 @@
             this.IblError.Visible = false;
             this.IblError.Click += new System.EventHandler(this.IblError_Click);
             // 
-            // GestionaIES
+            // Login
             // 
             this.AcceptButton = this.accept;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CancelButton = this.cancel;
-            this.ClientSize = new System.Drawing.Size(584, 411);
+            this.ClientSize = new System.Drawing.Size(807, 411);
             this.Controls.Add(this.IblError);
             this.Controls.Add(this.disclaimer);
             this.Controls.Add(this.cuadroCont);
@@ -185,7 +187,7 @@
             this.Location = new System.Drawing.Point(50, 50);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "GestionaIES";
+            this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GestionaIES";
             this.Load += new System.EventHandler(this.GestionaIES_Load);

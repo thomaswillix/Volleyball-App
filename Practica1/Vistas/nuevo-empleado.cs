@@ -10,15 +10,14 @@ using System.Windows.Forms;
 
 namespace Practica1
 {
-    public partial class FrmEmpleados : Form
+    public partial class nuevo_empleado : Form
     {
-        Empleado e;
-        public FrmEmpleados()
+        public nuevo_empleado()
         {
             InitializeComponent();
         }
 
-        private void FrmEmpleados_Load(object sender, EventArgs e)
+        private void nuevo_empleado_Load(object sender, EventArgs e)
         {
 
         }

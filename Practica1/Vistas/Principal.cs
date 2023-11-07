@@ -46,5 +46,17 @@ namespace Practica1
             nuevo_proyecto proy = new nuevo_proyecto();
             proy.ShowDialog();
         }
+
+        private void listadosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FrmEmpleados listaEmpl = new FrmEmpleados();
+            listaEmpl.ShowDialog();
+        }
+
+        private void altaToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
+
 }

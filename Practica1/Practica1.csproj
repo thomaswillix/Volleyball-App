@@ -74,54 +74,63 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Empleado.cs" />
-    <Compile Include="FrmEmpleados.cs">
+    <Compile Include="Clases\Empleado.cs" />
+    <Compile Include="Vistas\FrmEmpleados.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmEmpleados.Designer.cs">
+    <Compile Include="Vistas\FrmEmpleados.Designer.cs">
       <DependentUpon>FrmEmpleados.cs</DependentUpon>
     </Compile>
-    <Compile Include="nuevo-proyecto.cs">
+    <Compile Include="Vistas\nuevo-empleado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="nuevo-proyecto.Designer.cs">
+    <Compile Include="Vistas\nuevo-empleado.Designer.cs">
+      <DependentUpon>nuevo-empleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\nuevo-proyecto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\nuevo-proyecto.Designer.cs">
       <DependentUpon>nuevo-proyecto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Proyecto.cs" />
-    <Compile Include="FrmProyectos.cs">
+    <Compile Include="Clases\Proyecto.cs" />
+    <Compile Include="Vistas\FrmProyectos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmProyectos.Designer.cs">
+    <Compile Include="Vistas\FrmProyectos.Designer.cs">
       <DependentUpon>FrmProyectos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs">
+    <Compile Include="Vistas\Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
+    <Compile Include="Vistas\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Principal.cs">
+    <Compile Include="Vistas\Principal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Principal.Designer.cs">
+    <Compile Include="Vistas\Principal.Designer.cs">
       <DependentUpon>Principal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="Clases\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Usuario.cs" />
-    <EmbeddedResource Include="FrmEmpleados.resx">
+    <Compile Include="Clases\Usuario.cs" />
+    <EmbeddedResource Include="Vistas\FrmEmpleados.resx">
       <DependentUpon>FrmEmpleados.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmProyectos.resx">
+    <EmbeddedResource Include="Vistas\FrmProyectos.resx">
       <DependentUpon>FrmProyectos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
+    <EmbeddedResource Include="Vistas\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="nuevo-proyecto.resx">
+    <EmbeddedResource Include="Vistas\nuevo-empleado.resx">
+      <DependentUpon>nuevo-empleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\nuevo-proyecto.resx">
       <DependentUpon>nuevo-proyecto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Principal.resx">
+    <EmbeddedResource Include="Vistas\Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
