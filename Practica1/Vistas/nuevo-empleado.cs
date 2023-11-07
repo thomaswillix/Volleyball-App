@@ -21,5 +21,15 @@ namespace Practica1
         {
 
         }
+
+        private void b1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

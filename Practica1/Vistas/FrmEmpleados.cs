@@ -80,14 +80,14 @@ namespace Practica1
         private void ordenarFecha_Click(object sender, EventArgs e)
         {
             ordenarEmpleados(Empleado => Empleado.FechaNac);
-            groupBox1.Controls.Clear();
+            clb.Items.Clear();
             mostrarEmpleados();
         }
 
         private void ordenarNombre_Click(object sender, EventArgs e)
         {
             ordenarEmpleados(Empleado => Empleado.Nombre);
-            groupBox1.Controls.Clear();
+            clb.Items.Clear();
             mostrarEmpleados();
         }
     }

@@ -57,3 +57,4 @@ C:\Users\Lucía\Source\Repos\thomaswillix\form\Practica1\bin\Debug\System.Text.J
 C:\Users\Lucía\Source\Repos\thomaswillix\form\Practica1\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\Lucía\Source\Repos\thomaswillix\form\Practica1\bin\Debug\System.ValueTuple.xml
 C:\Users\Lucía\Source\Repos\thomaswillix\form\Practica1\obj\Debug\Practica1.csproj.CopyComplete
+C:\Users\Lucía\Source\Repos\thomaswillix\form\Practica1\obj\Debug\Practica1.nuevo_empleado.resources

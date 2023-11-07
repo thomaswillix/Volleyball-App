@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button.CheckBox;
 
 namespace Practica1
 {
@@ -17,7 +17,7 @@ namespace Practica1
         Proyecto p;
         DateTime fechaIni;
         DateTime fechaFin;
-        private static CheckedListBox clb = new CheckedListBox();
+        private static CheckBox clb = new CheckBox();
 
 
         public FrmProyectos()
@@ -42,8 +42,7 @@ namespace Practica1
             int posicion = 10;
             foreach (Proyecto project in Proyecto.listaProyectos)
             {
-                crearChecked(project.Descripcion, posicion, n);
-                posicion += 30;
+                crearChecked(project.Descripcion , posicion, n);
                 n++;
             }
         }
@@ -66,6 +65,10 @@ namespace Practica1
             fechaFin = DateTime.Today;
             p = new Proyecto("Tercero", fechaIni, fechaFin);
             Proyecto.listaProyectos.Add(p);
+            fechaIni = new DateTime(2015, 9, 21, 19, 0, 0);
+            fechaFin = new DateTime(2022, 10, 3, 10, 0, 0);
+            p = new Proyecto("Cuato", fechaIni, fechaFin);
+            Proyecto.listaProyectos.Add(p);
         }
         private void button3_Click(object sender, EventArgs e)
         {
@@ -82,7 +85,7 @@ namespace Practica1
         
         private void crearChecked(string proyectoText, int posicion, int contadorNombre)
         {
-            clb.Items.Add(proyectoText);
+            clb.Text = proyectoText;
             clb.AutoSize = true;
             clb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F,
             System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point,
@@ -91,14 +94,12 @@ namespace Practica1
             clb .Name = "clbProyectos" + contadorNombre;
             clb.Size = new System.Drawing.Size(291, 20);
             clb.TabIndex = 1;
-            clb.Text = proyectoText;
             groupBox1.Controls.Add(clb);
         }
 
         private void FrmProyectos_Load(object sender, EventArgs e)
         {
             cargarProyectos();
-            mostrarProyectos();
         }
         private void home_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -135,14 +136,19 @@ namespace Practica1
 
         private void btElim_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i<= Proyecto.listaProyectos.Count; i++)
+            int i = 0;
+            foreach (System.Windows.Forms.CheckBox cd in groupBox1.Controls)
             {
-                if (p.Descripcion[i] == clb.CheckedItems.ToString().Trim()[i])
+                if (cd.Checked)
                 {
-                    Proyecto.listaProyectos.Remove(p);
+                    int posicion = Proyecto.listaProyectos.FindIndex(x => x.Descripcion == cd.Text);
+                    Proyecto.listaProyectos.RemoveAt(posicion);
                 }
+                this.groupBox1.Controls.Clear();
+                mostrarProyectos();
             }
-            clb.CheckedItems.ToString().Trim();
+            
+            
         }
     }
 }
