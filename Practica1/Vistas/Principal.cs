@@ -55,7 +55,8 @@ namespace Practica1
 
         private void altaToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-
+            nuevo_empleado empl = new nuevo_empleado();
+            empl.ShowDialog();
         }
     }
 

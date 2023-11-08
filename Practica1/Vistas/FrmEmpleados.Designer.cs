@@ -98,6 +98,7 @@
             this.btElim.TabIndex = 9;
             this.btElim.Text = "Eliminar";
             this.btElim.UseVisualStyleBackColor = true;
+            this.btElim.Click += new System.EventHandler(this.btElim_Click);
             // 
             // botonCancelar
             // 

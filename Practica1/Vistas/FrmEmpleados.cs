@@ -13,8 +13,10 @@ namespace Practica1
     public partial class FrmEmpleados : Form
     {
         private Empleado e;
+        private int posicion = 10;
+        private int n = 1;
         private DateTime d;
-        private static CheckedListBox clb = new CheckedListBox();
+        private System.Windows.Forms.CheckBox cb = new System.Windows.Forms.CheckBox();
 
         public FrmEmpleados()
         {
@@ -46,29 +48,28 @@ namespace Practica1
 
         }
 
-        private void crearChecked(string empleado, int posicion, int contadorNombre)
+        private void crearChecked(Empleado e)
         {
-            clb.Items.Add(empleado);
-            clb.AutoSize = true;
-            clb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F,
+            cb.AutoSize = true;
+            cb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F,
             System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point,
             ((byte)(0)));
-            clb.Location = new System.Drawing.Point(75, posicion);
-            clb.Name = "clbProyectos" + contadorNombre;
-            clb.Size = new System.Drawing.Size(291, 20);
-            clb.TabIndex = 1;
-            clb.Text = empleado;
-            groupBox1.Controls.Add(clb);
+            cb.Location = new System.Drawing.Point(75, posicion);
+            cb.Name = "clbProyectos" + n;
+            cb.Size = new System.Drawing.Size(291, 20);
+            cb.TabIndex = 1;
+            cb.Text = e.Nombre + " " + e.Apellido1 + " " + e.Apellido2;
+            groupBox1.Controls.Add(cb);
+
+            posicion += 30;
+            n += 1;
         }
 
         private void mostrarEmpleados()
         {
-            int n = 1;
-            int posicion = 10;
             foreach (Empleado e in Empleado.listaEmpleados)
             {
-                crearChecked(e.Nombre + " " + e.Apellido1 + " " + e.Apellido2 + " " + e.Puesto,posicion, n);
-                n++;
+                crearChecked(e);
             }
         }
         private void ordenarEmpleados(Func<Empleado, IComparable> aux)
@@ -80,15 +81,30 @@ namespace Practica1
         private void ordenarFecha_Click(object sender, EventArgs e)
         {
             ordenarEmpleados(Empleado => Empleado.FechaNac);
-            clb.Items.Clear();
+            groupBox1.Controls.Clear();
             mostrarEmpleados();
         }
 
         private void ordenarNombre_Click(object sender, EventArgs e)
         {
             ordenarEmpleados(Empleado => Empleado.Nombre);
-            clb.Items.Clear();
+            groupBox1.Controls.Clear();
             mostrarEmpleados();
+        }
+
+        private void btElim_Click(object sender, EventArgs e)
+        {
+            int i = 0;
+            foreach (System.Windows.Forms.CheckBox cd in groupBox1.Controls)
+            {
+                if (cd.Checked)
+                {
+                    int posicion = Empleado.listaEmpleados.FindIndex(x => x.Nombre + " " + x.Apellido1 + " " + x.Apellido2 == cd.Text);
+                    Empleado.listaEmpleados.RemoveAt(posicion);
+                }
+                this.groupBox1.Controls.Clear();
+                mostrarEmpleados();
+            }
         }
     }
 }

@@ -41,7 +41,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.ape2 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.puesto = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tlf = new System.Windows.Forms.NumericUpDown();
             this.correo = new System.Windows.Forms.TextBox();
@@ -50,9 +49,14 @@
             this.label4 = new System.Windows.Forms.Label();
             this.come = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.bt2 = new System.Windows.Forms.Button();
+            this.wb = new System.Windows.Forms.PictureBox();
+            this.esc = new System.Windows.Forms.Button();
+            this.puesto = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.cod)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tlf)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSS)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wb)).BeginInit();
             this.SuspendLayout();
             // 
             // b1
@@ -161,13 +165,6 @@
             this.label9.TabIndex = 41;
             this.label9.Text = "Segundo Apellido";
             // 
-            // puesto
-            // 
-            this.puesto.Location = new System.Drawing.Point(147, 150);
-            this.puesto.Name = "puesto";
-            this.puesto.Size = new System.Drawing.Size(100, 20);
-            this.puesto.TabIndex = 44;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -237,6 +234,51 @@
             this.label5.Text = "Comentarios";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
+            // bt2
+            // 
+            this.bt2.Location = new System.Drawing.Point(506, 181);
+            this.bt2.Name = "bt2";
+            this.bt2.Size = new System.Drawing.Size(126, 23);
+            this.bt2.TabIndex = 53;
+            this.bt2.Text = "Whitebeard Jumpscare";
+            this.bt2.UseVisualStyleBackColor = true;
+            this.bt2.Click += new System.EventHandler(this.bt2_Click);
+            // 
+            // wb
+            // 
+            this.wb.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("wb.BackgroundImage")));
+            this.wb.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.wb.Location = new System.Drawing.Point(394, 38);
+            this.wb.Name = "wb";
+            this.wb.Size = new System.Drawing.Size(337, 135);
+            this.wb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.wb.TabIndex = 54;
+            this.wb.TabStop = false;
+            this.wb.Visible = false;
+            // 
+            // esc
+            // 
+            this.esc.Location = new System.Drawing.Point(523, 227);
+            this.esc.Name = "esc";
+            this.esc.Size = new System.Drawing.Size(88, 23);
+            this.esc.TabIndex = 55;
+            this.esc.Text = "Escondelo porfi";
+            this.esc.UseVisualStyleBackColor = true;
+            this.esc.Click += new System.EventHandler(this.esc_Click);
+            // 
+            // puesto
+            // 
+            this.puesto.FormattingEnabled = true;
+            this.puesto.Items.AddRange(new object[] {
+            "comercial",
+            "jefe",
+            "programador"});
+            this.puesto.Location = new System.Drawing.Point(146, 150);
+            this.puesto.Name = "puesto";
+            this.puesto.Size = new System.Drawing.Size(121, 21);
+            this.puesto.TabIndex = 56;
+            this.puesto.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // nuevo_empleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -244,6 +286,10 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(721, 418);
+            this.Controls.Add(this.puesto);
+            this.Controls.Add(this.esc);
+            this.Controls.Add(this.wb);
+            this.Controls.Add(this.bt2);
             this.Controls.Add(this.come);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.numSS);
@@ -251,7 +297,6 @@
             this.Controls.Add(this.correo);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.tlf);
-            this.Controls.Add(this.puesto);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.ape2);
             this.Controls.Add(this.label9);
@@ -271,6 +316,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.cod)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tlf)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wb)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -290,7 +336,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox ape2;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox puesto;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.NumericUpDown tlf;
         private System.Windows.Forms.TextBox correo;
@@ -299,5 +344,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox come;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button bt2;
+        private System.Windows.Forms.PictureBox wb;
+        private System.Windows.Forms.Button esc;
+        private System.Windows.Forms.ComboBox puesto;
     }
 }

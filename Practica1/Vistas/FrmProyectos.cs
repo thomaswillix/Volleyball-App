@@ -14,10 +14,11 @@ namespace Practica1
 {
     public partial class FrmProyectos : Form
     {
+        int posicion = 10;
         Proyecto p;
         DateTime fechaIni;
         DateTime fechaFin;
-        private static CheckBox clb = new CheckBox();
+        private System.Windows.Forms.CheckBox cb = new System.Windows.Forms.CheckBox();
 
 
         public FrmProyectos()
@@ -38,12 +39,9 @@ namespace Practica1
 
         private void mostrarProyectos()
         {
-            int n = 1;
-            int posicion = 10;
-            foreach (Proyecto project in Proyecto.listaProyectos)
+            foreach (Proyecto p in Proyecto.listaProyectos)
             {
-                crearChecked(project.Descripcion , posicion, n);
-                n++;
+                crearChecked(p);
             }
         }
 
@@ -83,23 +81,24 @@ namespace Practica1
         }
         
         
-        private void crearChecked(string proyectoText, int posicion, int contadorNombre)
+        private void crearChecked(Proyecto p1)
         {
-            clb.Text = proyectoText;
-            clb.AutoSize = true;
-            clb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F,
+            cb.AutoSize = true;
+            cb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F,
             System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point,
             ((byte)(0)));
-            clb.Location = new System.Drawing.Point(75, posicion);
-            clb .Name = "clbProyectos" + contadorNombre;
-            clb.Size = new System.Drawing.Size(291, 20);
-            clb.TabIndex = 1;
-            groupBox1.Controls.Add(clb);
+            cb.Location = new System.Drawing.Point(75, posicion);
+            cb.Size = new System.Drawing.Size(291, 20);
+            cb.TabIndex = 1;
+            cb.Text = p1.Descripcion;
+            groupBox1.Controls.Add(cb);
+            posicion += 30;
         }
 
         private void FrmProyectos_Load(object sender, EventArgs e)
         {
             cargarProyectos();
+            mostrarProyectos();
         }
         private void home_FormClosed(object sender, FormClosedEventArgs e)
         {

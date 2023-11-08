@@ -74,7 +74,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Clases\Empleado.cs" />
+    <Compile Include="Modelo\Empleado.cs" />
+    <Compile Include="Modelo\ValidacionEmail.cs" />
     <Compile Include="Vistas\FrmEmpleados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,7 +94,7 @@
     <Compile Include="Vistas\nuevo-proyecto.Designer.cs">
       <DependentUpon>nuevo-proyecto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Clases\Proyecto.cs" />
+    <Compile Include="Modelo\Proyecto.cs" />
     <Compile Include="Vistas\FrmProyectos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,9 +113,9 @@
     <Compile Include="Vistas\Principal.Designer.cs">
       <DependentUpon>Principal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Clases\Program.cs" />
+    <Compile Include="Modelo\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Clases\Usuario.cs" />
+    <Compile Include="Modelo\Usuario.cs" />
     <EmbeddedResource Include="Vistas\FrmEmpleados.resx">
       <DependentUpon>FrmEmpleados.cs</DependentUpon>
     </EmbeddedResource>
