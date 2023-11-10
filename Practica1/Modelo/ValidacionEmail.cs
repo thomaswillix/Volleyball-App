@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Net.Mail;
 
-namespace ValidacionEmail
+namespace  Practica1
 {
     public class ValidacionEmail
     {
-        public static void Main(string[] args)
+        /*public static void Main(string[] args)
         {
             var emailAddresses = new List<string>
             {
@@ -28,9 +28,9 @@ namespace ValidacionEmail
                 Console.WriteLine($"{emailAddress,-37} --> {(IsValid(emailAddress) ? "Valid" : "Invalid")}");
 
             Console.ReadLine();
-        }
+        }*/
 
-        private static bool IsValid(string email)
+        public static bool IsValid(string email)
         {
             var valid = true;
 

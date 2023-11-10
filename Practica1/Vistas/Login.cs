@@ -7,8 +7,6 @@ namespace Practica1
 {
     public partial class Login : Form
     {
-        //private string[] listaUsuariosNombre = new string[6];
-        //private string[] listaUsuariosClave = new string[6];
         private string[,] matrizUsuarios = new string[6, 2];
         private int intentos = 0;
         
@@ -22,22 +20,8 @@ namespace Practica1
         {
 
         }    
-        /*private void cargarUsuarios()
-        {
-            listaUsuariosNombre[0] = "root";
-            listaUsuariosNombre[1] = "juan";
-            listaUsuariosNombre[2] = "jaime";
-            listaUsuariosNombre[3] = "jose";
-            listaUsuariosNombre[4] = "javier";
-            listaUsuariosNombre[5] = "jorge";
-            listaUsuariosClave[0] = "1234";
-            listaUsuariosClave[1] = "4321";
-            listaUsuariosClave[2] = "4444";
-            listaUsuariosClave[3] = "1111";
-            listaUsuariosClave[4] = "2222";
-            listaUsuariosClave[5] = "3333";
-        }*/
-        private void cargarUsuariosBetter()
+        
+        private void cargarUsuarios()
         {
             matrizUsuarios[0, 0] = "root";
             matrizUsuarios[1, 0] = "juan";
@@ -57,7 +41,7 @@ namespace Practica1
             MessageBox.Show("Has pulsado Aceptar");    
             string usuario = cuadroUsu.Text.ToLower();
             string contrasena = cuadroCont.Text.ToLower();
-            if(validaLoginBetter(ref usuario, ref contrasena) == true){
+            if(validaLogin(ref usuario, ref contrasena) == true){
                 cuadroUsu.Clear();
                 cuadroCont.Clear();
                 Principal Form = new Principal();
@@ -79,28 +63,8 @@ namespace Practica1
             }
             // En la llamada es necesario pasarlo como ref | out
         }
-       /* bool validaLogin(ref string user, ref string pass)
-        // también se puede utilizar out
-        {
-            bool encontrado = false;
-            for (int i = 0; i < listaUsuariosNombre.Length && !encontrado; i++)
-            {
-                if (user == listaUsuariosNombre[i])
-                {
-                    if (pass == listaUsuariosClave[i])
-                    {
-                       return true;
-                    }
-                    else
-                    {
-                        MessageBox.Show("Clave Incorrecta");
-                        return false;
-                    }
-                }    
-            }
-            return false;
-        }*/
-        bool validaLoginBetter(ref string usuario, ref string clave)
+       
+        bool validaLogin(ref string usuario, ref string clave)
         {
             for(int i = 0; i <= matrizUsuarios.GetUpperBound(0); i++)
             // el método GetUpperBound devuelve la última posición 
@@ -165,8 +129,7 @@ namespace Practica1
 
         private void GestionaIES_Load(object sender, System.EventArgs e)
         {
-            //cargarUsuarios();
-            cargarUsuariosBetter();
+            cargarUsuarios();
         }
 
         private void button1_Click_1(object sender, System.EventArgs e)

@@ -53,6 +53,8 @@
             this.wb = new System.Windows.Forms.PictureBox();
             this.esc = new System.Windows.Forms.Button();
             this.puesto = new System.Windows.Forms.ComboBox();
+            this.dni = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.cod)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tlf)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSS)).BeginInit();
@@ -61,7 +63,7 @@
             // 
             // b1
             // 
-            this.b1.Location = new System.Drawing.Point(89, 340);
+            this.b1.Location = new System.Drawing.Point(86, 364);
             this.b1.Name = "b1";
             this.b1.Size = new System.Drawing.Size(75, 23);
             this.b1.TabIndex = 38;
@@ -72,21 +74,21 @@
             // cod
             // 
             this.cod.BackColor = System.Drawing.SystemColors.Window;
-            this.cod.Location = new System.Drawing.Point(147, 29);
+            this.cod.Location = new System.Drawing.Point(146, 23);
             this.cod.Name = "cod";
             this.cod.Size = new System.Drawing.Size(120, 20);
             this.cod.TabIndex = 34;
             // 
             // fechaNac
             // 
-            this.fechaNac.Location = new System.Drawing.Point(147, 231);
+            this.fechaNac.Location = new System.Drawing.Point(147, 258);
             this.fechaNac.Name = "fechaNac";
             this.fechaNac.Size = new System.Drawing.Size(200, 20);
             this.fechaNac.TabIndex = 32;
             // 
             // nom
             // 
-            this.nom.Location = new System.Drawing.Point(147, 58);
+            this.nom.Location = new System.Drawing.Point(147, 85);
             this.nom.Name = "nom";
             this.nom.Size = new System.Drawing.Size(100, 20);
             this.nom.TabIndex = 31;
@@ -94,7 +96,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(24, 181);
+            this.label3.Location = new System.Drawing.Point(24, 208);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label3.Size = new System.Drawing.Size(49, 13);
@@ -104,7 +106,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 237);
+            this.label1.Location = new System.Drawing.Point(24, 264);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label1.Size = new System.Drawing.Size(108, 13);
@@ -114,7 +116,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(24, 61);
+            this.label13.Location = new System.Drawing.Point(24, 88);
             this.label13.Name = "label13";
             this.label13.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label13.Size = new System.Drawing.Size(44, 13);
@@ -124,7 +126,7 @@
             // label122
             // 
             this.label122.AutoSize = true;
-            this.label122.Location = new System.Drawing.Point(24, 31);
+            this.label122.Location = new System.Drawing.Point(23, 25);
             this.label122.Name = "label122";
             this.label122.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label122.Size = new System.Drawing.Size(40, 13);
@@ -133,7 +135,7 @@
             // 
             // ape1
             // 
-            this.ape1.Location = new System.Drawing.Point(147, 88);
+            this.ape1.Location = new System.Drawing.Point(147, 115);
             this.ape1.Name = "ape1";
             this.ape1.Size = new System.Drawing.Size(100, 20);
             this.ape1.TabIndex = 40;
@@ -141,7 +143,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(24, 91);
+            this.label8.Location = new System.Drawing.Point(24, 118);
             this.label8.Name = "label8";
             this.label8.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label8.Size = new System.Drawing.Size(76, 13);
@@ -150,7 +152,7 @@
             // 
             // ape2
             // 
-            this.ape2.Location = new System.Drawing.Point(147, 117);
+            this.ape2.Location = new System.Drawing.Point(147, 144);
             this.ape2.Name = "ape2";
             this.ape2.Size = new System.Drawing.Size(100, 20);
             this.ape2.TabIndex = 42;
@@ -158,7 +160,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(24, 120);
+            this.label9.Location = new System.Drawing.Point(24, 147);
             this.label9.Name = "label9";
             this.label9.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label9.Size = new System.Drawing.Size(90, 13);
@@ -168,7 +170,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 153);
+            this.label2.Location = new System.Drawing.Point(24, 180);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label2.Size = new System.Drawing.Size(40, 13);
@@ -177,14 +179,14 @@
             // 
             // tlf
             // 
-            this.tlf.Location = new System.Drawing.Point(147, 179);
+            this.tlf.Location = new System.Drawing.Point(147, 206);
             this.tlf.Name = "tlf";
             this.tlf.Size = new System.Drawing.Size(120, 20);
             this.tlf.TabIndex = 45;
             // 
             // correo
             // 
-            this.correo.Location = new System.Drawing.Point(147, 205);
+            this.correo.Location = new System.Drawing.Point(147, 232);
             this.correo.Name = "correo";
             this.correo.Size = new System.Drawing.Size(100, 20);
             this.correo.TabIndex = 47;
@@ -192,7 +194,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(24, 208);
+            this.label10.Location = new System.Drawing.Point(24, 235);
             this.label10.Name = "label10";
             this.label10.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label10.Size = new System.Drawing.Size(38, 13);
@@ -201,7 +203,7 @@
             // 
             // numSS
             // 
-            this.numSS.Location = new System.Drawing.Point(147, 264);
+            this.numSS.Location = new System.Drawing.Point(147, 291);
             this.numSS.Name = "numSS";
             this.numSS.Size = new System.Drawing.Size(120, 20);
             this.numSS.TabIndex = 49;
@@ -209,7 +211,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(24, 266);
+            this.label4.Location = new System.Drawing.Point(24, 293);
             this.label4.Name = "label4";
             this.label4.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label4.Size = new System.Drawing.Size(87, 13);
@@ -218,7 +220,7 @@
             // 
             // come
             // 
-            this.come.Location = new System.Drawing.Point(147, 293);
+            this.come.Location = new System.Drawing.Point(147, 320);
             this.come.Name = "come";
             this.come.Size = new System.Drawing.Size(100, 20);
             this.come.TabIndex = 51;
@@ -226,7 +228,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(24, 296);
+            this.label5.Location = new System.Drawing.Point(24, 323);
             this.label5.Name = "label5";
             this.label5.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label5.Size = new System.Drawing.Size(65, 13);
@@ -273,11 +275,28 @@
             "comercial",
             "jefe",
             "programador"});
-            this.puesto.Location = new System.Drawing.Point(146, 150);
+            this.puesto.Location = new System.Drawing.Point(146, 177);
             this.puesto.Name = "puesto";
             this.puesto.Size = new System.Drawing.Size(121, 21);
             this.puesto.TabIndex = 56;
             this.puesto.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // dni
+            // 
+            this.dni.Location = new System.Drawing.Point(146, 55);
+            this.dni.Name = "dni";
+            this.dni.Size = new System.Drawing.Size(100, 20);
+            this.dni.TabIndex = 58;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(23, 58);
+            this.label6.Name = "label6";
+            this.label6.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label6.Size = new System.Drawing.Size(49, 13);
+            this.label6.TabIndex = 57;
+            this.label6.Text = "DNI/NIE";
             // 
             // nuevo_empleado
             // 
@@ -286,6 +305,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(721, 418);
+            this.Controls.Add(this.dni);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.puesto);
             this.Controls.Add(this.esc);
             this.Controls.Add(this.wb);
@@ -348,5 +369,7 @@
         private System.Windows.Forms.PictureBox wb;
         private System.Windows.Forms.Button esc;
         private System.Windows.Forms.ComboBox puesto;
+        private System.Windows.Forms.TextBox dni;
+        private System.Windows.Forms.Label label6;
     }
 }

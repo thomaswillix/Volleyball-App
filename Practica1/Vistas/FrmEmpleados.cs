@@ -13,10 +13,8 @@ namespace Practica1
     public partial class FrmEmpleados : Form
     {
         private Empleado e;
-        private int posicion = 10;
-        private int n = 1;
+        
         private DateTime d;
-        private System.Windows.Forms.CheckBox cb = new System.Windows.Forms.CheckBox();
 
         public FrmEmpleados()
         {
@@ -26,6 +24,7 @@ namespace Practica1
         private void FrmEmpleados_Load(object sender, EventArgs e)
         {
             cargarEmpleados();
+            mostrarEmpleados();
         }
         private void cargarEmpleados()
         {
@@ -48,28 +47,27 @@ namespace Practica1
 
         }
 
-        private void crearChecked(Empleado e)
+        private void crearChecked(string e, int posicion)
         {
+            System.Windows.Forms.CheckBox cb = new System.Windows.Forms.CheckBox();
             cb.AutoSize = true;
             cb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F,
             System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point,
             ((byte)(0)));
             cb.Location = new System.Drawing.Point(75, posicion);
-            cb.Name = "clbProyectos" + n;
             cb.Size = new System.Drawing.Size(291, 20);
             cb.TabIndex = 1;
-            cb.Text = e.Nombre + " " + e.Apellido1 + " " + e.Apellido2;
+            cb.Text = e;
             groupBox1.Controls.Add(cb);
-
-            posicion += 30;
-            n += 1;
         }
 
         private void mostrarEmpleados()
         {
+            int posicion = 10;
             foreach (Empleado e in Empleado.listaEmpleados)
             {
-                crearChecked(e);
+                crearChecked(e.Nombre ,posicion);
+                posicion += 30;
             }
         }
         private void ordenarEmpleados(Func<Empleado, IComparable> aux)
@@ -94,17 +92,16 @@ namespace Practica1
 
         private void btElim_Click(object sender, EventArgs e)
         {
-            int i = 0;
             foreach (System.Windows.Forms.CheckBox cd in groupBox1.Controls)
             {
                 if (cd.Checked)
                 {
-                    int posicion = Empleado.listaEmpleados.FindIndex(x => x.Nombre + " " + x.Apellido1 + " " + x.Apellido2 == cd.Text);
+                    int posicion = Empleado.listaEmpleados.FindIndex(x => x.Nombre == cd.Text);
                     Empleado.listaEmpleados.RemoveAt(posicion);
                 }
-                this.groupBox1.Controls.Clear();
-                mostrarEmpleados();
             }
+            this.groupBox1.Controls.Clear();
+            mostrarEmpleados();
         }
     }
 }

@@ -14,11 +14,9 @@ namespace Practica1
 {
     public partial class FrmProyectos : Form
     {
-        int posicion = 10;
         Proyecto p;
         DateTime fechaIni;
         DateTime fechaFin;
-        private System.Windows.Forms.CheckBox cb = new System.Windows.Forms.CheckBox();
 
 
         public FrmProyectos()
@@ -39,9 +37,12 @@ namespace Practica1
 
         private void mostrarProyectos()
         {
+            int posicion = 10;
+
             foreach (Proyecto p in Proyecto.listaProyectos)
             {
-                crearChecked(p);
+                crearChecked(p, posicion);
+                posicion += 30;
             }
         }
 
@@ -81,8 +82,10 @@ namespace Practica1
         }
         
         
-        private void crearChecked(Proyecto p1)
+        private void crearChecked(Proyecto p1, int posicion)
         {
+            System.Windows.Forms.CheckBox cb = new System.Windows.Forms.CheckBox();
+
             cb.AutoSize = true;
             cb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F,
             System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point,
@@ -92,7 +95,6 @@ namespace Practica1
             cb.TabIndex = 1;
             cb.Text = p1.Descripcion;
             groupBox1.Controls.Add(cb);
-            posicion += 30;
         }
 
         private void FrmProyectos_Load(object sender, EventArgs e)
@@ -135,7 +137,6 @@ namespace Practica1
 
         private void btElim_Click(object sender, EventArgs e)
         {
-            int i = 0;
             foreach (System.Windows.Forms.CheckBox cd in groupBox1.Controls)
             {
                 if (cd.Checked)
@@ -143,11 +144,9 @@ namespace Practica1
                     int posicion = Proyecto.listaProyectos.FindIndex(x => x.Descripcion == cd.Text);
                     Proyecto.listaProyectos.RemoveAt(posicion);
                 }
-                this.groupBox1.Controls.Clear();
-                mostrarProyectos();
             }
-            
-            
+            this.groupBox1.Controls.Clear();
+            mostrarProyectos();
         }
     }
 }
