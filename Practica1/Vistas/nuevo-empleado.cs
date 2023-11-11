@@ -61,8 +61,8 @@ namespace Practica1
         }
         private bool validar()
         {
-            if (cod.Value <= 0 || validarDni(dni.Text) || nom.Text == "" || ape1.Text == "" || ape2.Text == "" || ValidacionEmail.IsValid(correo.Text)
-                || tlf.Value > 699999999 || tlf.Value <= 600000000 || come.Text != "")
+            if (cod.Value <= 0 || validarDni(dni.Text) || String.IsNullOrEmpty(nom.Text) || String.IsNullOrEmpty(ape1.Text) || String.IsNullOrEmpty(ape2.Text)
+                || ValidacionEmail.IsValid(correo.Text)|| tlf.Value > 699999999 || tlf.Value <= 600000000 || String.IsNullOrEmpty(come.Text))
             {
                 return false;
             }
@@ -74,24 +74,24 @@ namespace Practica1
             {
                 cod.BackColor = Color.Red;
             }
-            if (validarDni(dni.Text))
+            if (!validarDni(dni.Text))
             {
                 cod.BackColor = Color.Red;
             }
-            if (nom.Text == "")
+            if (String.IsNullOrEmpty(nom.Text))
             {
                 cod.BackColor = Color.Red;
             }
-            if (ape1.Text == "")
+            if (String.IsNullOrEmpty(ape1.Text))
             {
                 cod.BackColor = Color.Red;
             }
-            if (ape2.Text == "")
+            if (String.IsNullOrEmpty(ape2.Text))
             {
                 cod.BackColor = Color.Red;
 
             }
-            if (come.Text == "")
+            if (String.IsNullOrEmpty(come.Text))
             {
                 cod.BackColor = Color.Red;
             }
