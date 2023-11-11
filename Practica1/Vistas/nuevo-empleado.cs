@@ -22,9 +22,46 @@ namespace Practica1
         {
 
         }
+        //Devuelve true si es valido el DNI
+        static bool validarDni(string dni)
+        {
+            //Comprobamos si el DNI tiene 9 digitos
+            if (dni.Length != 9)
+            {
+                //No es un DNI Valido
+                return false;
+            }
+
+            //Extraemos los números y la letra
+            string dniNumbers = dni.Substring(0, dni.Length - 1);
+            string dniLeter = dni.Substring(dni.Length - 1, 1);
+            //Intentamos convertir los números del DNI a integer
+            var numbersValid = int.TryParse(dniNumbers, out int dniInteger);
+            if (!numbersValid)
+            {
+                //No se pudo convertir los números a formato númerico
+                return false;
+            }
+            if (CalculateDNILeter(dniInteger) != dniLeter)
+            {
+                //La letra del DNI es incorrecta
+                return false;
+            }
+            //DNI Valido :)
+            return true;
+        }
+
+
+        static string CalculateDNILeter(int dniNumbers)
+        {
+            //Cargamos los digitos de control
+            string[] control = { "T", "R", "W", "A", "G", "M", "Y", "F", "P", "D", "X", "B", "N", "J", "Z", "S", "Q", "V", "H", "L", "C", "K", "E" };
+            var mod = dniNumbers % 23;
+            return control[mod];
+        }
         private bool validar()
         {
-            if (cod.Value <= 0 || nom.Text == "" || ape1.Text == "" || ape2.Text == "" || ValidacionEmail.IsValid(correo.Text)
+            if (cod.Value <= 0 || validarDni(dni.Text) || nom.Text == "" || ape1.Text == "" || ape2.Text == "" || ValidacionEmail.IsValid(correo.Text)
                 || tlf.Value > 699999999 || tlf.Value <= 600000000 || come.Text != "")
             {
                 return false;
@@ -37,19 +74,27 @@ namespace Practica1
             {
                 cod.BackColor = Color.Red;
             }
-            if (true)
+            if (validarDni(dni.Text))
             {
-                
+                cod.BackColor = Color.Red;
             }
+            if (nom.Text == "")
+            {
+                cod.BackColor = Color.Red;
+            }
+            if (ape1.Text == "")
+            {
+                cod.BackColor = Color.Red;
+            }
+            if (ape2.Text == "")
+            {
+                cod.BackColor = Color.Red;
 
-
-
-            /*|| nom.Text == "" || ape1.Text == "" || ape2.Text == "" || ValidacionEmail.IsValid(correo.Text)
-        || tlf.Value > 699999999 || tlf.Value <= 600000000 || come.Text != "")
-    {
-        return false;
-    }
-    return true;*/
+            }
+            if (come.Text == "")
+            {
+                cod.BackColor = Color.Red;
+            }
         }
         private void camposNormal()
         {
@@ -119,6 +164,11 @@ namespace Practica1
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cod_ValueChanged(object sender, EventArgs e)
         {
 
         }

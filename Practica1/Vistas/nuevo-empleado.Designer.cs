@@ -78,13 +78,17 @@
             this.cod.Name = "cod";
             this.cod.Size = new System.Drawing.Size(120, 20);
             this.cod.TabIndex = 34;
+            this.cod.ValueChanged += new System.EventHandler(this.cod_ValueChanged);
             // 
             // fechaNac
             // 
             this.fechaNac.Location = new System.Drawing.Point(147, 258);
+            this.fechaNac.MaxDate = new System.DateTime(2005, 12, 31, 0, 0, 0, 0);
+            this.fechaNac.MinDate = new System.DateTime(1960, 1, 1, 0, 0, 0, 0);
             this.fechaNac.Name = "fechaNac";
             this.fechaNac.Size = new System.Drawing.Size(200, 20);
             this.fechaNac.TabIndex = 32;
+            this.fechaNac.Value = new System.DateTime(2005, 12, 31, 0, 0, 0, 0);
             // 
             // nom
             // 
