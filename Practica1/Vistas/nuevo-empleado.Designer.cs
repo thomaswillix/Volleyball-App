@@ -66,7 +66,7 @@
             this.b1.Location = new System.Drawing.Point(86, 364);
             this.b1.Name = "b1";
             this.b1.Size = new System.Drawing.Size(75, 23);
-            this.b1.TabIndex = 38;
+            this.b1.TabIndex = 11;
             this.b1.Text = "Dar de Alta";
             this.b1.UseVisualStyleBackColor = true;
             this.b1.Click += new System.EventHandler(this.b1_Click);
@@ -77,17 +77,16 @@
             this.cod.Location = new System.Drawing.Point(146, 23);
             this.cod.Name = "cod";
             this.cod.Size = new System.Drawing.Size(120, 20);
-            this.cod.TabIndex = 34;
-            this.cod.ValueChanged += new System.EventHandler(this.cod_ValueChanged);
+            this.cod.TabIndex = 1;
             // 
             // fechaNac
             // 
             this.fechaNac.Location = new System.Drawing.Point(147, 258);
             this.fechaNac.MaxDate = new System.DateTime(2005, 12, 31, 0, 0, 0, 0);
-            this.fechaNac.MinDate = new System.DateTime(1960, 1, 1, 0, 0, 0, 0);
+            this.fechaNac.MinDate = new System.DateTime(1953, 1, 1, 0, 0, 0, 0);
             this.fechaNac.Name = "fechaNac";
             this.fechaNac.Size = new System.Drawing.Size(200, 20);
-            this.fechaNac.TabIndex = 32;
+            this.fechaNac.TabIndex = 8;
             this.fechaNac.Value = new System.DateTime(2005, 12, 31, 0, 0, 0, 0);
             // 
             // nom
@@ -95,7 +94,7 @@
             this.nom.Location = new System.Drawing.Point(147, 85);
             this.nom.Name = "nom";
             this.nom.Size = new System.Drawing.Size(100, 20);
-            this.nom.TabIndex = 31;
+            this.nom.TabIndex = 3;
             // 
             // label3
             // 
@@ -142,7 +141,7 @@
             this.ape1.Location = new System.Drawing.Point(147, 115);
             this.ape1.Name = "ape1";
             this.ape1.Size = new System.Drawing.Size(100, 20);
-            this.ape1.TabIndex = 40;
+            this.ape1.TabIndex = 4;
             // 
             // label8
             // 
@@ -159,7 +158,7 @@
             this.ape2.Location = new System.Drawing.Point(147, 144);
             this.ape2.Name = "ape2";
             this.ape2.Size = new System.Drawing.Size(100, 20);
-            this.ape2.TabIndex = 42;
+            this.ape2.TabIndex = 5;
             // 
             // label9
             // 
@@ -184,9 +183,25 @@
             // tlf
             // 
             this.tlf.Location = new System.Drawing.Point(147, 206);
+            this.tlf.Maximum = new decimal(new int[] {
+            699999999,
+            0,
+            0,
+            0});
+            this.tlf.Minimum = new decimal(new int[] {
+            600000000,
+            0,
+            0,
+            0});
             this.tlf.Name = "tlf";
             this.tlf.Size = new System.Drawing.Size(120, 20);
-            this.tlf.TabIndex = 45;
+            this.tlf.TabIndex = 7;
+            this.tlf.Value = new decimal(new int[] {
+            600000000,
+            0,
+            0,
+            0});
+            this.tlf.ValueChanged += new System.EventHandler(this.tlf_ValueChanged);
             // 
             // correo
             // 
@@ -210,7 +225,7 @@
             this.numSS.Location = new System.Drawing.Point(147, 291);
             this.numSS.Name = "numSS";
             this.numSS.Size = new System.Drawing.Size(120, 20);
-            this.numSS.TabIndex = 49;
+            this.numSS.TabIndex = 9;
             // 
             // label4
             // 
@@ -227,7 +242,8 @@
             this.come.Location = new System.Drawing.Point(147, 320);
             this.come.Name = "come";
             this.come.Size = new System.Drawing.Size(100, 20);
-            this.come.TabIndex = 51;
+            this.come.TabIndex = 10;
+            this.come.TextChanged += new System.EventHandler(this.come_TextChanged);
             // 
             // label5
             // 
@@ -245,7 +261,7 @@
             this.bt2.Location = new System.Drawing.Point(506, 181);
             this.bt2.Name = "bt2";
             this.bt2.Size = new System.Drawing.Size(126, 23);
-            this.bt2.TabIndex = 53;
+            this.bt2.TabIndex = 12;
             this.bt2.Text = "Whitebeard Jumpscare";
             this.bt2.UseVisualStyleBackColor = true;
             this.bt2.Click += new System.EventHandler(this.bt2_Click);
@@ -267,7 +283,7 @@
             this.esc.Location = new System.Drawing.Point(523, 227);
             this.esc.Name = "esc";
             this.esc.Size = new System.Drawing.Size(88, 23);
-            this.esc.TabIndex = 55;
+            this.esc.TabIndex = 13;
             this.esc.Text = "Escondelo porfi";
             this.esc.UseVisualStyleBackColor = true;
             this.esc.Click += new System.EventHandler(this.esc_Click);
@@ -282,7 +298,7 @@
             this.puesto.Location = new System.Drawing.Point(146, 177);
             this.puesto.Name = "puesto";
             this.puesto.Size = new System.Drawing.Size(121, 21);
-            this.puesto.TabIndex = 56;
+            this.puesto.TabIndex = 6;
             this.puesto.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // dni
@@ -290,7 +306,7 @@
             this.dni.Location = new System.Drawing.Point(146, 55);
             this.dni.Name = "dni";
             this.dni.Size = new System.Drawing.Size(100, 20);
-            this.dni.TabIndex = 58;
+            this.dni.TabIndex = 2;
             // 
             // label6
             // 

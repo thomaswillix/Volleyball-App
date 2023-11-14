@@ -33,12 +33,16 @@ namespace  Practica1
         public static bool IsValid(string email)
         {
             var valid = true;
-
+            
             try
             {
                 var emailAddress = new MailAddress(email);
             }
-            catch
+            catch (FormatException)
+            {
+                valid = false;
+            }
+            catch (ArgumentException)
             {
                 valid = false;
             }
