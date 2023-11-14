@@ -86,7 +86,7 @@
             this.fechaNac.MinDate = new System.DateTime(1953, 1, 1, 0, 0, 0, 0);
             this.fechaNac.Name = "fechaNac";
             this.fechaNac.Size = new System.Drawing.Size(200, 20);
-            this.fechaNac.TabIndex = 8;
+            this.fechaNac.TabIndex = 9;
             this.fechaNac.Value = new System.DateTime(2005, 12, 31, 0, 0, 0, 0);
             // 
             // nom
@@ -208,7 +208,7 @@
             this.correo.Location = new System.Drawing.Point(147, 232);
             this.correo.Name = "correo";
             this.correo.Size = new System.Drawing.Size(100, 20);
-            this.correo.TabIndex = 47;
+            this.correo.TabIndex = 8;
             // 
             // label10
             // 
@@ -225,7 +225,7 @@
             this.numSS.Location = new System.Drawing.Point(147, 291);
             this.numSS.Name = "numSS";
             this.numSS.Size = new System.Drawing.Size(120, 20);
-            this.numSS.TabIndex = 9;
+            this.numSS.TabIndex = 10;
             // 
             // label4
             // 
@@ -242,7 +242,7 @@
             this.come.Location = new System.Drawing.Point(147, 320);
             this.come.Name = "come";
             this.come.Size = new System.Drawing.Size(100, 20);
-            this.come.TabIndex = 10;
+            this.come.TabIndex = 11;
             this.come.TextChanged += new System.EventHandler(this.come_TextChanged);
             // 
             // label5

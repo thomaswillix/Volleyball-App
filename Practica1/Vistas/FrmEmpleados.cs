@@ -83,20 +83,20 @@ namespace Practica1
 
         private void ordenarFecha_Click(object sender, EventArgs e)
         {
+            groupBox1.Controls.Clear();
+            borrarEmpleados();
             cargarEmpleados();
             ordenarEmpleados(Empleado => Empleado.FechaNac);
-            groupBox1.Controls.Clear();
             mostrarEmpleados();
-            borrarEmpleados();
-            
         }
 
         private void ordenarNombre_Click(object sender, EventArgs e)
         {
-            ordenarEmpleados(Empleado => Empleado.Nombre);
             groupBox1.Controls.Clear();
-            mostrarEmpleados();
             borrarEmpleados();
+            cargarEmpleados();
+            ordenarEmpleados(Empleado => Empleado.Nombre);
+            mostrarEmpleados();
         }
 
         private void btElim_Click(object sender, EventArgs e)
