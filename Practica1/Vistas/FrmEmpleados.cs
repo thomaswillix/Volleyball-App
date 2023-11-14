@@ -13,7 +13,7 @@ namespace Practica1
     public partial class FrmEmpleados : Form
     {
         private Empleado e;
-        
+        private int a = 0;
         private DateTime d;
 
         public FrmEmpleados()
@@ -68,13 +68,7 @@ namespace Practica1
                 posicion += 30;
             }
         }
-        private void borrarEmpleados()
-        {
-            for (int i = 0; i < Empleado.listaEmpleados.Count; i++)
-            {
-                Empleado.listaEmpleados.RemoveAt(i);
-            }
-        }
+
         private void ordenarEmpleados(Func<Empleado, IComparable> aux)
         {
             Empleado.listaEmpleados = Empleado.listaEmpleados.OrderBy(aux).ToList();
@@ -84,8 +78,7 @@ namespace Practica1
         private void ordenarFecha_Click(object sender, EventArgs e)
         {
             groupBox1.Controls.Clear();
-            borrarEmpleados();
-            cargarEmpleados();
+
             ordenarEmpleados(Empleado => Empleado.FechaNac);
             mostrarEmpleados();
         }
@@ -93,8 +86,6 @@ namespace Practica1
         private void ordenarNombre_Click(object sender, EventArgs e)
         {
             groupBox1.Controls.Clear();
-            borrarEmpleados();
-            cargarEmpleados();
             ordenarEmpleados(Empleado => Empleado.Nombre);
             mostrarEmpleados();
         }
@@ -110,6 +101,13 @@ namespace Practica1
                 }
             }
             this.groupBox1.Controls.Clear();
+            mostrarEmpleados();
+        }
+
+        private void botonImprimir_Click(object sender, EventArgs e)
+        {
+            cargarEmpleados();
+            a ++;
             mostrarEmpleados();
         }
     }

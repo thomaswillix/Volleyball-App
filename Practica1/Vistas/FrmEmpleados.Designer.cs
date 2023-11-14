@@ -67,6 +67,7 @@
             this.botonImprimir.TabIndex = 6;
             this.botonImprimir.Text = "Imprimir";
             this.botonImprimir.UseVisualStyleBackColor = true;
+            this.botonImprimir.Click += new System.EventHandler(this.botonImprimir_Click);
             // 
             // ordenarFecha
             // 

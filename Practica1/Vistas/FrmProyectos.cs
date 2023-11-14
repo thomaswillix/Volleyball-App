@@ -71,15 +71,14 @@ namespace Practica1
         }
         private void button3_Click(object sender, EventArgs e)
         {
-            
+            cargarProyectos();
+            mostrarProyectos();
         }
         
         private void button2_Click(object sender, EventArgs e)
         {
-            borrarProyectos();
-            cargarProyectos();
-            ordenarProyectos(Proyecto => Proyecto.FechaIni);
             groupBox1.Controls.Clear();
+            ordenarProyectos(Proyecto => Proyecto.FechaIni);
             mostrarProyectos();
         }
         
@@ -127,27 +126,16 @@ namespace Practica1
         {
             
         }
-        private void borrarProyectos()
-        {
-            for (int i = 0; i < Proyecto.listaProyectos.Count; i++)
-            {
-                Proyecto.listaProyectos.RemoveAt(i);
-            }
-        }
 
         private void ordenarNombre_Click(object sender, EventArgs e)
         {
-            borrarProyectos();
-            cargarProyectos();
-            ordenarProyectos(Proyecto => Proyecto.Descripcion);
             groupBox1.Controls.Clear();
+            ordenarProyectos(Proyecto => Proyecto.Descripcion);
             mostrarProyectos();
         }
 
         private void btElim_Click(object sender, EventArgs e)
         {
-            borrarProyectos();
-            cargarProyectos();
             foreach (System.Windows.Forms.CheckBox cd in groupBox1.Controls)
             {
                 if (cd.Checked)
