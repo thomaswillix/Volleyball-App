@@ -31,9 +31,10 @@ namespace Practica1
                 //No es un DNI Valido
                 return false;
             }
+            return true;
 
             //Extraemos los números y la letra
-            string dniNumbers = dni.Substring(0, dni.Length - 1);
+            /*string dniNumbers = dni.Substring(0, dni.Length - 1);
             string dniLeter = dni.Substring(dni.Length - 1, 1);
             //Intentamos convertir los números del DNI a integer
             var numbersValid = int.TryParse(dniNumbers, out int dniInteger);
@@ -48,7 +49,7 @@ namespace Practica1
                 return false;
             }
             //DNI Valido :)
-            return true;
+            return true;*/
         }
 
 
@@ -61,8 +62,8 @@ namespace Practica1
         }
         private bool validar()
         {
-            if (cod.Value <= 0 || validarDni(dni.Text) || String.IsNullOrEmpty(nom.Text) || String.IsNullOrEmpty(ape1.Text) || String.IsNullOrEmpty(ape2.Text)
-                || ValidacionEmail.IsValid(correo.Text)|| tlf.Value > 699999999 || tlf.Value <= 600000000 || String.IsNullOrEmpty(come.Text))
+            if (cod.Value <= 0 || !validarDni(dni.Text) || String.IsNullOrEmpty(nom.Text) || String.IsNullOrEmpty(ape1.Text) || String.IsNullOrEmpty(ape2.Text)
+                || !ValidacionEmail.IsValid(correo.Text)|| tlf.Value > 699999999 || tlf.Value <= 600000000 || String.IsNullOrEmpty(come.Text))
             {
                 return false;
             }
@@ -76,24 +77,28 @@ namespace Practica1
             }
             if (!validarDni(dni.Text))
             {
-                cod.BackColor = Color.Red;
+                dni.BackColor = Color.Red;
             }
             if (String.IsNullOrEmpty(nom.Text))
             {
-                cod.BackColor = Color.Red;
+                nom.BackColor = Color.Red;
+            }
+            if (!ValidacionEmail.IsValid(correo.Text))
+            {
+                correo.BackColor = Color.Red;
             }
             if (String.IsNullOrEmpty(ape1.Text))
             {
-                cod.BackColor = Color.Red;
+                ape1.BackColor = Color.Red;
             }
             if (String.IsNullOrEmpty(ape2.Text))
             {
-                cod.BackColor = Color.Red;
+                ape2.BackColor = Color.Red;
 
             }
             if (String.IsNullOrEmpty(come.Text))
             {
-                cod.BackColor = Color.Red;
+                come.BackColor = Color.Red;
             }
         }
         private void camposNormal()
@@ -113,15 +118,17 @@ namespace Practica1
 
         private void vaciarCampos()
         { 
+            string fecha =  "Jan 01, 1953";
+            var parsedDate = DateTime.Parse(fecha);
             cod.Value = 0;
             dni.Clear();
             nom.Clear();
             ape1.Clear();
             ape2.Clear();
             puesto.Items.Clear();
-            tlf.Value = 0;
+            tlf.Value = 600000000;
             correo.Clear();
-            fechaNac.Value = DateTime.Now;
+            fechaNac.Value = parsedDate;
             numSS.Value = 0;
             come.Clear();
         }
@@ -169,6 +176,16 @@ namespace Practica1
         }
 
         private void cod_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tlf_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void come_TextChanged(object sender, EventArgs e)
         {
 
         }

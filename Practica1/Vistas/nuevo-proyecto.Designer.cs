@@ -157,7 +157,7 @@
             this.cambios.Location = new System.Drawing.Point(190, 268);
             this.cambios.Name = "cambios";
             this.cambios.Size = new System.Drawing.Size(81, 17);
-            this.cambios.TabIndex = 9;
+            this.cambios.TabIndex = 8;
             this.cambios.Text = "Actualizado";
             this.cambios.UseVisualStyleBackColor = true;
             this.cambios.CheckedChanged += new System.EventHandler(this.cambios_CheckedChanged);
@@ -171,7 +171,7 @@
             this.estado.Location = new System.Drawing.Point(190, 177);
             this.estado.Name = "estado";
             this.estado.Size = new System.Drawing.Size(56, 17);
-            this.estado.TabIndex = 10;
+            this.estado.TabIndex = 5;
             this.estado.Text = "Activo";
             this.estado.UseVisualStyleBackColor = true;
             this.estado.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
@@ -182,21 +182,21 @@
             this.desc.Location = new System.Drawing.Point(190, 85);
             this.desc.Name = "desc";
             this.desc.Size = new System.Drawing.Size(100, 20);
-            this.desc.TabIndex = 11;
+            this.desc.TabIndex = 2;
             // 
             // fechaIni
             // 
             this.fechaIni.Location = new System.Drawing.Point(190, 114);
             this.fechaIni.Name = "fechaIni";
             this.fechaIni.Size = new System.Drawing.Size(200, 20);
-            this.fechaIni.TabIndex = 12;
+            this.fechaIni.TabIndex = 3;
             // 
             // fechaFin
             // 
             this.fechaFin.Location = new System.Drawing.Point(190, 144);
             this.fechaFin.Name = "fechaFin";
             this.fechaFin.Size = new System.Drawing.Size(200, 20);
-            this.fechaFin.TabIndex = 13;
+            this.fechaFin.TabIndex = 4;
             // 
             // cod
             // 
@@ -204,7 +204,7 @@
             this.cod.Location = new System.Drawing.Point(190, 56);
             this.cod.Name = "cod";
             this.cod.Size = new System.Drawing.Size(120, 20);
-            this.cod.TabIndex = 14;
+            this.cod.TabIndex = 1;
             this.cod.ValueChanged += new System.EventHandler(this.cod_ValueChanged);
             // 
             // codCli
@@ -212,7 +212,7 @@
             this.codCli.Location = new System.Drawing.Point(190, 296);
             this.codCli.Name = "codCli";
             this.codCli.Size = new System.Drawing.Size(120, 20);
-            this.codCli.TabIndex = 15;
+            this.codCli.TabIndex = 9;
             // 
             // presuFin
             // 
@@ -225,7 +225,7 @@
             0});
             this.presuFin.Name = "presuFin";
             this.presuFin.Size = new System.Drawing.Size(120, 20);
-            this.presuFin.TabIndex = 17;
+            this.presuFin.TabIndex = 7;
             // 
             // presuIni
             // 
@@ -238,14 +238,14 @@
             0});
             this.presuIni.Name = "presuIni";
             this.presuIni.Size = new System.Drawing.Size(120, 20);
-            this.presuIni.TabIndex = 18;
+            this.presuIni.TabIndex = 6;
             // 
             // b1
             // 
             this.b1.Location = new System.Drawing.Point(152, 347);
             this.b1.Name = "b1";
             this.b1.Size = new System.Drawing.Size(75, 23);
-            this.b1.TabIndex = 19;
+            this.b1.TabIndex = 10;
             this.b1.Text = "Dar de Alta";
             this.b1.UseVisualStyleBackColor = true;
             this.b1.Click += new System.EventHandler(this.b1_Click);
