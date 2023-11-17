@@ -18,6 +18,7 @@ namespace Proyecto
         public partial class Login : Form
         {
             private int intentos = 0;
+            private bool validar = false;
 
             public Login()
             {
@@ -60,26 +61,51 @@ namespace Proyecto
             {
 
             }
-
-            bool validaLogin(ref string usuario, ref string clave)
+            private Usuario buscarUsuario(string usuario, string pass)
             {
-            foreach (Usuario u in listaUsuarios)
-            {
-                if((usuario == u.Nombre.ToLower()) &&(clave == u.Contrasenia.ToLower()))
+                Usuario u =  new Usuario();
+                for (int i = 0; i < listaUsuarios.Count; i++)
                 {
+                    if (usuario == listaUsuarios[i].Nombre.ToLower())
+                    {
+                        u =listaUsuarios[i];
+                        MessageBox.Show("El usuario " +  usuario + " se ha encontrado");
+                        if (pass == listaUsuarios[i].Contrasenia)
+                        {
+                            MessageBox.Show("La contraseña " + pass + " es correcta");
+                            validar = true;
+                            return u;
+                        }
+                    MessageBox.Show("La contraseña " + pass + " no es correcta");
+                    }
+                }
+                MessageBox.Show("El usuario " + usuario + " no se ha encontrado");
+                return u;
+            }
+        bool validaLogin(ref string usuario, ref string clave)
+            {
+            for (int i = 0; i < listaUsuarios.Count; i++)
+            {
+                if((usuario == listaUsuarios[i].Nombre.ToLower()) 
+                    && (clave == listaUsuarios[i].Contrasenia))
+                {
+                    validar = true; 
                     return true;
                 }
-                else if((usuario != u.Nombre.ToLower()) || (clave != u.Contrasenia.ToLower()))
+                else if((usuario != listaUsuarios[i].Nombre.ToLower()) 
+                    || (clave != listaUsuarios[i].Contrasenia.ToLower()))
                 {
-                    MessageBox.Show("Usuario o contraseña incorrectos");
-                    return false;
+                    continue;
                 }
             }
+            MessageBox.Show("Usuario o contraseña incorrectos");
             return false;   
         }
             private void button2_Click(object sender, System.EventArgs e)
             {
                 MessageBox.Show("Has pulsado Cancelar");
+                cuadroUsu.Clear();
+                cuadroCont.Clear();
             }
 
             private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -107,22 +133,35 @@ namespace Proyecto
             {
                 cuadroUsu.Clear();
                 cuadroCont.Clear();
-                foreach (Usuario u in listaUsuarios)
-                {
-                    if (u.EsJugador == false)
+               
+                    if (buscarUsuario(usuario, contrasena).EsJugador == true)
+                    {
+                        PrincipalJug jug = new PrincipalJug();
+                        jug.ShowDialog();
+                        this.Close();
+                    }
+                    else
                     {
                         PrincipalEntr entr = new PrincipalEntr();
                         entr.ShowDialog();
                         this.Close();
                     }
-                    else
-                    {
-                        PrincipalJug jug =  new PrincipalJug();
-                        jug.ShowDialog();
-                        this.Close();
-                    }
+
+            }
+            else
+            {
+                intentos++;
+                cuadroUsu.Clear();
+                cuadroCont.Clear();
+                cuadroUsu.Focus();
+                if (intentos >= 3)
+                {
+                    MessageBox.Show("Llevas 3 intentos");
+                    intentos = 0;
+                    Application.Exit();
                 }
             }
         }
+        
     }
 }
