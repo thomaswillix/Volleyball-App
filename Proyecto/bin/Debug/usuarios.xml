@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfUsuario>
+  <Usuario>
+    <Nombre>renan</Nombre>
+    <Contrasenia>1234</Contrasenia>
+  </Usuario>
+  <Usuario>
+    <Nombre>bruno</Nombre>
+    <Contrasenia>4321</Contrasenia>
+  </Usuario>
+  <Usuario>
+    <Nombre>giovane</Nombre>
+    <Contrasenia>4444</Contrasenia>
+  </Usuario>
+  <Usuario>
+    <Nombre>ze</Nombre>
+    <Contrasenia>1111</Contrasenia>
+  </Usuario>
+  <Usuario>
+    <Nombre>natalia</Nombre>
+    <Contrasenia>2222</Contrasenia>
+  </Usuario>
+  <Usuario>
+    <Nombre>jacqueline</Nombre>
+    <Contrasenia>3333</Contrasenia>
+  </Usuario>
+</ArrayOfUsuario>

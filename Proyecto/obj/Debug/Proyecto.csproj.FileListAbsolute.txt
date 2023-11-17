@@ -1,0 +1,16 @@
+C:\Users\Lucía\Source\Repos\thomaswillix\form\Proyecto\obj\Debug\Proyecto.csproj.AssemblyReference.cache
+C:\Users\Lucía\Source\Repos\thomaswillix\form\Proyecto\obj\Debug\Proyecto.Login.resources
+C:\Users\Lucía\Source\Repos\thomaswillix\form\Proyecto\obj\Debug\Proyecto.Properties.Resources.resources
+C:\Users\Lucía\Source\Repos\thomaswillix\form\Proyecto\obj\Debug\Practica1.PrincipalJug.resources
+C:\Users\Lucía\Source\Repos\thomaswillix\form\Proyecto\obj\Debug\Practica1.PrincipalEntr.resources
+C:\Users\Lucía\Source\Repos\thomaswillix\form\Proyecto\obj\Debug\Proyecto.csproj.GenerateResource.cache
+C:\Users\Lucía\Source\Repos\thomaswillix\form\Proyecto\obj\Debug\Proyecto.csproj.CoreCompileInputs.cache
+C:\Users\Lucía\Source\Repos\thomaswillix\form\Proyecto\obj\Debug\Practica1.ListaPartidos.resources
+C:\Users\Lucía\Source\Repos\thomaswillix\form\Proyecto\obj\Debug\Practica1.ListaJugadores.resources
+C:\Users\Lucía\Source\Repos\thomaswillix\form\Proyecto\obj\Debug\Practica1.NuevoJugador.resources
+C:\Users\Lucía\Source\Repos\thomaswillix\form\Proyecto\obj\Debug\Practica1.NuevoPartido.resources
+C:\Users\Lucía\Source\Repos\thomaswillix\form\Proyecto\bin\Debug\Proyecto.exe.config
+C:\Users\Lucía\Source\Repos\thomaswillix\form\Proyecto\bin\Debug\Proyecto.exe
+C:\Users\Lucía\Source\Repos\thomaswillix\form\Proyecto\bin\Debug\Proyecto.pdb
+C:\Users\Lucía\Source\Repos\thomaswillix\form\Proyecto\obj\Debug\Proyecto.exe
+C:\Users\Lucía\Source\Repos\thomaswillix\form\Proyecto\obj\Debug\Proyecto.pdb
