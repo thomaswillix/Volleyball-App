@@ -17,25 +17,7 @@ namespace Proyecto
     
         public partial class Login : Form
         {
-            private string[,] matrizUsuarios = new string[6, 2];
             private int intentos = 0;
-
-            private void escribirUsuariosXML()
-            {
-            try
-            {
-                using (var writer = new StreamWriter("usuarios.xml"))
-                {
-                    // Do this to avoid the serializer inserting default XML namespaces.
-                    var namespaces = new XmlSerializerNamespaces();
-                    namespaces.Add(string.Empty, string.Empty);
-                    var serializer = new XmlSerializer(listaUsuarios.GetType());
-                    serializer.Serialize(writer, listaUsuarios, namespaces);
-                }
-            }
-            catch (Exception e) { }
-        }
-
 
             public Login()
             {
@@ -48,66 +30,53 @@ namespace Proyecto
             }
 
             public static List<Usuario> listaUsuarios = new List<Usuario>();
+            private void escribirUsuariosXML()
+            {
+                try
+                {
+                    using (var writer = new StreamWriter("usuarios.xml"))
+                    {
+                        // Do this to avoid the serializer inserting default XML namespaces.
+                        var namespaces = new XmlSerializerNamespaces();
+                        namespaces.Add(string.Empty, string.Empty);
+                        var serializer = new XmlSerializer(listaUsuarios.GetType());
+                        serializer.Serialize(writer, listaUsuarios, namespaces);
+                    }
+                }
+                catch (Exception e) { }
+            }
 
             private void cargarUsuarios()
             {
-
-            listaUsuarios.Add(new Usuario("renan", "1234"));
-            listaUsuarios.Add(new Usuario("bruno", "4321"));
-            listaUsuarios.Add(new Usuario("giovane", "4444"));
-            listaUsuarios.Add(new Usuario("ze", "1111"));
-            listaUsuarios.Add(new Usuario("natalia", "2222"));
-            listaUsuarios.Add(new Usuario("jacqueline", "3333"));
-
-            /*
-            //Seleccion masculina
-            matrizUsuarios[0, 0] = "renan";
-                matrizUsuarios[1, 0] = "bruno";
-                matrizUsuarios[2, 0] = "giovane";
-
-                //Seleccion femenina
-                matrizUsuarios[3, 0] = "ze";
-                matrizUsuarios[4, 0] = "natalia";
-                matrizUsuarios[5, 0] = "jacqueline";
-
-                //Contraseñas
-                matrizUsuarios[0, 1] = "1234";
-                matrizUsuarios[1, 1] = "4321";
-                matrizUsuarios[2, 1] = "4444";
-                matrizUsuarios[3, 1] = "1111";
-                matrizUsuarios[4, 1] = "2222";
-                matrizUsuarios[5, 1] = "3333";
-
-            */
+                listaUsuarios.Add(new Usuario("renan", "1234", false));
+                listaUsuarios.Add(new Usuario("bruno", "4321", true));
+                listaUsuarios.Add(new Usuario("giovane", "4444", true));
+                listaUsuarios.Add(new Usuario("ze", "1111", false));
+                listaUsuarios.Add(new Usuario("natalia", "2222", true));
+                listaUsuarios.Add(new Usuario("jacqueline", "3333", true));
             }
+
             private void button1_Click(object sender, System.EventArgs e)
             {
 
-        }
-
-        bool validaLogin(ref string usuario, ref string clave)
-            {
-                for (int i = 0; i <= matrizUsuarios.GetUpperBound(0); i++)
-                // el método GetUpperBound devuelve la última posición 
-                // ocupada de una dimensión, en este caso quiero la primera, 
-                // es decir la 0 y devolverá 5
-                {
-                    if (matrizUsuarios[i, 0] == usuario.ToLower())
-                    {
-                        if (matrizUsuarios[i, 1] == clave)
-                        {
-                            return true;
-                        }
-                        else
-                        {
-                            MessageBox.Show("Contraseña incorrecta");
-                            return false;
-                        }
-                    }
-                }
-                return false;
-
             }
+
+            bool validaLogin(ref string usuario, ref string clave)
+            {
+            foreach (Usuario u in listaUsuarios)
+            {
+                if((usuario == u.Nombre.ToLower()) &&(clave == u.Contrasenia.ToLower()))
+                {
+                    return true;
+                }
+                else if((usuario != u.Nombre.ToLower()) || (clave != u.Contrasenia.ToLower()))
+                {
+                    MessageBox.Show("Usuario o contraseña incorrectos");
+                    return false;
+                }
+            }
+            return false;   
+        }
             private void button2_Click(object sender, System.EventArgs e)
             {
                 MessageBox.Show("Has pulsado Cancelar");
@@ -130,7 +99,7 @@ namespace Proyecto
             }
 
         private void accept_Click(object sender, EventArgs e)
-        {/*
+        {
             MessageBox.Show("Has pulsado Aceptar");
             string usuario = cuadroUsu.Text.ToLower();
             string contrasena = cuadroCont.Text.ToLower();
@@ -138,17 +107,22 @@ namespace Proyecto
             {
                 cuadroUsu.Clear();
                 cuadroCont.Clear();
-                foreach (var item in contrasena)
+                foreach (Usuario u in listaUsuarios)
                 {
-                    
+                    if (u.EsJugador == false)
+                    {
+                        PrincipalEntr entr = new PrincipalEntr();
+                        entr.ShowDialog();
+                        this.Close();
+                    }
+                    else
+                    {
+                        PrincipalJug jug =  new PrincipalJug();
+                        jug.ShowDialog();
+                        this.Close();
+                    }
                 }
-                else
-                {
-                    PrincipalJug jug = new PrincipalJug();
-                    jug.Show();
-                }
-                this.Close();
-            }*/
+            }
         }
     }
 }

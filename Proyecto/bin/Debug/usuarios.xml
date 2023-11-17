@@ -3,25 +3,31 @@
   <Usuario>
     <Nombre>renan</Nombre>
     <Contrasenia>1234</Contrasenia>
+    <EsJugador>false</EsJugador>
   </Usuario>
   <Usuario>
     <Nombre>bruno</Nombre>
     <Contrasenia>4321</Contrasenia>
+    <EsJugador>true</EsJugador>
   </Usuario>
   <Usuario>
     <Nombre>giovane</Nombre>
     <Contrasenia>4444</Contrasenia>
+    <EsJugador>true</EsJugador>
   </Usuario>
   <Usuario>
     <Nombre>ze</Nombre>
     <Contrasenia>1111</Contrasenia>
+    <EsJugador>false</EsJugador>
   </Usuario>
   <Usuario>
     <Nombre>natalia</Nombre>
     <Contrasenia>2222</Contrasenia>
+    <EsJugador>true</EsJugador>
   </Usuario>
   <Usuario>
     <Nombre>jacqueline</Nombre>
     <Contrasenia>3333</Contrasenia>
+    <EsJugador>true</EsJugador>
   </Usuario>
 </ArrayOfUsuario>
