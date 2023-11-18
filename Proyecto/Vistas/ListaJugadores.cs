@@ -110,5 +110,11 @@ namespace Practica1
             a ++;
             mostrarEmpleados();
         }
+
+        private void botonCancelar_Click(object sender, EventArgs e)
+        {
+            
+            this.Close();
+        }
     }
 }

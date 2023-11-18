@@ -40,19 +40,21 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Location = new System.Drawing.Point(161, 124);
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Location = new System.Drawing.Point(145, 124);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(479, 203);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Empleados";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // titulo
             // 
             this.titulo.AutoSize = true;
+            this.titulo.BackColor = System.Drawing.Color.Transparent;
             this.titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titulo.Location = new System.Drawing.Point(164, 45);
+            this.titulo.ForeColor = System.Drawing.Color.Black;
+            this.titulo.Location = new System.Drawing.Point(149, 69);
             this.titulo.Name = "titulo";
             this.titulo.Size = new System.Drawing.Size(466, 39);
             this.titulo.TabIndex = 1;
@@ -61,7 +63,7 @@
             // botonImprimir
             // 
             this.botonImprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonImprimir.Location = new System.Drawing.Point(137, 357);
+            this.botonImprimir.Location = new System.Drawing.Point(675, 241);
             this.botonImprimir.Name = "botonImprimir";
             this.botonImprimir.Size = new System.Drawing.Size(75, 23);
             this.botonImprimir.TabIndex = 6;
@@ -72,28 +74,28 @@
             // ordenarFecha
             // 
             this.ordenarFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ordenarFecha.Location = new System.Drawing.Point(191, 395);
+            this.ordenarFecha.Location = new System.Drawing.Point(627, 125);
             this.ordenarFecha.Name = "ordenarFecha";
             this.ordenarFecha.Size = new System.Drawing.Size(171, 23);
             this.ordenarFecha.TabIndex = 7;
-            this.ordenarFecha.Text = "Ordenar Fecha de Inicio";
+            this.ordenarFecha.Text = "Ordenar por edad";
             this.ordenarFecha.UseVisualStyleBackColor = true;
             this.ordenarFecha.Click += new System.EventHandler(this.ordenarFecha_Click);
             // 
             // ordenarNombre
             // 
-            this.ordenarNombre.Location = new System.Drawing.Point(330, 357);
+            this.ordenarNombre.Location = new System.Drawing.Point(652, 154);
             this.ordenarNombre.Name = "ordenarNombre";
             this.ordenarNombre.Size = new System.Drawing.Size(133, 23);
             this.ordenarNombre.TabIndex = 8;
-            this.ordenarNombre.Text = "Ordenar Nombre";
+            this.ordenarNombre.Text = "Ordenar por nombre";
             this.ordenarNombre.UseVisualStyleBackColor = true;
             this.ordenarNombre.Click += new System.EventHandler(this.ordenarNombre_Click);
             // 
             // btElim
             // 
             this.btElim.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btElim.Location = new System.Drawing.Point(469, 395);
+            this.btElim.Location = new System.Drawing.Point(675, 212);
             this.btElim.Name = "btElim";
             this.btElim.Size = new System.Drawing.Size(75, 23);
             this.btElim.TabIndex = 9;
@@ -103,19 +105,25 @@
             // 
             // botonCancelar
             // 
+            this.botonCancelar.BackColor = System.Drawing.Color.Transparent;
+            this.botonCancelar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botonCancelar.BackgroundImage")));
+            this.botonCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.botonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.botonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonCancelar.Location = new System.Drawing.Point(544, 357);
+            this.botonCancelar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.botonCancelar.Location = new System.Drawing.Point(327, 344);
             this.botonCancelar.Name = "botonCancelar";
-            this.botonCancelar.Size = new System.Drawing.Size(75, 23);
+            this.botonCancelar.Size = new System.Drawing.Size(96, 82);
             this.botonCancelar.TabIndex = 10;
-            this.botonCancelar.Text = "Cancelar";
-            this.botonCancelar.UseVisualStyleBackColor = true;
+            this.botonCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.botonCancelar.UseVisualStyleBackColor = false;
+            this.botonCancelar.Click += new System.EventHandler(this.botonCancelar_Click);
             // 
             // ListaJugadores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackColor = System.Drawing.SystemColors.Info;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.botonCancelar);
@@ -125,6 +133,8 @@
             this.Controls.Add(this.botonImprimir);
             this.Controls.Add(this.titulo);
             this.Controls.Add(this.groupBox1);
+            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ListaJugadores";
             this.Text = "FrmEmpleados";
             this.Load += new System.EventHandler(this.FrmEmpleados_Load);

@@ -38,6 +38,9 @@
             this.altaToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.modificaciónToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.listadosToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.bienv = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.botonCancelar = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,7 +51,7 @@
             this.proyectosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(448, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(786, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -66,21 +69,21 @@
             // altaToolStripMenuItem1
             // 
             this.altaToolStripMenuItem1.Name = "altaToolStripMenuItem1";
-            this.altaToolStripMenuItem1.Size = new System.Drawing.Size(144, 22);
+            this.altaToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.altaToolStripMenuItem1.Text = "Convocar";
             this.altaToolStripMenuItem1.Click += new System.EventHandler(this.altaToolStripMenuItem1_Click);
             // 
             // modificaciónToolStripMenuItem
             // 
             this.modificaciónToolStripMenuItem.Name = "modificaciónToolStripMenuItem";
-            this.modificaciónToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.modificaciónToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.modificaciónToolStripMenuItem.Text = "Modificación";
             this.modificaciónToolStripMenuItem.Click += new System.EventHandler(this.modificaciónToolStripMenuItem_Click);
             // 
             // listadosToolStripMenuItem1
             // 
             this.listadosToolStripMenuItem1.Name = "listadosToolStripMenuItem1";
-            this.listadosToolStripMenuItem1.Size = new System.Drawing.Size(144, 22);
+            this.listadosToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.listadosToolStripMenuItem1.Text = "Listados";
             this.listadosToolStripMenuItem1.Click += new System.EventHandler(this.listadosToolStripMenuItem1_Click);
             // 
@@ -115,14 +118,58 @@
             this.listadosToolStripMenuItem2.Text = "Jugadores";
             this.listadosToolStripMenuItem2.Click += new System.EventHandler(this.listadosToolStripMenuItem2_Click);
             // 
+            // bienv
+            // 
+            this.bienv.AutoSize = true;
+            this.bienv.BackColor = System.Drawing.Color.Transparent;
+            this.bienv.Font = new System.Drawing.Font("Segoe UI Emoji", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bienv.ForeColor = System.Drawing.Color.Blue;
+            this.bienv.Location = new System.Drawing.Point(249, 37);
+            this.bienv.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.bienv.Name = "bienv";
+            this.bienv.Size = new System.Drawing.Size(258, 46);
+            this.bienv.TabIndex = 2;
+            this.bienv.Text = "BIENVENID@   ";
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("OCR A Extended", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.label1.Location = new System.Drawing.Point(343, 480);
+            this.label1.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(98, 32);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Cerrar aplicación";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // botonCancelar
+            // 
+            this.botonCancelar.BackColor = System.Drawing.Color.Transparent;
+            this.botonCancelar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botonCancelar.BackgroundImage")));
+            this.botonCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.botonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.botonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonCancelar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.botonCancelar.Location = new System.Drawing.Point(344, 423);
+            this.botonCancelar.Name = "botonCancelar";
+            this.botonCancelar.Size = new System.Drawing.Size(97, 73);
+            this.botonCancelar.TabIndex = 14;
+            this.botonCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.botonCancelar.UseVisualStyleBackColor = false;
+            // 
             // PrincipalEntr
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(448, 254);
+            this.ClientSize = new System.Drawing.Size(786, 518);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.botonCancelar);
+            this.Controls.Add(this.bienv);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
@@ -148,5 +195,8 @@
         private System.Windows.Forms.ToolStripMenuItem altaToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem modificaciónToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem listadosToolStripMenuItem2;
+        private System.Windows.Forms.Label bienv;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button botonCancelar;
     }
 }

@@ -133,7 +133,7 @@ namespace Proyecto
             {
                 cuadroUsu.Clear();
                 cuadroCont.Clear();
-               
+                Usuario.u = buscarUsuario(usuario, contrasena);
                     if (buscarUsuario(usuario, contrasena).EsJugador == true)
                     {
                         PrincipalJug jug = new PrincipalJug();

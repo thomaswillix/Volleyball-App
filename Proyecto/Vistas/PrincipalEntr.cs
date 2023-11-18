@@ -75,6 +75,11 @@ namespace Practica1
         {
 
         }
+
+        private void botonCancelar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 
 }

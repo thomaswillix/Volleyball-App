@@ -19,11 +19,11 @@ namespace Practica1
 
         private void Principal_Load(object sender, EventArgs e)
         {
-
+            
+            bienv.Text += "";
         }
         private void Principal_FormClosing(object sender,FormClosingEventArgs e)
         {
-            Application.Exit();
         }
         private void modificacionToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -57,6 +57,21 @@ namespace Practica1
         {
             NuevoJugador empl = new NuevoJugador();
             empl.ShowDialog();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void botonCancelar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 
