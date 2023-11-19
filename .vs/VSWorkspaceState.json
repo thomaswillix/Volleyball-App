@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\Proyecto",
+    "\\Proyecto\\Modelo",
     "\\Proyecto\\Vistas"
   ],
-  "SelectedNode": "\\Proyecto\\Vistas\\Login.cs",
+  "SelectedNode": "\\Proyecto\\Modelo\\Usuario.cs",
   "PreviewInSolutionExplorer": false
 }

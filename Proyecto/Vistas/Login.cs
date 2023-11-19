@@ -131,20 +131,21 @@ namespace Proyecto
             string contrasena = cuadroCont.Text.ToLower();
             if (validaLogin(ref usuario, ref contrasena) == true)
             {
+                
                 cuadroUsu.Clear();
                 cuadroCont.Clear();
                 Usuario.u = buscarUsuario(usuario, contrasena);
                     if (buscarUsuario(usuario, contrasena).EsJugador == true)
                     {
+                        this.Close();
                         PrincipalJug jug = new PrincipalJug();
                         jug.ShowDialog();
-                        this.Close();
                     }
                     else
                     {
+                        this.Close();
                         PrincipalEntr entr = new PrincipalEntr();
                         entr.ShowDialog();
-                        this.Close();
                     }
 
             }
