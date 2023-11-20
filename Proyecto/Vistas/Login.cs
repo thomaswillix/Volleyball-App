@@ -29,29 +29,21 @@ namespace Proyecto
 
         }
 
-        /*private void cargarUsuarios()
-        {
-            ControladorUsuarios.listaUsuarios.Add(new Usuario("renan", "1234", false));
-            ControladorUsuarios.listaUsuarios.Add(new Usuario("bruno", "4321", true));
-            ControladorUsuarios.listaUsuarios.Add(new Usuario("giovane", "4444", true));
-            ControladorUsuarios.listaUsuarios.Add(new Usuario("ze", "1111", false));
-            ControladorUsuarios.listaUsuarios.Add(new Usuario("natalia", "2222", true));
-            ControladorUsuarios.listaUsuarios.Add(new Usuario("jacqueline", "3333", true));
-        }*/
-
         private void button1_Click(object sender, System.EventArgs e)
         {
 
         }
+        //llamada a método estático del ControladorUsuarios
         private Usuario buscarUsuario(string usuario, string pass)
         {
             return ControladorUsuarios.buscarUsuario(usuario, pass);
         }
+        //llamada a método estático del ControladorUsuarios
         private bool validaLogin(ref string usuario, ref string clave)
         {
             return ControladorUsuarios.validaLogin(ref usuario, ref clave);
         }
-
+        
         private void button2_Click(object sender, System.EventArgs e)
         {
             MessageBox.Show("Has pulsado Cancelar");
@@ -68,21 +60,19 @@ namespace Proyecto
         {
 
         }
-
+        //Acción que se realiza al iniciar la aplicación
         private void Login_Load(object sender, System.EventArgs e)
         {
+            
             ControladorUsuarios.leerUsuariosXML();
             //ControladorUsuarios.escribirUsuariosXML();
         }
-
-        private void accept_Click(object sender, EventArgs e)
+        /* Método en el que se determina la siguiente ventana que se abrirá y
+         cuando se cierre se volverá a poner el foco en esta. */
+        private void clasePrincipal(string usuario, string contrasena)
         {
-            MessageBox.Show("Has pulsado Aceptar");
-            string usuario = cuadroUsu.Text.ToLower();
-            string contrasena = cuadroCont.Text.ToLower();
             if (validaLogin(ref usuario, ref contrasena) == true)
             {
-
                 cuadroUsu.Clear();
                 cuadroCont.Clear();
                 Usuario.u = buscarUsuario(usuario, contrasena);
@@ -116,6 +106,14 @@ namespace Proyecto
                     Application.Exit();
                 }
             }
+        }
+
+        private void accept_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Has pulsado Aceptar");
+            string usuario = cuadroUsu.Text.ToLower();
+            string contrasena = cuadroCont.Text.ToLower();
+            clasePrincipal(usuario, contrasena);
         }
 
         private void Login_FormClosing(object sender, FormClosingEventArgs e)

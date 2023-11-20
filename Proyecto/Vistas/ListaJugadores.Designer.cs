@@ -40,8 +40,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Location = new System.Drawing.Point(145, 124);
+            this.groupBox1.Location = new System.Drawing.Point(149, 119);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(479, 203);
             this.groupBox1.TabIndex = 5;
@@ -50,11 +51,12 @@
             // 
             // titulo
             // 
+            this.titulo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.titulo.AutoSize = true;
             this.titulo.BackColor = System.Drawing.Color.Transparent;
             this.titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titulo.ForeColor = System.Drawing.Color.Black;
-            this.titulo.Location = new System.Drawing.Point(149, 69);
+            this.titulo.Location = new System.Drawing.Point(153, 69);
             this.titulo.Name = "titulo";
             this.titulo.Size = new System.Drawing.Size(466, 39);
             this.titulo.TabIndex = 1;
@@ -62,8 +64,9 @@
             // 
             // botonImprimir
             // 
+            this.botonImprimir.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.botonImprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonImprimir.Location = new System.Drawing.Point(675, 241);
+            this.botonImprimir.Location = new System.Drawing.Point(684, 236);
             this.botonImprimir.Name = "botonImprimir";
             this.botonImprimir.Size = new System.Drawing.Size(75, 23);
             this.botonImprimir.TabIndex = 6;
@@ -73,8 +76,9 @@
             // 
             // ordenarFecha
             // 
+            this.ordenarFecha.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.ordenarFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ordenarFecha.Location = new System.Drawing.Point(627, 125);
+            this.ordenarFecha.Location = new System.Drawing.Point(634, 119);
             this.ordenarFecha.Name = "ordenarFecha";
             this.ordenarFecha.Size = new System.Drawing.Size(171, 23);
             this.ordenarFecha.TabIndex = 7;
@@ -84,7 +88,8 @@
             // 
             // ordenarNombre
             // 
-            this.ordenarNombre.Location = new System.Drawing.Point(652, 154);
+            this.ordenarNombre.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.ordenarNombre.Location = new System.Drawing.Point(659, 148);
             this.ordenarNombre.Name = "ordenarNombre";
             this.ordenarNombre.Size = new System.Drawing.Size(133, 23);
             this.ordenarNombre.TabIndex = 8;
@@ -94,8 +99,9 @@
             // 
             // btElim
             // 
+            this.btElim.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btElim.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btElim.Location = new System.Drawing.Point(675, 212);
+            this.btElim.Location = new System.Drawing.Point(684, 207);
             this.btElim.Name = "btElim";
             this.btElim.Size = new System.Drawing.Size(75, 23);
             this.btElim.TabIndex = 9;
@@ -105,13 +111,14 @@
             // 
             // botonCancelar
             // 
+            this.botonCancelar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.botonCancelar.BackColor = System.Drawing.Color.Transparent;
             this.botonCancelar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botonCancelar.BackgroundImage")));
             this.botonCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.botonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.botonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botonCancelar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.botonCancelar.Location = new System.Drawing.Point(327, 344);
+            this.botonCancelar.Location = new System.Drawing.Point(331, 335);
             this.botonCancelar.Name = "botonCancelar";
             this.botonCancelar.Size = new System.Drawing.Size(96, 82);
             this.botonCancelar.TabIndex = 10;
@@ -125,7 +132,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(809, 441);
             this.Controls.Add(this.botonCancelar);
             this.Controls.Add(this.btElim);
             this.Controls.Add(this.ordenarNombre);
@@ -135,6 +142,7 @@
             this.Controls.Add(this.groupBox1);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(825, 480);
             this.Name = "ListaJugadores";
             this.Text = "FrmEmpleados";
             this.Load += new System.EventHandler(this.FrmEmpleados_Load);

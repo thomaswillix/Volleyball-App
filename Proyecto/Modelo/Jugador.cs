@@ -1,94 +1,62 @@
 ﻿using System;
 using System.Collections.Generic;
+using Proyecto.Modelo;
 
-public class Jugador
+public class Jugador : Usuario
 {
-	private int id;
-	private string dni;
-	private string nombre;
+    private int numCamiseta;
 	private string apellido1;
-    private string apellido2;
-	private string puesto;
-	private int telefono;
-	private string correo;
+    private string nombreCamiseta;
+	private string posicion;
+    private char sexo;
 	private DateTime fechaNac;
-	private int numSS;
-	private string comentarios;
-    public static List<Jugador> listaEmpleados = new List<Jugador>();
 
-    public Jugador(int id, string dni, string nombre, string apellido1, string apellido2, string puesto, int telefono, string correo, DateTime fechaNac, int numSS, string comentarios)
+    public Jugador(int numCamiseta, string apellido1, string nombreCamiseta, string posicion, char sexo, DateTime fechaNac)
     {
-        this.id = id;
-        this.dni = dni;
-        this.nombre = nombre;
+        this.numCamiseta = numCamiseta;
         this.apellido1 = apellido1;
-        this.apellido2 = apellido2;
-        this.puesto = puesto;
-        this.telefono = telefono;
-        this.correo = correo;
-        this.fechaNac = fechaNac;
-        this.numSS = numSS;
-        this.comentarios = comentarios;
-    }
-    public Jugador(int id, string nombre, string apellido1, string apellido2, string puesto, DateTime fechaNac)
-    {
-        this.nombre = nombre;
-        this.apellido1 = apellido1;
-        this.apellido2 = apellido2;
-        this.puesto = puesto;
+        this.nombreCamiseta = nombreCamiseta;
+        this.posicion = posicion;
+        this.sexo = sexo;
         this.fechaNac = fechaNac;
     }
-    public bool esJefe()
+
+    public Jugador()
     {
-        if (this.puesto == "jefe")
-        {
-            return true;
-        }
-        return false;
     }
 
-    public int Id { get => id; set => id = value; }
-    public string Dni { get => dni; set => dni = value; }
-    public string Nombre { get => nombre; set => nombre = value; }
+    public int NumCamiseta { get => numCamiseta; set => numCamiseta = value; }
     public string Apellido1 { get => apellido1; set => apellido1 = value; }
-    public string Apellido2 { get => apellido2; set => apellido2 = value; }
-    public string Puesto { get => puesto; set => puesto = value; }
-    public int Telefono { get => telefono; set => telefono = value; }
-    public string Correo { get => correo; set => correo = value; }
+    public string NombreCamiseta { get => nombreCamiseta; set => nombreCamiseta = value; }
+    public string Posicion { get => posicion; set => posicion = value; }
     public DateTime FechaNac { get => fechaNac; set => fechaNac = value; }
-    public int NumSS { get => numSS; set => numSS = value; }
-    public string Comentarios { get => comentarios; set => comentarios = value; }
 
     public override bool Equals(object obj)
     {
-        return obj is Jugador empleado &&
-               id == empleado.id &&
-               dni == empleado.dni &&
-               nombre == empleado.nombre &&
-               apellido1 == empleado.apellido1 &&
-               apellido2 == empleado.apellido2 &&
-               puesto == empleado.puesto &&
-               telefono == empleado.telefono &&
-               correo == empleado.correo &&
-               fechaNac == empleado.fechaNac &&
-               numSS == empleado.numSS &&
-               comentarios == empleado.comentarios;
+        return obj is Jugador jugador &&
+               Nombre == jugador.Nombre &&
+               Contrasenia == jugador.Contrasenia &&
+               EsJugador == jugador.EsJugador &&
+               numCamiseta == jugador.numCamiseta &&
+               apellido1 == jugador.apellido1 &&
+               nombreCamiseta == jugador.nombreCamiseta &&
+               posicion == jugador.posicion &&
+               sexo == jugador.sexo &&
+               fechaNac == jugador.fechaNac;
     }
 
     public override int GetHashCode()
     {
-        int hashCode = -920621640;
-        hashCode = hashCode * -1521134295 + id.GetHashCode();
-        hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(dni);
-        hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(nombre);
+        int hashCode = -1637787161;
+        hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Nombre);
+        hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Contrasenia);
+        hashCode = hashCode * -1521134295 + EsJugador.GetHashCode();
+        hashCode = hashCode * -1521134295 + numCamiseta.GetHashCode();
         hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(apellido1);
-        hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(apellido2);
-        hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(puesto);
-        hashCode = hashCode * -1521134295 + telefono.GetHashCode();
-        hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(correo);
+        hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(nombreCamiseta);
+        hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(posicion);
+        hashCode = hashCode * -1521134295 + sexo.GetHashCode();
         hashCode = hashCode * -1521134295 + fechaNac.GetHashCode();
-        hashCode = hashCode * -1521134295 + numSS.GetHashCode();
-        hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(comentarios);
         return hashCode;
     }
 }
