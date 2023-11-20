@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Proyecto;
+using Proyecto.Modelo;
 
 namespace Practica1
 {
@@ -23,7 +25,7 @@ namespace Practica1
         }
         private void Principal_FormClosing(object sender,FormClosingEventArgs e)
         {
-            Application.Exit();
+            Usuario.u = null;            
         }
         private void modificacionToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -78,7 +80,7 @@ namespace Practica1
 
         private void botonCancelar_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();                        
         }
     }
 
