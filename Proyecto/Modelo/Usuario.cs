@@ -25,5 +25,7 @@ namespace Proyecto.Modelo
             Contrasenia = contrasenia;
             EsJugador = esJugador;
         }
+
+
     }
 }

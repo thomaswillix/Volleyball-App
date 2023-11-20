@@ -82,7 +82,7 @@ namespace Proyecto
                 MessageBox.Show("El usuario " + usuario + " no se ha encontrado");
                 return u;
             }
-        bool validaLogin(ref string usuario, ref string clave)
+        private bool validaLogin(ref string usuario, ref string clave)
             {
             for (int i = 0; i < listaUsuarios.Count; i++)
             {
@@ -147,7 +147,6 @@ namespace Proyecto
                         PrincipalEntr entr = new PrincipalEntr();
                         entr.ShowDialog();
                     }
-
             }
             else
             {
