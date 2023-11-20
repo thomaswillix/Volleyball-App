@@ -21,7 +21,8 @@ namespace Practica1
 
         private void Principal_Load(object sender, EventArgs e)
         {
-
+            string nom = Usuario.u.Nombre.ToString();
+            bienv.Text += " " + nom;
         }
         private void Principal_FormClosing(object sender,FormClosingEventArgs e)
         {

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfJugador>
+  <Jugador>
+    <Nombre>Bruno</Nombre>
+    <EsJugador>false</EsJugador>
+    <NumCamiseta>1</NumCamiseta>
+    <Apellido1>Rezende</Apellido1>
+    <NombreCamiseta>Bruno</NombreCamiseta>
+    <Posicion>Colocador</Posicion>
+    <FechaNac>1986-07-02T00:00:00</FechaNac>
+  </Jugador>
+  <Jugador>
+    <Nombre>Otávio Henrique</Nombre>
+    <EsJugador>false</EsJugador>
+    <NumCamiseta>4</NumCamiseta>
+    <Apellido1>Rodrigues Pinto</Apellido1>
+    <NombreCamiseta>Otávio</NombreCamiseta>
+    <Posicion>Bloqueador Central</Posicion>
+    <FechaNac>1991-02-27T00:00:00</FechaNac>
+  </Jugador>
+  <Jugador>
+    <Nombre>Adriano</Nombre>
+    <EsJugador>false</EsJugador>
+    <NumCamiseta>6</NumCamiseta>
+    <Apellido1>Fernandes P.X.Calvante</Apellido1>
+    <NombreCamiseta>Adriano</NombreCamiseta>
+    <Posicion>Opuesto</Posicion>
+    <FechaNac>2002-02-06T00:00:00</FechaNac>
+  </Jugador>
+  <Jugador>
+    <Nombre>Henrique</Nombre>
+    <EsJugador>false</EsJugador>
+    <NumCamiseta>8</NumCamiseta>
+    <Apellido1>Dantas Nóbrega Honorato</Apellido1>
+    <NombreCamiseta>Honorato</NombreCamiseta>
+    <Posicion>Opuesto</Posicion>
+    <FechaNac>1997-03-18T00:00:00</FechaNac>
+  </Jugador>
+  <Jugador>
+    <Nombre>Maique</Nombre>
+    <EsJugador>false</EsJugador>
+    <NumCamiseta>15</NumCamiseta>
+    <Apellido1>Reis Nascimento</Apellido1>
+    <NombreCamiseta>Nascimento</NombreCamiseta>
+    <Posicion>Libero</Posicion>
+    <FechaNac>1997-07-16T00:00:00</FechaNac>
+  </Jugador>
+  <Jugador>
+    <Nombre>Flavio</Nombre>
+    <EsJugador>false</EsJugador>
+    <NumCamiseta>23</NumCamiseta>
+    <Apellido1>Resende Gualberto</Apellido1>
+    <NombreCamiseta>Flavio</NombreCamiseta>
+    <Posicion>Bloqueador Central</Posicion>
+    <FechaNac>1993-04-22T00:00:00</FechaNac>
+  </Jugador>
+  <Jugador>
+    <Nombre>Fernando</Nombre>
+    <EsJugador>false</EsJugador>
+    <NumCamiseta>14</NumCamiseta>
+    <Apellido1>Gil Kreling</Apellido1>
+    <NombreCamiseta>Fernando</NombreCamiseta>
+    <Posicion>Colocador</Posicion>
+    <FechaNac>1996-01-13T00:00:00</FechaNac>
+  </Jugador>
+</ArrayOfJugador>

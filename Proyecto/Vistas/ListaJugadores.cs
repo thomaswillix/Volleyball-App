@@ -25,8 +25,9 @@ namespace Practica1
 
         private void FrmEmpleados_Load(object sender, EventArgs e)
         {
+            ControladorJugadores.leerJugadoresXML();
         }
-        private void cargarEmpleados()
+        /*private void cargarEmpleados()
         {
             d = new DateTime(1986, 7, 2, 0, 0, 0);
             e = new Jugador(1,"Bruno","Rezende","Bruno", "Colocador", 'H',d);
@@ -40,15 +41,16 @@ namespace Practica1
             d = new DateTime(1997, 3, 18, 0, 0, 0);
             e = new Jugador(8, "Henrique", "Dantas Nóbrega Honorato", "Honorato", "Opuesto", 'H', d);
             ControladorJugadores.listaJugadores.Add(e);
-            d = new DateTime(1997, 3, 18, 0, 0, 0);
-            e = new Jugador(8, "Henrique", "Dantas Nóbrega Honorato", "Honorato", "Opuesto", 'H', d);
+            d = new DateTime(1997, 7, 16, 0, 0, 0);
+            e = new Jugador(15, "Maique", "Reis Nascimento", "Nascimento", "Libero", 'H', d);
             ControladorJugadores.listaJugadores.Add(e);
             d = new DateTime(1993, 4, 22, 0, 0, 0);
             e = new Jugador(23, "Flavio", "Resende Gualberto", "Flavio", "Bloqueador Central", 'H', d);
             ControladorJugadores.listaJugadores.Add(e);
-            e = new Jugador(8, "Henrique", "Dantas Nóbrega Honorato", "Honorato", "Opuesto", 'H', d);
+            d = new DateTime(1996, 1, 13, 0, 0, 0);
+            e = new Jugador(14, "Fernando", "Gil Kreling", "Fernando", "Colocador", 'H', d);
             ControladorJugadores.listaJugadores.Add(e);
-        }
+        }*/
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
@@ -72,7 +74,7 @@ namespace Practica1
         private void mostrarEmpleados()
         {
             int posicion = 10;
-            foreach (Jugador e in Jugador.listaEmpleados)
+            foreach (Jugador e in ControladorJugadores.listaJugadores)
             {
                 crearChecked(e.Nombre ,posicion);
                 posicion += 30;
@@ -81,7 +83,7 @@ namespace Practica1
 
         private void ordenarEmpleados(Func<Jugador, IComparable> aux)
         {
-            Jugador.listaEmpleados = Jugador.listaEmpleados.OrderBy(aux).ToList();
+            ControladorJugadores.listaJugadores = ControladorJugadores.listaJugadores.OrderBy(aux).ToList();
 
         }
 
@@ -106,8 +108,8 @@ namespace Practica1
             {
                 if (cd.Checked)
                 {
-                    int posicion = Jugador.listaEmpleados.FindIndex(x => x.Nombre == cd.Text);
-                    Jugador.listaEmpleados.RemoveAt(posicion);
+                    int posicion = ControladorJugadores.listaJugadores.FindIndex(x => x.Nombre == cd.Text);
+                    ControladorJugadores.listaJugadores.RemoveAt(posicion);
                 }
             }
             this.groupBox1.Controls.Clear();

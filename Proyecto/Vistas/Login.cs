@@ -76,7 +76,7 @@ namespace Proyecto
                 cuadroUsu.Clear();
                 cuadroCont.Clear();
                 Usuario.u = buscarUsuario(usuario, contrasena);
-                if (buscarUsuario(usuario, contrasena).EsJugador == true)
+                if (Usuario.u.EsJugador == true)
                 {
                     this.Hide();
                     PrincipalJug jug = new PrincipalJug();

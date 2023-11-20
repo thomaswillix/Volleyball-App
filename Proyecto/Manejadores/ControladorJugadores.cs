@@ -33,7 +33,7 @@ namespace Proyecto.Manejadores
             }
         }
 
-        public static void leerUsuariosXML()
+        public static void leerJugadoresXML()
         {
             try
             {
@@ -50,5 +50,6 @@ namespace Proyecto.Manejadores
 
             }
         }
+
     }
 }
