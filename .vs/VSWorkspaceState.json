@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Proyecto",
+    "\\Proyecto\\Modelo",
+    "\\Proyecto\\Vistas"
   ],
-  "SelectedNode": "\\Practica1Buena.sln",
+  "SelectedNode": "\\Proyecto\\Vistas\\PrincipalEntr.cs",
   "PreviewInSolutionExplorer": false
 }
