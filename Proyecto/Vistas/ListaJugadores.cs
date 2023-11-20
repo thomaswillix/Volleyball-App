@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Proyecto.Manejadores;
+
 
 namespace Practica1
 {
@@ -26,18 +28,26 @@ namespace Practica1
         }
         private void cargarEmpleados()
         {
-            d = new DateTime(2002, 2, 3, 13, 0, 0);
-            e = new Jugador(1,"Juan","Rodriguez","Perez", "programador",d);
-            Jugador.listaEmpleados.Add(e);
-            d = new DateTime(2000, 9, 4, 22, 0, 0);
-            e = new Jugador(1, "Pablo", "Hernandez", "Ortiz", "becario", d);
-            Jugador.listaEmpleados.Add(e);
-            d = new DateTime(2005, 6, 2, 7, 0, 0);
-            e = new Jugador(1, "Juana", "Martin", "Soler", "programador", d);
-            Jugador.listaEmpleados.Add(e);
-            d = new DateTime(1997, 8, 2, 12, 0, 0);
-            e = new Jugador(1, "Maria", "Pinar", "Dueñas", "jefe", d);
-            Jugador.listaEmpleados.Add(e);
+            d = new DateTime(1986, 7, 2, 0, 0, 0);
+            e = new Jugador(1,"Bruno","Rezende","Bruno", "Colocador", 'H',d);
+            ControladorJugadores.listaJugadores.Add(e);
+            d = new DateTime(1991, 2, 27, 0, 0, 0);
+            e = new Jugador(4, "Otávio Henrique", "Rodrigues Pinto", "Otávio", "Bloqueador Central", 'H' ,d);
+            ControladorJugadores.listaJugadores.Add(e);
+            d = new DateTime(2002, 2, 6, 0, 0, 0);
+            e = new Jugador(6, "Adriano", "Fernandes P.X.Calvante", "Adriano", "Opuesto", 'H', d);
+            ControladorJugadores.listaJugadores.Add(e);
+            d = new DateTime(1997, 3, 18, 0, 0, 0);
+            e = new Jugador(8, "Henrique", "Dantas Nóbrega Honorato", "Honorato", "Opuesto", 'H', d);
+            ControladorJugadores.listaJugadores.Add(e);
+            d = new DateTime(1997, 3, 18, 0, 0, 0);
+            e = new Jugador(8, "Henrique", "Dantas Nóbrega Honorato", "Honorato", "Opuesto", 'H', d);
+            ControladorJugadores.listaJugadores.Add(e);
+            d = new DateTime(1993, 4, 22, 0, 0, 0);
+            e = new Jugador(23, "Flavio", "Resende Gualberto", "Flavio", "Bloqueador Central", 'H', d);
+            ControladorJugadores.listaJugadores.Add(e);
+            e = new Jugador(8, "Henrique", "Dantas Nóbrega Honorato", "Honorato", "Opuesto", 'H', d);
+            ControladorJugadores.listaJugadores.Add(e);
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)

@@ -11,9 +11,10 @@ public class Jugador : Usuario
     private char sexo;
 	private DateTime fechaNac;
 
-    public Jugador(int numCamiseta, string apellido1, string nombreCamiseta, string posicion, char sexo, DateTime fechaNac)
+    public Jugador(int numCamiseta, string nombre, string apellido1, string nombreCamiseta, string posicion, char sexo, DateTime fechaNac)
     {
         this.numCamiseta = numCamiseta;
+        Nombre = nombre;
         this.apellido1 = apellido1;
         this.nombreCamiseta = nombreCamiseta;
         this.posicion = posicion;

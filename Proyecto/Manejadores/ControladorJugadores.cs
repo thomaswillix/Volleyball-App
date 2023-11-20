@@ -14,7 +14,6 @@ namespace Proyecto.Manejadores
     {
         public static List<Jugador> listaJugadores = new List<Jugador>();
 
-
         public static void escribirJugadoresXML()
         {
             try
