@@ -118,7 +118,7 @@ namespace Practica1
 
         private void botonImprimir_Click(object sender, EventArgs e)
         {
-            cargarEmpleados();
+            ControladorJugadores.leerJugadoresXML();
             a ++;
             mostrarEmpleados();
         }

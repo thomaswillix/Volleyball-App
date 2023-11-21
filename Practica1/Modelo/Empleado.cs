@@ -14,7 +14,7 @@ public class Empleado
 	private DateTime fechaNac;
 	private int numSS;
 	private string comentarios;
-    public static List<Empleado> listaEmpleados = new List<Empleado>();
+    
 
     public Empleado(int id, string dni, string nombre, string apellido1, string apellido2, string puesto, int telefono, string correo, DateTime fechaNac, int numSS, string comentarios)
     {
@@ -38,6 +38,8 @@ public class Empleado
         this.puesto = puesto;
         this.fechaNac = fechaNac;
     }
+    public Empleado() { }
+
     public bool esJefe()
     {
         if (this.puesto == "jefe")

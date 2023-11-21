@@ -93,3 +93,15 @@ C:\Users\thoma\Source\Repos\thomaswillix\form\Practica1\obj\Debug\Practica1.cspr
 C:\Users\thoma\Source\Repos\thomaswillix\form\Practica1\obj\Debug\Practica1.csproj.CopyComplete
 C:\Users\thoma\Source\Repos\thomaswillix\form\Practica1\obj\Debug\Practica1.exe
 C:\Users\thoma\Source\Repos\thomaswillix\form\Practica1\obj\Debug\Practica1.pdb
+C:\Users\Lucía\Source\Repos\form\Practica1\obj\Debug\Practica1.csproj.AssemblyReference.cache
+C:\Users\Lucía\Source\Repos\form\Practica1\obj\Debug\Practica1.FrmEmpleados.resources
+C:\Users\Lucía\Source\Repos\form\Practica1\obj\Debug\Practica1.FrmProyectos.resources
+C:\Users\Lucía\Source\Repos\form\Practica1\obj\Debug\Practica1.Login.resources
+C:\Users\Lucía\Source\Repos\form\Practica1\obj\Debug\Practica1.nuevo_empleado.resources
+C:\Users\Lucía\Source\Repos\form\Practica1\obj\Debug\Practica1.nuevo_proyecto.resources
+C:\Users\Lucía\Source\Repos\form\Practica1\obj\Debug\Practica1.Principal.resources
+C:\Users\Lucía\Source\Repos\form\Practica1\obj\Debug\Practica1.Properties.Resources.resources
+C:\Users\Lucía\Source\Repos\form\Practica1\obj\Debug\Practica1.csproj.GenerateResource.cache
+C:\Users\Lucía\Source\Repos\form\Practica1\obj\Debug\Practica1.csproj.CoreCompileInputs.cache
+C:\Users\Lucía\Source\Repos\form\Practica1\obj\Debug\Practica1.exe
+C:\Users\Lucía\Source\Repos\form\Practica1\obj\Debug\Practica1.pdb

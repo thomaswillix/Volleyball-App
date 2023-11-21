@@ -19,11 +19,10 @@ namespace Practica1
 
         private void Principal_Load(object sender, EventArgs e)
         {
-
+            label2.Text += Usuario.u.User;
         }
         private void Principal_FormClosing(object sender,FormClosingEventArgs e)
         {
-            Application.Exit();
         }
         private void modificacionToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -57,6 +56,11 @@ namespace Practica1
         {
             nuevo_empleado empl = new nuevo_empleado();
             empl.ShowDialog();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

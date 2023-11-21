@@ -6,28 +6,25 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Serialization;
-using Proyecto.Modelo;
 
 namespace Proyecto.Manejadores
 {
-    public static class ControladorJugadores
+    public static class ControladorEmpleados
     {
-        public static List<Jugador> listaJugadores = new List<Jugador>();
-        public static List<Jugador> equipoMasc= new List<Jugador>();
-        public static List<Jugador> equipoFem = new List<Jugador>();
+        public static List<Empleado> listaEmpleados= new List<Empleado>();
 
 
         public static void escribirJugadoresXML()
         {
             try
             {
-                using (var writer = new StreamWriter("jugadores.xml"))
+                using (var writer = new StreamWriter("empleados.xml"))
                 {
                     // Do this to avoid the serializer inserting default XML namespaces.
                     var namespaces = new XmlSerializerNamespaces();
                     namespaces.Add(string.Empty, string.Empty);
-                    var serializer = new XmlSerializer(listaJugadores.GetType());
-                    serializer.Serialize(writer, listaJugadores, namespaces);
+                    var serializer = new XmlSerializer(listaEmpleados.GetType());
+                    serializer.Serialize(writer, listaEmpleados, namespaces);
                 }
             }
             catch (Exception e)
@@ -40,11 +37,11 @@ namespace Proyecto.Manejadores
         {
             try
             {
-                string xml = File.ReadAllText("jugadores.xml");
+                string xml = File.ReadAllText("empleados.xml");
                 using (var reader = new StringReader(xml))
                 {
-                    XmlSerializer serializer = new XmlSerializer(listaJugadores.GetType());
-                    listaJugadores = (List<Jugador>)serializer.Deserialize(reader);
+                    XmlSerializer serializer = new XmlSerializer(listaEmpleados.GetType());
+                    listaEmpleados = (List<Empleado>)serializer.Deserialize(reader);
                 }
             }
 

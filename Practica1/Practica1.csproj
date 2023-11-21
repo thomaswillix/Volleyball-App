@@ -74,6 +74,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="manejadores\ControladorEmpleados.cs" />
+    <Compile Include="manejadores\ControladorUsuarios.cs" />
     <Compile Include="Modelo\Empleado.cs" />
     <Compile Include="Modelo\ValidacionEmail.cs" />
     <Compile Include="Vistas\FrmEmpleados.cs">

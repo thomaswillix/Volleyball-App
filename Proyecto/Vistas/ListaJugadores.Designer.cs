@@ -115,7 +115,7 @@
             this.botonCancelar.BackColor = System.Drawing.Color.Transparent;
             this.botonCancelar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botonCancelar.BackgroundImage")));
             this.botonCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.botonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.botonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botonCancelar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.botonCancelar.Location = new System.Drawing.Point(331, 335);

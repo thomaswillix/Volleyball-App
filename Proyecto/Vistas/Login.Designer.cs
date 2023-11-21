@@ -44,7 +44,7 @@
             // 
             this.cuadroCont.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cuadroCont.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cuadroCont.Location = new System.Drawing.Point(228, 228);
+            this.cuadroCont.Location = new System.Drawing.Point(252, 240);
             this.cuadroCont.MaximumSize = new System.Drawing.Size(300, 52);
             this.cuadroCont.MinimumSize = new System.Drawing.Size(75, 13);
             this.cuadroCont.Name = "cuadroCont";
@@ -63,7 +63,7 @@
             // 
             this.cuadroUsu.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cuadroUsu.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cuadroUsu.Location = new System.Drawing.Point(228, 191);
+            this.cuadroUsu.Location = new System.Drawing.Point(252, 203);
             this.cuadroUsu.MaximumSize = new System.Drawing.Size(300, 52);
             this.cuadroUsu.MinimumSize = new System.Drawing.Size(75, 13);
             this.cuadroUsu.Name = "cuadroUsu";
@@ -75,7 +75,7 @@
             this.cancel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.cancel.Location = new System.Drawing.Point(205, 278);
+            this.cancel.Location = new System.Drawing.Point(229, 290);
             this.cancel.MaximumSize = new System.Drawing.Size(150, 50);
             this.cancel.MinimumSize = new System.Drawing.Size(37, 12);
             this.cancel.Name = "cancel";
@@ -91,7 +91,7 @@
             this.accept.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.accept.Cursor = System.Windows.Forms.Cursors.Hand;
             this.accept.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.accept.Location = new System.Drawing.Point(317, 278);
+            this.accept.Location = new System.Drawing.Point(341, 290);
             this.accept.MaximumSize = new System.Drawing.Size(150, 50);
             this.accept.MinimumSize = new System.Drawing.Size(37, 12);
             this.accept.Name = "accept";
@@ -107,7 +107,7 @@
             this.escudo.BackColor = System.Drawing.Color.Transparent;
             this.escudo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("escudo.BackgroundImage")));
             this.escudo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.escudo.Location = new System.Drawing.Point(232, 34);
+            this.escudo.Location = new System.Drawing.Point(256, 46);
             this.escudo.MaximumSize = new System.Drawing.Size(280, 300);
             this.escudo.MinimumSize = new System.Drawing.Size(70, 75);
             this.escudo.Name = "escudo";
@@ -122,7 +122,7 @@
             this.clave.BackColor = System.Drawing.Color.Transparent;
             this.clave.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.clave.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.clave.Location = new System.Drawing.Point(140, 231);
+            this.clave.Location = new System.Drawing.Point(164, 243);
             this.clave.MaximumSize = new System.Drawing.Size(140, 40);
             this.clave.MinimumSize = new System.Drawing.Size(35, 10);
             this.clave.Name = "clave";
@@ -137,7 +137,7 @@
             this.usuario.BackColor = System.Drawing.Color.Transparent;
             this.usuario.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.usuario.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.usuario.Location = new System.Drawing.Point(140, 194);
+            this.usuario.Location = new System.Drawing.Point(164, 206);
             this.usuario.MaximumSize = new System.Drawing.Size(140, 40);
             this.usuario.MinimumSize = new System.Drawing.Size(35, 10);
             this.usuario.Name = "usuario";
@@ -152,7 +152,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InfoText;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(605, 383);
+            this.ClientSize = new System.Drawing.Size(653, 406);
             this.Controls.Add(this.escudo);
             this.Controls.Add(this.cuadroCont);
             this.Controls.Add(this.textBox2);
@@ -162,6 +162,7 @@
             this.Controls.Add(this.cancel);
             this.Controls.Add(this.accept);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(365, 355);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";

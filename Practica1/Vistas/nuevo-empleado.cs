@@ -8,6 +8,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Proyecto.Manejadores;
 
 namespace Practica1
 {
@@ -31,10 +32,9 @@ namespace Practica1
                 //No es un DNI Valido
                 return false;
             }
-            return true;
 
             //Extraemos los números y la letra
-            /*string dniNumbers = dni.Substring(0, dni.Length - 1);
+            string dniNumbers = dni.Substring(0, dni.Length - 1);
             string dniLeter = dni.Substring(dni.Length - 1, 1);
             //Intentamos convertir los números del DNI a integer
             var numbersValid = int.TryParse(dniNumbers, out int dniInteger);
@@ -49,7 +49,7 @@ namespace Practica1
                 return false;
             }
             //DNI Valido :)
-            return true;*/
+            return true;
         }
 
 
@@ -134,7 +134,7 @@ namespace Practica1
         }
         private void aniadirEmpleado()
         {
-            Empleado.listaEmpleados.Add(new Empleado((int)cod.Value, dni.Text, nom.Text, ape1.Text, ape2.Text,
+            ControladorEmpleados.listaEmpleados.Add(new Empleado((int)cod.Value, dni.Text, nom.Text, ape1.Text, ape2.Text,
                 puesto.Text, (int)tlf.Value, correo.Text, fechaNac.Value, (int)numSS.Value, come.Text));
         }
 
