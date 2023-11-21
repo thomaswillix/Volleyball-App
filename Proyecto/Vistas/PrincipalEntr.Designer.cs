@@ -155,9 +155,9 @@
             this.botonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botonCancelar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.botonCancelar.Location = new System.Drawing.Point(370, 435);
+            this.botonCancelar.Location = new System.Drawing.Point(377, 454);
             this.botonCancelar.Name = "botonCancelar";
-            this.botonCancelar.Size = new System.Drawing.Size(48, 55);
+            this.botonCancelar.Size = new System.Drawing.Size(36, 36);
             this.botonCancelar.TabIndex = 14;
             this.botonCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.botonCancelar.UseVisualStyleBackColor = false;

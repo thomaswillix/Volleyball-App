@@ -2,9 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\Proyecto",
+    "\\Proyecto\\Manejadores",
     "\\Proyecto\\Modelo",
     "\\Proyecto\\Vistas"
   ],
-  "SelectedNode": "\\Proyecto\\Vistas\\PrincipalEntr.cs",
+  "SelectedNode": "\\Proyecto\\Manejadores\\ControladorJugadores.cs",
   "PreviewInSolutionExplorer": false
 }
