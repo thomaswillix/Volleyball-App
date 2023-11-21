@@ -33,8 +33,8 @@
             this.empleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.altaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.bienv = new System.Windows.Forms.Label();
-            this.botonCancelar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.botonCancelar = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,14 +69,28 @@
             this.bienv.AutoSize = true;
             this.bienv.BackColor = System.Drawing.Color.Transparent;
             this.bienv.Font = new System.Drawing.Font("Segoe UI Emoji", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bienv.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.bienv.ForeColor = System.Drawing.Color.Black;
             this.bienv.Location = new System.Drawing.Point(45, 55);
             this.bienv.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.bienv.Name = "bienv";
-            this.bienv.Size = new System.Drawing.Size(237, 46);
+            this.bienv.Size = new System.Drawing.Size(207, 46);
             this.bienv.TabIndex = 1;
-            this.bienv.Text = "Bienvenid@   ";
+            this.bienv.Text = "Bienvenid@";
             this.bienv.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(344, 493);
+            this.label2.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(98, 32);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "Cerrar aplicación";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // botonCancelar
             // 
@@ -88,27 +102,13 @@
             this.botonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botonCancelar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.botonCancelar.Location = new System.Drawing.Point(359, 433);
+            this.botonCancelar.Location = new System.Drawing.Point(370, 435);
             this.botonCancelar.Name = "botonCancelar";
-            this.botonCancelar.Size = new System.Drawing.Size(66, 72);
-            this.botonCancelar.TabIndex = 16;
+            this.botonCancelar.Size = new System.Drawing.Size(48, 55);
+            this.botonCancelar.TabIndex = 18;
             this.botonCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.botonCancelar.UseVisualStyleBackColor = false;
             this.botonCancelar.Click += new System.EventHandler(this.botonCancelar_Click);
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.label2.Location = new System.Drawing.Point(343, 494);
-            this.label2.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 32);
-            this.label2.TabIndex = 17;
-            this.label2.Text = "Cerrar aplicación";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // PrincipalJug
             // 
@@ -119,10 +119,11 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CausesValidation = false;
             this.ClientSize = new System.Drawing.Size(784, 561);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.botonCancelar);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.bienv);
             this.Controls.Add(this.menuStrip1);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -148,7 +149,7 @@
         private System.Windows.Forms.ToolStripMenuItem empleadosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem altaToolStripMenuItem1;
         private System.Windows.Forms.Label bienv;
-        private System.Windows.Forms.Button botonCancelar;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button botonCancelar;
     }
 }

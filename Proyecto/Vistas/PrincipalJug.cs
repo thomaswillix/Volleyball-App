@@ -67,13 +67,14 @@ namespace Practica1
             
         }
 
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
         private void botonCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
 
         }
     }

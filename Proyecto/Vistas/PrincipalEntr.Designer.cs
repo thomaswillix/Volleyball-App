@@ -123,21 +123,21 @@
             this.bienv.AutoSize = true;
             this.bienv.BackColor = System.Drawing.Color.Transparent;
             this.bienv.Font = new System.Drawing.Font("Segoe UI Emoji", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bienv.ForeColor = System.Drawing.Color.Blue;
+            this.bienv.ForeColor = System.Drawing.Color.Black;
             this.bienv.Location = new System.Drawing.Point(45, 55);
             this.bienv.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.bienv.Name = "bienv";
-            this.bienv.Size = new System.Drawing.Size(237, 46);
+            this.bienv.Size = new System.Drawing.Size(207, 46);
             this.bienv.TabIndex = 2;
-            this.bienv.Text = "Bienvenid@   ";
+            this.bienv.Text = "Bienvenid@";
             // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label1.Location = new System.Drawing.Point(343, 480);
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(344, 493);
             this.label1.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(98, 32);
@@ -155,9 +155,9 @@
             this.botonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botonCancelar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.botonCancelar.Location = new System.Drawing.Point(358, 422);
+            this.botonCancelar.Location = new System.Drawing.Point(370, 435);
             this.botonCancelar.Name = "botonCancelar";
-            this.botonCancelar.Size = new System.Drawing.Size(66, 72);
+            this.botonCancelar.Size = new System.Drawing.Size(48, 55);
             this.botonCancelar.TabIndex = 14;
             this.botonCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.botonCancelar.UseVisualStyleBackColor = false;
@@ -174,6 +174,7 @@
             this.Controls.Add(this.botonCancelar);
             this.Controls.Add(this.bienv);
             this.Controls.Add(this.menuStrip1);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;

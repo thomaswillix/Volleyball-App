@@ -36,17 +36,16 @@ namespace Proyecto
         //llamada a método estático del ControladorUsuarios
         private Usuario buscarUsuario(string usuario, string pass)
         {
-            return ControladorUsuarios.buscarUsuario(usuario, pass);
+            return Usuario.buscarUsuario(usuario, pass);
         }
         //llamada a método estático del ControladorUsuarios
         private bool validaLogin(ref string usuario, ref string clave)
         {
-            return ControladorUsuarios.validaLogin(ref usuario, ref clave);
+            return Usuario.validaLogin(ref usuario, ref clave);
         }
         
         private void button2_Click(object sender, System.EventArgs e)
         {
-            MessageBox.Show("Has pulsado Cancelar");
             cuadroUsu.Clear();
             cuadroCont.Clear();
         }
@@ -95,6 +94,7 @@ namespace Proyecto
             }
             else
             {
+                MessageBox.Show("Usuario o contraseña incorrectos");
                 intentos++;
                 cuadroUsu.Clear();
                 cuadroCont.Clear();
@@ -110,7 +110,6 @@ namespace Proyecto
 
         private void accept_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Has pulsado Aceptar");
             string usuario = cuadroUsu.Text.ToLower();
             string contrasena = cuadroCont.Text.ToLower();
             clasePrincipal(usuario, contrasena);
@@ -119,6 +118,10 @@ namespace Proyecto
         private void Login_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void escudo_MouseHover(object sender, EventArgs e)
+        {
         }
     }
 }
