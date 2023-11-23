@@ -47,3 +47,4 @@ C:\Users\Lucía\Source\Repos\form\Proyecto\obj\Debug\Proyecto.pdb
 C:\Users\Lucía\Source\Repos\form\Proyecto\bin\Debug\Proyecto.exe.config
 C:\Users\Lucía\Source\Repos\form\Proyecto\bin\Debug\Proyecto.exe
 C:\Users\Lucía\Source\Repos\form\Proyecto\bin\Debug\Proyecto.pdb
+C:\Users\Lucía\Source\Repos\form\Proyecto\obj\Debug\Proyecto.Vistas.ConsultarConvocatorias.resources

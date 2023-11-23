@@ -68,7 +68,7 @@ namespace Practica1
             cb.Size = new System.Drawing.Size(291, 20);
             cb.TabIndex = 1;
             cb.Text = e;
-            groupBox1.Controls.Add(cb);
+            panel2.Controls.Add(cb);
         }
 
         private void mostrarEmpleados()
@@ -89,7 +89,7 @@ namespace Practica1
 
         private void ordenarFecha_Click(object sender, EventArgs e)
         {
-            groupBox1.Controls.Clear();
+            panel2.Controls.Clear();
 
             ordenarEmpleados(Empleado => Empleado.FechaNac);
             mostrarEmpleados();
@@ -97,14 +97,14 @@ namespace Practica1
 
         private void ordenarNombre_Click(object sender, EventArgs e)
         {
-            groupBox1.Controls.Clear();
+            panel2.Controls.Clear();
             ordenarEmpleados(Empleado => Empleado.Nombre);
             mostrarEmpleados();
         }
 
         private void btElim_Click(object sender, EventArgs e)
         {
-            foreach (System.Windows.Forms.CheckBox cd in groupBox1.Controls)
+            foreach (System.Windows.Forms.CheckBox cd in panel2.Controls)
             {
                 if (cd.Checked)
                 {
@@ -112,7 +112,7 @@ namespace Practica1
                     ControladorJugadores.listaJugadores.RemoveAt(posicion);
                 }
             }
-            this.groupBox1.Controls.Clear();
+            this.panel2.Controls.Clear();
             mostrarEmpleados();
         }
 
@@ -127,6 +127,11 @@ namespace Practica1
         {
             
             this.Close();
+        }
+
+        private void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
+        {
+
         }
     }
 }

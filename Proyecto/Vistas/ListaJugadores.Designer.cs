@@ -29,25 +29,14 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListaJugadores));
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.titulo = new System.Windows.Forms.Label();
             this.botonImprimir = new System.Windows.Forms.Button();
             this.ordenarFecha = new System.Windows.Forms.Button();
             this.ordenarNombre = new System.Windows.Forms.Button();
             this.btElim = new System.Windows.Forms.Button();
             this.botonCancelar = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Location = new System.Drawing.Point(149, 119);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(479, 203);
-            this.groupBox1.TabIndex = 5;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // titulo
             // 
@@ -64,9 +53,9 @@
             // 
             // botonImprimir
             // 
-            this.botonImprimir.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.botonImprimir.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.botonImprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonImprimir.Location = new System.Drawing.Point(684, 236);
+            this.botonImprimir.Location = new System.Drawing.Point(12, 130);
             this.botonImprimir.Name = "botonImprimir";
             this.botonImprimir.Size = new System.Drawing.Size(75, 23);
             this.botonImprimir.TabIndex = 6;
@@ -99,9 +88,9 @@
             // 
             // btElim
             // 
-            this.btElim.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btElim.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btElim.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btElim.Location = new System.Drawing.Point(684, 207);
+            this.btElim.Location = new System.Drawing.Point(12, 168);
             this.btElim.Name = "btElim";
             this.btElim.Size = new System.Drawing.Size(75, 23);
             this.btElim.TabIndex = 9;
@@ -126,6 +115,17 @@
             this.botonCancelar.UseVisualStyleBackColor = false;
             this.botonCancelar.Click += new System.EventHandler(this.botonCancelar_Click);
             // 
+            // panel2
+            // 
+            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel2.AutoScroll = true;
+            this.panel2.AutoSize = true;
+            this.panel2.Location = new System.Drawing.Point(160, 130);
+            this.panel2.MinimumSize = new System.Drawing.Size(456, 199);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(456, 199);
+            this.panel2.TabIndex = 1;
+            // 
             // ListaJugadores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -133,15 +133,16 @@
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(809, 441);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.botonCancelar);
             this.Controls.Add(this.btElim);
             this.Controls.Add(this.ordenarNombre);
             this.Controls.Add(this.ordenarFecha);
             this.Controls.Add(this.botonImprimir);
             this.Controls.Add(this.titulo);
-            this.Controls.Add(this.groupBox1);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.MinimumSize = new System.Drawing.Size(825, 480);
             this.Name = "ListaJugadores";
             this.Text = "FrmEmpleados";
@@ -152,13 +153,12 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label titulo;
         private System.Windows.Forms.Button botonImprimir;
         private System.Windows.Forms.Button ordenarFecha;
         private System.Windows.Forms.Button ordenarNombre;
         private System.Windows.Forms.Button btElim;
         private System.Windows.Forms.Button botonCancelar;
+        private System.Windows.Forms.Panel panel2;
     }
 }
