@@ -82,6 +82,7 @@
             // ordenarNombre
             // 
             this.ordenarNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ordenarNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ordenarNombre.Location = new System.Drawing.Point(508, 85);
             this.ordenarNombre.Name = "ordenarNombre";
             this.ordenarNombre.Size = new System.Drawing.Size(133, 23);
