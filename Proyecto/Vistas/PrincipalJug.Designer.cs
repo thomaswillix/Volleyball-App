@@ -45,7 +45,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(19, 6, 0, 6);
-            this.menuStrip1.Size = new System.Drawing.Size(784, 31);
+            this.menuStrip1.Size = new System.Drawing.Size(584, 31);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -60,7 +60,7 @@
             // altaToolStripMenuItem1
             // 
             this.altaToolStripMenuItem1.Name = "altaToolStripMenuItem1";
-            this.altaToolStripMenuItem1.Size = new System.Drawing.Size(150, 22);
+            this.altaToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.altaToolStripMenuItem1.Text = "Convocatorias";
             this.altaToolStripMenuItem1.Click += new System.EventHandler(this.altaToolStripMenuItem1_Click);
             // 
@@ -68,12 +68,12 @@
             // 
             this.bienv.AutoSize = true;
             this.bienv.BackColor = System.Drawing.Color.Transparent;
-            this.bienv.Font = new System.Drawing.Font("Segoe UI Emoji", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bienv.Font = new System.Drawing.Font("Segoe UI Emoji", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bienv.ForeColor = System.Drawing.Color.White;
             this.bienv.Location = new System.Drawing.Point(45, 55);
             this.bienv.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.bienv.Name = "bienv";
-            this.bienv.Size = new System.Drawing.Size(207, 46);
+            this.bienv.Size = new System.Drawing.Size(167, 36);
             this.bienv.TabIndex = 1;
             this.bienv.Text = "Bienvenid@";
             this.bienv.Click += new System.EventHandler(this.label1_Click);
@@ -84,12 +84,12 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(344, 493);
+            this.label2.Location = new System.Drawing.Point(244, 493);
             this.label2.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(98, 32);
             this.label2.TabIndex = 17;
-            this.label2.Text = "Cerrar aplicación";
+            this.label2.Text = "Cerrar sesión";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // botonCancelar
@@ -102,9 +102,9 @@
             this.botonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botonCancelar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.botonCancelar.Location = new System.Drawing.Point(377, 454);
+            this.botonCancelar.Location = new System.Drawing.Point(269, 455);
             this.botonCancelar.Name = "botonCancelar";
-            this.botonCancelar.Size = new System.Drawing.Size(36, 36);
+            this.botonCancelar.Size = new System.Drawing.Size(46, 47);
             this.botonCancelar.TabIndex = 18;
             this.botonCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.botonCancelar.UseVisualStyleBackColor = false;
@@ -118,7 +118,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CausesValidation = false;
-            this.ClientSize = new System.Drawing.Size(784, 561);
+            this.ClientSize = new System.Drawing.Size(584, 561);
             this.Controls.Add(this.botonCancelar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.bienv);
@@ -131,6 +131,7 @@
             this.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(600, 600);
             this.Name = "PrincipalJug";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu Jugador";
