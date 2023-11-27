@@ -47,8 +47,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Manejadores\ControladorJugadores.cs" />
+    <Compile Include="Manejadores\ControladorPartidos.cs" />
     <Compile Include="Manejadores\ControladorUsuarios.cs" />
     <Compile Include="Modelo\Entrenador.cs" />
+    <Compile Include="Modelo\Equipo.cs" />
     <Compile Include="Modelo\Jugador.cs" />
     <Compile Include="Modelo\Partido.cs" />
     <Compile Include="Modelo\Usuario.cs" />

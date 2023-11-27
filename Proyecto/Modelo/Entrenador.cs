@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Proyecto.Modelo;
 
-namespace Proyecto.Modelo
+namespace Proyecto
 {
     internal class Entrenador : Usuario
     {

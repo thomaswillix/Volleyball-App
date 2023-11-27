@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Proyecto;
 using Proyecto.Modelo;
 
 public class Jugador : Usuario
@@ -10,8 +11,9 @@ public class Jugador : Usuario
 	private string posicion;
     private char sexo;
 	private DateTime fechaNac;
+    private Equipo e;
 
-    public Jugador(int numCamiseta, string nombre, string apellido1, string nombreCamiseta, string posicion, char sexo, DateTime fechaNac)
+    public Jugador(int numCamiseta, string nombre, string apellido1, string nombreCamiseta, string posicion, char sexo, DateTime fechaNac, Equipo e)
     {
         this.numCamiseta = numCamiseta;
         Nombre = nombre;
@@ -20,6 +22,7 @@ public class Jugador : Usuario
         this.posicion = posicion;
         this.sexo = sexo;
         this.fechaNac = fechaNac;
+        this.E = e;
     }
 
     public Jugador()
@@ -31,33 +34,30 @@ public class Jugador : Usuario
     public string NombreCamiseta { get => nombreCamiseta; set => nombreCamiseta = value; }
     public string Posicion { get => posicion; set => posicion = value; }
     public DateTime FechaNac { get => fechaNac; set => fechaNac = value; }
+    public Equipo E { get => e; set => e = value; }
 
     public override bool Equals(object obj)
     {
         return obj is Jugador jugador &&
-               Nombre == jugador.Nombre &&
-               Contrasenia == jugador.Contrasenia &&
-               EsJugador == jugador.EsJugador &&
                numCamiseta == jugador.numCamiseta &&
                apellido1 == jugador.apellido1 &&
                nombreCamiseta == jugador.nombreCamiseta &&
                posicion == jugador.posicion &&
                sexo == jugador.sexo &&
-               fechaNac == jugador.fechaNac;
+               fechaNac == jugador.fechaNac &&
+               EqualityComparer<Equipo>.Default.Equals(e, jugador.e);
     }
 
     public override int GetHashCode()
     {
-        int hashCode = -1637787161;
-        hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Nombre);
-        hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Contrasenia);
-        hashCode = hashCode * -1521134295 + EsJugador.GetHashCode();
+        int hashCode = -801381194;
         hashCode = hashCode * -1521134295 + numCamiseta.GetHashCode();
         hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(apellido1);
         hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(nombreCamiseta);
         hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(posicion);
         hashCode = hashCode * -1521134295 + sexo.GetHashCode();
         hashCode = hashCode * -1521134295 + fechaNac.GetHashCode();
+        hashCode = hashCode * -1521134295 + EqualityComparer<Equipo>.Default.GetHashCode(e);
         return hashCode;
     }
 }

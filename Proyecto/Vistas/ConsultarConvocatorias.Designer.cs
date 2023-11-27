@@ -47,7 +47,7 @@
             this.botonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botonCancelar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.botonCancelar.Location = new System.Drawing.Point(335, 387);
+            this.botonCancelar.Location = new System.Drawing.Point(360, 370);
             this.botonCancelar.Name = "botonCancelar";
             this.botonCancelar.Size = new System.Drawing.Size(80, 70);
             this.botonCancelar.TabIndex = 17;
@@ -58,7 +58,7 @@
             // 
             this.btElim.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btElim.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btElim.Location = new System.Drawing.Point(205, 123);
+            this.btElim.Location = new System.Drawing.Point(244, 113);
             this.btElim.Name = "btElim";
             this.btElim.Size = new System.Drawing.Size(75, 23);
             this.btElim.TabIndex = 16;
@@ -68,7 +68,8 @@
             // ordenarNombre
             // 
             this.ordenarNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.ordenarNombre.Location = new System.Drawing.Point(465, 123);
+            this.ordenarNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ordenarNombre.Location = new System.Drawing.Point(504, 113);
             this.ordenarNombre.Name = "ordenarNombre";
             this.ordenarNombre.Size = new System.Drawing.Size(133, 23);
             this.ordenarNombre.TabIndex = 15;
@@ -79,7 +80,7 @@
             // 
             this.ordenarFecha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ordenarFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ordenarFecha.Location = new System.Drawing.Point(286, 123);
+            this.ordenarFecha.Location = new System.Drawing.Point(325, 113);
             this.ordenarFecha.Name = "ordenarFecha";
             this.ordenarFecha.Size = new System.Drawing.Size(171, 23);
             this.ordenarFecha.TabIndex = 14;
@@ -90,7 +91,7 @@
             // 
             this.botonImprimir.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.botonImprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonImprimir.Location = new System.Drawing.Point(124, 123);
+            this.botonImprimir.Location = new System.Drawing.Point(163, 113);
             this.botonImprimir.Name = "botonImprimir";
             this.botonImprimir.Size = new System.Drawing.Size(75, 23);
             this.botonImprimir.TabIndex = 13;
@@ -102,20 +103,21 @@
             this.titulo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.titulo.AutoSize = true;
             this.titulo.BackColor = System.Drawing.Color.Transparent;
-            this.titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titulo.ForeColor = System.Drawing.Color.Black;
-            this.titulo.Location = new System.Drawing.Point(133, 60);
+            this.titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titulo.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.titulo.Location = new System.Drawing.Point(258, 56);
             this.titulo.Name = "titulo";
-            this.titulo.Size = new System.Drawing.Size(466, 39);
+            this.titulo.Size = new System.Drawing.Size(283, 33);
             this.titulo.TabIndex = 11;
-            this.titulo.Text = "LISTADO DE JUGADORES";
+            this.titulo.Text = "CONVOCATORIAS";
+            this.titulo.Click += new System.EventHandler(this.titulo_Click);
             // 
             // panel2
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel2.AutoScroll = true;
             this.panel2.AutoSize = true;
-            this.panel2.Location = new System.Drawing.Point(133, 152);
+            this.panel2.Location = new System.Drawing.Point(172, 142);
             this.panel2.MinimumSize = new System.Drawing.Size(456, 199);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(456, 199);
@@ -125,6 +127,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Desktop;
             this.ClientSize = new System.Drawing.Size(784, 461);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.botonCancelar);

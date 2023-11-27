@@ -20,7 +20,12 @@ namespace Proyecto.Vistas
 
         private void ConsultarConvocatorias_Load(object sender, EventArgs e)
         {
-            ControladorJugadores.leerJugadoresXML();
+            ControladorPartidos.leerPartidosXML();
+        }
+
+        private void titulo_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
