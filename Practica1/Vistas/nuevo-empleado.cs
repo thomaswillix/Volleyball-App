@@ -134,7 +134,7 @@ namespace Practica1
         }
         private void aniadirEmpleado()
         {
-            ControladorEmpleados.listaEmpleados.Add(new Empleado((int)cod.Value, dni.Text, nom.Text, ape1.Text, ape2.Text,
+            ControladorEmpleadosXML.listaEmpleados.Add(new Empleado((int)cod.Value, dni.Text, nom.Text, ape1.Text, ape2.Text,
                 puesto.Text, (int)tlf.Value, correo.Text, fechaNac.Value, (int)numSS.Value, come.Text));
         }
 

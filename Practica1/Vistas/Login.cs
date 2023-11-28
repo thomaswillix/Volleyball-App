@@ -27,7 +27,7 @@ namespace Practica1
             string usuario = cuadroUsu.Text.ToLower();
             string contrasena = cuadroCont.Text.ToLower();
             if(validaLogin(ref usuario, ref contrasena) == true){
-                Usuario.u = ControladorUsuarios.buscarUsuario(usuario, contrasena);
+                Usuario.u = ControladorUsuariosXML.buscarUsuario(usuario, contrasena);
                 cuadroUsu.Clear();
                 cuadroCont.Clear();
                 this.Hide();
@@ -54,7 +54,7 @@ namespace Practica1
        
         bool validaLogin(ref string usuario, ref string clave)
         {
-            return ControladorUsuarios.validaLogin(ref usuario, ref clave);
+            return ControladorUsuariosXML.validaLogin(ref usuario, ref clave);
 
         }
         private void button2_Click(object sender, System.EventArgs e)
@@ -99,8 +99,8 @@ namespace Practica1
 
         private void GestionaIES_Load(object sender, System.EventArgs e)
         {
-            ControladorUsuarios.cargarUsuarios();
-            ControladorUsuarios.escribirUsuariosXML();
+            ControladorUsuariosXML.cargarUsuarios();
+            ControladorUsuariosXML.escribirUsuariosXML();
         }
 
         private void button1_Click_1(object sender, System.EventArgs e)

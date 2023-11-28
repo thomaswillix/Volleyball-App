@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Practica1.manejadores;
 
 namespace Practica1
 {
@@ -28,16 +29,16 @@ namespace Practica1
         {
             d = new DateTime(2002, 2, 3, 13, 0, 0);
             e = new Empleado(1,"Juan","Rodriguez","Perez", "programador",d);
-            Empleado.listaEmpleados.Add(e);
+            ControladorEmpleadosXML.listaEmpleados.Add(e);
             d = new DateTime(2000, 9, 4, 22, 0, 0);
             e = new Empleado(1, "Pablo", "Hernandez", "Ortiz", "becario", d);
-            Empleado.listaEmpleados.Add(e);
+            ControladorEmpleadosXML.listaEmpleados.Add(e);
             d = new DateTime(2005, 6, 2, 7, 0, 0);
             e = new Empleado(1, "Juana", "Martin", "Soler", "programador", d);
-            Empleado.listaEmpleados.Add(e);
+            ControladorEmpleadosXML.listaEmpleados.Add(e);
             d = new DateTime(1997, 8, 2, 12, 0, 0);
             e = new Empleado(1, "Maria", "Pinar", "Dueñas", "jefe", d);
-            Empleado.listaEmpleados.Add(e);
+            ControladorEmpleadosXML.listaEmpleados.Add(e);
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -62,7 +63,7 @@ namespace Practica1
         private void mostrarEmpleados()
         {
             int posicion = 10;
-            foreach (Empleado e in Empleado.listaEmpleados)
+            foreach (Empleado e in ControladorEmpleadosXML.listaEmpleados)
             {
                 crearChecked(e.Nombre ,posicion);
                 posicion += 30;
@@ -71,7 +72,7 @@ namespace Practica1
 
         private void ordenarEmpleados(Func<Empleado, IComparable> aux)
         {
-            Empleado.listaEmpleados = Empleado.listaEmpleados.OrderBy(aux).ToList();
+            ControladorEmpleadosXML.listaEmpleados = ControladorEmpleadosXML.listaEmpleados.OrderBy(aux).ToList();
 
         }
 
@@ -96,8 +97,8 @@ namespace Practica1
             {
                 if (cd.Checked)
                 {
-                    int posicion = Empleado.listaEmpleados.FindIndex(x => x.Nombre == cd.Text);
-                    Empleado.listaEmpleados.RemoveAt(posicion);
+                    int posicion = ControladorEmpleadosXML.listaEmpleados.FindIndex(x => x.Nombre == cd.Text);
+                    ControladorEmpleadosXML.listaEmpleados.RemoveAt(posicion);
                 }
             }
             this.groupBox1.Controls.Clear();
@@ -109,6 +110,24 @@ namespace Practica1
             cargarEmpleados();
             a ++;
             mostrarEmpleados();
+        }
+
+        private void botonCancelar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FrmEmpleados_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("¿Desea guardar los cambios?", "Guardar", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                ControladorEmpleadosXML.escribirEmpleadosXML();
+                MessageBox.Show("Guardado");
+            }
+            else
+            {
+                MessageBox.Show("No guardado");            
+            }
         }
     }
 }

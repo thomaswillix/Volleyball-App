@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfUsuario>
+  <Usuario>
+    <User>root</User>
+    <Pass>1234</Pass>
+  </Usuario>
+  <Usuario>
+    <User>jorge</User>
+    <Pass>4321</Pass>
+  </Usuario>
+  <Usuario>
+    <User>jaime</User>
+    <Pass>4444</Pass>
+  </Usuario>
+  <Usuario>
+    <User>jose</User>
+    <Pass>1111</Pass>
+  </Usuario>
+  <Usuario>
+    <User>javier</User>
+    <Pass>2222</Pass>
+  </Usuario>
+</ArrayOfUsuario>

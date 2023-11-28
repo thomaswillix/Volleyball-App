@@ -110,6 +110,7 @@
             this.botonCancelar.TabIndex = 10;
             this.botonCancelar.Text = "Cancelar";
             this.botonCancelar.UseVisualStyleBackColor = true;
+            this.botonCancelar.Click += new System.EventHandler(this.botonCancelar_Click);
             // 
             // FrmEmpleados
             // 
@@ -127,6 +128,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmEmpleados";
             this.Text = "FrmEmpleados";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmEmpleados_FormClosing);
             this.Load += new System.EventHandler(this.FrmEmpleados_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
