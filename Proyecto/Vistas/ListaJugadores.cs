@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Proyecto.Manejadores;
+using Proyecto.Modelo;
 
 
 namespace Practica1
@@ -16,6 +17,7 @@ namespace Practica1
     {
         private Jugador e;
         private int a = 0;
+        private Equipo eq;
         private DateTime d;
 
         public ListaJugadores()
@@ -25,32 +27,40 @@ namespace Practica1
 
         private void FrmEmpleados_Load(object sender, EventArgs e)
         {
+            if (Usuario.u.Sexo == 'H') {
+                cargarJugadoresMasc();
+                ControladorJugadores.escribirJugadoresXML();
+            } else if (Usuario.u.Sexo == 'M')
+            {
+
+            }
             ControladorJugadores.leerJugadoresXML();
         }
-        /*private void cargarEmpleados()
+        private void cargarJugadoresMasc()
         {
+            eq = new Equipo(1, "Seleccion Masc Brasileña");
             d = new DateTime(1986, 7, 2, 0, 0, 0);
-            e = new Jugador(1,"Bruno","Rezende","Bruno", "Colocador", 'H',d);
-            ControladorJugadores.listaJugadores.Add(e);
+            e = new Jugador(1,"Bruno","Rezende","Bruno", "Colocador", 'H',d, eq);
+            ControladorJugadores.equipoMasc.Add(e);
             d = new DateTime(1991, 2, 27, 0, 0, 0);
-            e = new Jugador(4, "Otávio Henrique", "Rodrigues Pinto", "Otávio", "Bloqueador Central", 'H' ,d);
-            ControladorJugadores.listaJugadores.Add(e);
+            e = new Jugador(4, "Otávio Henrique", "Rodrigues Pinto", "Otávio", "Bloqueador Central", 'H', d, eq);
+            ControladorJugadores.equipoMasc.Add(e);
             d = new DateTime(2002, 2, 6, 0, 0, 0);
-            e = new Jugador(6, "Adriano", "Fernandes P.X.Calvante", "Adriano", "Opuesto", 'H', d);
-            ControladorJugadores.listaJugadores.Add(e);
+            e = new Jugador(6, "Adriano", "Fernandes P.X.Calvante", "Adriano", "Opuesto", 'H', d, eq);
+            ControladorJugadores.equipoMasc.Add(e);
             d = new DateTime(1997, 3, 18, 0, 0, 0);
-            e = new Jugador(8, "Henrique", "Dantas Nóbrega Honorato", "Honorato", "Opuesto", 'H', d);
-            ControladorJugadores.listaJugadores.Add(e);
+            e = new Jugador(8, "Henrique", "Dantas Nóbrega Honorato", "Honorato", "Opuesto", 'H', d, eq);
+            ControladorJugadores.equipoMasc.Add(e);
             d = new DateTime(1997, 7, 16, 0, 0, 0);
-            e = new Jugador(15, "Maique", "Reis Nascimento", "Nascimento", "Libero", 'H', d);
-            ControladorJugadores.listaJugadores.Add(e);
+            e = new Jugador(15, "Maique", "Reis Nascimento", "Nascimento", "Libero", 'H', d, eq);
+            ControladorJugadores.equipoMasc.Add(e);
             d = new DateTime(1993, 4, 22, 0, 0, 0);
-            e = new Jugador(23, "Flavio", "Resende Gualberto", "Flavio", "Bloqueador Central", 'H', d);
-            ControladorJugadores.listaJugadores.Add(e);
+            e = new Jugador(23, "Flavio", "Resende Gualberto", "Flavio", "Bloqueador Central", 'H', d, eq);
+            ControladorJugadores.equipoMasc.Add(e);
             d = new DateTime(1996, 1, 13, 0, 0, 0);
-            e = new Jugador(14, "Fernando", "Gil Kreling", "Fernando", "Colocador", 'H', d);
-            ControladorJugadores.listaJugadores.Add(e);
-        }*/
+            e = new Jugador(14, "Fernando", "Gil Kreling", "Fernando", "Colocador", 'H', d, eq);
+            ControladorJugadores.equipoMasc.Add(e);
+        }
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
@@ -76,7 +86,7 @@ namespace Practica1
             int posicion = 10;
             foreach (Jugador e in ControladorJugadores.listaJugadores)
             {
-                crearChecked(e.Nombre ,posicion);
+                crearChecked(e.Nombre + " " + e.Apellido1 +" | " + e.Posicion + " | " + e.NumCamiseta ,posicion);
                 posicion += 30;
             }
         }
@@ -108,8 +118,9 @@ namespace Practica1
             {
                 if (cd.Checked)
                 {
-                    int posicion = ControladorJugadores.listaJugadores.FindIndex(x => x.Nombre == cd.Text);
+                    int posicion = ControladorJugadores.listaJugadores.FindIndex(x => x.Nombre + " " + x.Apellido1 + " | " + x.Posicion + " | " + x.NumCamiseta == cd.Text);
                     ControladorJugadores.listaJugadores.RemoveAt(posicion);
+                    ControladorJugadores.escribirJugadoresXML();
                 }
             }
             this.panel2.Controls.Clear();
@@ -118,9 +129,12 @@ namespace Practica1
 
         private void botonImprimir_Click(object sender, EventArgs e)
         {
+
             ControladorJugadores.leerJugadoresXML();
             a ++;
-            mostrarEmpleados();
+            if (a < 1) { 
+                mostrarEmpleados();
+            }
         }
 
         private void botonCancelar_Click(object sender, EventArgs e)

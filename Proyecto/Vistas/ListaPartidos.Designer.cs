@@ -1,4 +1,4 @@
-﻿namespace Practica1
+﻿namespace Proyecto
 {
     partial class ListaPartidos
     {
@@ -58,7 +58,6 @@
             this.botonCancelar.TabIndex = 1;
             this.botonCancelar.Text = "Cancelar";
             this.botonCancelar.UseVisualStyleBackColor = true;
-            this.botonCancelar.Click += new System.EventHandler(this.botonCancelar_Click);
             // 
             // ordenarFecha
             // 
@@ -69,7 +68,6 @@
             this.ordenarFecha.TabIndex = 2;
             this.ordenarFecha.Text = "Ordenar Fecha de Inicio";
             this.ordenarFecha.UseVisualStyleBackColor = true;
-            this.ordenarFecha.Click += new System.EventHandler(this.button2_Click);
             // 
             // botonImprimir
             // 
@@ -80,7 +78,6 @@
             this.botonImprimir.TabIndex = 3;
             this.botonImprimir.Text = "Imprimir";
             this.botonImprimir.UseVisualStyleBackColor = true;
-            this.botonImprimir.Click += new System.EventHandler(this.button3_Click);
             // 
             // groupBox1
             // 
@@ -90,7 +87,6 @@
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Proyectos";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // ordenarNombre
             // 
@@ -100,7 +96,6 @@
             this.ordenarNombre.TabIndex = 5;
             this.ordenarNombre.Text = "Ordenar Nombre";
             this.ordenarNombre.UseVisualStyleBackColor = true;
-            this.ordenarNombre.Click += new System.EventHandler(this.ordenarNombre_Click);
             // 
             // btElim
             // 
@@ -111,7 +106,6 @@
             this.btElim.TabIndex = 6;
             this.btElim.Text = "Eliminar";
             this.btElim.UseVisualStyleBackColor = true;
-            this.btElim.Click += new System.EventHandler(this.btElim_Click);
             // 
             // FrmProyectos
             // 
@@ -129,7 +123,6 @@
             this.Controls.Add(this.titulo);
             this.Name = "FrmProyectos";
             this.Text = "FrmProyectos";
-            this.Load += new System.EventHandler(this.FrmProyectos_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

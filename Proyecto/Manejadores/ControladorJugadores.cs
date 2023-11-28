@@ -26,8 +26,8 @@ namespace Proyecto.Manejadores
                     // Do this to avoid the serializer inserting default XML namespaces.
                     var namespaces = new XmlSerializerNamespaces();
                     namespaces.Add(string.Empty, string.Empty);
-                    var serializer = new XmlSerializer(listaJugadores.GetType());
-                    serializer.Serialize(writer, listaJugadores, namespaces);
+                    var serializer = new XmlSerializer(equipoMasc.GetType());
+                    serializer.Serialize(writer, equipoMasc, namespaces);
                 }
             }
             catch (Exception e)
@@ -43,8 +43,8 @@ namespace Proyecto.Manejadores
                 string xml = File.ReadAllText("jugadores.xml");
                 using (var reader = new StringReader(xml))
                 {
-                    XmlSerializer serializer = new XmlSerializer(listaJugadores.GetType());
-                    listaJugadores = (List<Jugador>)serializer.Deserialize(reader);
+                    XmlSerializer serializer = new XmlSerializer(equipoMasc.GetType());
+                    equipoMasc = (List<Jugador>)serializer.Deserialize(reader);
                 }
             }
 

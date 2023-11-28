@@ -20,7 +20,7 @@ namespace Proyecto.Vistas
 
         private void ConsultarConvocatorias_Load(object sender, EventArgs e)
         {
-            ControladorPartidos.leerPartidosXML();
+            ControladorPartidos.leerPartidos();
         }
 
         private void titulo_Click(object sender, EventArgs e)

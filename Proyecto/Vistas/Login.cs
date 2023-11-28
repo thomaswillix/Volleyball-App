@@ -62,9 +62,9 @@ namespace Proyecto
         //Acción que se realiza al iniciar la aplicación
         private void Login_Load(object sender, System.EventArgs e)
         {
-            
-            ControladorUsuarios.leerUsuariosXML();
+            //ControladorUsuarios.cargarUsuarios();
             //ControladorUsuarios.escribirUsuariosXML();
+            ControladorUsuarios.leerUsuariosXML();
         }
         /* Método en el que se determina la siguiente ventana que se abrirá y
          cuando se cierre se volverá a poner el foco en esta. */

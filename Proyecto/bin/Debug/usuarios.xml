@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfUsuario>
   <Usuario>
-    <Nombre>renan</Nombre>
+    <Nombre>Renan</Nombre>
     <Contrasenia>1234</Contrasenia>
     <EsJugador>false</EsJugador>
+    <Sexo>72</Sexo>
   </Usuario>
   <Usuario>
-    <Nombre>bruno</Nombre>
+    <Nombre>Bruno</Nombre>
     <Contrasenia>4321</Contrasenia>
     <EsJugador>true</EsJugador>
+    <Sexo>72</Sexo>
   </Usuario>
   <Usuario>
-    <Nombre>giovane</Nombre>
-    <Contrasenia>4444</Contrasenia>
-    <EsJugador>true</EsJugador>
-  </Usuario>
-  <Usuario>
-    <Nombre>ze</Nombre>
+    <Nombre>Ze</Nombre>
     <Contrasenia>1111</Contrasenia>
     <EsJugador>false</EsJugador>
+    <Sexo>72</Sexo>
   </Usuario>
   <Usuario>
-    <Nombre>natalia</Nombre>
+    <Nombre>Natalia</Nombre>
     <Contrasenia>2222</Contrasenia>
     <EsJugador>true</EsJugador>
+    <Sexo>77</Sexo>
   </Usuario>
   <Usuario>
-    <Nombre>jacqueline</Nombre>
+    <Nombre>Jacqueline</Nombre>
     <Contrasenia>3333</Contrasenia>
     <EsJugador>true</EsJugador>
+    <Sexo>77</Sexo>
   </Usuario>
 </ArrayOfUsuario>

@@ -9,8 +9,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button.CheckBox;
+using Proyecto.Manejadores;
 
-namespace Practica1
+namespace Proyecto
 {
     public partial class ListaPartidos : Form
     {
@@ -31,10 +32,10 @@ namespace Practica1
 
         private void ordenarProyectos(Func<Partido, IComparable> aux)
         {
-            Partido.listaProyectos = Partido.listaProyectos.OrderBy(aux).ToList();
+            ControladorPartidos.listaPartidos = ControladorPartidos.listaPartidos.OrderBy(aux).ToList();
 
         }
-
+        /*
         private void mostrarProyectos()
         {
             int posicion = 10;
@@ -145,7 +146,8 @@ namespace Practica1
                 }
             }
             this.groupBox1.Controls.Clear();
-            mostrarProyectos();*/
+            mostrarProyectos();
         }
+    */
     }
 }

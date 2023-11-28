@@ -9,7 +9,6 @@ public class Jugador : Usuario
 	private string apellido1;
     private string nombreCamiseta;
 	private string posicion;
-    private char sexo;
 	private DateTime fechaNac;
     private Equipo e;
 
@@ -20,7 +19,7 @@ public class Jugador : Usuario
         this.apellido1 = apellido1;
         this.nombreCamiseta = nombreCamiseta;
         this.posicion = posicion;
-        this.sexo = sexo;
+        Sexo = sexo;
         this.fechaNac = fechaNac;
         this.E = e;
     }
@@ -43,7 +42,6 @@ public class Jugador : Usuario
                apellido1 == jugador.apellido1 &&
                nombreCamiseta == jugador.nombreCamiseta &&
                posicion == jugador.posicion &&
-               sexo == jugador.sexo &&
                fechaNac == jugador.fechaNac &&
                EqualityComparer<Equipo>.Default.Equals(e, jugador.e);
     }
@@ -55,7 +53,6 @@ public class Jugador : Usuario
         hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(apellido1);
         hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(nombreCamiseta);
         hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(posicion);
-        hashCode = hashCode * -1521134295 + sexo.GetHashCode();
         hashCode = hashCode * -1521134295 + fechaNac.GetHashCode();
         hashCode = hashCode * -1521134295 + EqualityComparer<Equipo>.Default.GetHashCode(e);
         return hashCode;
