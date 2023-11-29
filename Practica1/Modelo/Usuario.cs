@@ -10,6 +10,8 @@ namespace Practica1
     {
         String user;
         String pass;
+
+        //Usuario del que mantendremos la sesión
         public static Usuario u;
 
         public Usuario(string user, string pass)
@@ -22,19 +24,5 @@ namespace Practica1
         public string User { get => user; set => user = value; }
         public string Pass { get => pass; set => pass = value; }
 
-        public override bool Equals(object obj)
-        {
-            return obj is Usuario usuario &&
-                   this.User == usuario.User &&
-                   Pass == usuario.Pass;
-        }
-
-        public override int GetHashCode()
-        {
-            int hashCode = -2076927977;
-            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(User);
-            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Pass);
-            return hashCode;
-        }
     }
 }

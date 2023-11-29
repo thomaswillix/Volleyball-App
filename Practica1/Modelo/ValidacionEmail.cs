@@ -6,6 +6,8 @@ namespace  Practica1
 {
     public class ValidacionEmail
     {
+        //Ejemplo de validación sencillito.
+
         /*public static void Main(string[] args)
         {
             var emailAddresses = new List<string>

@@ -1,4 +1,4 @@
-﻿namespace Practica1
+﻿namespace Proyecto
 {
     partial class PrincipalEntr
     {
@@ -37,7 +37,6 @@
             this.proyectosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.altaToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.modificaciónToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.listadosToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.bienv = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.botonCancelar = new System.Windows.Forms.Button();
@@ -91,8 +90,7 @@
             // 
             this.proyectosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.altaToolStripMenuItem2,
-            this.modificaciónToolStripMenuItem1,
-            this.listadosToolStripMenuItem2});
+            this.modificaciónToolStripMenuItem1});
             this.proyectosToolStripMenuItem.Name = "proyectosToolStripMenuItem";
             this.proyectosToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
             this.proyectosToolStripMenuItem.Text = "Partidos";
@@ -110,13 +108,6 @@
             this.modificaciónToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.modificaciónToolStripMenuItem1.Text = "Modificación";
             this.modificaciónToolStripMenuItem1.Click += new System.EventHandler(this.modificaciónToolStripMenuItem1_Click);
-            // 
-            // listadosToolStripMenuItem2
-            // 
-            this.listadosToolStripMenuItem2.Name = "listadosToolStripMenuItem2";
-            this.listadosToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
-            this.listadosToolStripMenuItem2.Text = "Jugadores";
-            this.listadosToolStripMenuItem2.Click += new System.EventHandler(this.listadosToolStripMenuItem2_Click);
             // 
             // bienv
             // 
@@ -204,7 +195,6 @@
         private System.Windows.Forms.ToolStripMenuItem listadosToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem altaToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem modificaciónToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem listadosToolStripMenuItem2;
         private System.Windows.Forms.Label bienv;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button botonCancelar;

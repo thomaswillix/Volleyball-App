@@ -1,4 +1,4 @@
-﻿namespace Practica1
+﻿namespace Proyecto
 {
     partial class PrincipalJug
     {
@@ -35,13 +35,16 @@
             this.bienv = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.botonCancelar = new System.Windows.Forms.Button();
+            this.equipoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.misDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.empleadosToolStripMenuItem});
+            this.empleadosToolStripMenuItem,
+            this.misDatosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(19, 6, 0, 6);
@@ -52,7 +55,8 @@
             // empleadosToolStripMenuItem
             // 
             this.empleadosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.altaToolStripMenuItem1});
+            this.altaToolStripMenuItem1,
+            this.equipoToolStripMenuItem});
             this.empleadosToolStripMenuItem.Name = "empleadosToolStripMenuItem";
             this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(70, 19);
             this.empleadosToolStripMenuItem.Text = "Consultar";
@@ -110,6 +114,18 @@
             this.botonCancelar.UseVisualStyleBackColor = false;
             this.botonCancelar.Click += new System.EventHandler(this.botonCancelar_Click);
             // 
+            // equipoToolStripMenuItem
+            // 
+            this.equipoToolStripMenuItem.Name = "equipoToolStripMenuItem";
+            this.equipoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.equipoToolStripMenuItem.Text = "Equipo";
+            // 
+            // misDatosToolStripMenuItem
+            // 
+            this.misDatosToolStripMenuItem.Name = "misDatosToolStripMenuItem";
+            this.misDatosToolStripMenuItem.Size = new System.Drawing.Size(71, 19);
+            this.misDatosToolStripMenuItem.Text = "Mis Datos";
+            // 
             // PrincipalJug
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -152,5 +168,7 @@
         private System.Windows.Forms.Label bienv;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button botonCancelar;
+        private System.Windows.Forms.ToolStripMenuItem equipoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem misDatosToolStripMenuItem;
     }
 }

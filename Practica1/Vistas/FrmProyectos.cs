@@ -9,15 +9,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button.CheckBox;
+using Practica1.manejadores;
 
 namespace Practica1
 {
     public partial class FrmProyectos : Form
     {
-        Proyecto p;
-        DateTime fechaIni;
-        DateTime fechaFin;
-
 
         public FrmProyectos()
         {
@@ -31,7 +28,7 @@ namespace Practica1
 
         private void ordenarProyectos(Func<Proyecto, IComparable> aux)
         {
-            Proyecto.listaProyectos = Proyecto.listaProyectos.OrderBy(aux).ToList();
+            ControladorProyectosBin.listaProyectos = ControladorProyectosBin.listaProyectos.OrderBy(aux).ToList();
 
         }
 
@@ -39,39 +36,15 @@ namespace Practica1
         {
             int posicion = 10;
 
-            foreach (Proyecto p in Proyecto.listaProyectos)
+            foreach (Proyecto p in ControladorProyectosBin.listaProyectos)
             {
                 crearChecked(p, posicion);
                 posicion += 30;
             }
         }
 
-        private void cargarProyectos()
-        {
-            fechaIni = new DateTime(2011, 2, 3 , 13, 0, 0);
-            fechaFin = DateTime.Today;
-            p = new Proyecto("Proyecto Antiguo", fechaIni, fechaFin);
-            Proyecto.listaProyectos.Add(p);
-            fechaIni = new DateTime(2015, 5, 21, 8, 0, 0);
-            fechaFin = new DateTime(2023, 9, 30, 9, 0, 0);
-            p = new Proyecto("Segundo Proyecto", fechaIni, fechaFin);
-            Proyecto.listaProyectos.Add(p);
-            fechaIni = new DateTime(2022, 7, 14, 6, 0, 0);
-            fechaFin = new DateTime(2020, 10, 3, 10, 0, 0);
-            p = new Proyecto("Most Recent", fechaIni, fechaFin);
-            Proyecto.listaProyectos.Add(p);
-            fechaIni = new DateTime(2018, 9, 21, 19, 0, 0);
-            fechaFin = DateTime.Today;
-            p = new Proyecto("Tercero", fechaIni, fechaFin);
-            Proyecto.listaProyectos.Add(p);
-            fechaIni = new DateTime(2015, 9, 21, 19, 0, 0);
-            fechaFin = new DateTime(2022, 10, 3, 10, 0, 0);
-            p = new Proyecto("Cuato", fechaIni, fechaFin);
-            Proyecto.listaProyectos.Add(p);
-        }
         private void button3_Click(object sender, EventArgs e)
         {
-            cargarProyectos();
             mostrarProyectos();
         }
         
@@ -100,6 +73,8 @@ namespace Practica1
 
         private void FrmProyectos_Load(object sender, EventArgs e)
         {
+            ControladorProyectosBin.cargarProyectos();
+            ControladorProyectosBin.escribirProyecto();
         }
         private void home_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -140,8 +115,8 @@ namespace Practica1
             {
                 if (cd.Checked)
                 {
-                    int posicion = Proyecto.listaProyectos.FindIndex(x => x.Descripcion == cd.Text);
-                    Proyecto.listaProyectos.RemoveAt(posicion);
+                    int posicion = ControladorProyectosBin.listaProyectos.FindIndex(x => x.Descripcion == cd.Text);
+                    ControladorProyectosBin.listaProyectos.RemoveAt(posicion);
                 }
             }
             this.groupBox1.Controls.Clear();

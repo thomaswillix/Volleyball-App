@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Practica1
+namespace Proyecto
 {
     public partial class NuevoJugador : Form
     {

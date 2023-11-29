@@ -36,12 +36,12 @@ namespace Proyecto
         //llamada a método estático del ControladorUsuarios
         private Usuario buscarUsuario(string usuario, string pass)
         {
-            return Usuario.buscarUsuario(usuario, pass);
+            return ControladorUsuarios.buscarUsuario(usuario, pass);
         }
         //llamada a método estático del ControladorUsuarios
         private bool validaLogin(ref string usuario, ref string clave)
         {
-            return Usuario.validaLogin(ref usuario, ref clave);
+            return ControladorUsuarios.validaLogin(ref usuario, ref clave);
         }
         
         private void button2_Click(object sender, System.EventArgs e)

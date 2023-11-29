@@ -75,9 +75,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="manejadores\ControladorEmpleadosJSON.cs" />
-    <Compile Include="manejadores\ControladorEmpleadosXML.cs" />
+    <Compile Include="manejadores\ControladorProyectosBin.cs" />
     <Compile Include="manejadores\ControladorUsuariosXML.cs" />
-    <Compile Include="manejadores\ControladorUsuariosJSON.cs" />
     <Compile Include="Modelo\Empleado.cs" />
     <Compile Include="Modelo\ValidacionEmail.cs" />
     <Compile Include="Vistas\FrmEmpleados.cs">

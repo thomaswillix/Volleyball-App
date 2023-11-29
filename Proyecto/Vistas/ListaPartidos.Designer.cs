@@ -107,7 +107,7 @@
             this.btElim.Text = "Eliminar";
             this.btElim.UseVisualStyleBackColor = true;
             // 
-            // FrmProyectos
+            // ListaPartidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -121,8 +121,9 @@
             this.Controls.Add(this.ordenarFecha);
             this.Controls.Add(this.botonCancelar);
             this.Controls.Add(this.titulo);
-            this.Name = "FrmProyectos";
+            this.Name = "ListaPartidos";
             this.Text = "FrmProyectos";
+            this.Load += new System.EventHandler(this.ListaPartidos_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

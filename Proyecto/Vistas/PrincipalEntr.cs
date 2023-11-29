@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using Proyecto;
 using Proyecto.Modelo;
 
-namespace Practica1
+namespace Proyecto
 {
     public partial class PrincipalEntr : Form
     {
@@ -42,8 +42,8 @@ namespace Practica1
         private void listadosToolStripMenuItem2_Click(object sender, EventArgs e)
         {
             
-            ListaJugadores listaJ= new ListaJugadores();
-            listaJ.ShowDialog();
+            /*ListaJugadores listaJ= new ListaJugadores();
+            listaJ.ShowDialog();*/
         }
 
         private void altaToolStripMenuItem2_Click(object sender, EventArgs e)
@@ -54,15 +54,13 @@ namespace Practica1
 
         private void listadosToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            /*
-            FrmEmpleados listaEmpl = new FrmEmpleados();
-            listaEmpl.ShowDialog();*/
+            ListaJugadores listaJ = new ListaJugadores();
+            listaJ.ShowDialog();
         }
 
         private void altaToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            ListaJugadores listaJug= new ListaJugadores();
-            listaJug.ShowDialog();
+            /*Vista de Convocar a Jugadores para X partidos.*/
         }
 
         private void empleadosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -72,12 +70,12 @@ namespace Practica1
 
         private void modificaciónToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            // Vista de Modificación de Jugadores
         }
 
         private void modificaciónToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-
+            // Vista de Modificación de Partidos
         }
 
         private void botonCancelar_Click(object sender, EventArgs e)

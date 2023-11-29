@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Practica1
 {
-    internal class Proyecto 
+    public class Proyecto 
     {
         private int codigo;
         private String descripcion;
@@ -17,7 +17,6 @@ namespace Practica1
         private Double presupuestoAct;
         private bool cambios;
         private int codigoCliente;
-        public static List<Proyecto> listaProyectos = new List<Proyecto>();
 
         public Proyecto(int codigo, string descripcion, DateTime fechaIni, DateTime fechaFin, bool estado, double presupuestoIni, double presupuestoAct, bool cambios, int codigoCliente)
         {
@@ -47,36 +46,6 @@ namespace Practica1
         public double PresupuestoAct { get => presupuestoAct; set => presupuestoAct = value; }
         public bool Cambios { get => cambios; set => cambios = value; }
         public int CodigoCliente { get => codigoCliente; set => codigoCliente = value; }
-
-       
-        public override bool Equals(object obj)
-        {
-            return obj is Proyecto proyecto &&
-                   Codigo == proyecto.Codigo &&
-                   Descripcion == proyecto.Descripcion &&
-                   FechaIni == proyecto.FechaIni &&
-                   FechaFin == proyecto.FechaFin &&
-                   Estado == proyecto.Estado &&
-                   PresupuestoIni == proyecto.PresupuestoIni &&
-                   PresupuestoAct == proyecto.PresupuestoAct &&
-                   Cambios == proyecto.Cambios &&
-                   CodigoCliente == proyecto.CodigoCliente;
-        }
-
-        public override int GetHashCode()
-        {
-            int hashCode = -55884537;
-            hashCode = hashCode * -1521134295 + Codigo.GetHashCode();
-            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Descripcion);
-            hashCode = hashCode * -1521134295 + FechaIni.GetHashCode();
-            hashCode = hashCode * -1521134295 + FechaFin.GetHashCode();
-            hashCode = hashCode * -1521134295 + Estado.GetHashCode();
-            hashCode = hashCode * -1521134295 + PresupuestoIni.GetHashCode();
-            hashCode = hashCode * -1521134295 + PresupuestoAct.GetHashCode();
-            hashCode = hashCode * -1521134295 + Cambios.GetHashCode();
-            hashCode = hashCode * -1521134295 + CodigoCliente.GetHashCode();
-            return hashCode;
-        }
 
     }
 }

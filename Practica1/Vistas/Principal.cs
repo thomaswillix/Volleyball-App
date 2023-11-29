@@ -19,7 +19,8 @@ namespace Practica1
 
         private void Principal_Load(object sender, EventArgs e)
         {
-            label2.Text += Usuario.u.User;
+            //Mensaje personalizado para la pestaña principal.
+            label2.Text += " " +Usuario.u.User;
         }
         private void Principal_FormClosing(object sender,FormClosingEventArgs e)
         {

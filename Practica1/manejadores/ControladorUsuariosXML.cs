@@ -1,15 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+//importamos estas dependencias
 using System.Xml.Serialization;
-using Practica1;
+using System.IO;
 
-namespace Proyecto.Manejadores
+namespace Practica1.manejadores
 {
+    //Importante que los métodos de las clases controladoras y las clases sean public y static
     public static class ControladorUsuariosXML
     {
         public static List<Usuario> listaUsuarios = new List<Usuario>();
@@ -52,15 +53,15 @@ namespace Proyecto.Manejadores
 
         public static bool validaLogin(ref string usuario, ref string clave)
         {
-            for (int i = 0; i < ControladorUsuariosXML.listaUsuarios.Count; i++)
+            for (int i = 0; i < listaUsuarios.Count; i++)
             {
-                if ((usuario == ControladorUsuariosXML.listaUsuarios[i].User.ToLower())
-                    && (clave == ControladorUsuariosXML.listaUsuarios[i].Pass))
+                if ((usuario == listaUsuarios[i].User.ToLower())
+                    && (clave == listaUsuarios[i].Pass))
                 {
                     return true;
                 }
-                else if ((usuario != ControladorUsuariosXML.listaUsuarios[i].User.ToLower())
-                    || (clave != ControladorUsuariosXML.listaUsuarios[i].Pass.ToLower()))
+                else if ((usuario != listaUsuarios[i].User.ToLower())
+                    || (clave != listaUsuarios[i].Pass.ToLower()))
                 {
                     continue;
                 }
@@ -72,13 +73,13 @@ namespace Proyecto.Manejadores
         public static  Usuario buscarUsuario(string usuario, string pass)
         {
             Usuario u = new Usuario();
-            for (int i = 0; i < ControladorUsuariosXML.listaUsuarios.Count; i++)
+            for (int i = 0; i < listaUsuarios.Count; i++)
             {
-                if (usuario == ControladorUsuariosXML.listaUsuarios[i].User.ToLower())
+                if (usuario == listaUsuarios[i].User.ToLower())
                 {
-                    u = ControladorUsuariosXML.listaUsuarios[i];
+                    u = listaUsuarios[i];
                     MessageBox.Show("El usuario " + usuario + " se ha encontrado");
-                    if (pass == ControladorUsuariosXML.listaUsuarios[i].Pass)
+                    if (pass == listaUsuarios[i].Pass)
                     {
                         MessageBox.Show("La contraseña " + pass + " es correcta");
                         return u;

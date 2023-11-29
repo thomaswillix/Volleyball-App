@@ -2,7 +2,7 @@
 using System.Drawing.Text;
 using System.Security.Permissions;
 using System.Windows.Forms;
-using Proyecto.Manejadores;
+using Practica1.manejadores;
 
 namespace Practica1
 {

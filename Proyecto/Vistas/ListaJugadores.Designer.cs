@@ -1,4 +1,4 @@
-﻿namespace Practica1
+﻿namespace Proyecto
 {
     partial class ListaJugadores
     {
@@ -149,6 +149,7 @@
             this.MinimumSize = new System.Drawing.Size(825, 520);
             this.Name = "ListaJugadores";
             this.Text = "FrmEmpleados";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ListaJugadores_FormClosing);
             this.Load += new System.EventHandler(this.FrmEmpleados_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

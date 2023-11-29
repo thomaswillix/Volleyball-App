@@ -28,9 +28,6 @@ namespace Proyecto
         public Equipo Equipo2 { get => equipo2; set => equipo2 = value; }
         public DateTime Fecha { get => fecha; set => fecha = value; }
 
-        public static void consultarConvocatorias()
-        {
-
-        }
+        
     }
 }

@@ -13,9 +13,6 @@ namespace Practica1
 {
     public partial class FrmEmpleados : Form
     {
-        private Empleado e;
-        private int a = 0;
-        private DateTime d;
 
         public FrmEmpleados()
         {
@@ -24,21 +21,11 @@ namespace Practica1
 
         private void FrmEmpleados_Load(object sender, EventArgs e)
         {
-        }
-        private void cargarEmpleados()
-        {
-            d = new DateTime(2002, 2, 3, 13, 0, 0);
-            e = new Empleado(1,"Juan","Rodriguez","Perez", "programador",d);
-            ControladorEmpleadosXML.listaEmpleados.Add(e);
-            d = new DateTime(2000, 9, 4, 22, 0, 0);
-            e = new Empleado(1, "Pablo", "Hernandez", "Ortiz", "becario", d);
-            ControladorEmpleadosXML.listaEmpleados.Add(e);
-            d = new DateTime(2005, 6, 2, 7, 0, 0);
-            e = new Empleado(1, "Juana", "Martin", "Soler", "programador", d);
-            ControladorEmpleadosXML.listaEmpleados.Add(e);
-            d = new DateTime(1997, 8, 2, 12, 0, 0);
-            e = new Empleado(1, "Maria", "Pinar", "Dueñas", "jefe", d);
-            ControladorEmpleadosXML.listaEmpleados.Add(e);
+            //Esto se comentará luego.
+            ControladorEmpleadosJSON.cargarEmpleados();
+            ControladorEmpleadosJSON.escribirEmpleados();
+            ControladorEmpleadosJSON.leerEmpleados();
+            mostrarEmpleados();
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -63,7 +50,7 @@ namespace Practica1
         private void mostrarEmpleados()
         {
             int posicion = 10;
-            foreach (Empleado e in ControladorEmpleadosXML.listaEmpleados)
+            foreach (Empleado e in ControladorEmpleadosJSON.listaEmpleados)
             {
                 crearChecked(e.Nombre ,posicion);
                 posicion += 30;
@@ -72,14 +59,13 @@ namespace Practica1
 
         private void ordenarEmpleados(Func<Empleado, IComparable> aux)
         {
-            ControladorEmpleadosXML.listaEmpleados = ControladorEmpleadosXML.listaEmpleados.OrderBy(aux).ToList();
+            ControladorEmpleadosJSON.listaEmpleados = ControladorEmpleadosJSON.listaEmpleados.OrderBy(aux).ToList();
 
         }
 
         private void ordenarFecha_Click(object sender, EventArgs e)
         {
             groupBox1.Controls.Clear();
-
             ordenarEmpleados(Empleado => Empleado.FechaNac);
             mostrarEmpleados();
         }
@@ -97,8 +83,8 @@ namespace Practica1
             {
                 if (cd.Checked)
                 {
-                    int posicion = ControladorEmpleadosXML.listaEmpleados.FindIndex(x => x.Nombre == cd.Text);
-                    ControladorEmpleadosXML.listaEmpleados.RemoveAt(posicion);
+                    int posicion = ControladorEmpleadosJSON.listaEmpleados.FindIndex(x => x.Nombre == cd.Text);
+                    ControladorEmpleadosJSON.listaEmpleados.RemoveAt(posicion);
                 }
             }
             this.groupBox1.Controls.Clear();
@@ -107,8 +93,6 @@ namespace Practica1
 
         private void botonImprimir_Click(object sender, EventArgs e)
         {
-            cargarEmpleados();
-            a ++;
             mostrarEmpleados();
         }
 
@@ -121,7 +105,7 @@ namespace Practica1
         {
             if (MessageBox.Show("¿Desea guardar los cambios?", "Guardar", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                ControladorEmpleadosXML.escribirEmpleadosXML();
+                ControladorEmpleadosJSON.escribirEmpleados();
                 MessageBox.Show("Guardado");
             }
             else

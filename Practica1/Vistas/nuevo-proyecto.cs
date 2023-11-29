@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Practica1.manejadores;
 
 namespace Practica1
 {
@@ -138,7 +139,7 @@ namespace Practica1
 
         private void aniadirProyecto()
         {
-            Proyecto.listaProyectos.Add(new Proyecto((int)cod.Value, desc.Text, fechaIni.Value,
+            ControladorProyectosBin.listaProyectos.Add(new Proyecto((int)cod.Value, desc.Text, fechaIni.Value,
                 fechaFin.Value, estado.Checked, (Double)presuIni.Value, (Double)presuFin.Value,
                 cambios.Checked, (int)codCli.Value));
         }

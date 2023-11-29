@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using Proyecto;
 using Proyecto.Modelo;
 
-namespace Practica1
+namespace Proyecto
 {
     public partial class PrincipalJug : Form
     {
@@ -27,33 +27,6 @@ namespace Practica1
         private void Principal_FormClosing(object sender,FormClosingEventArgs e)
         {
             Usuario.u = null;
-        }
-        private void modificacionToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void facturacionToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listadosToolStripMenuItem2_Click(object sender, EventArgs e)
-        {
-            ListaPartidos Form = new ListaPartidos();
-            Form.ShowDialog();
-        }
-
-        private void altaToolStripMenuItem2_Click(object sender, EventArgs e)
-        {
-            NuevoPartido proy = new NuevoPartido();
-            proy.ShowDialog();
-        }
-
-        private void listadosToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            ListaJugadores listaEmpl = new ListaJugadores();
-            listaEmpl.ShowDialog();
         }
 
         private void altaToolStripMenuItem1_Click(object sender, EventArgs e)

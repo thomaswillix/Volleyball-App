@@ -8,7 +8,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Proyecto.Manejadores;
+using Practica1.manejadores;
 
 namespace Practica1
 {
@@ -32,9 +32,9 @@ namespace Practica1
                 //No es un DNI Valido
                 return false;
             }
-
+            return true;
             //Extraemos los números y la letra
-            string dniNumbers = dni.Substring(0, dni.Length - 1);
+            /*string dniNumbers = dni.Substring(0, dni.Length - 1);
             string dniLeter = dni.Substring(dni.Length - 1, 1);
             //Intentamos convertir los números del DNI a integer
             var numbersValid = int.TryParse(dniNumbers, out int dniInteger);
@@ -49,17 +49,17 @@ namespace Practica1
                 return false;
             }
             //DNI Valido :)
-            return true;
+            return true;*/
         }
 
 
-        static string CalculateDNILeter(int dniNumbers)
+        /*static string CalculateDNILeter(int dniNumbers)
         {
             //Cargamos los digitos de control
             string[] control = { "T", "R", "W", "A", "G", "M", "Y", "F", "P", "D", "X", "B", "N", "J", "Z", "S", "Q", "V", "H", "L", "C", "K", "E" };
             var mod = dniNumbers % 23;
             return control[mod];
-        }
+        }*/
         private bool validar()
         {
             if (cod.Value <= 0 || !validarDni(dni.Text) || String.IsNullOrEmpty(nom.Text) || String.IsNullOrEmpty(ape1.Text) || String.IsNullOrEmpty(ape2.Text)
@@ -134,7 +134,7 @@ namespace Practica1
         }
         private void aniadirEmpleado()
         {
-            ControladorEmpleadosXML.listaEmpleados.Add(new Empleado((int)cod.Value, dni.Text, nom.Text, ape1.Text, ape2.Text,
+            ControladorEmpleadosJSON.listaEmpleados.Add(new Empleado((int)cod.Value, dni.Text, nom.Text, ape1.Text, ape2.Text,
                 puesto.Text, (int)tlf.Value, correo.Text, fechaNac.Value, (int)numSS.Value, come.Text));
         }
 
