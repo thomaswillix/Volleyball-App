@@ -19,13 +19,8 @@ C:\Users\thoma\Source\Repos\thomaswillix\form\Proyecto\bin\Debug\Proyecto.exe
 C:\Users\thoma\Source\Repos\thomaswillix\form\Proyecto\bin\Debug\Proyecto.pdb
 C:\Users\thoma\Source\Repos\thomaswillix\form\Proyecto\obj\Debug\Proyecto.csproj.AssemblyReference.cache
 C:\Users\thoma\Source\Repos\thomaswillix\form\Proyecto\obj\Debug\Proyecto.csproj.SuggestedBindingRedirects.cache
-C:\Users\thoma\Source\Repos\thomaswillix\form\Proyecto\obj\Debug\Practica1.ListaJugadores.resources
 C:\Users\thoma\Source\Repos\thomaswillix\form\Proyecto\obj\Debug\Proyecto.Login.resources
 C:\Users\thoma\Source\Repos\thomaswillix\form\Proyecto\obj\Debug\Proyecto.Properties.Resources.resources
-C:\Users\thoma\Source\Repos\thomaswillix\form\Proyecto\obj\Debug\Practica1.NuevoJugador.resources
-C:\Users\thoma\Source\Repos\thomaswillix\form\Proyecto\obj\Debug\Practica1.NuevoPartido.resources
-C:\Users\thoma\Source\Repos\thomaswillix\form\Proyecto\obj\Debug\Practica1.PrincipalJug.resources
-C:\Users\thoma\Source\Repos\thomaswillix\form\Proyecto\obj\Debug\Practica1.PrincipalEntr.resources
 C:\Users\thoma\Source\Repos\thomaswillix\form\Proyecto\obj\Debug\Proyecto.csproj.GenerateResource.cache
 C:\Users\thoma\Source\Repos\thomaswillix\form\Proyecto\obj\Debug\Proyecto.csproj.CoreCompileInputs.cache
 C:\Users\thoma\Source\Repos\thomaswillix\form\Proyecto\obj\Debug\Proyecto.exe
@@ -68,3 +63,8 @@ C:\Users\thoma\Source\Repos\thomaswillix\form\Proyecto\bin\Debug\System.Text.Jso
 C:\Users\thoma\Source\Repos\thomaswillix\form\Proyecto\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\thoma\Source\Repos\thomaswillix\form\Proyecto\bin\Debug\System.ValueTuple.xml
 C:\Users\thoma\Source\Repos\thomaswillix\form\Proyecto\obj\Debug\Proyecto.csproj.CopyComplete
+C:\Users\thoma\Source\Repos\thomaswillix\form\Proyecto\obj\Debug\Proyecto.ListaJugadores.resources
+C:\Users\thoma\Source\Repos\thomaswillix\form\Proyecto\obj\Debug\Proyecto.NuevoJugador.resources
+C:\Users\thoma\Source\Repos\thomaswillix\form\Proyecto\obj\Debug\Proyecto.NuevoPartido.resources
+C:\Users\thoma\Source\Repos\thomaswillix\form\Proyecto\obj\Debug\Proyecto.PrincipalJug.resources
+C:\Users\thoma\Source\Repos\thomaswillix\form\Proyecto\obj\Debug\Proyecto.PrincipalEntr.resources

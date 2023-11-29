@@ -1,4 +1,4 @@
-﻿namespace Practica1
+﻿namespace Proyecto
 {
     partial class NuevoJugador
     {

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Proyecto;
 using Proyecto.Modelo;
+using Proyecto.Vistas;
 
 namespace Proyecto
 {
@@ -31,8 +32,8 @@ namespace Proyecto
 
         private void altaToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            NuevoJugador empl = new NuevoJugador();
-            empl.ShowDialog();
+            ConsultarConvocatorias consulta = new ConsultarConvocatorias();
+            consulta.ShowDialog();
         }
 
         private void label1_Click(object sender, EventArgs e)
