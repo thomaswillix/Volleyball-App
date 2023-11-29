@@ -20,7 +20,10 @@ namespace Proyecto.Vistas
 
         private void ConsultarConvocatorias_Load(object sender, EventArgs e)
         {
-            ControladorPartidos.leerPartidos();
+            /*Lo dejo comentado hasta que se creen los partidos porque el archivo, 
+            *al estar vacío nos da un problema de lectura errónea y la app crashea.*/
+            
+            //ControladorPartidos.leerPartidos();
         }
 
         private void titulo_Click(object sender, EventArgs e)
