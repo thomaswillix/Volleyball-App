@@ -8,11 +8,18 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Proyecto.Manejadores;
+using Proyecto.Modelo;
 
 namespace Proyecto
 {
     public partial class NuevoJugador : Form
     {
+        DateTime fechaActual = new DateTime();
+        TimeSpan edad;
+        double edadAnios;
+        char s;
+
         public NuevoJugador()
         {
             InitializeComponent();
@@ -20,130 +27,92 @@ namespace Proyecto
 
         private void NuevoJugador_Load(object sender, EventArgs e)
         {
-
+         
         }
-        //Devuelve true si es valido el DNI
-        static bool validarDni(string dni)
+        public void calcularEdad()
         {
-            //Comprobamos si el DNI tiene 9 digitos
-            if (dni.Length != 9)
+            fechaActual.ToLocalTime();
+            edad = fechaActual - fechaNac.Value;
+            edadAnios = (edad.TotalDays / 365.25);
+        }
+        public void establecerSexo()
+        {
+            if(sexo.SelectedItem.ToString() == "Hombre")
             {
-                //No es un DNI Valido
-                return false;
+                s = 'H';
             }
+            else if(sexo.SelectedItem.ToString() == "Mujer")
+            {
+                s = 'M';
+            }
+        }
+        private bool validar()
+        {
+            calcularEdad();
 
-            //Extraemos los números y la letra
-            string dniNumbers = dni.Substring(0, dni.Length - 1);
-            string dniLeter = dni.Substring(dni.Length - 1, 1);
-            //Intentamos convertir los números del DNI a integer
-            var numbersValid = int.TryParse(dniNumbers, out int dniInteger);
-            if (!numbersValid)
+            if (String.IsNullOrEmpty(nom.Text) || String.IsNullOrEmpty(ape.Text) || String.IsNullOrEmpty(nomCami.Text)||
+                numeroCami.Value < 1 || numeroCami.Value > 18 || edadAnios < 18)
             {
-                //No se pudo convertir los números a formato númerico
                 return false;
             }
-            if (CalculateDNILeter(dniInteger) != dniLeter)
-            {
-                //La letra del DNI es incorrecta
-                return false;
-            }
-            //DNI Valido :)
             return true;
-        }
-
-
-        static string CalculateDNILeter(int dniNumbers)
-        {
-            //Cargamos los digitos de control
-            string[] control = { "T", "R", "W", "A", "G", "M", "Y", "F", "P", "D", "X", "B", "N", "J", "Z", "S", "Q", "V", "H", "L", "C", "K", "E" };
-            var mod = dniNumbers % 23;
-            return control[mod];
-        }
-        private void validar()
-        {/*
-            if (cod.Value <= 0 || !validarDni(dni.Text) || String.IsNullOrEmpty(nom.Text) || String.IsNullOrEmpty(ape1.Text) || String.IsNullOrEmpty(ape2.Text)
-                || !ValidacionEmail.IsValid(correo.Text)|| tlf.Value > 699999999 || tlf.Value <= 600000000 || String.IsNullOrEmpty(come.Text))
-            {
-                return false;
-            }
-            return true;*/
         }
         private void camposIncorrectos()
         {
-            if (cod.Value <= 0)
-            {
-                cod.BackColor = Color.Red;
-            }
-            if (!validarDni(dni.Text))
-            {
-                dni.BackColor = Color.Red;
-            }
             if (String.IsNullOrEmpty(nom.Text))
             {
                 nom.BackColor = Color.Red;
-            }/*
-            if (!ValidacionEmail.IsValid(correo.Text))
-            {
-                correo.BackColor = Color.Red;
-            }*/
-            if (String.IsNullOrEmpty(ape1.Text))
-            {
-                ape1.BackColor = Color.Red;
             }
-            if (String.IsNullOrEmpty(ape2.Text))
+            if (String.IsNullOrEmpty(ape.Text))
             {
-                ape2.BackColor = Color.Red;
-
+                ape.BackColor = Color.Red;
             }
-            if (String.IsNullOrEmpty(come.Text))
+            if (String.IsNullOrEmpty(nomCami.Text))
             {
-                come.BackColor = Color.Red;
+                nomCami.BackColor = Color.Red;
+            }
+            if (numeroCami.Value<1 || numeroCami.Value>18)
+            {
+                nomCami.BackColor = Color.Red;
+            }
+            if (edadAnios<18)
+            {
+                fechaNac.CalendarTitleBackColor = Color.Red;
             }
         }
         private void camposNormal()
         {
-            cod.BackColor = Color.White;
-            dni.BackColor = Color.White;
             nom.BackColor = Color.White;
-            ape1.BackColor = Color.White;
-            ape2.BackColor = Color.White;
-            puesto.BackColor = Color.White;
-            tlf.BackColor = Color.White;
-            correo.BackColor = Color.White;
-            fechaNac.CalendarTitleBackColor = Color.White;
-            numSS.BackColor = Color.White;
-            come.BackColor = Color.White;
+            ape.BackColor = Color.White;
+            nomCami.BackColor = Color.White;
+            numeroCami.BackColor = Color.White;
+            posicion.BackColor = Color.White;
+            fechaNac.CalendarTitleBackColor = Color.White;    
         }
 
         private void vaciarCampos()
         { 
-            string fecha =  "Jan 01, 1953";
-            var parsedDate = DateTime.Parse(fecha);
-            cod.Value = 0;
-            dni.Clear();
             nom.Clear();
-            ape1.Clear();
-            ape2.Clear();
-            puesto.Items.Clear();
-            tlf.Value = 600000000;
-            correo.Clear();
-            fechaNac.Value = parsedDate;
-            numSS.Value = 0;
-            come.Clear();
+            ape.Clear();
+            nomCami.Clear();
+            numeroCami.Value = 0;
+            posicion.Items.Clear();
+            }
+        private void aniadirJugador()
+        {
+            establecerSexo();
+            Equipo e = new Equipo(equipo.SelectedText.ToString());
+            ControladorJugadores.listaJugadores.Add(new Jugador((int)numeroCami.Value, nom.Text, ape.Text, nomCami.Text, posicion.Text,
+                s, fechaNac.Value, e));
         }
-        private void aniadirEmpleado()
-        {/*
-            Empleado.listaEmpleados.Add(new Empleado((int)cod.Value, dni.Text, nom.Text, ape1.Text, ape2.Text,
-                puesto.Text, (int)tlf.Value, correo.Text, fechaNac.Value, (int)numSS.Value, come.Text));
-        */}
 
         private void b1_Click(object sender, EventArgs e)
         {
-            /*if (validar())
+            if (validar())
             {
-                aniadirEmpleado();
+                aniadirJugador();
                 vaciarCampos();
-                MessageBox.Show("Empleado añadido al repositorio de Empleados");
+                MessageBox.Show("Jugador añadido al repositorio de Jugador");
 
             }
             else
@@ -151,22 +120,12 @@ namespace Proyecto
                 camposNormal();
                 camposIncorrectos();
                 MessageBox.Show("Revisa los campos, hay algún dato erróneo");
-            }*/
+            }
         }
 
         private void label5_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void bt2_Click(object sender, EventArgs e)
-        {
-            wb.Visible = true;
-        }
-
-        private void esc_Click(object sender, EventArgs e)
-        {
-            wb.Visible = false;
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -179,10 +138,6 @@ namespace Proyecto
 
         }
 
-        private void tlf_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void come_TextChanged(object sender, EventArgs e)
         {

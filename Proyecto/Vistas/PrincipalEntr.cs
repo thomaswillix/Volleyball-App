@@ -60,7 +60,8 @@ namespace Proyecto
 
         private void altaToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            /*Vista de Convocar a Jugadores para X partidos.*/
+            NuevoJugador nuevoJugador = new NuevoJugador();
+            nuevoJugador.ShowDialog();
         }
 
         private void empleadosToolStripMenuItem_Click(object sender, EventArgs e)

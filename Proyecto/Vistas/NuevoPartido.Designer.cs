@@ -210,6 +210,7 @@
             this.Controls.Add(this.btProgr);
             this.Controls.Add(this.fechaNac);
             this.Controls.Add(this.label1);
+            this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(1030, 600);
             this.MinimizeBox = false;

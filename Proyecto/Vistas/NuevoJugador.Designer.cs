@@ -32,21 +32,21 @@
             this.b1 = new System.Windows.Forms.Button();
             this.fechaNac = new System.Windows.Forms.DateTimePicker();
             this.nom = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.ape1 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.ape = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.puesto = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.ape2 = new System.Windows.Forms.TextBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.posicion = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.nomCami = new System.Windows.Forms.TextBox();
+            this.numeroCami = new System.Windows.Forms.NumericUpDown();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.equipo = new System.Windows.Forms.ComboBox();
+            this.sexo = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.numeroCami)).BeginInit();
             this.SuspendLayout();
             // 
             // b1
@@ -77,152 +77,155 @@
             this.nom.Size = new System.Drawing.Size(100, 20);
             this.nom.TabIndex = 3;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(29, 366);
-            this.label1.Name = "label1";
-            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label1.Size = new System.Drawing.Size(108, 13);
-            this.label1.TabIndex = 22;
-            this.label1.Text = "Fecha de Nacimiento";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(29, 64);
-            this.label13.Name = "label13";
-            this.label13.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label13.Size = new System.Drawing.Size(44, 13);
-            this.label13.TabIndex = 21;
-            this.label13.Text = "Nombre";
-            // 
-            // ape1
-            // 
-            this.ape1.Location = new System.Drawing.Point(91, 98);
-            this.ape1.Name = "ape1";
-            this.ape1.Size = new System.Drawing.Size(100, 20);
-            this.ape1.TabIndex = 4;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(29, 101);
+            this.label8.Location = new System.Drawing.Point(29, 366);
             this.label8.Name = "label8";
             this.label8.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label8.Size = new System.Drawing.Size(49, 13);
-            this.label8.TabIndex = 39;
-            this.label8.Text = "Apellidos";
+            this.label8.Size = new System.Drawing.Size(108, 13);
+            this.label8.TabIndex = 22;
+            this.label8.Text = "Fecha de Nacimiento";
+            this.label8.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(29, 64);
+            this.label1.Name = "label1";
+            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label1.Size = new System.Drawing.Size(44, 13);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Nombre";
+            // 
+            // ape
+            // 
+            this.ape.Location = new System.Drawing.Point(91, 98);
+            this.ape.Name = "ape";
+            this.ape.Size = new System.Drawing.Size(100, 20);
+            this.ape.TabIndex = 4;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(29, 313);
+            this.label2.Location = new System.Drawing.Point(29, 101);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label2.Size = new System.Drawing.Size(47, 13);
-            this.label2.TabIndex = 43;
-            this.label2.Text = "Posición";
+            this.label2.Size = new System.Drawing.Size(49, 13);
+            this.label2.TabIndex = 39;
+            this.label2.Text = "Apellidos";
             // 
-            // puesto
+            // label7
             // 
-            this.puesto.FormattingEnabled = true;
-            this.puesto.Items.AddRange(new object[] {
-            "comercial",
-            "jefe",
-            "programador"});
-            this.puesto.Location = new System.Drawing.Point(90, 310);
-            this.puesto.Name = "puesto";
-            this.puesto.Size = new System.Drawing.Size(121, 21);
-            this.puesto.TabIndex = 6;
-            this.puesto.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(29, 313);
+            this.label7.Name = "label7";
+            this.label7.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label7.Size = new System.Drawing.Size(47, 13);
+            this.label7.TabIndex = 43;
+            this.label7.Text = "Posición";
             // 
-            // label9
+            // posicion
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(29, 140);
-            this.label9.Name = "label9";
-            this.label9.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label9.Size = new System.Drawing.Size(115, 13);
-            this.label9.TabIndex = 41;
-            this.label9.Text = "Nombre en la camiseta";
+            this.posicion.FormattingEnabled = true;
+            this.posicion.Items.AddRange(new object[] {
+            "Colocador",
+            "Bloqueador Cental",
+            "Libero",
+            "Opuesto"});
+            this.posicion.Location = new System.Drawing.Point(90, 310);
+            this.posicion.Name = "posicion";
+            this.posicion.Size = new System.Drawing.Size(121, 21);
+            this.posicion.TabIndex = 6;
+            this.posicion.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // ape2
+            // label3
             // 
-            this.ape2.Location = new System.Drawing.Point(161, 138);
-            this.ape2.Name = "ape2";
-            this.ape2.Size = new System.Drawing.Size(100, 20);
-            this.ape2.TabIndex = 5;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(29, 140);
+            this.label3.Name = "label3";
+            this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label3.Size = new System.Drawing.Size(115, 13);
+            this.label3.TabIndex = 41;
+            this.label3.Text = "Nombre en la camiseta";
             // 
-            // numericUpDown1
+            // nomCami
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(161, 178);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.nomCami.Location = new System.Drawing.Point(161, 138);
+            this.nomCami.Name = "nomCami";
+            this.nomCami.Size = new System.Drawing.Size(100, 20);
+            this.nomCami.TabIndex = 5;
+            // 
+            // numeroCami
+            // 
+            this.numeroCami.Location = new System.Drawing.Point(161, 178);
+            this.numeroCami.Maximum = new decimal(new int[] {
             18,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(52, 20);
-            this.numericUpDown1.TabIndex = 51;
-            this.numericUpDown1.Value = new decimal(new int[] {
+            this.numeroCami.Name = "numeroCami";
+            this.numeroCami.Size = new System.Drawing.Size(52, 20);
+            this.numeroCami.TabIndex = 51;
+            this.numeroCami.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(29, 180);
+            this.label4.Name = "label4";
+            this.label4.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label4.Size = new System.Drawing.Size(115, 13);
+            this.label4.TabIndex = 52;
+            this.label4.Text = "Número de la camiseta";
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(29, 180);
+            this.label6.Location = new System.Drawing.Point(29, 265);
             this.label6.Name = "label6";
             this.label6.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label6.Size = new System.Drawing.Size(115, 13);
-            this.label6.TabIndex = 52;
-            this.label6.Text = "Número de la camiseta";
+            this.label6.Size = new System.Drawing.Size(40, 13);
+            this.label6.TabIndex = 54;
+            this.label6.Text = "Equipo";
             // 
-            // label7
+            // equipo
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(29, 265);
-            this.label7.Name = "label7";
-            this.label7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label7.Size = new System.Drawing.Size(40, 13);
-            this.label7.TabIndex = 54;
-            this.label7.Text = "Equipo";
+            this.equipo.FormattingEnabled = true;
+            this.equipo.Items.AddRange(new object[] {
+            "Selección Brasileña",
+            "Selección Japonesa",
+            "Selección EEUU",
+            "Selección Italiana"});
+            this.equipo.Location = new System.Drawing.Point(77, 261);
+            this.equipo.Name = "equipo";
+            this.equipo.Size = new System.Drawing.Size(121, 21);
+            this.equipo.TabIndex = 55;
             // 
-            // comboBox1
+            // sexo
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.sexo.FormattingEnabled = true;
+            this.sexo.Items.AddRange(new object[] {
             "Hombre",
             "Mujer"});
-            this.comboBox1.Location = new System.Drawing.Point(77, 261);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 55;
+            this.sexo.Location = new System.Drawing.Point(77, 218);
+            this.sexo.Name = "sexo";
+            this.sexo.Size = new System.Drawing.Size(121, 21);
+            this.sexo.TabIndex = 57;
             // 
-            // comboBox2
+            // label5
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Hombre",
-            "Mujer"});
-            this.comboBox2.Location = new System.Drawing.Point(77, 218);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 57;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(29, 222);
-            this.label3.Name = "label3";
-            this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label3.Size = new System.Drawing.Size(31, 13);
-            this.label3.TabIndex = 56;
-            this.label3.Text = "Sexo";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(29, 222);
+            this.label5.Name = "label5";
+            this.label5.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label5.Size = new System.Drawing.Size(31, 13);
+            this.label5.TabIndex = 56;
+            this.label5.Text = "Sexo";
             // 
             // NuevoJugador
             // 
@@ -231,23 +234,24 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(361, 494);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.sexo);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.equipo);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.puesto);
+            this.Controls.Add(this.numeroCami);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.posicion);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.nomCami);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.ape);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.ape2);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.ape1);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.b1);
             this.Controls.Add(this.fechaNac);
             this.Controls.Add(this.nom);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.label13);
+            this.DoubleBuffered = true;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(377, 533);
             this.MinimizeBox = false;
@@ -255,7 +259,7 @@
             this.Name = "NuevoJugador";
             this.Text = "Nuevo Jugador";
             this.Load += new System.EventHandler(this.NuevoJugador_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numeroCami)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -266,19 +270,19 @@
         private System.Windows.Forms.Button b1;
         private System.Windows.Forms.DateTimePicker fechaNac;
         private System.Windows.Forms.TextBox nom;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox ape1;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox ape;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox puesto;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox ape2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox posicion;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox nomCami;
+        private System.Windows.Forms.NumericUpDown numeroCami;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox equipo;
+        private System.Windows.Forms.ComboBox sexo;
+        private System.Windows.Forms.Label label5;
     }
 }

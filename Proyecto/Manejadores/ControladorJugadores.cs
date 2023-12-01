@@ -53,7 +53,7 @@ namespace Proyecto.Manejadores
 
             }
         }
-        public static void cargarJugadoresMasc()
+        /*public static void cargarJugadoresMasc()
         {
             Equipo eq;
             DateTime d;
@@ -80,6 +80,6 @@ namespace Proyecto.Manejadores
             d = new DateTime(1996, 1, 13, 0, 0, 0);
             e = new Jugador(14, "Fernando", "Gil Kreling", "Fernando", "Colocador", 'H', d, eq);
             equipoMasc.Add(e);
-        }
+        }*/
     }
 }

@@ -10,16 +10,18 @@ namespace Proyecto.Modelo
     {
         private int id;
         private string nombre;
-
-        public Equipo(int id, string nombre)
+        private static int num = 0;
+        public Equipo(string nombre)
         {
-            this.Id = id;
+            this.Id = num;
             this.Nombre = nombre;
+            num++;
         }
         public Equipo() { }
 
         public int Id { get => id; set => id = value; }
         public string Nombre { get => nombre; set => nombre = value; }
+
 
     }
 }
