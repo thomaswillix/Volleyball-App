@@ -31,18 +31,18 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NuevoPartido));
             this.label1 = new System.Windows.Forms.Label();
-            this.fechaIni = new System.Windows.Forms.DateTimePicker();
-            this.b1 = new System.Windows.Forms.Button();
+            this.fechaNac = new System.Windows.Forms.DateTimePicker();
+            this.btProgr = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.imageList2 = new System.Windows.Forms.ImageList(this.components);
-            this.puesto = new System.Windows.Forms.ComboBox();
+            this.equipoL = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.escudo = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.equipoV = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.escudo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -58,23 +58,23 @@
             this.label1.Text = "Fecha";
             this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
-            // fechaIni
+            // fechaNac
             // 
-            this.fechaIni.Location = new System.Drawing.Point(433, 75);
-            this.fechaIni.Name = "fechaIni";
-            this.fechaIni.Size = new System.Drawing.Size(200, 20);
-            this.fechaIni.TabIndex = 3;
-            this.fechaIni.Value = new System.DateTime(2023, 12, 9, 11, 0, 0, 0);
+            this.fechaNac.Location = new System.Drawing.Point(433, 75);
+            this.fechaNac.Name = "fechaNac";
+            this.fechaNac.Size = new System.Drawing.Size(200, 20);
+            this.fechaNac.TabIndex = 1;
+            this.fechaNac.Value = new System.DateTime(2023, 12, 9, 11, 0, 0, 0);
             // 
-            // b1
+            // btProgr
             // 
-            this.b1.Location = new System.Drawing.Point(468, 453);
-            this.b1.Name = "b1";
-            this.b1.Size = new System.Drawing.Size(75, 23);
-            this.b1.TabIndex = 10;
-            this.b1.Text = "Programar";
-            this.b1.UseVisualStyleBackColor = true;
-            this.b1.Click += new System.EventHandler(this.b1_Click);
+            this.btProgr.Location = new System.Drawing.Point(468, 453);
+            this.btProgr.Name = "btProgr";
+            this.btProgr.Size = new System.Drawing.Size(75, 23);
+            this.btProgr.TabIndex = 4;
+            this.btProgr.Text = "Programar";
+            this.btProgr.UseVisualStyleBackColor = true;
+            this.btProgr.Click += new System.EventHandler(this.b1_Click);
             // 
             // imageList1
             // 
@@ -88,19 +88,19 @@
             this.imageList2.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList2.TransparentColor = System.Drawing.Color.Transparent;
             // 
-            // puesto
+            // equipoL
             // 
-            this.puesto.FormattingEnabled = true;
-            this.puesto.Items.AddRange(new object[] {
+            this.equipoL.FormattingEnabled = true;
+            this.equipoL.Items.AddRange(new object[] {
             "Selección Brasileña",
             "Selección Japonesa",
             "Selección EEUU",
             "Selección Italiana"});
-            this.puesto.Location = new System.Drawing.Point(199, 124);
-            this.puesto.Name = "puesto";
-            this.puesto.Size = new System.Drawing.Size(121, 21);
-            this.puesto.TabIndex = 44;
-            this.puesto.SelectedIndexChanged += new System.EventHandler(this.puesto_SelectedIndexChanged);
+            this.equipoL.Location = new System.Drawing.Point(199, 124);
+            this.equipoL.Name = "equipoL";
+            this.equipoL.Size = new System.Drawing.Size(121, 21);
+            this.equipoL.TabIndex = 2;
+            this.equipoL.SelectedIndexChanged += new System.EventHandler(this.puesto_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -178,18 +178,18 @@
             this.pictureBox1.TabIndex = 51;
             this.pictureBox1.TabStop = false;
             // 
-            // comboBox1
+            // equipoV
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.equipoV.FormattingEnabled = true;
+            this.equipoV.Items.AddRange(new object[] {
             "Selección Brasileña",
             "Selección Japonesa",
             "Selección EEUU",
             "Selección Italiana"});
-            this.comboBox1.Location = new System.Drawing.Point(704, 123);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 46;
+            this.equipoV.Location = new System.Drawing.Point(704, 123);
+            this.equipoV.Name = "equipoV";
+            this.equipoV.Size = new System.Drawing.Size(121, 21);
+            this.equipoV.TabIndex = 3;
             // 
             // NuevoPartido
             // 
@@ -203,16 +203,19 @@
             this.Controls.Add(this.escudo);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.equipoV);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.puesto);
+            this.Controls.Add(this.equipoL);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.b1);
-            this.Controls.Add(this.fechaIni);
+            this.Controls.Add(this.btProgr);
+            this.Controls.Add(this.fechaNac);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(1030, 600);
+            this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(1030, 600);
             this.Name = "NuevoPartido";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Programar partido";
             this.Load += new System.EventHandler(this.NuevoPartido_Load);
             ((System.ComponentModel.ISupportInitialize)(this.escudo)).EndInit();
@@ -224,17 +227,17 @@
 
         #endregion
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker fechaIni;
-        private System.Windows.Forms.Button b1;
+        private System.Windows.Forms.DateTimePicker fechaNac;
+        private System.Windows.Forms.Button btProgr;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.ImageList imageList2;
-        private System.Windows.Forms.ComboBox puesto;
+        private System.Windows.Forms.ComboBox equipoL;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox escudo;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox equipoV;
     }
 }

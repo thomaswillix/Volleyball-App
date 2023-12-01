@@ -55,12 +55,12 @@ namespace Proyecto
 
         private void checkBox2_MouseHover(object sender, EventArgs e)
         {
-            tp.Show("Marcarse solo si sigue activo", cambios);
+            //tp.Show("Marcarse solo si sigue activo", cambios);
         }
 
         private void checkBox1_MouseHover(object sender, EventArgs e)
         {
-            tp.Show("Marcarse solo si han habido cambios en la realización del proyecto", cambios);
+            //tp.Show("Marcarse solo si han habido cambios en la realización del proyecto", cambios);
         }
 
         private void cambios_CheckedChanged(object sender, EventArgs e)
@@ -75,65 +75,29 @@ namespace Proyecto
 
         private bool validar()
         {
-            if (desc.Text == "" || (fechaIni.Value > fechaFin.Value)
-                || presuIni.Value < 0 || presuFin.Value < 0 || cod.Value <= 0
-                || codCli.Value <= 0)
+            /*if (fechaNac.Value<)
             {
                 return false;
-            }
+            }*/
             return true;
         }
         private void camposIncorrectos()
         {
-            if (desc.Text == "")
+            /*if (fechaNac.Value<)
             {
-                desc.BackColor = Color.Red;
-            }
-            if (fechaIni.Value > fechaFin.Value)
-            {
-                fechaIni.CalendarTitleBackColor = Color.Red;
-                fechaFin.CalendarTitleBackColor = Color.Red;
-            }
-            if (presuIni.Value < 0)
-            {
-                presuIni.BackColor = Color.Red;
-            }
-            if (presuFin.Value < 0)
-            {
-                presuFin.BackColor = Color.Red;
-            }
-            if (cod.Value <= 0)
-            {
-                cod.BackColor = Color.Red;
-            }
-            if (codCli.Value <= 0)
-            {
-                codCli.BackColor = Color.Red;
-            }
+                fechaNac.CalendarTitleBackColor = Color.Red;
+             }*/
         }
         private void camposNormal()
         {
-            desc.BackColor = Color.White;
-            fechaIni.CalendarTitleBackColor = Color.White;
-            fechaFin.CalendarTitleBackColor = Color.White;
-            presuIni.BackColor = Color.White;
-            presuFin.BackColor = Color.White;
-            cod.BackColor = Color.White;
-            codCli.BackColor = Color.White;
-
+            
+            fechaNac.CalendarTitleBackColor = Color.White;
+            
         }
         private void vaciarCampos()
         {
-            desc.Clear();
-            fechaIni.Value = DateTime.Now;
-            fechaFin.Value = DateTime.Now;
-            presuIni.Value = 0;
-            estado.Checked = false;
-            cambios.Checked = false;
-            presuFin.Value = 0;
-            cod.Value = 0;
-            codCli.Value = 0;
-
+            fechaNac.Value = DateTime.Now;
+            
         }
 
         private void aniadirProyecto()
