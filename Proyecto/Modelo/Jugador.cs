@@ -6,7 +6,7 @@ using Proyecto.Modelo;
 public class Jugador : Usuario
 {
     private int numCamiseta;
-	private string apellido1;
+	private string apellidos;
     private string nombreCamiseta;
 	private string posicion;
 	private DateTime fechaNac;
@@ -16,7 +16,7 @@ public class Jugador : Usuario
     {
         this.numCamiseta = numCamiseta;
         Nombre = nombre;
-        this.apellido1 = apellido1;
+        this.apellidos = apellido1;
         this.nombreCamiseta = nombreCamiseta;
         this.posicion = posicion;
         Sexo = sexo;
@@ -29,7 +29,7 @@ public class Jugador : Usuario
     }
 
     public int NumCamiseta { get => numCamiseta; set => numCamiseta = value; }
-    public string Apellido1 { get => apellido1; set => apellido1 = value; }
+    public string Apellido1 { get => apellidos; set => apellidos = value; }
     public string NombreCamiseta { get => nombreCamiseta; set => nombreCamiseta = value; }
     public string Posicion { get => posicion; set => posicion = value; }
     public DateTime FechaNac { get => fechaNac; set => fechaNac = value; }
@@ -39,7 +39,7 @@ public class Jugador : Usuario
     {
         return obj is Jugador jugador &&
                numCamiseta == jugador.numCamiseta &&
-               apellido1 == jugador.apellido1 &&
+               apellidos == jugador.apellidos &&
                nombreCamiseta == jugador.nombreCamiseta &&
                posicion == jugador.posicion &&
                fechaNac == jugador.fechaNac &&
@@ -50,7 +50,7 @@ public class Jugador : Usuario
     {
         int hashCode = -801381194;
         hashCode = hashCode * -1521134295 + numCamiseta.GetHashCode();
-        hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(apellido1);
+        hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(apellidos);
         hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(nombreCamiseta);
         hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(posicion);
         hashCode = hashCode * -1521134295 + fechaNac.GetHashCode();

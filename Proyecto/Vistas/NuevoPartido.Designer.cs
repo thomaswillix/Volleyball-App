@@ -36,13 +36,13 @@
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.imageList2 = new System.Windows.Forms.ImageList(this.components);
             this.puesto = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.escudo = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.escudo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -92,35 +92,26 @@
             // 
             this.puesto.FormattingEnabled = true;
             this.puesto.Items.AddRange(new object[] {
-            "comercial",
-            "jefe",
-            "programador"});
+            "Selección Brasileña",
+            "Selección Japonesa",
+            "Selección EEUU",
+            "Selección Italiana"});
             this.puesto.Location = new System.Drawing.Point(199, 124);
             this.puesto.Name = "puesto";
             this.puesto.Size = new System.Drawing.Size(121, 21);
             this.puesto.TabIndex = 44;
+            this.puesto.SelectedIndexChanged += new System.EventHandler(this.puesto_SelectedIndexChanged);
             // 
-            // label8
+            // label3
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(123, 128);
-            this.label8.Name = "label8";
-            this.label8.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label8.Size = new System.Drawing.Size(69, 13);
-            this.label8.TabIndex = 45;
-            this.label8.Text = "Equipo Local";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "comercial",
-            "jefe",
-            "programador"});
-            this.comboBox1.Location = new System.Drawing.Point(704, 123);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 46;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(123, 128);
+            this.label3.Name = "label3";
+            this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label3.Size = new System.Drawing.Size(69, 13);
+            this.label3.TabIndex = 45;
+            this.label3.Text = "Equipo Local";
+            this.label3.Click += new System.EventHandler(this.label8_Click);
             // 
             // label2
             // 
@@ -131,6 +122,7 @@
             this.label2.Size = new System.Drawing.Size(83, 13);
             this.label2.TabIndex = 47;
             this.label2.Text = "Equipo Visitante";
+            this.label2.Click += new System.EventHandler(this.label2_Click_2);
             // 
             // panel2
             // 
@@ -186,11 +178,25 @@
             this.pictureBox1.TabIndex = 51;
             this.pictureBox1.TabStop = false;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Selección Brasileña",
+            "Selección Japonesa",
+            "Selección EEUU",
+            "Selección Italiana"});
+            this.comboBox1.Location = new System.Drawing.Point(704, 123);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 46;
+            // 
             // NuevoPartido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1014, 561);
             this.Controls.Add(this.pictureBox1);
@@ -200,7 +206,7 @@
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.puesto);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.b1);
             this.Controls.Add(this.fechaIni);
             this.Controls.Add(this.label1);
@@ -223,12 +229,12 @@
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.ImageList imageList2;
         private System.Windows.Forms.ComboBox puesto;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox escudo;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
