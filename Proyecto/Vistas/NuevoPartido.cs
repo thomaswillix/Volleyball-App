@@ -84,6 +84,7 @@ namespace Proyecto
             Equipo eL = new Equipo(equipoL.Text);
             Equipo eV = new Equipo(equipoV.Text);
             ControladorPartidos.listaPartidos.Add(new Partido(eL, eV, fechaPart.Value));
+            ControladorPartidos.escribirPartidos();
         }
 
         private void b1_Click(object sender, EventArgs e)

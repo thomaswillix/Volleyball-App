@@ -209,6 +209,7 @@
             this.equipo.Name = "equipo";
             this.equipo.Size = new System.Drawing.Size(121, 21);
             this.equipo.TabIndex = 6;
+            this.equipo.SelectedIndexChanged += new System.EventHandler(this.equipo_SelectedIndexChanged);
             // 
             // sexo
             // 
@@ -262,6 +263,7 @@
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(377, 533);
             this.Name = "NuevoJugador";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nuevo Jugador";
             this.Load += new System.EventHandler(this.NuevoJugador_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numeroCami)).EndInit();

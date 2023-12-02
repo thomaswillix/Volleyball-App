@@ -71,9 +71,21 @@ namespace Proyecto
             {
                 nomCami.BackColor = Color.Red;
             }
-            if (numeroCami.Value<1 || numeroCami.Value>18)
+            if (numeroCami.Value < 1 || numeroCami.Value > 18)
             {
                 nomCami.BackColor = Color.Red;
+            }
+            if (String.IsNullOrEmpty(sexo.Text))
+            {
+                sexo.BackColor = Color.Red;
+            }
+            if (String.IsNullOrEmpty(equipo.Text))
+            {
+                equipo.BackColor = Color.Red;
+            }
+            if (String.IsNullOrEmpty(posicion.Text))
+            {
+                posicion.BackColor = Color.Red;
             }
             if (edadAnios<18)
             {
@@ -86,6 +98,8 @@ namespace Proyecto
             ape.BackColor = Color.White;
             nomCami.BackColor = Color.White;
             numeroCami.BackColor = Color.White;
+            sexo.BackColor = Color.White;
+            equipo.BackColor = Color.White;
             posicion.BackColor = Color.White;
             fechaNac.CalendarTitleBackColor = Color.White;    
         }
@@ -159,6 +173,11 @@ namespace Proyecto
         }
 
         private void numeroCami_ValueChanged(object sender, EventArgs e)
+        {
+            camposNormal();
+        }
+
+        private void equipo_SelectedIndexChanged(object sender, EventArgs e)
         {
             camposNormal();
         }
