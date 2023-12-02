@@ -6,4 +6,8 @@ In this application I'll apply my knowledge onto resolving an issue that I've en
 
 I'm using Visual Studio Community 2022.
 
-It is still in process.</p>
+It is still in process.
+
+
+
+Credits for the flaming volleyball logo: <a href="Vecteezy.com">Vecteezy.com</a></p>
