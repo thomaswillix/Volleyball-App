@@ -7,12 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Proyecto.Modelo;
+using Proyecto.Manejadores;
 
 namespace Proyecto
 {
     public partial class NuevoPartido : Form
     {
-        ToolTip tp = new ToolTip();
+        DateTime fechaActual = new DateTime();
+
         public NuevoPartido()
         {
             InitializeComponent();
@@ -28,40 +31,6 @@ namespace Proyecto
 
         }
 
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox1_MouseDown(object sender, MouseEventArgs e)
-        {
-
-        }
-
-        private void checkBox2_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox1_MouseEnter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox2_MouseHover(object sender, EventArgs e)
-        {
-            //tp.Show("Marcarse solo si sigue activo", cambios);
-        }
-
-        private void checkBox1_MouseHover(object sender, EventArgs e)
-        {
-            //tp.Show("Marcarse solo si han habido cambios en la realización del proyecto", cambios);
-        }
 
         private void cambios_CheckedChanged(object sender, EventArgs e)
         {
@@ -75,45 +44,55 @@ namespace Proyecto
 
         private bool validar()
         {
-            /*if (fechaNac.Value<)
+            
+            if (fechaPart.Value<fechaActual || String.IsNullOrEmpty(equipoL.Text) || String.IsNullOrEmpty(equipoV.Text))
             {
                 return false;
-            }*/
+            }
             return true;
         }
         private void camposIncorrectos()
         {
-            /*if (fechaNac.Value<)
+            if (fechaPart.Value < fechaActual) {
+                MessageBox.Show("La fecha del partido no puede ser anterior a la fecha actual");
+                fechaPart.CalendarTitleBackColor = Color.Red;
+            }
+            if (String.IsNullOrEmpty(equipoL.Text))
             {
-                fechaNac.CalendarTitleBackColor = Color.Red;
-             }*/
+                equipoL.BackColor = Color.Red;
+            }
+            if (String.IsNullOrEmpty(equipoV.Text))
+            {
+                equipoV.BackColor = Color.Red;
+            }
         }
         private void camposNormal()
         {
-            
-            fechaNac.CalendarTitleBackColor = Color.White;
-            
+            fechaPart.CalendarTitleBackColor = Color.White;
+            equipoL.BackColor = Color.White;
+            equipoV.BackColor = Color.White;
         }
         private void vaciarCampos()
         {
-            fechaNac.Value = DateTime.Now;
-            
+            fechaPart.Value = DateTime.Now;
+            equipoL.ResetText();
+            equipoV.ResetText();
         }
 
-        private void aniadirProyecto()
-        {/*
-            Proyecto.listaProyectos.Add(new Proyecto((int)cod.Value, desc.Text, fechaIni.Value,
-                fechaFin.Value, estado.Checked, (Double)presuIni.Value, (Double)presuFin.Value,
-                cambios.Checked, (int)codCli.Value));*/
+        private void aniadirPartido()
+        {
+            Equipo eL = new Equipo(equipoL.Text);
+            Equipo eV = new Equipo(equipoV.Text);
+            ControladorPartidos.listaPartidos.Add(new Partido(eL, eV, fechaPart.Value));
         }
 
         private void b1_Click(object sender, EventArgs e)
         {
             if (validar())
             {
-                aniadirProyecto();
+                aniadirPartido();
                 vaciarCampos();
-                MessageBox.Show("Proyecto añadido al repositorio de Proyectos");
+                MessageBox.Show("Partido añadido al repositorio de Partidos");
 
             }
             else
@@ -126,7 +105,7 @@ namespace Proyecto
 
         private void NuevoPartido_Load(object sender, EventArgs e)
         {
-
+            fechaActual.ToLocalTime();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
@@ -139,34 +118,33 @@ namespace Proyecto
 
         }
 
-        private void presuFin_ValueChanged(object sender, EventArgs e)
+        private void mismoEquipo()
         {
-
+            if(equipoV.SelectedIndex == equipoL.SelectedIndex)
+            {
+                label4.Visible = true;
+            }
+            else
+            {
+                label4.Visible = false;
+            }
         }
 
-        private void codCli_ValueChanged(object sender, EventArgs e)
+        private void equipoL_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            camposNormal();
+            mismoEquipo();
         }
 
-        private void presuIni_ValueChanged(object sender, EventArgs e)
+        private void equipoV_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            camposNormal();
+            mismoEquipo();
         }
 
-        private void puesto_SelectedIndexChanged(object sender, EventArgs e)
+        private void fechaNac_ValueChanged(object sender, EventArgs e)
         {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click_2(object sender, EventArgs e)
-        {
-
+            camposNormal();
         }
     }
 }

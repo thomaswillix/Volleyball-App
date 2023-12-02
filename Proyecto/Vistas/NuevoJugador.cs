@@ -123,25 +123,9 @@ namespace Proyecto
             }
         }
 
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-        }
-
-        private void cod_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void come_TextChanged(object sender, EventArgs e)
-        {
-
+            camposNormal();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -151,7 +135,32 @@ namespace Proyecto
 
         private void fechaNac_ValueChanged(object sender, EventArgs e)
         {
+            camposNormal();
+        }
 
+        private void nomCami_TextChanged(object sender, EventArgs e)
+        {
+            camposNormal();
+        }
+
+        private void ape_TextChanged(object sender, EventArgs e)
+        {
+            camposNormal();
+        }
+
+        private void nom_TextChanged(object sender, EventArgs e)
+        {
+            camposNormal();
+        }
+
+        private void sexo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            camposNormal();
+        }
+
+        private void numeroCami_ValueChanged(object sender, EventArgs e)
+        {
+            camposNormal();
         }
     }
 }

@@ -54,7 +54,7 @@
             this.b1.Location = new System.Drawing.Point(138, 420);
             this.b1.Name = "b1";
             this.b1.Size = new System.Drawing.Size(75, 23);
-            this.b1.TabIndex = 11;
+            this.b1.TabIndex = 10;
             this.b1.Text = "Dar de Alta";
             this.b1.UseVisualStyleBackColor = true;
             this.b1.Click += new System.EventHandler(this.b1_Click);
@@ -67,7 +67,7 @@
             this.fechaNac.Name = "fechaNac";
             this.fechaNac.Size = new System.Drawing.Size(200, 20);
             this.fechaNac.TabIndex = 9;
-            this.fechaNac.Value = new System.DateTime(2005, 12, 31, 0, 0, 0, 0);
+            this.fechaNac.Value = new System.DateTime(2005, 12, 2, 0, 0, 0, 0);
             this.fechaNac.ValueChanged += new System.EventHandler(this.fechaNac_ValueChanged);
             // 
             // nom
@@ -75,7 +75,8 @@
             this.nom.Location = new System.Drawing.Point(91, 61);
             this.nom.Name = "nom";
             this.nom.Size = new System.Drawing.Size(100, 20);
-            this.nom.TabIndex = 3;
+            this.nom.TabIndex = 1;
+            this.nom.TextChanged += new System.EventHandler(this.nom_TextChanged);
             // 
             // label8
             // 
@@ -103,7 +104,8 @@
             this.ape.Location = new System.Drawing.Point(91, 98);
             this.ape.Name = "ape";
             this.ape.Size = new System.Drawing.Size(100, 20);
-            this.ape.TabIndex = 4;
+            this.ape.TabIndex = 2;
+            this.ape.TextChanged += new System.EventHandler(this.ape_TextChanged);
             // 
             // label2
             // 
@@ -136,7 +138,7 @@
             this.posicion.Location = new System.Drawing.Point(90, 310);
             this.posicion.Name = "posicion";
             this.posicion.Size = new System.Drawing.Size(121, 21);
-            this.posicion.TabIndex = 6;
+            this.posicion.TabIndex = 7;
             this.posicion.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label3
@@ -154,7 +156,8 @@
             this.nomCami.Location = new System.Drawing.Point(161, 138);
             this.nomCami.Name = "nomCami";
             this.nomCami.Size = new System.Drawing.Size(100, 20);
-            this.nomCami.TabIndex = 5;
+            this.nomCami.TabIndex = 3;
+            this.nomCami.TextChanged += new System.EventHandler(this.nomCami_TextChanged);
             // 
             // numeroCami
             // 
@@ -166,12 +169,13 @@
             0});
             this.numeroCami.Name = "numeroCami";
             this.numeroCami.Size = new System.Drawing.Size(52, 20);
-            this.numeroCami.TabIndex = 51;
+            this.numeroCami.TabIndex = 4;
             this.numeroCami.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
+            this.numeroCami.ValueChanged += new System.EventHandler(this.numeroCami_ValueChanged);
             // 
             // label4
             // 
@@ -204,7 +208,7 @@
             this.equipo.Location = new System.Drawing.Point(77, 261);
             this.equipo.Name = "equipo";
             this.equipo.Size = new System.Drawing.Size(121, 21);
-            this.equipo.TabIndex = 55;
+            this.equipo.TabIndex = 6;
             // 
             // sexo
             // 
@@ -215,7 +219,8 @@
             this.sexo.Location = new System.Drawing.Point(77, 218);
             this.sexo.Name = "sexo";
             this.sexo.Size = new System.Drawing.Size(121, 21);
-            this.sexo.TabIndex = 57;
+            this.sexo.TabIndex = 5;
+            this.sexo.SelectedIndexChanged += new System.EventHandler(this.sexo_SelectedIndexChanged);
             // 
             // label5
             // 

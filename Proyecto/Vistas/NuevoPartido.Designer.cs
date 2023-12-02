@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NuevoPartido));
             this.label1 = new System.Windows.Forms.Label();
-            this.fechaNac = new System.Windows.Forms.DateTimePicker();
+            this.fechaPart = new System.Windows.Forms.DateTimePicker();
             this.btProgr = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.imageList2 = new System.Windows.Forms.ImageList(this.components);
@@ -43,6 +43,7 @@
             this.escudo = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.equipoV = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.escudo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -50,21 +51,24 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(387, 78);
+            this.label1.Location = new System.Drawing.Point(358, 79);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label1.Size = new System.Drawing.Size(37, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "Fecha";
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // fechaNac
+            // fechaPart
             // 
-            this.fechaNac.Location = new System.Drawing.Point(433, 75);
-            this.fechaNac.Name = "fechaNac";
-            this.fechaNac.Size = new System.Drawing.Size(200, 20);
-            this.fechaNac.TabIndex = 1;
-            this.fechaNac.Value = new System.DateTime(2023, 12, 9, 11, 0, 0, 0);
+            this.fechaPart.Checked = false;
+            this.fechaPart.Location = new System.Drawing.Point(404, 76);
+            this.fechaPart.MinDate = new System.DateTime(2023, 12, 2, 12, 33, 3, 0);
+            this.fechaPart.Name = "fechaPart";
+            this.fechaPart.Size = new System.Drawing.Size(200, 20);
+            this.fechaPart.TabIndex = 1;
+            this.fechaPart.Value = new System.DateTime(2023, 12, 2, 12, 33, 3, 0);
+            this.fechaPart.ValueChanged += new System.EventHandler(this.fechaNac_ValueChanged);
             // 
             // btProgr
             // 
@@ -96,33 +100,33 @@
             "Selección Japonesa",
             "Selección EEUU",
             "Selección Italiana"});
-            this.equipoL.Location = new System.Drawing.Point(199, 124);
+            this.equipoL.Location = new System.Drawing.Point(214, 124);
             this.equipoL.Name = "equipoL";
             this.equipoL.Size = new System.Drawing.Size(121, 21);
             this.equipoL.TabIndex = 2;
-            this.equipoL.SelectedIndexChanged += new System.EventHandler(this.puesto_SelectedIndexChanged);
+            this.equipoL.SelectedIndexChanged += new System.EventHandler(this.equipoL_SelectedIndexChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(123, 128);
+            this.label3.Location = new System.Drawing.Point(138, 128);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label3.Size = new System.Drawing.Size(69, 13);
             this.label3.TabIndex = 45;
             this.label3.Text = "Equipo Local";
-            this.label3.Click += new System.EventHandler(this.label8_Click);
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(614, 127);
+            this.label2.Location = new System.Drawing.Point(627, 127);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label2.Size = new System.Drawing.Size(83, 13);
             this.label2.TabIndex = 47;
             this.label2.Text = "Equipo Visitante";
-            this.label2.Click += new System.EventHandler(this.label2_Click_2);
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // panel2
             // 
@@ -154,7 +158,7 @@
             this.escudo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("escudo.BackgroundImage")));
             this.escudo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.escudo.Cursor = System.Windows.Forms.Cursors.Default;
-            this.escudo.Location = new System.Drawing.Point(208, 435);
+            this.escudo.Location = new System.Drawing.Point(210, 435);
             this.escudo.MaximumSize = new System.Drawing.Size(280, 300);
             this.escudo.MinimumSize = new System.Drawing.Size(70, 75);
             this.escudo.Name = "escudo";
@@ -170,7 +174,7 @@
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox1.Location = new System.Drawing.Point(720, 435);
+            this.pictureBox1.Location = new System.Drawing.Point(722, 435);
             this.pictureBox1.MaximumSize = new System.Drawing.Size(280, 300);
             this.pictureBox1.MinimumSize = new System.Drawing.Size(70, 75);
             this.pictureBox1.Name = "pictureBox1";
@@ -186,10 +190,25 @@
             "Selección Japonesa",
             "Selección EEUU",
             "Selección Italiana"});
-            this.equipoV.Location = new System.Drawing.Point(704, 123);
+            this.equipoV.Location = new System.Drawing.Point(717, 123);
             this.equipoV.Name = "equipoV";
             this.equipoV.Size = new System.Drawing.Size(121, 21);
             this.equipoV.TabIndex = 3;
+            this.equipoV.SelectedIndexChanged += new System.EventHandler(this.equipoV_SelectedIndexChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label4.Location = new System.Drawing.Point(130, 534);
+            this.label4.Name = "label4";
+            this.label4.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label4.Size = new System.Drawing.Size(746, 18);
+            this.label4.TabIndex = 52;
+            this.label4.Text = "*Al seleccionar a ambos equipos como el mismo, das a entender que el partido será" +
+    " un entrenamiento amistoso";
+            this.label4.Visible = false;
             // 
             // NuevoPartido
             // 
@@ -199,6 +218,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1014, 561);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.escudo);
             this.Controls.Add(this.panel1);
@@ -208,7 +228,7 @@
             this.Controls.Add(this.equipoL);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btProgr);
-            this.Controls.Add(this.fechaNac);
+            this.Controls.Add(this.fechaPart);
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -228,7 +248,7 @@
 
         #endregion
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker fechaNac;
+        private System.Windows.Forms.DateTimePicker fechaPart;
         private System.Windows.Forms.Button btProgr;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.ImageList imageList2;
@@ -240,5 +260,6 @@
         private System.Windows.Forms.PictureBox escudo;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ComboBox equipoV;
+        private System.Windows.Forms.Label label4;
     }
 }
