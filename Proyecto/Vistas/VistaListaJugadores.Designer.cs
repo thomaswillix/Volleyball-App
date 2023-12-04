@@ -29,11 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VistaListaJugadores));
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
-            "ssss",
-            "aaaa",
-            "cccc",
-            "asdasdas"}, -1);
             this.botonCancelar = new System.Windows.Forms.Button();
             this.btElim = new System.Windows.Forms.Button();
             this.ordenarNombre = new System.Windows.Forms.Button();
@@ -122,10 +117,6 @@
             this.posLista,
             this.numCamiLista});
             this.listView1.HideSelection = false;
-            listViewItem1.Checked = true;
-            listViewItem1.StateImageIndex = 1;
-            this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
             this.listView1.Location = new System.Drawing.Point(167, 110);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(520, 259);
