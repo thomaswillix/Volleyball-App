@@ -12,9 +12,9 @@ using Proyecto.Modelo;
 
 namespace Proyecto
 {
-    public partial class PrincipalEntr : Form
+    public partial class VistaPrincipalEntr : Form
     {
-        public PrincipalEntr()
+        public VistaPrincipalEntr()
         {
             InitializeComponent();
         }
@@ -24,6 +24,16 @@ namespace Proyecto
             
             string nom = Usuario.u.Nombre.ToString();
             bienv.Text += " " + nom;
+            switch (nom)
+            {
+                case "Ze":
+                    pfp.BackgroundImage = Image.FromFile("../Pics/Ze.jpeg");
+                    break;
+                case "Renan":
+                    pfp.BackgroundImage = Image.FromFile("../Pics/Renan.jpeg");
+                    pfp.Size = new Size(
+                    break;
+            }
         }
         private void Principal_FormClosing(object sender,FormClosingEventArgs e)
         {
@@ -48,19 +58,19 @@ namespace Proyecto
 
         private void altaToolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            NuevoPartido part = new NuevoPartido();
+            FormNuevoPartido part = new FormNuevoPartido();
             part.ShowDialog();
         }
 
         private void listadosToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            ListaJugadores listaJ = new ListaJugadores();
+            VistaListaJugadores listaJ = new VistaListaJugadores();
             listaJ.ShowDialog();
         }
 
         private void altaToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            NuevoJugador nuevoJugador = new NuevoJugador();
+            FormNuevoJugador nuevoJugador = new FormNuevoJugador();
             nuevoJugador.ShowDialog();
         }
 
@@ -85,6 +95,11 @@ namespace Proyecto
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void escudo_Click(object sender, EventArgs e)
         {
 
         }

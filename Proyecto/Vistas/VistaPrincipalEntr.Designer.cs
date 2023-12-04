@@ -1,6 +1,6 @@
 ﻿namespace Proyecto
 {
-    partial class PrincipalEntr
+    partial class VistaPrincipalEntr
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PrincipalEntr));
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VistaPrincipalEntr));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.empleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.altaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -37,17 +38,22 @@
             this.proyectosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.altaToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.modificaciónToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.miPerfilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bienv = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.botonCancelar = new System.Windows.Forms.Button();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.pfp = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pfp)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.empleadosToolStripMenuItem,
-            this.proyectosToolStripMenuItem});
+            this.proyectosToolStripMenuItem,
+            this.miPerfilToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(584, 24);
@@ -68,21 +74,21 @@
             // altaToolStripMenuItem1
             // 
             this.altaToolStripMenuItem1.Name = "altaToolStripMenuItem1";
-            this.altaToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.altaToolStripMenuItem1.Size = new System.Drawing.Size(144, 22);
             this.altaToolStripMenuItem1.Text = "Añadir";
             this.altaToolStripMenuItem1.Click += new System.EventHandler(this.altaToolStripMenuItem1_Click);
             // 
             // modificaciónToolStripMenuItem
             // 
             this.modificaciónToolStripMenuItem.Name = "modificaciónToolStripMenuItem";
-            this.modificaciónToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.modificaciónToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.modificaciónToolStripMenuItem.Text = "Modificación";
             this.modificaciónToolStripMenuItem.Click += new System.EventHandler(this.modificaciónToolStripMenuItem_Click);
             // 
             // listadosToolStripMenuItem1
             // 
             this.listadosToolStripMenuItem1.Name = "listadosToolStripMenuItem1";
-            this.listadosToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.listadosToolStripMenuItem1.Size = new System.Drawing.Size(144, 22);
             this.listadosToolStripMenuItem1.Text = "Listados";
             this.listadosToolStripMenuItem1.Click += new System.EventHandler(this.listadosToolStripMenuItem1_Click);
             // 
@@ -108,6 +114,12 @@
             this.modificaciónToolStripMenuItem1.Size = new System.Drawing.Size(144, 22);
             this.modificaciónToolStripMenuItem1.Text = "Modificación";
             this.modificaciónToolStripMenuItem1.Click += new System.EventHandler(this.modificaciónToolStripMenuItem1_Click);
+            // 
+            // miPerfilToolStripMenuItem
+            // 
+            this.miPerfilToolStripMenuItem.Name = "miPerfilToolStripMenuItem";
+            this.miPerfilToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
+            this.miPerfilToolStripMenuItem.Text = "Mi perfil";
             // 
             // bienv
             // 
@@ -155,13 +167,35 @@
             this.botonCancelar.UseVisualStyleBackColor = false;
             this.botonCancelar.Click += new System.EventHandler(this.botonCancelar_Click);
             // 
-            // PrincipalEntr
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // pfp
+            // 
+            this.pfp.AccessibleDescription = "";
+            this.pfp.BackColor = System.Drawing.Color.Transparent;
+            this.pfp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pfp.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pfp.Location = new System.Drawing.Point(514, 0);
+            this.pfp.MaximumSize = new System.Drawing.Size(280, 300);
+            this.pfp.MinimumSize = new System.Drawing.Size(70, 75);
+            this.pfp.Name = "pfp";
+            this.pfp.Size = new System.Drawing.Size(70, 75);
+            this.pfp.TabIndex = 16;
+            this.pfp.TabStop = false;
+            this.pfp.Click += new System.EventHandler(this.escudo_Click);
+            // 
+            // VistaPrincipalEntr
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(584, 561);
+            this.Controls.Add(this.pfp);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.botonCancelar);
             this.Controls.Add(this.bienv);
@@ -173,13 +207,14 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(600, 600);
-            this.Name = "PrincipalEntr";
+            this.Name = "VistaPrincipalEntr";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu Entrenador";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Principal_FormClosing);
             this.Load += new System.EventHandler(this.Principal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pfp)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -198,5 +233,8 @@
         private System.Windows.Forms.Label bienv;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button botonCancelar;
+        private System.Windows.Forms.ToolStripMenuItem miPerfilToolStripMenuItem;
+        private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.PictureBox pfp;
     }
 }

@@ -13,9 +13,9 @@ using Proyecto.Vistas;
 
 namespace Proyecto
 {
-    public partial class PrincipalJug : Form
+    public partial class VistaPrincipalJug : Form
     {
-        public PrincipalJug()
+        public VistaPrincipalJug()
         {
             InitializeComponent();
         }

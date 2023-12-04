@@ -13,11 +13,11 @@ using Proyecto.Modelo;
 
 namespace Proyecto
 {
-    public partial class ListaJugadores : Form
+    public partial class VistaListaJugadores : Form
     {
         private int a = 0;
 
-        public ListaJugadores()
+        public VistaListaJugadores()
         {
             InitializeComponent();
         }
@@ -31,7 +31,7 @@ namespace Proyecto
             //{
 
             //}
-            ControladorJugadores.leerJugadoresXML();
+            ControladorJugadoresXML.leerJugadoresXML();
             mostrarJugadores();
         }
         
@@ -48,32 +48,32 @@ namespace Proyecto
             cb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F,
             System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point,
             ((byte)(0)));
-            cb.Location = new System.Drawing.Point(65, posicion);
+            cb.Location = new System.Drawing.Point(10, posicion);
             cb.Size = new System.Drawing.Size(291, 20);
             cb.TabIndex = 1;
             cb.Text = e;
-            panel2.Controls.Add(cb);
+            listView1.Controls.Add(cb);
         }
 
         private void mostrarJugadores()
         {
             int posicion = 10;
-            foreach (Jugador e in ControladorJugadores.equipoMasc)
+            foreach (Jugador e in ControladorJugadoresXML.equipoMasc)
             {
                 crearChecked(e.Nombre + " " + e.Apellido1 +" | " + e.Posicion + " | " + e.NumCamiseta ,posicion);
                 posicion += 30;
-            }
+            } 
         }
 
         private void ordenarJugadores(Func<Jugador, IComparable> aux)
         {
-            ControladorJugadores.equipoMasc = ControladorJugadores.equipoMasc.OrderBy(aux).ToList();
+            ControladorJugadoresXML.equipoMasc = ControladorJugadoresXML.equipoMasc.OrderBy(aux).ToList();
 
         }
 
         private void ordenarFecha_Click(object sender, EventArgs e)
         {
-            panel2.Controls.Clear();
+            listView1.Controls.Clear();
 
             ordenarJugadores(Jugador=> Jugador.FechaNac);
             mostrarJugadores();
@@ -81,22 +81,22 @@ namespace Proyecto
 
         private void ordenarNombre_Click(object sender, EventArgs e)
         {
-            panel2.Controls.Clear();
+            listView1.Controls.Clear();
             ordenarJugadores(Jugador => Jugador.Nombre);
             mostrarJugadores();
         }
 
         private void btElim_Click(object sender, EventArgs e)
         {
-            foreach (System.Windows.Forms.CheckBox cd in panel2.Controls)
+            foreach (System.Windows.Forms.CheckBox cd in listView1.Controls)
             {
                 if (cd.Checked)
                 {
-                    int posicion = ControladorJugadores.equipoMasc.FindIndex(x => x.Nombre + " " + x.Apellido1 + " | " + x.Posicion + " | " + x.NumCamiseta == cd.Text);
-                    ControladorJugadores.equipoMasc.RemoveAt(posicion);
+                    int posicion = ControladorJugadoresXML.equipoMasc.FindIndex(x => x.Nombre + " " + x.Apellido1 + " | " + x.Posicion + " | " + x.NumCamiseta == cd.Text);
+                    ControladorJugadoresXML.equipoMasc.RemoveAt(posicion);
                 }
             }
-            this.panel2.Controls.Clear();
+            this.listView1.Controls.Clear();
             mostrarJugadores();
         }
 
@@ -128,7 +128,7 @@ namespace Proyecto
         {
             if (MessageBox.Show("¿Desea guardar los cambios?", "Guardar", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                ControladorJugadores.escribirJugadoresXML();
+                ControladorJugadoresXML.escribirJugadoresXML();
                 MessageBox.Show("Guardado");
             }
             else

@@ -1,6 +1,6 @@
 ﻿namespace Proyecto
 {
-    partial class ListaPartidos
+    partial class VistaListaPartidos
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListaPartidos));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VistaListaPartidos));
             this.titulo = new System.Windows.Forms.Label();
             this.botonCancelar = new System.Windows.Forms.Button();
             this.ordenarFecha = new System.Windows.Forms.Button();

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace Proyecto.Manejadores
 {
 
-    public static class ControladorPartidos
+    public static class ControladorPartidosJSON
     {
         public static List<Partido> listaPartidos = new List<Partido>();
 

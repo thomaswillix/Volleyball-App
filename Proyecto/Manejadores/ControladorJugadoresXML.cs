@@ -10,7 +10,7 @@ using Proyecto.Modelo;
 
 namespace Proyecto.Manejadores
 {
-    public static class ControladorJugadores
+    public static class ControladorJugadoresXML
     {
         public static List<Jugador> listaJugadores = new List<Jugador>();
         public static List<Jugador> equipoMasc= new List<Jugador>();

@@ -124,7 +124,7 @@
   <data name="botonCancelar.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAN
-        0wAADdMBvdUcagAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAADvLSURBVHhe7d0J
+        0QAADdEBwivf4wAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAADvLSURBVHhe7d0J
         +G5jvf9xexu2eY4MGTIkSaSS5KRBoSiVNCApjUqlg47mkkZpoE4qEZrQpJRO9G84zToNUohDo1KEyJD+
         n+9/L3+35bP3/v32s9Z67vte7891va7rXN+Tvdf3Xve6171/v+dZa4l//etfACqnbCuvkVPlPPmVXCfX
         yi/lXDlFXiVbuz8DQF1sEUD5lO3k3fK/EoXZuFSOkW3cnw2gfLYIoFzKpvIpSW/oi+s2OU02dn8XgHLZ
@@ -383,6 +383,9 @@
         nyFzr6LlAAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="imageList1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>132, 17</value>
+  </metadata>
   <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -392,7 +395,7 @@
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAfQAAAH0CAYAAADL1t+KAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAAeWdJREFUeF7tnQeYFMXWhn9zBAzXq6CYFRMGTHgNqFdUMCdEQRQMmBMGREQRc0DE
+        vgAADr4B6kKxwAAAeWdJREFUeF7tnQeYFMXWhn9zBAzXq6CYFRMGTHgNqFdUMCdEQRQMmBMGREQRc0DE
         HDCLKKiYxawock3AknPOOaftrr+/2hp2pvt0T+rpnen93uf5HtiZ6uqZnq46XVWnzvk/RQghhJCShwad
         EEIIiQE06IQQQkgMoEEnhBBCYgANOiGEEBIDaNAJIYSQGECDTgghhMQAGnRCCCEkBtCgE0IIITGABp0Q
         QgiJATTohBBCSAygQSeEEEJiAA06IYQQEgNo0AkhhJAYQINOCCGExAAadEIIISQG0KATQgghMYAGnRBC

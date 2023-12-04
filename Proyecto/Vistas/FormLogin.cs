@@ -15,11 +15,11 @@ using Proyecto.Manejadores;
 
 namespace Proyecto
 {
-    public partial class Login : Form
+    public partial class FormLogin : Form
     {
         private int intentos = 0;
 
-        public Login()
+        public FormLogin()
         {
             InitializeComponent();
         }
@@ -78,7 +78,7 @@ namespace Proyecto
                 if (Usuario.u.EsJugador == true)
                 {
                     this.Hide();
-                    PrincipalJug jug = new PrincipalJug();
+                    VistaPrincipalJug jug = new VistaPrincipalJug();
                     jug.ShowDialog();
                     jug.Dispose();
                     this.Show();
@@ -86,7 +86,7 @@ namespace Proyecto
                 else
                 {
                     this.Hide();
-                    PrincipalEntr entr = new PrincipalEntr();
+                    VistaPrincipalEntr entr = new VistaPrincipalEntr();
                     entr.ShowDialog();
                     entr.Dispose();
                     this.Show();

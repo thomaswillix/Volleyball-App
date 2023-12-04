@@ -13,14 +13,14 @@ using Proyecto.Manejadores;
 
 namespace Proyecto
 {
-    public partial class ListaPartidos : Form
+    public partial class VistaListaPartidos : Form
     {
         Partido p;
         DateTime fechaIni;
         DateTime fechaFin;
 
 
-        public ListaPartidos()
+        public VistaListaPartidos()
         {
             InitializeComponent();
         }
@@ -32,7 +32,7 @@ namespace Proyecto
 
         private void ordenarProyectos(Func<Partido, IComparable> aux)
         {
-            ControladorPartidos.listaPartidos = ControladorPartidos.listaPartidos.OrderBy(aux).ToList();
+            ControladorPartidosJSON.listaPartidos = ControladorPartidosJSON.listaPartidos.OrderBy(aux).ToList();
 
         }
 

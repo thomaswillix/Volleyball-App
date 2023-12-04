@@ -13,14 +13,14 @@ using Proyecto.Modelo;
 
 namespace Proyecto
 {
-    public partial class NuevoJugador : Form
+    public partial class FormNuevoJugador : Form
     {
         DateTime fechaActual = new DateTime();
         TimeSpan edad;
         double edadAnios;
         char s;
 
-        public NuevoJugador()
+        public FormNuevoJugador()
         {
             InitializeComponent();
         }
@@ -116,7 +116,7 @@ namespace Proyecto
         {
             establecerSexo();
             Equipo e = new Equipo(equipo.SelectedText.ToString());
-            ControladorJugadores.listaJugadores.Add(new Jugador((int)numeroCami.Value, nom.Text, ape.Text, nomCami.Text, posicion.Text,
+            ControladorJugadoresXML.listaJugadores.Add(new Jugador((int)numeroCami.Value, nom.Text, ape.Text, nomCami.Text, posicion.Text,
                 s, fechaNac.Value, e));
         }
 

@@ -1,6 +1,6 @@
 ﻿namespace Proyecto
 {
-    partial class ListaJugadores
+    partial class VistaListaJugadores
     {
         /// <summary>
         /// Required designer variable.
@@ -28,27 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListaJugadores));
-            this.panel2 = new System.Windows.Forms.Panel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VistaListaJugadores));
             this.botonCancelar = new System.Windows.Forms.Button();
             this.btElim = new System.Windows.Forms.Button();
             this.ordenarNombre = new System.Windows.Forms.Button();
             this.ordenarFecha = new System.Windows.Forms.Button();
             this.botonImprimir = new System.Windows.Forms.Button();
             this.titulo = new System.Windows.Forms.Label();
+            this.listView1 = new System.Windows.Forms.ListView();
             this.SuspendLayout();
-            // 
-            // panel2
-            // 
-            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel2.AutoScroll = true;
-            this.panel2.AutoSize = true;
-            this.panel2.Location = new System.Drawing.Point(139, 148);
-            this.panel2.MinimumSize = new System.Drawing.Size(456, 199);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(556, 229);
-            this.panel2.TabIndex = 25;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // botonCancelar
             // 
@@ -128,6 +116,15 @@
             this.titulo.TabIndex = 19;
             this.titulo.Text = "LISTADO DE JUGADORES";
             // 
+            // listView1
+            // 
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(167, 143);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(511, 226);
+            this.listView1.TabIndex = 25;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
             // ListaJugadores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -135,7 +132,7 @@
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(834, 481);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.listView1);
             this.Controls.Add(this.botonCancelar);
             this.Controls.Add(this.btElim);
             this.Controls.Add(this.ordenarNombre);
@@ -157,13 +154,12 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button botonCancelar;
         private System.Windows.Forms.Button btElim;
         private System.Windows.Forms.Button ordenarNombre;
         private System.Windows.Forms.Button ordenarFecha;
         private System.Windows.Forms.Button botonImprimir;
         private System.Windows.Forms.Label titulo;
+        private System.Windows.Forms.ListView listView1;
     }
 }

@@ -24,10 +24,4 @@
     <EsJugador>true</EsJugador>
     <Sexo>77</Sexo>
   </Usuario>
-  <Usuario>
-    <Nombre>Jacqueline</Nombre>
-    <Contrasenia>3333</Contrasenia>
-    <EsJugador>true</EsJugador>
-    <Sexo>77</Sexo>
-  </Usuario>
 </ArrayOfUsuario>

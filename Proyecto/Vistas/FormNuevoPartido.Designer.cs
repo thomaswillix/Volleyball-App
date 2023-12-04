@@ -1,6 +1,6 @@
 ﻿namespace Proyecto
 {
-    partial class NuevoPartido
+    partial class FormNuevoPartido
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NuevoPartido));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormNuevoPartido));
             this.label1 = new System.Windows.Forms.Label();
             this.fechaPart = new System.Windows.Forms.DateTimePicker();
             this.btProgr = new System.Windows.Forms.Button();

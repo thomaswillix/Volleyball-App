@@ -16,7 +16,7 @@ namespace Proyecto
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Login login = new Login();
+            FormLogin login = new FormLogin();
             login.Show();
             Application.Run();
         }

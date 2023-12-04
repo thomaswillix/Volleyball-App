@@ -7,7 +7,7 @@ using Proyecto.Modelo;
 
 namespace Proyecto
 {
-    internal class Entrenador : Usuario
+    public class Entrenador : Usuario
     {
         private string apellido1;
         private Equipo e;
