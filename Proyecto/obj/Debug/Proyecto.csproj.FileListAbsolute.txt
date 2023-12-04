@@ -105,3 +105,4 @@ C:\Users\thoma\Source\Repos\thomaswillix\Volleyball-App\Proyecto\obj\Debug\Proye
 C:\Users\thoma\Source\Repos\thomaswillix\Volleyball-App\Proyecto\obj\Debug\Proyecto.FormNuevoPartido.resources
 C:\Users\thoma\Source\Repos\thomaswillix\Volleyball-App\Proyecto\obj\Debug\Proyecto.VistaPrincipalJug.resources
 C:\Users\thoma\Source\Repos\thomaswillix\Volleyball-App\Proyecto\obj\Debug\Proyecto.VistaPrincipalEntr.resources
+C:\Users\thoma\Source\Repos\thomaswillix\Volleyball-App\Proyecto\obj\Debug\Proyecto.Vistas.VistaPerfil.resources

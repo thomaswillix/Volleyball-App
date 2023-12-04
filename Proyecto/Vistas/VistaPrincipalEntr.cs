@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Proyecto;
 using Proyecto.Modelo;
+using Proyecto.Vistas;
 
 namespace Proyecto
 {
@@ -31,7 +32,6 @@ namespace Proyecto
                     break;
                 case "Renan":
                     pfp.BackgroundImage = Image.FromFile("../Pics/Renan.jpeg");
-                    pfp.Size = new Size(
                     break;
             }
         }
@@ -101,7 +101,8 @@ namespace Proyecto
 
         private void escudo_Click(object sender, EventArgs e)
         {
-
+            VistaPerfil vistaPerfil = new VistaPerfil();
+            vistaPerfil.ShowDialog();
         }
     }
 

@@ -5,48 +5,43 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
 using Proyecto.Modelo;
 
 namespace Proyecto.Manejadores
 {
-    public static class ControladorUsuarios
+    public static class ControladorUsuariosBin
     {
         public static List<Usuario> listaUsuarios = new List<Usuario>();
 
-        public static void escribirUsuariosXML()
+        public static void escribirUsuariosBin()
         {
             try
             {
-                using (var writer = new StreamWriter("usuarios.xml"))
-                {
-                    // Do this to avoid the serializer inserting default XML namespaces.
-                    var namespaces = new XmlSerializerNamespaces();
-                    namespaces.Add(string.Empty, string.Empty);
-                    var serializer = new XmlSerializer(listaUsuarios.GetType());
-                    serializer.Serialize(writer, listaUsuarios, namespaces);
-                }
+                Stream OpenFileStream = File.OpenRead("usuarios.bin");
+                BinaryFormatter deserializer = new BinaryFormatter();
+                listaUsuarios = (List<Usuario>)deserializer.Deserialize(OpenFileStream);
+                OpenFileStream.Close();
             }
-            catch (Exception e) {
-                
+            catch (Exception e)
+            {   
             }
         }
 
-        public static void leerUsuariosXML()
+        public static bool leerUsuariosBin()
         {
             try
             {
-                string xml = File.ReadAllText("usuarios.xml");
-                using (var reader = new StringReader(xml))
-                {
-                    XmlSerializer serializer = new XmlSerializer(listaUsuarios.GetType());
-                    listaUsuarios = (List<Usuario>) serializer.Deserialize(reader);
-                }
-            }
+                Stream SaveFileStream = File.Create("usuarios.bin");
+                BinaryFormatter serializer = new BinaryFormatter();
+                serializer.Serialize(SaveFileStream, listaUsuarios);
+                SaveFileStream.Close();
+                return true;
 
-            catch (Exception)
+            }
+            catch (Exception e)
             {
-                
+                return false;
             }
         }
         public static bool validaLogin(ref string usuario, ref string clave)
@@ -84,18 +79,18 @@ namespace Proyecto.Manejadores
             return u;
         }
 
-        /*public static void cargarUsuarios()
+        public static void cargarUsuarios()
         {
             Usuario u = new Usuario("Renan", "1234", false, 'H');
-            ControladorUsuarios.listaUsuarios.Add(u);
+            listaUsuarios.Add(u);
             u = new Usuario("Bruno", "4321", true, 'H');
-            ControladorUsuarios.listaUsuarios.Add(u);
+            listaUsuarios.Add(u);
             u = new Usuario("Ze", "1111", false, 'H');
-            ControladorUsuarios.listaUsuarios.Add(u);
+            listaUsuarios.Add(u);
             u = new Usuario("Natalia", "2222", true, 'M');
-            ControladorUsuarios.listaUsuarios.Add(u);
+            listaUsuarios.Add(u);
             u = new Usuario("Jacqueline", "3333", true, 'M');
             listaUsuarios.Add(u);
-        }*/
+        }
     }
 }

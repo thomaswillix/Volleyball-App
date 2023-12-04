@@ -32,19 +32,20 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.empleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.altaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.equipoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bienv = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.botonCancelar = new System.Windows.Forms.Button();
-            this.equipoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.misDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pfp = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pfp)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.empleadosToolStripMenuItem,
-            this.misDatosToolStripMenuItem});
+            this.empleadosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(19, 6, 0, 6);
@@ -64,9 +65,15 @@
             // altaToolStripMenuItem1
             // 
             this.altaToolStripMenuItem1.Name = "altaToolStripMenuItem1";
-            this.altaToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.altaToolStripMenuItem1.Size = new System.Drawing.Size(150, 22);
             this.altaToolStripMenuItem1.Text = "Convocatorias";
             this.altaToolStripMenuItem1.Click += new System.EventHandler(this.altaToolStripMenuItem1_Click);
+            // 
+            // equipoToolStripMenuItem
+            // 
+            this.equipoToolStripMenuItem.Name = "equipoToolStripMenuItem";
+            this.equipoToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.equipoToolStripMenuItem.Text = "Equipo";
             // 
             // bienv
             // 
@@ -114,19 +121,36 @@
             this.botonCancelar.UseVisualStyleBackColor = false;
             this.botonCancelar.Click += new System.EventHandler(this.botonCancelar_Click);
             // 
-            // equipoToolStripMenuItem
+            // pfp
             // 
-            this.equipoToolStripMenuItem.Name = "equipoToolStripMenuItem";
-            this.equipoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.equipoToolStripMenuItem.Text = "Equipo";
+            this.pfp.AccessibleDescription = "";
+            this.pfp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pfp.BackColor = System.Drawing.Color.Transparent;
+            this.pfp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pfp.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pfp.Location = new System.Drawing.Point(516, 36);
+            this.pfp.MaximumSize = new System.Drawing.Size(280, 300);
+            this.pfp.MinimumSize = new System.Drawing.Size(40, 24);
+            this.pfp.Name = "pfp";
+            this.pfp.Size = new System.Drawing.Size(54, 50);
+            this.pfp.TabIndex = 19;
+            this.pfp.TabStop = false;
+            this.pfp.Click += new System.EventHandler(this.pfp_Click);
             // 
-            // misDatosToolStripMenuItem
+            // label1
             // 
-            this.misDatosToolStripMenuItem.Name = "misDatosToolStripMenuItem";
-            this.misDatosToolStripMenuItem.Size = new System.Drawing.Size(71, 19);
-            this.misDatosToolStripMenuItem.Text = "Mis Datos";
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Emoji", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(514, 87);
+            this.label1.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(66, 17);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "Mi perfil";
             // 
-            // PrincipalJug
+            // VistaPrincipalJug
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
@@ -135,6 +159,8 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CausesValidation = false;
             this.ClientSize = new System.Drawing.Size(584, 561);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pfp);
             this.Controls.Add(this.botonCancelar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.bienv);
@@ -148,13 +174,14 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(600, 600);
-            this.Name = "PrincipalJug";
+            this.Name = "VistaPrincipalJug";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu Jugador";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Principal_FormClosing);
             this.Load += new System.EventHandler(this.Principal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pfp)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -169,6 +196,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button botonCancelar;
         private System.Windows.Forms.ToolStripMenuItem equipoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem misDatosToolStripMenuItem;
+        private System.Windows.Forms.PictureBox pfp;
+        private System.Windows.Forms.Label label1;
     }
 }

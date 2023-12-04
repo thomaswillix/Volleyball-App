@@ -36,12 +36,12 @@ namespace Proyecto
         //llamada a método estático del ControladorUsuarios
         private Usuario buscarUsuario(string usuario, string pass)
         {
-            return ControladorUsuarios.buscarUsuario(usuario, pass);
+            return ControladorUsuariosBin.buscarUsuario(usuario, pass);
         }
         //llamada a método estático del ControladorUsuarios
         private bool validaLogin(ref string usuario, ref string clave)
         {
-            return ControladorUsuarios.validaLogin(ref usuario, ref clave);
+            return ControladorUsuariosBin.validaLogin(ref usuario, ref clave);
         }
         
         private void button2_Click(object sender, System.EventArgs e)
@@ -62,9 +62,9 @@ namespace Proyecto
         //Acción que se realiza al iniciar la aplicación
         private void Login_Load(object sender, System.EventArgs e)
         {
-            //ControladorUsuarios.cargarUsuarios();
-            //ControladorUsuarios.escribirUsuariosXML();
-            ControladorUsuarios.leerUsuariosXML();
+            ControladorUsuariosBin.cargarUsuarios();
+            ControladorUsuariosBin.escribirUsuariosBin();
+            ControladorUsuariosBin.leerUsuariosBin();
         }
         /* Método en el que se determina la siguiente ventana que se abrirá y
          cuando se cierre se volverá a poner el foco en esta. */

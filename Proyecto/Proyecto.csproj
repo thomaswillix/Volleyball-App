@@ -77,7 +77,7 @@
     <Compile Include="Manejadores\ControladorEntrenadoresXML.cs" />
     <Compile Include="Manejadores\ControladorJugadoresXML.cs" />
     <Compile Include="Manejadores\ControladorPartidosJSON.cs" />
-    <Compile Include="Manejadores\ControladorUsuarios.cs" />
+    <Compile Include="Manejadores\ControladorUsuariosBin.cs" />
     <Compile Include="Modelo\Entrenador.cs" />
     <Compile Include="Modelo\Equipo.cs" />
     <Compile Include="Modelo\Jugador.cs" />
@@ -121,6 +121,12 @@
     <Compile Include="Vistas\FormNuevoPartido.Designer.cs">
       <DependentUpon>FormNuevoPartido.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\VistaPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\VistaPerfil.Designer.cs">
+      <DependentUpon>VistaPerfil.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\VistaPrincipalJug.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,6 +165,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\FormNuevoPartido.resx">
       <DependentUpon>FormNuevoPartido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\VistaPerfil.resx">
+      <DependentUpon>VistaPerfil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\VistaPrincipalJug.resx">
       <DependentUpon>VistaPrincipalJug.cs</DependentUpon>

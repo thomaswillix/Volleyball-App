@@ -23,7 +23,16 @@ namespace Proyecto
         private void Principal_Load(object sender, EventArgs e)
         {
             string nom = Usuario.u.Nombre.ToString();
-            bienv.Text += " " + nom;            
+            bienv.Text += " " + nom;
+            switch (nom)
+            {
+                case "Bruno":
+                    pfp.BackgroundImage = Image.FromFile("../Pics/Bruno.jpeg");
+                    break;
+                case "Natalia":
+                    pfp.BackgroundImage = Image.FromFile("../Pics/Natalia.jpg");
+                    break;
+            }
         }
         private void Principal_FormClosing(object sender,FormClosingEventArgs e)
         {
@@ -55,6 +64,17 @@ namespace Proyecto
         private void button1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void escudo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pfp_Click(object sender, EventArgs e)
+        {
+            VistaPerfil vistaPerfil =  new VistaPerfil();
+            vistaPerfil.ShowDialog();
         }
     }
 }

@@ -44,6 +44,7 @@
             this.botonCancelar = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.pfp = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pfp)).BeginInit();
             this.SuspendLayout();
@@ -176,17 +177,31 @@
             // pfp
             // 
             this.pfp.AccessibleDescription = "";
+            this.pfp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pfp.BackColor = System.Drawing.Color.Transparent;
             this.pfp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pfp.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pfp.Location = new System.Drawing.Point(514, 0);
+            this.pfp.Location = new System.Drawing.Point(521, 27);
             this.pfp.MaximumSize = new System.Drawing.Size(280, 300);
-            this.pfp.MinimumSize = new System.Drawing.Size(70, 75);
+            this.pfp.MinimumSize = new System.Drawing.Size(40, 24);
             this.pfp.Name = "pfp";
-            this.pfp.Size = new System.Drawing.Size(70, 75);
+            this.pfp.Size = new System.Drawing.Size(56, 53);
             this.pfp.TabIndex = 16;
             this.pfp.TabStop = false;
             this.pfp.Click += new System.EventHandler(this.escudo_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Emoji", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(516, 83);
+            this.label2.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(66, 17);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "Mi perfil";
             // 
             // VistaPrincipalEntr
             // 
@@ -195,6 +210,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(584, 561);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.pfp);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.botonCancelar);
@@ -236,5 +252,6 @@
         private System.Windows.Forms.ToolStripMenuItem miPerfilToolStripMenuItem;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.PictureBox pfp;
+        private System.Windows.Forms.Label label2;
     }
 }
