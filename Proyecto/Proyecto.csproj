@@ -74,10 +74,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Manejadores\ControladorEntrenadoresXML.cs" />
-    <Compile Include="Manejadores\ControladorJugadoresXML.cs" />
-    <Compile Include="Manejadores\ControladorPartidosJSON.cs" />
-    <Compile Include="Manejadores\ControladorUsuariosBin.cs" />
+    <Compile Include="Controladores\ControladorEntrenadoresXML.cs" />
+    <Compile Include="Controladores\ControladorJugadoresXML.cs" />
+    <Compile Include="Controladores\ControladorPartidosJSON.cs" />
+    <Compile Include="Controladores\ControladorUsuariosBin.cs" />
     <Compile Include="Modelo\Entrenador.cs" />
     <Compile Include="Modelo\Equipo.cs" />
     <Compile Include="Modelo\Jugador.cs" />

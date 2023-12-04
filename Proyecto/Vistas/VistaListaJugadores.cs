@@ -15,7 +15,6 @@ namespace Proyecto
 {
     public partial class VistaListaJugadores : Form
     {
-        private int a = 0;
 
         public VistaListaJugadores()
         {
@@ -24,13 +23,8 @@ namespace Proyecto
 
         private void FrmEmpleados_Load(object sender, EventArgs e)
         {
-            //if (Usuario.u.Sexo == 'H') {
-              //  ControladorJugadores.cargarJugadoresMasc();
-               // ControladorJugadores.escribirJugadoresXML();
-            //} else if (Usuario.u.Sexo == 'M')
-            //{
-
-            //}
+            ControladorJugadoresXML.cargarJugadoresMasc();
+            ControladorJugadoresXML.escribirJugadoresXML();
             ControladorJugadoresXML.leerJugadoresXML();
             mostrarJugadores();
         }
@@ -41,7 +35,7 @@ namespace Proyecto
 
         }
 
-        private void crearChecked(string e, int posicion)
+        /*private void crearChecked(string nom, string ape, string pos, int numCami, int posicion)
         {
             System.Windows.Forms.CheckBox cb = new System.Windows.Forms.CheckBox();
             cb.AutoSize = true;
@@ -53,27 +47,36 @@ namespace Proyecto
             cb.TabIndex = 1;
             cb.Text = e;
             listView1.Controls.Add(cb);
+        }*/
+        private void createListElement(string nom, string ape, string pos, string numCami, int posicion)
+        {
+            ListViewItem item = new ListViewItem();
+            item.Text = nom;
+            item.SubItems.Add(ape);
+            item.SubItems.Add(pos);
+            item.SubItems.Add(numCami);
+            listView1.Items.Add(item);
         }
-
         private void mostrarJugadores()
         {
             int posicion = 10;
-            foreach (Jugador e in ControladorJugadoresXML.equipoMasc)
+            foreach (Jugador e in ControladorJugadoresXML.listaJugadores)
             {
-                crearChecked(e.Nombre + " " + e.Apellido1 +" | " + e.Posicion + " | " + e.NumCamiseta ,posicion);
+                string numcami = e.NumCamiseta.ToString();
+                createListElement(e.Nombre, e.Apellido1, e.Posicion, numcami ,posicion);
                 posicion += 30;
             } 
         }
 
         private void ordenarJugadores(Func<Jugador, IComparable> aux)
         {
-            ControladorJugadoresXML.equipoMasc = ControladorJugadoresXML.equipoMasc.OrderBy(aux).ToList();
+            ControladorJugadoresXML.listaJugadores = ControladorJugadoresXML.listaJugadores.OrderBy(aux).ToList();
 
         }
 
         private void ordenarFecha_Click(object sender, EventArgs e)
         {
-            listView1.Controls.Clear();
+            listView1.Items.Clear();
 
             ordenarJugadores(Jugador=> Jugador.FechaNac);
             mostrarJugadores();
@@ -81,7 +84,7 @@ namespace Proyecto
 
         private void ordenarNombre_Click(object sender, EventArgs e)
         {
-            listView1.Controls.Clear();
+            listView1.Items.Clear();
             ordenarJugadores(Jugador => Jugador.Nombre);
             mostrarJugadores();
         }
@@ -92,20 +95,16 @@ namespace Proyecto
             {
                 if (cd.Checked)
                 {
-                    int posicion = ControladorJugadoresXML.equipoMasc.FindIndex(x => x.Nombre + " " + x.Apellido1 + " | " + x.Posicion + " | " + x.NumCamiseta == cd.Text);
-                    ControladorJugadoresXML.equipoMasc.RemoveAt(posicion);
+                    int posicion = ControladorJugadoresXML.listaJugadores.FindIndex(x => x.Nombre + " " + x.Apellido1 + " | " + x.Posicion + " | " + x.NumCamiseta == cd.Text);
+                    ControladorJugadoresXML.listaJugadores.RemoveAt(posicion);
                 }
             }
-            this.listView1.Controls.Clear();
+            this.listView1.Items.Clear();
             mostrarJugadores();
         }
 
         private void botonImprimir_Click(object sender, EventArgs e)
         {
-            a ++;
-            if (a <= 1) { 
-                mostrarJugadores();
-            }
         }
 
         private void botonCancelar_Click(object sender, EventArgs e)
@@ -135,6 +134,11 @@ namespace Proyecto
             {
                 MessageBox.Show("No guardado");
             }
+
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }

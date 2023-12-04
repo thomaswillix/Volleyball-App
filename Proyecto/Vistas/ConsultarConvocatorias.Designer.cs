@@ -39,6 +39,19 @@
             button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
+            // button1
+            // 
+            button1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            button1.BackColor = System.Drawing.Color.DarkGray;
+            button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            button1.ForeColor = System.Drawing.Color.Black;
+            button1.Location = new System.Drawing.Point(22, 241);
+            button1.Name = "button1";
+            button1.Size = new System.Drawing.Size(160, 23);
+            button1.TabIndex = 4;
+            button1.Text = "Generar lista de convocatorias";
+            button1.UseVisualStyleBackColor = false;
+            // 
             // titulo
             // 
             this.titulo.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -46,7 +59,7 @@
             this.titulo.BackColor = System.Drawing.Color.Transparent;
             this.titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titulo.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.titulo.Location = new System.Drawing.Point(258, 56);
+            this.titulo.Location = new System.Drawing.Point(275, 56);
             this.titulo.Name = "titulo";
             this.titulo.Size = new System.Drawing.Size(283, 33);
             this.titulo.TabIndex = 11;
@@ -64,19 +77,6 @@
             this.panel2.Size = new System.Drawing.Size(489, 199);
             this.panel2.TabIndex = 18;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
-            // button1
-            // 
-            button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            button1.BackColor = System.Drawing.Color.DarkGray;
-            button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            button1.ForeColor = System.Drawing.Color.Black;
-            button1.Location = new System.Drawing.Point(22, 241);
-            button1.Name = "button1";
-            button1.Size = new System.Drawing.Size(160, 23);
-            button1.TabIndex = 4;
-            button1.Text = "Generar lista de convocatorias";
-            button1.UseVisualStyleBackColor = false;
             // 
             // eMasc
             // 

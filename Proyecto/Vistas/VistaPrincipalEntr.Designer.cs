@@ -38,7 +38,6 @@
             this.proyectosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.altaToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.modificaciónToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.miPerfilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bienv = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.botonCancelar = new System.Windows.Forms.Button();
@@ -53,8 +52,7 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.empleadosToolStripMenuItem,
-            this.proyectosToolStripMenuItem,
-            this.miPerfilToolStripMenuItem});
+            this.proyectosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(584, 24);
@@ -115,12 +113,6 @@
             this.modificaciónToolStripMenuItem1.Size = new System.Drawing.Size(144, 22);
             this.modificaciónToolStripMenuItem1.Text = "Modificación";
             this.modificaciónToolStripMenuItem1.Click += new System.EventHandler(this.modificaciónToolStripMenuItem1_Click);
-            // 
-            // miPerfilToolStripMenuItem
-            // 
-            this.miPerfilToolStripMenuItem.Name = "miPerfilToolStripMenuItem";
-            this.miPerfilToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
-            this.miPerfilToolStripMenuItem.Text = "Mi perfil";
             // 
             // bienv
             // 
@@ -249,7 +241,6 @@
         private System.Windows.Forms.Label bienv;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button botonCancelar;
-        private System.Windows.Forms.ToolStripMenuItem miPerfilToolStripMenuItem;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.PictureBox pfp;
         private System.Windows.Forms.Label label2;

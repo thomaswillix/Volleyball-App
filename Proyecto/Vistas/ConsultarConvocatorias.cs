@@ -23,7 +23,7 @@ namespace Proyecto.Vistas
             /*Lo dejo comentado hasta que se creen los partidos porque el archivo, 
             *al estar vacío nos da un problema de lectura errónea y la app crashea.*/
             
-            //ControladorPartidos.leerPartidos();
+            ControladorPartidosJSON.leerPartidos();
         }
 
         private void titulo_Click(object sender, EventArgs e)

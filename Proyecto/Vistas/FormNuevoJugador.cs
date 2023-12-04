@@ -110,7 +110,10 @@ namespace Proyecto
             ape.Clear();
             nomCami.Clear();
             numeroCami.Value = 0;
-            posicion.Items.Clear();
+            sexo.ResetText();
+            equipo.ResetText();
+            posicion.ResetText();
+            fechaNac.ResetText();
             }
         private void aniadirJugador()
         {

@@ -10,7 +10,6 @@
     <Posicion>Colocador</Posicion>
     <FechaNac>1986-07-02T00:00:00</FechaNac>
     <E>
-      <Id>1</Id>
       <Nombre>Seleccion Masc Brasileña</Nombre>
     </E>
   </Jugador>
@@ -24,7 +23,6 @@
     <Posicion>Bloqueador Central</Posicion>
     <FechaNac>1991-02-27T00:00:00</FechaNac>
     <E>
-      <Id>1</Id>
       <Nombre>Seleccion Masc Brasileña</Nombre>
     </E>
   </Jugador>
@@ -38,7 +36,6 @@
     <Posicion>Opuesto</Posicion>
     <FechaNac>2002-02-06T00:00:00</FechaNac>
     <E>
-      <Id>1</Id>
       <Nombre>Seleccion Masc Brasileña</Nombre>
     </E>
   </Jugador>
@@ -52,7 +49,6 @@
     <Posicion>Opuesto</Posicion>
     <FechaNac>1997-03-18T00:00:00</FechaNac>
     <E>
-      <Id>1</Id>
       <Nombre>Seleccion Masc Brasileña</Nombre>
     </E>
   </Jugador>
@@ -66,7 +62,6 @@
     <Posicion>Libero</Posicion>
     <FechaNac>1997-07-16T00:00:00</FechaNac>
     <E>
-      <Id>1</Id>
       <Nombre>Seleccion Masc Brasileña</Nombre>
     </E>
   </Jugador>
@@ -80,7 +75,6 @@
     <Posicion>Bloqueador Central</Posicion>
     <FechaNac>1993-04-22T00:00:00</FechaNac>
     <E>
-      <Id>1</Id>
       <Nombre>Seleccion Masc Brasileña</Nombre>
     </E>
   </Jugador>
@@ -94,7 +88,6 @@
     <Posicion>Colocador</Posicion>
     <FechaNac>1996-01-13T00:00:00</FechaNac>
     <E>
-      <Id>1</Id>
       <Nombre>Seleccion Masc Brasileña</Nombre>
     </E>
   </Jugador>
