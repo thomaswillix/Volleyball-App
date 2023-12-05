@@ -21,6 +21,8 @@ namespace Proyecto.Vistas
 
         private void VistaPerfil_Load(object sender, EventArgs e)
         {
+            ControladorEntrenadoresXML.leerEntrendoresXML();
+            ControladorJugadoresXML.leerJugadoresXML();
             vistaNormal();
             string nom = Usuario.u.Nombre.ToString();
             switch (nom)
@@ -38,15 +40,19 @@ namespace Proyecto.Vistas
                     pfp.BackgroundImage = Image.FromFile("../Pics/Renan.jpeg");
                     break;
             }
+        }
+
+        public void rellenarCampos()
+        {
             if (Usuario.u.EsJugador)
             {
                 foreach (Jugador j in ControladorJugadoresXML.listaJugadores)
                 {
                     if (j.Nombre == Usuario.u.Nombre)
                     {
-                        nombre.Text +=": " + j.Nombre;
-                        apell.Text +=" " + j.Apellido1;
-
+                        nombre.Text += ": " + j.Nombre;
+                        apell.Text += " " + j.Apellido1;
+                        dateBir.Text += " " + j.FechaNac.Day + "/" + j.FechaNac.Month + "/" + j.FechaNac.Year;
                     }
                 }
             }
@@ -54,7 +60,7 @@ namespace Proyecto.Vistas
             {
                 foreach (Entrenador p in ControladorEntrenadoresXML.listaEntrenadores)
                 {
-                    if (p.Nombre == Usuario.u.Nombre)
+                    if (p.Nombre == Usuario.u.Nombre || Usuario.u.Nombre == "Ze")
                     {
                         nombre.Text += " " + p.Nombre;
                         apell.Text += " " + p.Apellido1;
@@ -65,20 +71,27 @@ namespace Proyecto.Vistas
         }
         public void vistaNormal()
         {
+            rellenarCampos();
+            btEdit.Show();
             textBox1.Hide();
             textBox2.Hide();
             dateTimePicker1.Hide();
+            btCancel.Hide();
+            btSave.Hide();
 
         }
 
         public void vistaEditar()
         {
-            nombre.Hide();
-            apell.Hide();
-            dateBir.Hide();
+            nombre.Text = "Nombre";
+            apell.Text = "Apellidos";
+            dateBir.Text = "Fecha de Nacimiento";
             textBox1.Show();
             textBox2.Show();
             dateTimePicker1.Show();
+            btCancel.Show();
+            btSave.Show(); 
+            btEdit.Hide();
         }
 
 
@@ -86,8 +99,7 @@ namespace Proyecto.Vistas
 
         private void btEdit_Click(object sender, EventArgs e)
         {
-            textBox1.Show();
-            textBox2.Show();
+            vistaEditar();
             
         }
 
@@ -101,24 +113,17 @@ namespace Proyecto.Vistas
 
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btCancel_Click(object sender, EventArgs e)
         {
+            vistaNormal();
+        }
 
+        private void btSave_Click(object sender, EventArgs e)
+        {
+            if (Usuario.u.EsJugador) 
+            {
+                
+            }
         }
     }
 }

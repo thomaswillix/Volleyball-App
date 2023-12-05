@@ -23,8 +23,8 @@ namespace Proyecto
 
         private void FrmEmpleados_Load(object sender, EventArgs e)
         {
-            ControladorJugadoresXML.cargarJugadoresMasc();
-            ControladorJugadoresXML.escribirJugadoresXML();
+            //ControladorJugadoresXML.cargarJugadoresMasc();
+            //ControladorJugadoresXML.escribirJugadoresXML();
             ControladorJugadoresXML.leerJugadoresXML();
             mostrarJugadores();
         }
@@ -48,23 +48,22 @@ namespace Proyecto
             cb.Text = e;
             listView1.Controls.Add(cb);
         }*/
-        private void createListElement(string nom, string ape, string pos, string numCami, int posicion)
+        private void createListElement(string nom, string ape, string pos, string numCami, string equipo)
         {
             ListViewItem item = new ListViewItem();
             item.Text = nom;
             item.SubItems.Add(ape);
             item.SubItems.Add(pos);
             item.SubItems.Add(numCami);
+            item.SubItems.Add(equipo);
             listView1.Items.Add(item);
         }
         private void mostrarJugadores()
         {
-            int posicion = 10;
             foreach (Jugador e in ControladorJugadoresXML.listaJugadores)
             {
                 string numcami = e.NumCamiseta.ToString();
-                createListElement(e.Nombre, e.Apellido1, e.Posicion, numcami ,posicion);
-                posicion += 30;
+                createListElement(e.Nombre, e.Apellido1, e.Posicion, numcami , e.E.Nombre);
             } 
         }
 
@@ -77,7 +76,6 @@ namespace Proyecto
         private void ordenarFecha_Click(object sender, EventArgs e)
         {
             listView1.Items.Clear();
-
             ordenarJugadores(Jugador=> Jugador.FechaNac);
             mostrarJugadores();
         }
@@ -87,24 +85,6 @@ namespace Proyecto
             listView1.Items.Clear();
             ordenarJugadores(Jugador => Jugador.Nombre);
             mostrarJugadores();
-        }
-
-        private void btElim_Click(object sender, EventArgs e)
-        {
-            foreach (System.Windows.Forms.CheckBox cd in listView1.Controls)
-            {
-                if (cd.Checked)
-                {
-                    int posicion = ControladorJugadoresXML.listaJugadores.FindIndex(x => x.Nombre + " " + x.Apellido1 + " | " + x.Posicion + " | " + x.NumCamiseta == cd.Text);
-                    ControladorJugadoresXML.listaJugadores.RemoveAt(posicion);
-                }
-            }
-            this.listView1.Items.Clear();
-            mostrarJugadores();
-        }
-
-        private void botonImprimir_Click(object sender, EventArgs e)
-        {
         }
 
         private void botonCancelar_Click(object sender, EventArgs e)
@@ -144,7 +124,10 @@ namespace Proyecto
 
         private void button1_Click(object sender, EventArgs e)
         {
+            listView1.Items.Clear();
 
+            ordenarJugadores(Jugador => Jugador.NumCamiseta);
+            mostrarJugadores();
         }
     }
 }

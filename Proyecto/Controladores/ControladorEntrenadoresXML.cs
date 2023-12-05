@@ -51,5 +51,19 @@ namespace Proyecto.Manejadores
 
             }
         }
+        public static void cargarEntrenadores()
+        {
+            Equipo eq;
+            DateTime d;
+            Entrenador   e;
+            eq = new Equipo("Selección Masc Brasileña");
+            d = new DateTime(1960, 7, 19, 0, 0, 0);
+            e = new Entrenador("Renan", "Dal Zotto", d, eq);
+            listaEntrenadores.Add(e);
+            d = new DateTime(1954, 7, 31, 0, 0, 0);
+            eq = new Equipo("Selección Fem Brasileña");
+            e = new Entrenador("José Roberto", "Lages Gimarães",d ,eq);
+            listaEntrenadores.Add(e);
+        }
     }
 }

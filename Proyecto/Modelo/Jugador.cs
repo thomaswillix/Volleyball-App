@@ -19,6 +19,7 @@ public class Jugador : Usuario
         this.apellidos = apellido1;
         this.nombreCamiseta = nombreCamiseta;
         this.posicion = posicion;
+        EsJugador = true;
         Sexo = sexo;
         this.fechaNac = fechaNac;
         this.E = e;

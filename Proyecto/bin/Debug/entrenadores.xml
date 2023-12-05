@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfEntrenador>
+  <Entrenador>
+    <Nombre>Renan</Nombre>
+    <EsJugador>false</EsJugador>
+    <Sexo>0</Sexo>
+    <Apellido1>Dal Zotto</Apellido1>
+    <FechaNac>1960-07-19T00:00:00</FechaNac>
+    <E>
+      <Nombre>Selección Masc Brasileña</Nombre>
+    </E>
+  </Entrenador>
+  <Entrenador>
+    <Nombre>José Roberto</Nombre>
+    <EsJugador>false</EsJugador>
+    <Sexo>0</Sexo>
+    <Apellido1>Lages Gimarães</Apellido1>
+    <FechaNac>1954-07-31T00:00:00</FechaNac>
+    <E>
+      <Nombre>Selección Fem Brasileña</Nombre>
+    </E>
+  </Entrenador>
+</ArrayOfEntrenador>

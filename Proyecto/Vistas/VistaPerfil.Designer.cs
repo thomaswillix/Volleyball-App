@@ -38,7 +38,7 @@
             this.dateBir = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btSave = new System.Windows.Forms.Button();
             this.btEdit = new System.Windows.Forms.Button();
             this.btCancel = new System.Windows.Forms.Button();
             this.nom = new System.Windows.Forms.Label();
@@ -52,9 +52,9 @@
             this.pfp.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pfp.BackColor = System.Drawing.Color.Transparent;
             this.pfp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pfp.Location = new System.Drawing.Point(103, 48);
+            this.pfp.Location = new System.Drawing.Point(29, 27);
             this.pfp.Name = "pfp";
-            this.pfp.Size = new System.Drawing.Size(198, 156);
+            this.pfp.Size = new System.Drawing.Size(178, 159);
             this.pfp.TabIndex = 0;
             this.pfp.TabStop = false;
             // 
@@ -62,28 +62,26 @@
             // 
             this.nombre.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.nombre.AutoSize = true;
-            this.nombre.Location = new System.Drawing.Point(313, 93);
+            this.nombre.Location = new System.Drawing.Point(213, 57);
             this.nombre.Name = "nombre";
             this.nombre.Size = new System.Drawing.Size(44, 13);
             this.nombre.TabIndex = 1;
             this.nombre.Text = "Nombre";
-            this.nombre.Click += new System.EventHandler(this.label1_Click);
             // 
             // apell
             // 
             this.apell.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.apell.AutoSize = true;
-            this.apell.Location = new System.Drawing.Point(307, 155);
+            this.apell.Location = new System.Drawing.Point(207, 96);
             this.apell.Name = "apell";
             this.apell.Size = new System.Drawing.Size(49, 13);
             this.apell.TabIndex = 2;
             this.apell.Text = "Apellidos";
-            this.apell.Click += new System.EventHandler(this.label2_Click);
             // 
             // textBox1
             // 
             this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.Location = new System.Drawing.Point(363, 89);
+            this.textBox1.Location = new System.Drawing.Point(263, 53);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 4;
@@ -92,7 +90,7 @@
             // textBox2
             // 
             this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox2.Location = new System.Drawing.Point(363, 151);
+            this.textBox2.Location = new System.Drawing.Point(263, 92);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 5;
@@ -101,7 +99,7 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dateTimePicker1.Location = new System.Drawing.Point(237, 235);
+            this.dateTimePicker1.Location = new System.Drawing.Point(163, 214);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 7;
@@ -110,7 +108,7 @@
             // 
             this.dateBir.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dateBir.AutoSize = true;
-            this.dateBir.Location = new System.Drawing.Point(125, 239);
+            this.dateBir.Location = new System.Drawing.Point(51, 218);
             this.dateBir.Name = "dateBir";
             this.dateBir.Size = new System.Drawing.Size(106, 13);
             this.dateBir.TabIndex = 8;
@@ -120,20 +118,21 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // button1
+            // btSave
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.Location = new System.Drawing.Point(160, 296);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 23);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Guardar cambios";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btSave.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btSave.Location = new System.Drawing.Point(112, 275);
+            this.btSave.Name = "btSave";
+            this.btSave.Size = new System.Drawing.Size(95, 23);
+            this.btSave.TabIndex = 10;
+            this.btSave.Text = "Guardar cambios";
+            this.btSave.UseVisualStyleBackColor = true;
+            this.btSave.Click += new System.EventHandler(this.btSave_Click);
             // 
             // btEdit
             // 
             this.btEdit.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btEdit.Location = new System.Drawing.Point(274, 296);
+            this.btEdit.Location = new System.Drawing.Point(200, 275);
             this.btEdit.Name = "btEdit";
             this.btEdit.Size = new System.Drawing.Size(52, 23);
             this.btEdit.TabIndex = 11;
@@ -144,7 +143,7 @@
             // btCancel
             // 
             this.btCancel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btCancel.Location = new System.Drawing.Point(345, 296);
+            this.btCancel.Location = new System.Drawing.Point(242, 275);
             this.btCancel.Name = "btCancel";
             this.btCancel.Size = new System.Drawing.Size(75, 23);
             this.btCancel.TabIndex = 12;
@@ -178,15 +177,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(549, 376);
+            this.ClientSize = new System.Drawing.Size(401, 335);
             this.Controls.Add(this.fechaNac);
             this.Controls.Add(this.apes);
             this.Controls.Add(this.nom);
             this.Controls.Add(this.btCancel);
             this.Controls.Add(this.btEdit);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btSave);
             this.Controls.Add(this.dateBir);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.textBox2);
@@ -218,7 +216,7 @@
         private System.Windows.Forms.Label dateBir;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btSave;
         private System.Windows.Forms.Button btEdit;
         private System.Windows.Forms.Button btCancel;
         private System.Windows.Forms.Label nom;

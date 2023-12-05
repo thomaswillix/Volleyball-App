@@ -18,6 +18,7 @@ namespace Proyecto
             Nombre = nombre;
             this.apellido1 = apellido1;
             this.fechaNac = fechaNac;
+            EsJugador = false;
             this.E = e;
         }
 
