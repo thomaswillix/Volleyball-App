@@ -30,17 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VistaListaJugadores));
             this.botonCancelar = new System.Windows.Forms.Button();
-            this.btElim = new System.Windows.Forms.Button();
             this.ordenarNombre = new System.Windows.Forms.Button();
             this.ordenarFecha = new System.Windows.Forms.Button();
             this.titulo = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.nomLista = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.apeLista = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.posLista = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.numCamiLista = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // botonCancelar
@@ -60,23 +60,11 @@
             this.botonCancelar.UseVisualStyleBackColor = false;
             this.botonCancelar.Click += new System.EventHandler(this.botonCancelar_Click);
             // 
-            // btElim
-            // 
-            this.btElim.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btElim.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btElim.Location = new System.Drawing.Point(22, 308);
-            this.btElim.Name = "btElim";
-            this.btElim.Size = new System.Drawing.Size(60, 23);
-            this.btElim.TabIndex = 23;
-            this.btElim.Text = "Eliminar";
-            this.btElim.UseVisualStyleBackColor = true;
-            this.btElim.Click += new System.EventHandler(this.btElim_Click);
-            // 
             // ordenarNombre
             // 
             this.ordenarNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ordenarNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ordenarNombre.Location = new System.Drawing.Point(22, 210);
+            this.ordenarNombre.Location = new System.Drawing.Point(22, 200);
             this.ordenarNombre.Name = "ordenarNombre";
             this.ordenarNombre.Size = new System.Drawing.Size(106, 23);
             this.ordenarNombre.TabIndex = 22;
@@ -90,7 +78,7 @@
             this.ordenarFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ordenarFecha.Location = new System.Drawing.Point(22, 167);
             this.ordenarFecha.Name = "ordenarFecha";
-            this.ordenarFecha.Size = new System.Drawing.Size(48, 23);
+            this.ordenarFecha.Size = new System.Drawing.Size(106, 23);
             this.ordenarFecha.TabIndex = 21;
             this.ordenarFecha.Text = "Edad";
             this.ordenarFecha.UseVisualStyleBackColor = true;
@@ -125,32 +113,6 @@
             this.listView1.View = System.Windows.Forms.View.Details;
             this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(50, 127);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 24);
-            this.label1.TabIndex = 26;
-            this.label1.Text = "Ordenar";
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(411, 448);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 20);
-            this.label2.TabIndex = 27;
-            this.label2.Text = "salir";
-            // 
             // nomLista
             // 
             this.nomLista.Text = "Nombre";
@@ -171,6 +133,44 @@
             this.numCamiLista.Text = "Dorsal";
             this.numCamiLista.Width = 66;
             // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(29, 130);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(87, 24);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "Ordenar";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(411, 448);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(42, 20);
+            this.label2.TabIndex = 27;
+            this.label2.Text = "salir";
+            // 
+            // button1
+            // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(22, 235);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(106, 23);
+            this.button1.TabIndex = 28;
+            this.button1.Text = "Dorsal";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // VistaListaJugadores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -178,11 +178,11 @@
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(834, 481);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.botonCancelar);
-            this.Controls.Add(this.btElim);
             this.Controls.Add(this.ordenarNombre);
             this.Controls.Add(this.ordenarFecha);
             this.Controls.Add(this.titulo);
@@ -202,7 +202,6 @@
 
         #endregion
         private System.Windows.Forms.Button botonCancelar;
-        private System.Windows.Forms.Button btElim;
         private System.Windows.Forms.Button ordenarNombre;
         private System.Windows.Forms.Button ordenarFecha;
         private System.Windows.Forms.Label titulo;
@@ -213,5 +212,6 @@
         private System.Windows.Forms.ColumnHeader apeLista;
         private System.Windows.Forms.ColumnHeader posLista;
         private System.Windows.Forms.ColumnHeader numCamiLista;
+        private System.Windows.Forms.Button button1;
     }
 }

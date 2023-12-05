@@ -21,6 +21,7 @@ namespace Proyecto.Vistas
 
         private void VistaPerfil_Load(object sender, EventArgs e)
         {
+            vistaNormal();
             string nom = Usuario.u.Nombre.ToString();
             switch (nom)
             {
@@ -37,40 +38,87 @@ namespace Proyecto.Vistas
                     pfp.BackgroundImage = Image.FromFile("../Pics/Renan.jpeg");
                     break;
             }
-
-            textBox1.Hide();
-            textBox2.Hide();
-            dateTimePicker1.Hide();
             if (Usuario.u.EsJugador)
             {
                 foreach (Jugador j in ControladorJugadoresXML.listaJugadores)
                 {
                     if (j.Nombre == Usuario.u.Nombre)
                     {
-                        nom = j.Nombre;
-                        apes.Text = j.Apellido1;
+                        nombre.Text +=": " + j.Nombre;
+                        apell.Text +=" " + j.Apellido1;
 
                     }
                 }
             }
             else
             {
-                foreach (Entrenador e in ControladorEntrenadoresXML.listaEntrenadores)
+                foreach (Entrenador p in ControladorEntrenadoresXML.listaEntrenadores)
                 {
-                    if (e.Nombre == Usuario.u.Nombre)
+                    if (p.Nombre == Usuario.u.Nombre)
                     {
-                        nom = e.Nombre;
-                        apes.Text = e.Apellido1;
+                        nombre.Text += " " + p.Nombre;
+                        apell.Text += " " + p.Apellido1;
+                        dateBir.Text += " " + p.FechaNac.Day + "/" + p.FechaNac.Month + "/" + p.FechaNac.Year;
                     }
                 }
             }
         }
+        public void vistaNormal()
+        {
+            textBox1.Hide();
+            textBox2.Hide();
+            dateTimePicker1.Hide();
+
+        }
+
+        public void vistaEditar()
+        {
+            nombre.Hide();
+            apell.Hide();
+            dateBir.Hide();
+            textBox1.Show();
+            textBox2.Show();
+            dateTimePicker1.Show();
+        }
+
+
+
 
         private void btEdit_Click(object sender, EventArgs e)
         {
             textBox1.Show();
             textBox2.Show();
             
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btCancel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
