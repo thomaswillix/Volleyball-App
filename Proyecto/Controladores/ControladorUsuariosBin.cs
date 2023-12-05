@@ -14,7 +14,7 @@ namespace Proyecto.Manejadores
     {
         public static List<Usuario> listaUsuarios = new List<Usuario>();
 
-        public static void escribirUsuariosBin()
+        public static void leerUsuariosBin()
         {
             try
             {
@@ -28,7 +28,7 @@ namespace Proyecto.Manejadores
             }
         }
 
-        public static bool leerUsuariosBin()
+        public static bool escribirUsuariosBin()
         {
             try
             {

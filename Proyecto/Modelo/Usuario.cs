@@ -7,7 +7,8 @@ using Proyecto.Manejadores;
 
 namespace Proyecto.Modelo
 {
-    public class Usuario
+    [Serializable]
+    public class Usuario 
     {
         private string nombre;
         private string contrasenia;
