@@ -20,12 +20,32 @@ namespace Proyecto.Vistas
 
         private void ConsultarConvocatorias_Load(object sender, EventArgs e)
         {
-            /*Lo dejo comentado hasta que se creen los partidos porque el archivo, 
-            *al estar vacío nos da un problema de lectura errónea y la app crashea.*/
-            
             ControladorPartidosJSON.leerPartidos();
+            mostrarPartidos();
         }
-
+        public void mostrarPartidos()
+        {
+            int posicion = 10;
+            foreach (Partido e in ControladorPartidosJSON.listaPartidos)
+            {
+                createList(e.Equipo1.Nombre, e.Equipo2.Nombre, e.Fecha, posicion);
+                posicion += 35;
+            }
+        }
+        public void createList(string equipo1, string equipo2, DateTime fecha, int posicion)
+        {
+            System.Windows.Forms.Label l = new System.Windows.Forms.Label();
+            l.AutoSize = true;
+            l.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F,
+            System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point,
+            ((byte)(0)));
+            l.ForeColor = System.Drawing.Color.White;
+            l.Location = new System.Drawing.Point(10, posicion);
+            l.Size = new System.Drawing.Size(291, 20);
+            l.TabIndex = 1;
+            l.Text = equipo1 + " versus " + equipo2 + " " + fecha.DayOfWeek + " " + fecha.Day + " de " + fecha.Month + " " + fecha.Year;
+            groupBox1.Controls.Add(l);
+        }
         private void titulo_Click(object sender, EventArgs e)
         {
 
@@ -34,6 +54,11 @@ namespace Proyecto.Vistas
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void botonCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

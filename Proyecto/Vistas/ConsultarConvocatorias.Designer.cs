@@ -28,29 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.Button button1;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConsultarConvocatorias));
             this.titulo = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.eMasc = new System.Windows.Forms.RadioButton();
-            this.efem = new System.Windows.Forms.RadioButton();
             this.botonCancelar = new System.Windows.Forms.Button();
-            this.equipo = new System.Windows.Forms.ComboBox();
-            button1 = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.SuspendLayout();
-            // 
-            // button1
-            // 
-            button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            button1.BackColor = System.Drawing.Color.DarkGray;
-            button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            button1.ForeColor = System.Drawing.Color.Black;
-            button1.Location = new System.Drawing.Point(22, 241);
-            button1.Name = "button1";
-            button1.Size = new System.Drawing.Size(160, 23);
-            button1.TabIndex = 4;
-            button1.Text = "Generar lista de convocatorias";
-            button1.UseVisualStyleBackColor = false;
             // 
             // titulo
             // 
@@ -59,48 +41,12 @@
             this.titulo.BackColor = System.Drawing.Color.Transparent;
             this.titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titulo.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.titulo.Location = new System.Drawing.Point(275, 56);
+            this.titulo.Location = new System.Drawing.Point(260, 77);
             this.titulo.Name = "titulo";
             this.titulo.Size = new System.Drawing.Size(283, 33);
             this.titulo.TabIndex = 11;
             this.titulo.Text = "CONVOCATORIAS";
             this.titulo.Click += new System.EventHandler(this.titulo_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel2.AutoScroll = true;
-            this.panel2.AutoSize = true;
-            this.panel2.Location = new System.Drawing.Point(201, 124);
-            this.panel2.MinimumSize = new System.Drawing.Size(456, 199);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(489, 199);
-            this.panel2.TabIndex = 18;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
-            // eMasc
-            // 
-            this.eMasc.AutoSize = true;
-            this.eMasc.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.eMasc.Location = new System.Drawing.Point(47, 184);
-            this.eMasc.Name = "eMasc";
-            this.eMasc.Size = new System.Drawing.Size(73, 17);
-            this.eMasc.TabIndex = 2;
-            this.eMasc.TabStop = true;
-            this.eMasc.Text = "Masculino";
-            this.eMasc.UseVisualStyleBackColor = true;
-            // 
-            // efem
-            // 
-            this.efem.AutoSize = true;
-            this.efem.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.efem.Location = new System.Drawing.Point(47, 207);
-            this.efem.Name = "efem";
-            this.efem.Size = new System.Drawing.Size(71, 17);
-            this.efem.TabIndex = 3;
-            this.efem.TabStop = true;
-            this.efem.Text = "Femenino";
-            this.efem.UseVisualStyleBackColor = true;
             // 
             // botonCancelar
             // 
@@ -117,19 +63,16 @@
             this.botonCancelar.TabIndex = 17;
             this.botonCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.botonCancelar.UseVisualStyleBackColor = false;
+            this.botonCancelar.Click += new System.EventHandler(this.botonCancelar_Click);
             // 
-            // equipo
+            // groupBox1
             // 
-            this.equipo.FormattingEnabled = true;
-            this.equipo.Items.AddRange(new object[] {
-            "Selección Brasileña",
-            "Selección Japonesa",
-            "Selección EEUU",
-            "Selección Italiana"});
-            this.equipo.Location = new System.Drawing.Point(47, 133);
-            this.equipo.Name = "equipo";
-            this.equipo.Size = new System.Drawing.Size(121, 21);
-            this.equipo.TabIndex = 1;
+            this.groupBox1.Location = new System.Drawing.Point(102, 119);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(606, 245);
+            this.groupBox1.TabIndex = 18;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
             // 
             // ConsultarConvocatorias
             // 
@@ -137,14 +80,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Desktop;
             this.ClientSize = new System.Drawing.Size(784, 461);
-            this.Controls.Add(this.equipo);
-            this.Controls.Add(this.efem);
-            this.Controls.Add(this.eMasc);
-            this.Controls.Add(button1);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.botonCancelar);
             this.Controls.Add(this.titulo);
+            this.MaximumSize = new System.Drawing.Size(800, 500);
+            this.MinimumSize = new System.Drawing.Size(800, 500);
             this.Name = "ConsultarConvocatorias";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ConsultarConvocatorias";
             this.Load += new System.EventHandler(this.ConsultarConvocatorias_Load);
             this.ResumeLayout(false);
@@ -154,10 +96,7 @@
 
         #endregion
         private System.Windows.Forms.Label titulo;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.RadioButton eMasc;
-        private System.Windows.Forms.RadioButton efem;
         private System.Windows.Forms.Button botonCancelar;
-        private System.Windows.Forms.ComboBox equipo;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

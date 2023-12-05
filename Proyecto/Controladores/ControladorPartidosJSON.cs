@@ -45,14 +45,5 @@ namespace Proyecto.Manejadores
                 throw;
             }
         }
-
-        public static void consultarConvocatorias()
-        {
-            /*foreach (Jugador j in ControladorJugadores.listaJugadores)
-            {
-                
-            }*/
-            
-        }
     }
 }

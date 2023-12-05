@@ -89,12 +89,6 @@
     <Compile Include="Vistas\ConsultarConvocatorias.Designer.cs">
       <DependentUpon>ConsultarConvocatorias.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\VistaListaPartidos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vistas\VistaListaPartidos.Designer.cs">
-      <DependentUpon>VistaListaPartidos.cs</DependentUpon>
-    </Compile>
     <Compile Include="Vistas\VistaListaJugadores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,9 +135,6 @@
     </Compile>
     <EmbeddedResource Include="Vistas\ConsultarConvocatorias.resx">
       <DependentUpon>ConsultarConvocatorias.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\VistaListaPartidos.resx">
-      <DependentUpon>VistaListaPartidos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\VistaListaJugadores.resx">
       <DependentUpon>VistaListaJugadores.cs</DependentUpon>
