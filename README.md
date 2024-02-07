@@ -1,13 +1,12 @@
 # Volleyball team management app
-*Created with Visual Studio Community 2022 .NET* 
- <p>My experience playing volleyball helped me with the inspiration creating my very first app.
+*Developed using Visual Studio Community 2022 with .NET framework.*
 
-In this application I'll apply my knowledge onto resolving an issue that I've encountered and that is the management of matches, players, etc.
+<p>My experience playing volleyball inspired me to create my very first app.
 
-I'm using Visual Studio Community 2022.
+This application aims to address the challenges I've encountered in managing matches, players, etc.
 
-It is still in process.
+I am currently utilizing Visual Studio Community 2022 for development.
 
+The project is still a work in progress.
 
-
-Credits for the flaming volleyball logo: <a href="vecteezy.com">Vecteezy.com</a></p>
+Credits to <a href="vecteezy.com">Vecteezy.com</a> for the flaming volleyball logo.</p>
