@@ -116,7 +116,7 @@
             this.botonCancelar.Location = new System.Drawing.Point(269, 455);
             this.botonCancelar.Name = "botonCancelar";
             this.botonCancelar.Size = new System.Drawing.Size(46, 47);
-            this.botonCancelar.TabIndex = 18;
+            this.botonCancelar.TabIndex = 0;
             this.botonCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.botonCancelar.UseVisualStyleBackColor = false;
             this.botonCancelar.Click += new System.EventHandler(this.botonCancelar_Click);

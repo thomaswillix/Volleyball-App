@@ -6,7 +6,7 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace Proyecto.Manejadores
+namespace Proyecto.Controladores
 {
 
     public static class ControladorPartidosJSON

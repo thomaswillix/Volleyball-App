@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Proyecto;
 using Proyecto.Modelo;
+using Proyecto.Vistas.LecturaBBDD;
 using Proyecto.Vistas;
 
 namespace Proyecto
@@ -41,7 +42,7 @@ namespace Proyecto
 
         private void altaToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            ConsultarConvocatorias consulta = new ConsultarConvocatorias();
+            FormListaPartidosDB consulta = new FormListaPartidosDB();
             consulta.ShowDialog();
         }
 

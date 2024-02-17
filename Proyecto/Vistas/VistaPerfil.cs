@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Proyecto.Manejadores;
+using Proyecto.Controladores;
 using Proyecto.Modelo;
 
 namespace Proyecto.Vistas
@@ -21,8 +21,8 @@ namespace Proyecto.Vistas
 
         private void VistaPerfil_Load(object sender, EventArgs e)
         {
-            ControladorEntrenadoresXML.leerEntrendoresXML();
-            ControladorJugadoresXML.leerJugadoresXML();
+            ControladorEntrenadoresXML.cargarEntrenadoresXML();
+            ControladorJugadoresXML.cargarJugadoresXML();
             vistaNormal();
             string nom = Usuario.u.Nombre.ToString();
             switch (nom)

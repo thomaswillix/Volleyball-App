@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Proyecto;
 using Proyecto.Modelo;
+using Proyecto.Vistas.LecturaBBDD;
 using Proyecto.Vistas;
 
 namespace Proyecto
@@ -64,8 +65,7 @@ namespace Proyecto
 
         private void listadosToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            VistaListaJugadores listaJ = new VistaListaJugadores();
-            listaJ.ShowDialog();
+            
         }
 
         private void altaToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -103,6 +103,18 @@ namespace Proyecto
         {
             VistaPerfil vistaPerfil = new VistaPerfil();
             vistaPerfil.ShowDialog();
+        }
+
+        private void jugadoresToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FormListaJugadores listaJ = new FormListaJugadores();
+            listaJ.ShowDialog();
+        }
+
+        private void jugadoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormListaJugadoresDB listaJ = new FormListaJugadoresDB();
+            listaJ.ShowDialog();
         }
     }
 
