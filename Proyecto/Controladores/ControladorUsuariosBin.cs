@@ -14,7 +14,7 @@ namespace Proyecto.Manejadores
     {
         public static List<Usuario> listaUsuarios = new List<Usuario>();
 
-        public static void leerUsuariosBin()
+        public static void cargarUsuariosBin()
         {
             try
             {
@@ -79,7 +79,7 @@ namespace Proyecto.Manejadores
             return u;
         }
 
-        public static void cargarUsuarios()
+        public static void crearUsuarios()
         {
             Usuario u = new Usuario("Renan", "1234", false, 'H');
             listaUsuarios.Add(u);

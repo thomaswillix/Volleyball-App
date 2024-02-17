@@ -20,7 +20,7 @@ namespace Proyecto.Vistas
 
         private void ConsultarConvocatorias_Load(object sender, EventArgs e)
         {
-            ControladorPartidosJSON.leerPartidos();
+            ControladorPartidosJSON.cargarPartidos();
             mostrarPartidos();
         }
         public void mostrarPartidos()

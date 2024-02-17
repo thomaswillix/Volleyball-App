@@ -197,7 +197,7 @@
             this.MinimumSize = new System.Drawing.Size(417, 374);
             this.Name = "VistaPerfil";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "VistaPerfil";
+            this.Text = "Mi perfil";
             this.Load += new System.EventHandler(this.VistaPerfil_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pfp)).EndInit();
             this.ResumeLayout(false);

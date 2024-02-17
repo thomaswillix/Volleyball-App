@@ -13,7 +13,7 @@ namespace Proyecto.Manejadores
     {
         public static List<Partido> listaPartidos = new List<Partido>();
 
-        public static void leerPartidos()
+        public static void cargarPartidos()
         {
             try
             {

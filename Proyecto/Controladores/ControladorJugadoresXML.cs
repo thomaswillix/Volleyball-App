@@ -8,7 +8,7 @@ using System.Windows.Forms;
 using System.Xml.Serialization;
 using Proyecto.Modelo;
 
-namespace Proyecto.Manejadores
+namespace Proyecto.Controladores
 {
     public static class ControladorJugadoresXML
     {
@@ -33,7 +33,7 @@ namespace Proyecto.Manejadores
             }
         }
 
-        public static void leerJugadoresXML()
+        public static void cargarJugadoresXML()
         {
             try
             {
@@ -50,7 +50,7 @@ namespace Proyecto.Manejadores
 
             }
         }
-        public static void cargarJugadoresMasc()
+        public static void crearJugadoresMasc()
         {
             Equipo eq;
             DateTime d;

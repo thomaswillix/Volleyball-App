@@ -8,7 +8,7 @@ using Proyecto.Modelo;
 using System.IO;
 
 
-namespace Proyecto.Manejadores
+namespace Proyecto.Controladores
 {
     public static class ControladorEntrenadoresXML
     {
@@ -34,7 +34,7 @@ namespace Proyecto.Manejadores
             }
         }
 
-        public static void leerEntrendoresXML()
+        public static void cargarEntrenadoresXML()
         {
             try
             {
@@ -51,7 +51,7 @@ namespace Proyecto.Manejadores
 
             }
         }
-        public static void cargarEntrenadores()
+        public static void crearEntrenadores()
         {
             Equipo eq;
             DateTime d;

@@ -23,7 +23,7 @@ namespace Proyecto
 
         private void FrmEmpleados_Load(object sender, EventArgs e)
         {
-            //ControladorJugadoresXML.cargarJugadoresMasc();
+            //ControladorJugadoresXML.crearJugadoresMasc();
             //ControladorJugadoresXML.escribirJugadoresXML();
             ControladorJugadoresXML.leerJugadoresXML();
             mostrarJugadores();

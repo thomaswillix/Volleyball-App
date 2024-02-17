@@ -38,9 +38,9 @@
             this.apeLista = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.posLista = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.numCamiLista = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.equipo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.equipo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // botonCancelar
@@ -135,6 +135,11 @@
             this.numCamiLista.Text = "Dorsal";
             this.numCamiLista.Width = 66;
             // 
+            // equipo
+            // 
+            this.equipo.Text = "Equipo";
+            this.equipo.Width = 121;
+            // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -160,11 +165,6 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // equipo
-            // 
-            this.equipo.Text = "Equipo";
-            this.equipo.Width = 121;
-            // 
             // VistaListaJugadores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -185,7 +185,7 @@
             this.MaximumSize = new System.Drawing.Size(850, 520);
             this.MinimumSize = new System.Drawing.Size(825, 520);
             this.Name = "VistaListaJugadores";
-            this.Text = "FrmEmpleados";
+            this.Text = "Lista de jugadores";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ListaJugadores_FormClosing);
             this.Load += new System.EventHandler(this.FrmEmpleados_Load);
             this.ResumeLayout(false);
