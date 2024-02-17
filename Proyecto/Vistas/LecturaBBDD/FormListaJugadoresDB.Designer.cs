@@ -29,11 +29,189 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormListaJugadoresDB));
+            this.botonCancelar = new System.Windows.Forms.Button();
+            this.titulo = new System.Windows.Forms.Label();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.databaseDataSet = new Proyecto.DatabaseDataSet();
+            this.jugadoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.jugadoresTableAdapter = new Proyecto.DatabaseDataSetTableAdapters.JugadoresTableAdapter();
+            this.idJugadorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numerocamisetaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apellidosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombrecamisetaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.posicionDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sexoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechanacimientoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.equipoIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.jugadorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jugadoresBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jugadorBindingSource)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // botonCancelar
+            // 
+            this.botonCancelar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.botonCancelar.BackColor = System.Drawing.Color.Transparent;
+            this.botonCancelar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botonCancelar.BackgroundImage")));
+            this.botonCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.botonCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.botonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonCancelar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.botonCancelar.Location = new System.Drawing.Point(463, 326);
+            this.botonCancelar.Name = "botonCancelar";
+            this.botonCancelar.Size = new System.Drawing.Size(80, 70);
+            this.botonCancelar.TabIndex = 32;
+            this.botonCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.botonCancelar.UseVisualStyleBackColor = false;
+            this.botonCancelar.Click += new System.EventHandler(this.botonCancelar_Click);
+            // 
+            // titulo
+            // 
+            this.titulo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.titulo.AutoSize = true;
+            this.titulo.BackColor = System.Drawing.Color.Transparent;
+            this.titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titulo.ForeColor = System.Drawing.Color.Black;
+            this.titulo.Location = new System.Drawing.Point(396, 9);
+            this.titulo.Name = "titulo";
+            this.titulo.Size = new System.Drawing.Size(207, 39);
+            this.titulo.TabIndex = 29;
+            this.titulo.Text = "PLANTILLA";
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idJugadorDataGridViewTextBoxColumn,
+            this.numerocamisetaDataGridViewTextBoxColumn,
+            this.nombreDataGridViewTextBoxColumn1,
+            this.apellidosDataGridViewTextBoxColumn,
+            this.nombrecamisetaDataGridViewTextBoxColumn1,
+            this.posicionDataGridViewTextBoxColumn1,
+            this.sexoDataGridViewTextBoxColumn1,
+            this.fechanacimientoDataGridViewTextBoxColumn,
+            this.equipoIDDataGridViewTextBoxColumn});
+            this.dataGridView2.DataSource = this.jugadoresBindingSource;
+            this.dataGridView2.Location = new System.Drawing.Point(47, 89);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(940, 216);
+            this.dataGridView2.TabIndex = 37;
+            // 
+            // databaseDataSet
+            // 
+            this.databaseDataSet.DataSetName = "DatabaseDataSet";
+            this.databaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // jugadoresBindingSource
+            // 
+            this.jugadoresBindingSource.DataMember = "Jugadores";
+            this.jugadoresBindingSource.DataSource = this.databaseDataSet;
+            // 
+            // jugadoresTableAdapter
+            // 
+            this.jugadoresTableAdapter.ClearBeforeFill = true;
+            // 
+            // idJugadorDataGridViewTextBoxColumn
+            // 
+            this.idJugadorDataGridViewTextBoxColumn.DataPropertyName = "idJugador";
+            this.idJugadorDataGridViewTextBoxColumn.HeaderText = "idJugador";
+            this.idJugadorDataGridViewTextBoxColumn.Name = "idJugadorDataGridViewTextBoxColumn";
+            this.idJugadorDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // numerocamisetaDataGridViewTextBoxColumn
+            // 
+            this.numerocamisetaDataGridViewTextBoxColumn.DataPropertyName = "numero_camiseta";
+            this.numerocamisetaDataGridViewTextBoxColumn.HeaderText = "numero_camiseta";
+            this.numerocamisetaDataGridViewTextBoxColumn.Name = "numerocamisetaDataGridViewTextBoxColumn";
+            // 
+            // nombreDataGridViewTextBoxColumn1
+            // 
+            this.nombreDataGridViewTextBoxColumn1.DataPropertyName = "nombre";
+            this.nombreDataGridViewTextBoxColumn1.HeaderText = "nombre";
+            this.nombreDataGridViewTextBoxColumn1.Name = "nombreDataGridViewTextBoxColumn1";
+            // 
+            // apellidosDataGridViewTextBoxColumn
+            // 
+            this.apellidosDataGridViewTextBoxColumn.DataPropertyName = "apellidos";
+            this.apellidosDataGridViewTextBoxColumn.HeaderText = "apellidos";
+            this.apellidosDataGridViewTextBoxColumn.Name = "apellidosDataGridViewTextBoxColumn";
+            // 
+            // nombrecamisetaDataGridViewTextBoxColumn1
+            // 
+            this.nombrecamisetaDataGridViewTextBoxColumn1.DataPropertyName = "nombre_camiseta";
+            this.nombrecamisetaDataGridViewTextBoxColumn1.HeaderText = "nombre_camiseta";
+            this.nombrecamisetaDataGridViewTextBoxColumn1.Name = "nombrecamisetaDataGridViewTextBoxColumn1";
+            // 
+            // posicionDataGridViewTextBoxColumn1
+            // 
+            this.posicionDataGridViewTextBoxColumn1.DataPropertyName = "posicion";
+            this.posicionDataGridViewTextBoxColumn1.HeaderText = "posicion";
+            this.posicionDataGridViewTextBoxColumn1.Name = "posicionDataGridViewTextBoxColumn1";
+            // 
+            // sexoDataGridViewTextBoxColumn1
+            // 
+            this.sexoDataGridViewTextBoxColumn1.DataPropertyName = "sexo";
+            this.sexoDataGridViewTextBoxColumn1.HeaderText = "sexo";
+            this.sexoDataGridViewTextBoxColumn1.Name = "sexoDataGridViewTextBoxColumn1";
+            // 
+            // fechanacimientoDataGridViewTextBoxColumn
+            // 
+            this.fechanacimientoDataGridViewTextBoxColumn.DataPropertyName = "fecha_nacimiento";
+            this.fechanacimientoDataGridViewTextBoxColumn.HeaderText = "fecha_nacimiento";
+            this.fechanacimientoDataGridViewTextBoxColumn.Name = "fechanacimientoDataGridViewTextBoxColumn";
+            // 
+            // equipoIDDataGridViewTextBoxColumn
+            // 
+            this.equipoIDDataGridViewTextBoxColumn.DataPropertyName = "EquipoID";
+            this.equipoIDDataGridViewTextBoxColumn.HeaderText = "EquipoID";
+            this.equipoIDDataGridViewTextBoxColumn.Name = "equipoIDDataGridViewTextBoxColumn";
+            // 
+            // jugadorBindingSource
+            // 
+            this.jugadorBindingSource.DataSource = typeof(Jugador);
+            // 
+            // FormListaJugadoresDB
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1009, 420);
+            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.botonCancelar);
+            this.Controls.Add(this.titulo);
+            this.Name = "FormListaJugadoresDB";
             this.Text = "FormListaJugadoresDB";
+            this.Load += new System.EventHandler(this.FormListaJugadoresDB_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jugadoresBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jugadorBindingSource)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+        private System.Windows.Forms.Button botonCancelar;
+        private System.Windows.Forms.Label titulo;
+        private System.Windows.Forms.BindingSource jugadorBindingSource;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private DatabaseDataSet databaseDataSet;
+        private System.Windows.Forms.BindingSource jugadoresBindingSource;
+        private DatabaseDataSetTableAdapters.JugadoresTableAdapter jugadoresTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idJugadorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numerocamisetaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn apellidosDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombrecamisetaDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn posicionDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sexoDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechanacimientoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn equipoIDDataGridViewTextBoxColumn;
     }
 }

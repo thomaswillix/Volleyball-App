@@ -145,3 +145,4 @@ C:\Users\thoma\source\Repos\thomaswillix\Volleyball-App\Proyecto\bin\Debug\Datab
 C:\Users\thoma\source\Repos\thomaswillix\Volleyball-App\Proyecto\obj\Debug\Proyecto.Vistas.FormListaPartidos.resources
 C:\Users\thoma\source\Repos\thomaswillix\Volleyball-App\Proyecto\obj\Debug\Proyecto.FormListaJugadores.resources
 C:\Users\thoma\source\Repos\thomaswillix\Volleyball-App\Proyecto\obj\Debug\Proyecto.Vistas.LecturaBBDD.FormListaPartidosDB.resources
+C:\Users\thoma\source\Repos\thomaswillix\Volleyball-App\Proyecto\obj\Debug\Proyecto.Vistas.LecturaBBDD.FormListaJugadoresDB.resources

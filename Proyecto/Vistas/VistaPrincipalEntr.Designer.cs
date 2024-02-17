@@ -34,19 +34,18 @@
             this.empleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.altaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.modificaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.listadosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.proyectosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.altaToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.modificaciónToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.programarPersistenciaEnBBDDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.jugadoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.jugadoresToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.bienv = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.botonCancelar = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.pfp = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.listadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.jugadoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.jugadoresToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pfp)).BeginInit();
             this.SuspendLayout();
@@ -67,39 +66,29 @@
             // 
             this.empleadosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.altaToolStripMenuItem1,
-            this.modificaciónToolStripMenuItem,
-            this.listadosToolStripMenuItem1});
+            this.modificaciónToolStripMenuItem});
             this.empleadosToolStripMenuItem.Name = "empleadosToolStripMenuItem";
             this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
             this.empleadosToolStripMenuItem.Text = "Jugadores";
-            this.empleadosToolStripMenuItem.Click += new System.EventHandler(this.empleadosToolStripMenuItem_Click);
             // 
             // altaToolStripMenuItem1
             // 
             this.altaToolStripMenuItem1.Name = "altaToolStripMenuItem1";
-            this.altaToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.altaToolStripMenuItem1.Size = new System.Drawing.Size(144, 22);
             this.altaToolStripMenuItem1.Text = "Añadir";
-            this.altaToolStripMenuItem1.Click += new System.EventHandler(this.altaToolStripMenuItem1_Click);
             // 
             // modificaciónToolStripMenuItem
             // 
             this.modificaciónToolStripMenuItem.Name = "modificaciónToolStripMenuItem";
-            this.modificaciónToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.modificaciónToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.modificaciónToolStripMenuItem.Text = "Modificación";
             this.modificaciónToolStripMenuItem.Click += new System.EventHandler(this.modificaciónToolStripMenuItem_Click);
-            // 
-            // listadosToolStripMenuItem1
-            // 
-            this.listadosToolStripMenuItem1.Name = "listadosToolStripMenuItem1";
-            this.listadosToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.listadosToolStripMenuItem1.Text = "Listados";
-            this.listadosToolStripMenuItem1.Click += new System.EventHandler(this.listadosToolStripMenuItem1_Click);
             // 
             // proyectosToolStripMenuItem
             // 
             this.proyectosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.altaToolStripMenuItem2,
-            this.modificaciónToolStripMenuItem1});
+            this.programarPersistenciaEnBBDDToolStripMenuItem});
             this.proyectosToolStripMenuItem.Name = "proyectosToolStripMenuItem";
             this.proyectosToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
             this.proyectosToolStripMenuItem.Text = "Partidos";
@@ -107,16 +96,39 @@
             // altaToolStripMenuItem2
             // 
             this.altaToolStripMenuItem2.Name = "altaToolStripMenuItem2";
-            this.altaToolStripMenuItem2.Size = new System.Drawing.Size(144, 22);
-            this.altaToolStripMenuItem2.Text = "Programar";
+            this.altaToolStripMenuItem2.Size = new System.Drawing.Size(259, 22);
+            this.altaToolStripMenuItem2.Text = "Programar (Persistencia en fichero)";
             this.altaToolStripMenuItem2.Click += new System.EventHandler(this.altaToolStripMenuItem2_Click);
             // 
-            // modificaciónToolStripMenuItem1
+            // programarPersistenciaEnBBDDToolStripMenuItem
             // 
-            this.modificaciónToolStripMenuItem1.Name = "modificaciónToolStripMenuItem1";
-            this.modificaciónToolStripMenuItem1.Size = new System.Drawing.Size(144, 22);
-            this.modificaciónToolStripMenuItem1.Text = "Modificación";
-            this.modificaciónToolStripMenuItem1.Click += new System.EventHandler(this.modificaciónToolStripMenuItem1_Click);
+            this.programarPersistenciaEnBBDDToolStripMenuItem.Name = "programarPersistenciaEnBBDDToolStripMenuItem";
+            this.programarPersistenciaEnBBDDToolStripMenuItem.Size = new System.Drawing.Size(259, 22);
+            this.programarPersistenciaEnBBDDToolStripMenuItem.Text = "Programar (Persistencia en BBDD)";
+            this.programarPersistenciaEnBBDDToolStripMenuItem.Click += new System.EventHandler(this.programarPersistenciaEnBBDDToolStripMenuItem_Click);
+            // 
+            // listadosToolStripMenuItem
+            // 
+            this.listadosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.jugadoresToolStripMenuItem,
+            this.jugadoresToolStripMenuItem1});
+            this.listadosToolStripMenuItem.Name = "listadosToolStripMenuItem";
+            this.listadosToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.listadosToolStripMenuItem.Text = "Listados";
+            // 
+            // jugadoresToolStripMenuItem
+            // 
+            this.jugadoresToolStripMenuItem.Name = "jugadoresToolStripMenuItem";
+            this.jugadoresToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
+            this.jugadoresToolStripMenuItem.Text = "Jugadores (Base de Datos)";
+            this.jugadoresToolStripMenuItem.Click += new System.EventHandler(this.jugadoresToolStripMenuItem_Click);
+            // 
+            // jugadoresToolStripMenuItem1
+            // 
+            this.jugadoresToolStripMenuItem1.Name = "jugadoresToolStripMenuItem1";
+            this.jugadoresToolStripMenuItem1.Size = new System.Drawing.Size(211, 22);
+            this.jugadoresToolStripMenuItem1.Text = "Jugadores (Fichero XML)";
+            this.jugadoresToolStripMenuItem1.Click += new System.EventHandler(this.jugadoresToolStripMenuItem1_Click);
             // 
             // bienv
             // 
@@ -144,7 +156,6 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "Cerrar sesión";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // botonCancelar
             // 
@@ -199,29 +210,6 @@
             this.label2.TabIndex = 21;
             this.label2.Text = "Mi perfil";
             // 
-            // listadosToolStripMenuItem
-            // 
-            this.listadosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.jugadoresToolStripMenuItem,
-            this.jugadoresToolStripMenuItem1});
-            this.listadosToolStripMenuItem.Name = "listadosToolStripMenuItem";
-            this.listadosToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
-            this.listadosToolStripMenuItem.Text = "Listados";
-            // 
-            // jugadoresToolStripMenuItem
-            // 
-            this.jugadoresToolStripMenuItem.Name = "jugadoresToolStripMenuItem";
-            this.jugadoresToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
-            this.jugadoresToolStripMenuItem.Text = "Jugadores (Base de Datos)";
-            this.jugadoresToolStripMenuItem.Click += new System.EventHandler(this.jugadoresToolStripMenuItem_Click);
-            // 
-            // jugadoresToolStripMenuItem1
-            // 
-            this.jugadoresToolStripMenuItem1.Name = "jugadoresToolStripMenuItem1";
-            this.jugadoresToolStripMenuItem1.Size = new System.Drawing.Size(211, 22);
-            this.jugadoresToolStripMenuItem1.Text = "Jugadores (Fichero XML)";
-            this.jugadoresToolStripMenuItem1.Click += new System.EventHandler(this.jugadoresToolStripMenuItem1_Click);
-            // 
             // VistaPrincipalEntr
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -262,9 +250,7 @@
         private System.Windows.Forms.ToolStripMenuItem proyectosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem altaToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem modificaciónToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem listadosToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem altaToolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem modificaciónToolStripMenuItem1;
         private System.Windows.Forms.Label bienv;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button botonCancelar;
@@ -274,5 +260,6 @@
         private System.Windows.Forms.ToolStripMenuItem listadosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem jugadoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem jugadoresToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem programarPersistenciaEnBBDDToolStripMenuItem;
     }
 }

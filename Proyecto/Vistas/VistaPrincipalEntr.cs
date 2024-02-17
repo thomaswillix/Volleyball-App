@@ -40,44 +40,6 @@ namespace Proyecto
         {
             Usuario.u = null;            
         }
-        private void modificacionToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void facturacionToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listadosToolStripMenuItem2_Click(object sender, EventArgs e)
-        {
-            
-            /*ListaJugadores listaJ= new ListaJugadores();
-            listaJ.ShowDialog();*/
-        }
-
-        private void altaToolStripMenuItem2_Click(object sender, EventArgs e)
-        {
-            FormNuevoPartido part = new FormNuevoPartido();
-            part.ShowDialog();
-        }
-
-        private void listadosToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void altaToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            FormNuevoJugador nuevoJugador = new FormNuevoJugador();
-            nuevoJugador.ShowDialog();
-        }
-
-        private void empleadosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void modificaciónToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -94,10 +56,6 @@ namespace Proyecto
             this.Close();                        
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void escudo_Click(object sender, EventArgs e)
         {
@@ -115,6 +73,17 @@ namespace Proyecto
         {
             FormListaJugadoresDB listaJ = new FormListaJugadoresDB();
             listaJ.ShowDialog();
+        }
+
+        private void altaToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            FormNuevoPartido nuevoP =  new FormNuevoPartido();
+            nuevoP.ShowDialog();
+        }
+
+        private void programarPersistenciaEnBBDDToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 
