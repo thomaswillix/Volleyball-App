@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Proyecto;
 using Proyecto.Modelo;
-using Proyecto.Vistas.LecturaBBDD;
 using Proyecto.Vistas;
 
 namespace Proyecto

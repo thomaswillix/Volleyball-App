@@ -7,9 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Proyecto;
 using Proyecto.Modelo;
-using Proyecto.Vistas.LecturaBBDD;
 using Proyecto.Vistas;
 
 namespace Proyecto
@@ -19,6 +17,7 @@ namespace Proyecto
         public VistaPrincipalEntr()
         {
             InitializeComponent();
+            IsMdiContainer = true;
         }
 
         private void Principal_Load(object sender, EventArgs e)
@@ -35,6 +34,7 @@ namespace Proyecto
                     pfp.BackgroundImage = Image.FromFile("../Pics/Renan.jpeg");
                     break;
             }
+            loopBackgroud();
         }
         private void Principal_FormClosing(object sender,FormClosingEventArgs e)
         {
@@ -63,28 +63,45 @@ namespace Proyecto
             vistaPerfil.ShowDialog();
         }
 
-        private void jugadoresToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void jugadoresXML_Click(object sender, EventArgs e)
         {
             FormListaJugadores listaJ = new FormListaJugadores();
             listaJ.ShowDialog();
         }
 
-        private void jugadoresToolStripMenuItem_Click(object sender, EventArgs e)
+        private void jugadoresBBDD_Click(object sender, EventArgs e)
         {
             FormListaJugadoresDB listaJ = new FormListaJugadoresDB();
             listaJ.ShowDialog();
         }
+        private void aniadirJugadorXML_Click(object sender, EventArgs e)
+        {
+            FormNuevoJugador nuevoJ = new FormNuevoJugador();
+            nuevoJ.ShowDialog();
+        }
 
-        private void altaToolStripMenuItem2_Click(object sender, EventArgs e)
+        private void partidoJSON_Click(object sender, EventArgs e)
         {
             FormNuevoPartido nuevoP =  new FormNuevoPartido();
             nuevoP.ShowDialog();
         }
 
-        private void programarPersistenciaEnBBDDToolStripMenuItem_Click(object sender, EventArgs e)
+        private void partidoBBDD_Click(object sender, EventArgs e)
         {
-
+            FormNuevoPartidoDB nuevoP = new FormNuevoPartidoDB();
+            nuevoP.ShowDialog();
         }
+
+        private void loopBackgroud()
+        {
+            string executableFilePath = System.Reflection.Assembly.GetExecutingAssembly().Location;
+            string executableDirectoryPath = System.IO.Path.GetDirectoryName(executableFilePath);
+            string videoFilePath = System.IO.Path.Combine(executableDirectoryPath, "background.mp4");
+            axWindowsMediaPlayer1.URL = videoFilePath;
+            axWindowsMediaPlayer1.settings.setMode("Loop", true);
+            axWindowsMediaPlayer1.Ctlcontrols.play();
+        }
+
     }
 
 }

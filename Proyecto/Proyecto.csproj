@@ -89,11 +89,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controladores\ControladorEntrenadoresXML.cs" />
-    <Compile Include="Controladores\ControladorJugadoresXML.cs" />
-    <Compile Include="Controladores\ControladorPartidosJSON.cs" />
-    <Compile Include="Controladores\ControladorUsuariosBin.cs" />
-    <Compile Include="Controladores\Database.cs" />
+    <Compile Include="Controladores\Ficheros\ControladorEntrenadoresXML.cs" />
+    <Compile Include="Controladores\Ficheros\ControladorJugadoresXML.cs" />
+    <Compile Include="Controladores\Ficheros\ControladorPartidosJSON.cs" />
+    <Compile Include="Controladores\Ficheros\ControladorUsuariosBin.cs" />
+    <Compile Include="Controladores\BBDD\ConnectionDB.cs" />
+    <Compile Include="Controladores\BBDD\JugadoresDAO.cs" />
+    <Compile Include="Controladores\BBDD\PartidosDAO.cs" />
+    <Compile Include="Controladores\Validator.cs" />
     <Compile Include="DatabaseDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -104,22 +107,22 @@
     <Compile Include="Modelo\Jugador.cs" />
     <Compile Include="Modelo\Partido.cs" />
     <Compile Include="Modelo\Usuario.cs" />
-    <Compile Include="Vistas\Escritura BBDD\FormNuevoPartidoDB.cs">
+    <Compile Include="Vistas\BBDD\Escritura BBDD\FormNuevoPartidoDB.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistas\Escritura BBDD\FormNuevoPartidoDB.Designer.cs">
+    <Compile Include="Vistas\BBDD\Escritura BBDD\FormNuevoPartidoDB.Designer.cs">
       <DependentUpon>FormNuevoPartidoDB.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\LecturaArchivos\FormListaPartidos.cs">
+    <Compile Include="Vistas\Archivos\LecturaArchivos\FormListaPartidos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistas\LecturaArchivos\FormListaPartidos.Designer.cs">
+    <Compile Include="Vistas\Archivos\LecturaArchivos\FormListaPartidos.Designer.cs">
       <DependentUpon>FormListaPartidos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\LecturaArchivos\FormListaJugadores.cs">
+    <Compile Include="Vistas\Archivos\LecturaArchivos\FormListaJugadores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistas\LecturaArchivos\FormListaJugadores.Designer.cs">
+    <Compile Include="Vistas\Archivos\LecturaArchivos\FormListaJugadores.Designer.cs">
       <DependentUpon>FormListaJugadores.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\FormLogin.cs">
@@ -130,29 +133,35 @@
     </Compile>
     <Compile Include="Modelo\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Vistas\EscrituraArchivos\FormNuevoJugador.cs">
+    <Compile Include="Vistas\Archivos\EscrituraArchivos\FormNuevoJugador.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistas\EscrituraArchivos\FormNuevoJugador.Designer.cs">
+    <Compile Include="Vistas\Archivos\EscrituraArchivos\FormNuevoJugador.Designer.cs">
       <DependentUpon>FormNuevoJugador.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\EscrituraArchivos\FormNuevoPartido.cs">
+    <Compile Include="Vistas\Archivos\EscrituraArchivos\FormNuevoPartido.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistas\EscrituraArchivos\FormNuevoPartido.Designer.cs">
+    <Compile Include="Vistas\Archivos\EscrituraArchivos\FormNuevoPartido.Designer.cs">
       <DependentUpon>FormNuevoPartido.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\LecturaBBDD\FormListaJugadoresDB.cs">
+    <Compile Include="Vistas\BBDD\LecturaBBDD\FormListaJugadoresDB.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistas\LecturaBBDD\FormListaJugadoresDB.Designer.cs">
+    <Compile Include="Vistas\BBDD\LecturaBBDD\FormListaJugadoresDB.Designer.cs">
       <DependentUpon>FormListaJugadoresDB.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\LecturaBBDD\FormListaPartidosDB.cs">
+    <Compile Include="Vistas\BBDD\LecturaBBDD\FormListaPartidosDB.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistas\LecturaBBDD\FormListaPartidosDB.Designer.cs">
+    <Compile Include="Vistas\BBDD\LecturaBBDD\FormListaPartidosDB.Designer.cs">
       <DependentUpon>FormListaPartidosDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\FormNuevoUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\FormNuevoUsuario.Designer.cs">
+      <DependentUpon>FormNuevoUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\VistaPerfil.cs">
       <SubType>Form</SubType>
@@ -172,13 +181,13 @@
     <Compile Include="Vistas\VistaPrincipalEntr.Designer.cs">
       <DependentUpon>VistaPrincipalEntr.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Vistas\Escritura BBDD\FormNuevoPartidoDB.resx">
+    <EmbeddedResource Include="Vistas\BBDD\Escritura BBDD\FormNuevoPartidoDB.resx">
       <DependentUpon>FormNuevoPartidoDB.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\LecturaArchivos\FormListaPartidos.resx">
+    <EmbeddedResource Include="Vistas\Archivos\LecturaArchivos\FormListaPartidos.resx">
       <DependentUpon>FormListaPartidos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\LecturaArchivos\FormListaJugadores.resx">
+    <EmbeddedResource Include="Vistas\Archivos\LecturaArchivos\FormListaJugadores.resx">
       <DependentUpon>FormListaJugadores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\FormLogin.resx">
@@ -193,17 +202,20 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Vistas\EscrituraArchivos\FormNuevoJugador.resx">
+    <EmbeddedResource Include="Vistas\Archivos\EscrituraArchivos\FormNuevoJugador.resx">
       <DependentUpon>FormNuevoJugador.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\EscrituraArchivos\FormNuevoPartido.resx">
+    <EmbeddedResource Include="Vistas\Archivos\EscrituraArchivos\FormNuevoPartido.resx">
       <DependentUpon>FormNuevoPartido.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\LecturaBBDD\FormListaJugadoresDB.resx">
+    <EmbeddedResource Include="Vistas\BBDD\LecturaBBDD\FormListaJugadoresDB.resx">
       <DependentUpon>FormListaJugadoresDB.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\LecturaBBDD\FormListaPartidosDB.resx">
+    <EmbeddedResource Include="Vistas\BBDD\LecturaBBDD\FormListaPartidosDB.resx">
       <DependentUpon>FormListaPartidosDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\FormNuevoUsuario.resx">
+      <DependentUpon>FormNuevoUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\VistaPerfil.resx">
       <DependentUpon>VistaPerfil.cs</DependentUpon>
@@ -276,6 +288,24 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
