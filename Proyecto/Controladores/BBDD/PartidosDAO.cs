@@ -9,7 +9,7 @@ namespace Proyecto.Controladores
     internal class PartidosDAO
     {
         //Hoy que probar este método, no estoy seguro e que funcione pero we'll see.
-        public DataTable ObtenerPartidos()
+        public DataTable obtenerPartidos()
         {
             // Cadena de conexión a la base de datos
             string connectionString = ConnectionDB.construirCadenaConexión();

@@ -17,7 +17,7 @@ namespace Proyecto.Vistas
         {
             InitializeComponent();
             PartidosDAO db = new PartidosDAO();
-            dataGridView1.DataSource =  db.ObtenerPartidos();
+            dataGridView1.DataSource =  db.obtenerPartidos();
         }
     }
 }

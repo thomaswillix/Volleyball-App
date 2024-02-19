@@ -89,6 +89,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controladores\BBDD\ImagenDAO.cs" />
     <Compile Include="Controladores\Ficheros\ControladorEntrenadoresXML.cs" />
     <Compile Include="Controladores\Ficheros\ControladorJugadoresXML.cs" />
     <Compile Include="Controladores\Ficheros\ControladorPartidosJSON.cs" />
@@ -125,6 +126,12 @@
     <Compile Include="Vistas\Archivos\LecturaArchivos\FormListaJugadores.Designer.cs">
       <DependentUpon>FormListaJugadores.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\FormCambiarFotoPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\FormCambiarFotoPerfil.Designer.cs">
+      <DependentUpon>FormCambiarFotoPerfil.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,10 +164,10 @@
     <Compile Include="Vistas\BBDD\LecturaBBDD\FormListaPartidosDB.Designer.cs">
       <DependentUpon>FormListaPartidosDB.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\FormNuevoUsuario.cs">
+    <Compile Include="Vistas\Archivos\EscrituraArchivos\FormNuevoUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistas\FormNuevoUsuario.Designer.cs">
+    <Compile Include="Vistas\Archivos\EscrituraArchivos\FormNuevoUsuario.Designer.cs">
       <DependentUpon>FormNuevoUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\VistaPerfil.cs">
@@ -190,6 +197,9 @@
     <EmbeddedResource Include="Vistas\Archivos\LecturaArchivos\FormListaJugadores.resx">
       <DependentUpon>FormListaJugadores.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\FormCambiarFotoPerfil.resx">
+      <DependentUpon>FormCambiarFotoPerfil.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -214,7 +224,7 @@
     <EmbeddedResource Include="Vistas\BBDD\LecturaBBDD\FormListaPartidosDB.resx">
       <DependentUpon>FormListaPartidosDB.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\FormNuevoUsuario.resx">
+    <EmbeddedResource Include="Vistas\Archivos\EscrituraArchivos\FormNuevoUsuario.resx">
       <DependentUpon>FormNuevoUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\VistaPerfil.resx">

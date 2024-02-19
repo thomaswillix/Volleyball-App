@@ -9,7 +9,7 @@ namespace Proyecto.Controladores
     public class PersistenciaJugadores
     {
 
-        public DataTable ObtenerJugadores()
+        public DataTable obtenerJugadores()
         {
             // Cadena de conexión a la base de datos
             string connectionString = ConnectionDB.construirCadenaConexión();
@@ -79,7 +79,7 @@ namespace Proyecto.Controladores
             }
         }
 
-        public void CargarDatosEspecificosDataGridView(DataGridView dataGridView)
+        public void cargarDatosEspecificosDataGridView(DataGridView dataGridView)
         {
             // Cadena de conexión a la base de datos
             string connectionString = ConnectionDB.construirCadenaConexión();

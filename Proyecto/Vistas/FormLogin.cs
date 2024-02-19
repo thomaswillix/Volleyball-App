@@ -11,6 +11,7 @@ using Proyecto;
 using System.IO;
 using System.Xml.Serialization;
 using Proyecto.Modelo;
+using Proyecto.Vistas;
 using Proyecto.Manejadores;
 
 namespace Proyecto
@@ -126,7 +127,8 @@ namespace Proyecto
 
         private void linkLabel1_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
-           
+            FormNuevoUsuario registro = new FormNuevoUsuario();
+            registro.ShowDialog();
         }
     }
 }

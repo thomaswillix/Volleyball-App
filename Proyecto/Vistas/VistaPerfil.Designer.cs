@@ -44,6 +44,7 @@
             this.nom = new System.Windows.Forms.Label();
             this.apes = new System.Windows.Forms.Label();
             this.fechaNac = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pfp)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,7 +53,7 @@
             this.pfp.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pfp.BackColor = System.Drawing.Color.Transparent;
             this.pfp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pfp.Location = new System.Drawing.Point(29, 27);
+            this.pfp.Location = new System.Drawing.Point(328, 12);
             this.pfp.Name = "pfp";
             this.pfp.Size = new System.Drawing.Size(178, 159);
             this.pfp.TabIndex = 0;
@@ -62,7 +63,8 @@
             // 
             this.nombre.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.nombre.AutoSize = true;
-            this.nombre.Location = new System.Drawing.Point(213, 57);
+            this.nombre.ForeColor = System.Drawing.SystemColors.Window;
+            this.nombre.Location = new System.Drawing.Point(0, 67);
             this.nombre.Name = "nombre";
             this.nombre.Size = new System.Drawing.Size(44, 13);
             this.nombre.TabIndex = 1;
@@ -72,7 +74,8 @@
             // 
             this.apell.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.apell.AutoSize = true;
-            this.apell.Location = new System.Drawing.Point(207, 96);
+            this.apell.ForeColor = System.Drawing.SystemColors.Window;
+            this.apell.Location = new System.Drawing.Point(0, 108);
             this.apell.Name = "apell";
             this.apell.Size = new System.Drawing.Size(49, 13);
             this.apell.TabIndex = 2;
@@ -81,25 +84,25 @@
             // textBox1
             // 
             this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.Location = new System.Drawing.Point(263, 53);
+            this.textBox1.Location = new System.Drawing.Point(56, 64);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.Size = new System.Drawing.Size(148, 20);
             this.textBox1.TabIndex = 4;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
             this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox2.Location = new System.Drawing.Point(263, 92);
+            this.textBox2.Location = new System.Drawing.Point(56, 104);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.Size = new System.Drawing.Size(148, 20);
             this.textBox2.TabIndex = 5;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dateTimePicker1.Location = new System.Drawing.Point(163, 214);
+            this.dateTimePicker1.Location = new System.Drawing.Point(112, 154);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 7;
@@ -108,7 +111,8 @@
             // 
             this.dateBir.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dateBir.AutoSize = true;
-            this.dateBir.Location = new System.Drawing.Point(51, 218);
+            this.dateBir.ForeColor = System.Drawing.SystemColors.Window;
+            this.dateBir.Location = new System.Drawing.Point(0, 158);
             this.dateBir.Name = "dateBir";
             this.dateBir.Size = new System.Drawing.Size(106, 13);
             this.dateBir.TabIndex = 8;
@@ -121,7 +125,7 @@
             // btSave
             // 
             this.btSave.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btSave.Location = new System.Drawing.Point(112, 275);
+            this.btSave.Location = new System.Drawing.Point(72, 243);
             this.btSave.Name = "btSave";
             this.btSave.Size = new System.Drawing.Size(95, 23);
             this.btSave.TabIndex = 10;
@@ -132,7 +136,7 @@
             // btEdit
             // 
             this.btEdit.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btEdit.Location = new System.Drawing.Point(200, 275);
+            this.btEdit.Location = new System.Drawing.Point(223, 243);
             this.btEdit.Name = "btEdit";
             this.btEdit.Size = new System.Drawing.Size(52, 23);
             this.btEdit.TabIndex = 11;
@@ -143,7 +147,7 @@
             // btCancel
             // 
             this.btCancel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btCancel.Location = new System.Drawing.Point(242, 275);
+            this.btCancel.Location = new System.Drawing.Point(328, 243);
             this.btCancel.Name = "btCancel";
             this.btCancel.Size = new System.Drawing.Size(75, 23);
             this.btCancel.TabIndex = 12;
@@ -172,13 +176,27 @@
             this.fechaNac.Size = new System.Drawing.Size(100, 23);
             this.fechaNac.TabIndex = 17;
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.LinkColor = System.Drawing.Color.White;
+            this.linkLabel1.Location = new System.Drawing.Point(372, 179);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(106, 13);
+            this.linkLabel1.TabIndex = 20;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Cambiar foto de perfil";
+            this.linkLabel1.VisitedLinkColor = System.Drawing.Color.WhiteSmoke;
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // VistaPerfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(401, 335);
+            this.ClientSize = new System.Drawing.Size(515, 335);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.fechaNac);
             this.Controls.Add(this.apes);
             this.Controls.Add(this.nom);
@@ -194,7 +212,7 @@
             this.Controls.Add(this.pfp);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(417, 374);
+            this.MinimumSize = new System.Drawing.Size(531, 374);
             this.Name = "VistaPerfil";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mi perfil";
@@ -222,5 +240,6 @@
         private System.Windows.Forms.Label nom;
         private System.Windows.Forms.Label apes;
         private System.Windows.Forms.Label fechaNac;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
