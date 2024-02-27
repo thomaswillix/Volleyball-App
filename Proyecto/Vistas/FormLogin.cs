@@ -12,7 +12,7 @@ using System.IO;
 using System.Xml.Serialization;
 using Proyecto.Modelo;
 using Proyecto.Vistas;
-using Proyecto.Manejadores;
+using Proyecto.Controladores;
 
 namespace Proyecto
 {
@@ -33,17 +33,7 @@ namespace Proyecto
         private void button1_Click(object sender, System.EventArgs e)
         {
 
-        }
-        //llamada a método estático del ControladorUsuarios
-        private Usuario buscarUsuario(string usuario, string pass)
-        {
-            return ControladorUsuariosBin.buscarUsuario(usuario, pass);
-        }
-        //llamada a método estático del ControladorUsuarios
-        private bool validaLogin(ref string usuario, ref string clave)
-        {
-            return ControladorUsuariosBin.validaLogin(ref usuario, ref clave);
-        }
+        } 
         
         private void button2_Click(object sender, System.EventArgs e)
         {
@@ -71,11 +61,11 @@ namespace Proyecto
          cuando se cierre se volverá a poner el foco en esta. */
         private void clasePrincipal(string usuario, string contrasena)
         {
-            if (validaLogin(ref usuario, ref contrasena) == true)
+            if (ControladorUsuariosBin.validaLogin(ref usuario, ref contrasena) == true)
             {
                 cuadroUsu.Clear();
                 cuadroCont.Clear();
-                Usuario.u = buscarUsuario(usuario, contrasena);
+                Usuario.u = ControladorUsuariosBin.buscarUsuario(usuario, contrasena);
                 if (Usuario.u.EsJugador == true)
                 {
                     this.Hide();

@@ -8,7 +8,7 @@ using System.Windows.Forms;
 using System.Runtime.Serialization.Formatters.Binary;
 using Proyecto.Modelo;
 
-namespace Proyecto.Manejadores
+namespace Proyecto.Controladores
 {
     public static class ControladorUsuariosBin
     {

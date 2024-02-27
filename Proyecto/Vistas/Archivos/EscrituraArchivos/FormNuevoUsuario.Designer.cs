@@ -28,26 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.cuadroCont = new System.Windows.Forms.TextBox();
+            this.pass = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.clave = new System.Windows.Forms.Label();
-            this.cuadroUsu = new System.Windows.Forms.TextBox();
+            this.user = new System.Windows.Forms.TextBox();
             this.usuario = new System.Windows.Forms.Label();
             this.cancel = new System.Windows.Forms.Button();
             this.accept = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // cuadroCont
+            // pass
             // 
-            this.cuadroCont.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cuadroCont.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cuadroCont.Location = new System.Drawing.Point(142, 59);
-            this.cuadroCont.MaximumSize = new System.Drawing.Size(300, 52);
-            this.cuadroCont.MinimumSize = new System.Drawing.Size(75, 13);
-            this.cuadroCont.Name = "cuadroCont";
-            this.cuadroCont.PasswordChar = '*';
-            this.cuadroCont.Size = new System.Drawing.Size(150, 26);
-            this.cuadroCont.TabIndex = 17;
+            this.pass.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pass.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pass.Location = new System.Drawing.Point(142, 59);
+            this.pass.MaximumSize = new System.Drawing.Size(300, 52);
+            this.pass.MinimumSize = new System.Drawing.Size(75, 13);
+            this.pass.Name = "pass";
+            this.pass.PasswordChar = '*';
+            this.pass.Size = new System.Drawing.Size(150, 26);
+            this.pass.TabIndex = 17;
             // 
             // textBox2
             // 
@@ -71,16 +71,16 @@
             this.clave.TabIndex = 22;
             this.clave.Text = "Clave";
             // 
-            // cuadroUsu
+            // user
             // 
-            this.cuadroUsu.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cuadroUsu.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cuadroUsu.Location = new System.Drawing.Point(142, 26);
-            this.cuadroUsu.MaximumSize = new System.Drawing.Size(300, 52);
-            this.cuadroUsu.MinimumSize = new System.Drawing.Size(75, 13);
-            this.cuadroUsu.Name = "cuadroUsu";
-            this.cuadroUsu.Size = new System.Drawing.Size(150, 26);
-            this.cuadroUsu.TabIndex = 16;
+            this.user.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.user.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.user.Location = new System.Drawing.Point(142, 26);
+            this.user.MaximumSize = new System.Drawing.Size(300, 52);
+            this.user.MinimumSize = new System.Drawing.Size(75, 13);
+            this.user.Name = "user";
+            this.user.Size = new System.Drawing.Size(150, 26);
+            this.user.TabIndex = 16;
             // 
             // usuario
             // 
@@ -132,10 +132,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(321, 173);
-            this.Controls.Add(this.cuadroCont);
+            this.Controls.Add(this.pass);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.clave);
-            this.Controls.Add(this.cuadroUsu);
+            this.Controls.Add(this.user);
             this.Controls.Add(this.usuario);
             this.Controls.Add(this.cancel);
             this.Controls.Add(this.accept);
@@ -147,10 +147,10 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox cuadroCont;
+        private System.Windows.Forms.TextBox pass;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label clave;
-        private System.Windows.Forms.TextBox cuadroUsu;
+        private System.Windows.Forms.TextBox user;
         private System.Windows.Forms.Label usuario;
         private System.Windows.Forms.Button cancel;
         private System.Windows.Forms.Button accept;
