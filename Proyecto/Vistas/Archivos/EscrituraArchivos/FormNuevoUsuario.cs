@@ -72,10 +72,10 @@ namespace Proyecto.Vistas
             }
             else
             {
-                u.User = user.Text;
-                u.Pass = pass.Text;
+                u.Nombre = user.Text;
+                u.Contrasenia = pass.Text;
                 ControladorUsuariosBin.listaUsuarios.Add(u);
-                ControladorUsuariosBin.escribirUsuariosXML();
+                ControladorUsuariosBin.cargarUsuariosBin();
                 MessageBox.Show("Usuario registrado con éxito.");
             }
         }
