@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
-using System.IO;
 using System.Windows.Forms;
 
 namespace Proyecto.Controladores
@@ -44,7 +43,7 @@ namespace Proyecto.Controladores
             // Ver método construirCadenaConexión más arriba
             string connectionString = ConnectionDB.construirCadenaConexión();
             // Query de inserción
-            string query = "INSERT INTO Jugadores (NumeroCamiseta, Nombre, Apellidos, NombreCamiseta, Posicion, Sexo, FechaNac, CodEquipo) VALUES (@NumeroCami, @Nombre, @Apellidos, @NombreCami, @Posicion, @Sexo, @FechaNac, @CodEquipo)";
+            string query = "INSERT INTO Jugadores (NumeroCamiseta, Nombre, Apellidos, NombreCamiseta, Posicion, Sexo, FechaNac, EquipoID) VALUES (@NumeroCami, @Nombre, @Apellidos, @NombreCami, @Posicion, @Sexo, @FechaNac, @CodEquipo)";
 
             // Crear la conexión
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -79,19 +78,18 @@ namespace Proyecto.Controladores
             }
         }
 
-        public void cargarDatosEspecificosDataGridView(DataGridView dataGridView)
+        public void cargarDatosEspecificosDataGridView(DataGridView dataGridView, int codEquipo)
         {
             // Cadena de conexión a la base de datos
             string connectionString = ConnectionDB.construirCadenaConexión();
             // Query para obtener los datos específicos
-            string query = "SELECT nombre, apellidos, posicion, numero_camiseta FROM Jugadores";
+            string query = "SELECT nombre, apellidos, posicion, numero_camiseta FROM Jugadoresw where EquipoID = @CodEquipo";
 
             dataGridView.Columns.Clear();
             dataGridView.Columns.Add("Nombre", "nombre");
             dataGridView.Columns.Add("Apellidos", "apellidos");
             dataGridView.Columns.Add("Posición", "posicion");
             dataGridView.Columns.Add("Dorsal", "numero_camiseta");
-
 
             // Crear la conexión
 
@@ -103,6 +101,7 @@ namespace Proyecto.Controladores
 
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
+                        command.Parameters.AddWithValue("@CodEquipo", codEquipo);
                         using (SqlDataReader reader = command.ExecuteReader())
                         {
                             while (reader.Read())

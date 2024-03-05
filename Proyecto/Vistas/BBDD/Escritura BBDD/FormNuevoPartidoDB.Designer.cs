@@ -34,8 +34,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.escudo = new System.Windows.Forms.PictureBox();
             this.equipoV = new System.Windows.Forms.ComboBox();
-            this.equiposBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.databaseDataSet = new Proyecto.DatabaseDataSet();
             this.label2 = new System.Windows.Forms.Label();
             this.equipoL = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,15 +42,17 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.databaseDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.databaseDataSet = new Proyecto.DatabaseDataSet();
+            this.equiposBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.equiposTableAdapter = new Proyecto.DatabaseDataSetTableAdapters.EquiposTableAdapter();
+            this.equiposBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.escudo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.equiposBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.equiposBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.equiposBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // label4
@@ -103,23 +103,14 @@
             // 
             // equipoV
             // 
-            this.equipoV.DataSource = this.equiposBindingSource;
+            this.equipoV.DataSource = this.equiposBindingSource1;
             this.equipoV.DisplayMember = "nombre";
             this.equipoV.FormattingEnabled = true;
             this.equipoV.Location = new System.Drawing.Point(696, 85);
             this.equipoV.Name = "equipoV";
             this.equipoV.Size = new System.Drawing.Size(121, 21);
             this.equipoV.TabIndex = 56;
-            // 
-            // equiposBindingSource
-            // 
-            this.equiposBindingSource.DataMember = "Equipos";
-            this.equiposBindingSource.DataSource = this.databaseDataSet;
-            // 
-            // databaseDataSet
-            // 
-            this.databaseDataSet.DataSetName = "DatabaseDataSet";
-            this.databaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.equipoV.SelectedIndexChanged += new System.EventHandler(this.equipoV_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -133,6 +124,7 @@
             // 
             // equipoL
             // 
+            this.equipoL.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.equiposBindingSource, "nombre", true));
             this.equipoL.DataSource = this.equiposBindingSource;
             this.equipoL.DisplayMember = "nombre";
             this.equipoL.FormattingEnabled = true;
@@ -187,7 +179,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(69, 126);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(342, 244);
+            this.dataGridView1.Size = new System.Drawing.Size(340, 244);
             this.dataGridView1.TabIndex = 65;
             // 
             // dataGridView2
@@ -195,17 +187,27 @@
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(564, 126);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(340, 244);
+            this.dataGridView2.Size = new System.Drawing.Size(374, 244);
             this.dataGridView2.TabIndex = 66;
             // 
-            // databaseDataSetBindingSource
+            // databaseDataSet
             // 
-            this.databaseDataSetBindingSource.DataSource = this.databaseDataSet;
-            this.databaseDataSetBindingSource.Position = 0;
+            this.databaseDataSet.DataSetName = "DatabaseDataSet";
+            this.databaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // equiposBindingSource
+            // 
+            this.equiposBindingSource.DataMember = "Equipos";
+            this.equiposBindingSource.DataSource = this.databaseDataSet;
             // 
             // equiposTableAdapter
             // 
             this.equiposTableAdapter.ClearBeforeFill = true;
+            // 
+            // equiposBindingSource1
+            // 
+            this.equiposBindingSource1.DataMember = "Equipos";
+            this.equiposBindingSource1.DataSource = this.databaseDataSet;
             // 
             // FormNuevoPartidoDB
             // 
@@ -233,11 +235,11 @@
             this.Load += new System.EventHandler(this.FormNuevoPartidoDB_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.escudo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.equiposBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.equiposBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.equiposBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -257,9 +259,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.BindingSource databaseDataSetBindingSource;
         private DatabaseDataSet databaseDataSet;
         private System.Windows.Forms.BindingSource equiposBindingSource;
         private DatabaseDataSetTableAdapters.EquiposTableAdapter equiposTableAdapter;
+        private System.Windows.Forms.BindingSource equiposBindingSource1;
     }
 }

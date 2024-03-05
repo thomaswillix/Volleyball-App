@@ -1,31 +1,26 @@
-﻿using System;
+﻿using Proyecto.Controladores;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Proyecto.Controladores;
+
 namespace Proyecto.Vistas
 {
     public partial class FormNuevoPartidoDB : Form
     {
+        PersistenciaJugadores jugadores = new PersistenciaJugadores();
+        EquiposDAO equipos = new EquiposDAO();
+
         public FormNuevoPartidoDB()
         {
             InitializeComponent();
-            populateComboBoxes();
-        }
-
-        private void populateComboBoxes()
-        {
-            
         }
 
         private void equipoL_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+            int idL = equipos.obtenerId(equipoL.Text);
+
+            jugadores.cargarDatosEspecificosDataGridView(dataGridView1, idL);
         }
 
         private void FormNuevoPartidoDB_Load(object sender, EventArgs e)
@@ -38,7 +33,7 @@ namespace Proyecto.Vistas
         {
             if (validar())
             {
-                aniadirProyecto();
+                aniadirPartido();
                 vaciarCampos();
                 MessageBox.Show("Proyecto añadido al repositorio de Proyectos");
 
@@ -55,7 +50,7 @@ namespace Proyecto.Vistas
 
             // Realiza todas las validaciones y recopila los mensajes de error
 
-            if (fechaPart != null || fechaPart.Value < DateTime.Today)
+            if (fechaPart == null || fechaPart.Value < DateTime.Today)
             {
                 errores.Add("La fecha no es válida.");
             }
@@ -90,12 +85,20 @@ namespace Proyecto.Vistas
             fechaPart.Value = DateTime.Now;
         }
 
-        private void aniadirProyecto()
+        private void aniadirPartido()
         {
-            /*int idV = Equi
+            int idV = equipos.obtenerId(equipoV.Text);
+            int idL = equipos.obtenerId(equipoL.Text);
+
             PartidosDAO db = new PartidosDAO();
-            db.insertarPartido(,,
-                fechaPart.Value);*/
+            db.insertarPartido(idV, idL, fechaPart.Value);
+        }
+
+        private void equipoV_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int idV = equipos.obtenerId(equipoV.Text);
+
+            jugadores.cargarDatosEspecificosDataGridView(dataGridView1, idV);
         }
     }
 }
