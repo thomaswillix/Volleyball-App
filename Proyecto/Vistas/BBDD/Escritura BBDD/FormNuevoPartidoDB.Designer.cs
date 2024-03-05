@@ -34,6 +34,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.escudo = new System.Windows.Forms.PictureBox();
             this.equipoV = new System.Windows.Forms.ComboBox();
+            this.equiposBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.databaseDataSet = new Proyecto.DatabaseDataSet();
             this.label2 = new System.Windows.Forms.Label();
             this.equipoL = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -42,17 +44,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.databaseDataSet = new Proyecto.DatabaseDataSet();
             this.databaseDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.equiposBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.equiposTableAdapter = new Proyecto.DatabaseDataSetTableAdapters.EquiposTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.escudo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.equiposBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.databaseDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.equiposBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label4
@@ -111,6 +111,16 @@
             this.equipoV.Size = new System.Drawing.Size(121, 21);
             this.equipoV.TabIndex = 56;
             // 
+            // equiposBindingSource
+            // 
+            this.equiposBindingSource.DataMember = "Equipos";
+            this.equiposBindingSource.DataSource = this.databaseDataSet;
+            // 
+            // databaseDataSet
+            // 
+            this.databaseDataSet.DataSetName = "DatabaseDataSet";
+            this.databaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -150,6 +160,7 @@
             this.btProgr.TabIndex = 57;
             this.btProgr.Text = "Programar";
             this.btProgr.UseVisualStyleBackColor = true;
+            this.btProgr.Click += new System.EventHandler(this.btProgr_Click);
             // 
             // fechaPart
             // 
@@ -187,20 +198,10 @@
             this.dataGridView2.Size = new System.Drawing.Size(340, 244);
             this.dataGridView2.TabIndex = 66;
             // 
-            // databaseDataSet
-            // 
-            this.databaseDataSet.DataSetName = "DatabaseDataSet";
-            this.databaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // databaseDataSetBindingSource
             // 
             this.databaseDataSetBindingSource.DataSource = this.databaseDataSet;
             this.databaseDataSetBindingSource.Position = 0;
-            // 
-            // equiposBindingSource
-            // 
-            this.equiposBindingSource.DataMember = "Equipos";
-            this.equiposBindingSource.DataSource = this.databaseDataSet;
             // 
             // equiposTableAdapter
             // 
@@ -232,11 +233,11 @@
             this.Load += new System.EventHandler(this.FormNuevoPartidoDB_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.escudo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.equiposBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.databaseDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.equiposBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

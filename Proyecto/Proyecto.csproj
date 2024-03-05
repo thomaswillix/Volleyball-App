@@ -89,6 +89,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controladores\BBDD\EquiposDAO.cs" />
     <Compile Include="Controladores\BBDD\ImagenDAO.cs" />
     <Compile Include="Controladores\Ficheros\ControladorEntrenadoresXML.cs" />
     <Compile Include="Controladores\Ficheros\ControladorJugadoresXML.cs" />

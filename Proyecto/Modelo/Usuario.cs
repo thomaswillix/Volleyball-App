@@ -14,6 +14,7 @@ namespace Proyecto.Modelo
         private string contrasenia;
         private bool esJugador;
         private char sexo;
+
         public static Usuario u;
 
         public string Nombre { get => nombre; set => nombre = value; }
