@@ -128,7 +128,8 @@ namespace Proyecto.Vistas
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            FormCambiarFotoPerfil cambiarFoto = new FormCambiarFotoPerfil();
+            cambiarFoto.Show();
         }
     }
 }

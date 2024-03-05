@@ -66,7 +66,7 @@ namespace Proyecto.Vistas
         {
             Usuario u = new Usuario();
 
-            if (ControladorUsuariosBin.listaUsuarios.Contains(ControladorUsuariosBin.validaLogin(user.Text, pass.Text)))
+            /*if (ControladorUsuariosBin.listaUsuarios.Contains(ControladorUsuariosBin.validaLogin(user.Text, pass.Text)))
             {
                 MessageBox.Show("Ese usuario ya existe");
             }
@@ -77,7 +77,7 @@ namespace Proyecto.Vistas
                 ControladorUsuariosBin.listaUsuarios.Add(u);
                 ControladorUsuariosBin.cargarUsuariosBin();
                 MessageBox.Show("Usuario registrado con éxito.");
-            }
+            }*/
         }
     }
 }

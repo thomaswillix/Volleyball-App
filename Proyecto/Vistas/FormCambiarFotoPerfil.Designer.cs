@@ -28,13 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCambiarFotoPerfil));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.databaseDataSet = new Proyecto.DatabaseDataSet();
+            this.imagenesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.imagenesTableAdapter = new Proyecto.DatabaseDataSetTableAdapters.ImagenesTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imagenesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -79,6 +86,7 @@
             // comboBox1
             // 
             this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBox1.DataSource = this.imagenesBindingSource;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(67, 242);
             this.comboBox1.Name = "comboBox1";
@@ -89,10 +97,27 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // databaseDataSet
+            // 
+            this.databaseDataSet.DataSetName = "DatabaseDataSet";
+            this.databaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // imagenesBindingSource
+            // 
+            this.imagenesBindingSource.DataMember = "Imagenes";
+            this.imagenesBindingSource.DataSource = this.databaseDataSet;
+            // 
+            // imagenesTableAdapter
+            // 
+            this.imagenesTableAdapter.ClearBeforeFill = true;
+            // 
             // FormCambiarFotoPerfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(289, 310);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label1);
@@ -102,7 +127,10 @@
             this.MinimumSize = new System.Drawing.Size(305, 349);
             this.Name = "FormCambiarFotoPerfil";
             this.Text = "FormCambiarFotoPerfil";
+            this.Load += new System.EventHandler(this.FormCambiarFotoPerfil_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imagenesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -116,5 +144,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private DatabaseDataSet databaseDataSet;
+        private System.Windows.Forms.BindingSource imagenesBindingSource;
+        private DatabaseDataSetTableAdapters.ImagenesTableAdapter imagenesTableAdapter;
     }
 }
