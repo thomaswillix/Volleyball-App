@@ -22,8 +22,11 @@ namespace Proyecto.Vistas
         {
             // TODO: esta línea de código carga datos en la tabla 'databaseDataSet.Imagenes' Puede moverla o quitarla según sea necesario.
             this.imagenesTableAdapter.Fill(this.databaseDataSet.Imagenes);
+        }
 
-
+        private void button1_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.ShowDialog();
         }
     }
 }

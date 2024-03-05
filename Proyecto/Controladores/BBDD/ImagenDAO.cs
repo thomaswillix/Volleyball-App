@@ -13,7 +13,7 @@ namespace Proyecto.Controladores.BBDD
         {
             // Cadena de conexión a la base de datos
             string connectionString = ConnectionDB.construirCadenaConexión();
-            // Query para obtener los jugadores
+            // Query para obtener las imagenes
             string query = "SELECT * FROM Imagenes";
 
             // Crear una tabla para almacenar los resultados
@@ -38,13 +38,13 @@ namespace Proyecto.Controladores.BBDD
         }
 
         // Modificado: Ahora los parámetros son pasados como argumentos
-        public void insertarJugador(string id_foto, string foto)
+        public void insertarImagenes(string id_foto, string foto)
         {
             // Cadena de conexión a la base de datos
             // Ver método construirCadenaConexión más arriba
             string connectionString = ConnectionDB.construirCadenaConexión();
             // Query de inserción
-            string query = "INSERT INTO Imagenes (Id_Foto, foto) VALUES (@Id, @foto)";
+            string query = "INSERT INTO Imagenes (Id_Foto, foto) VALUES (@id_foto, @foto)";
 
             // Crear la conexión
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -55,7 +55,7 @@ namespace Proyecto.Controladores.BBDD
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     // Agregar parámetros y sus valores
-                    command.Parameters.AddWithValue("@Id", id_foto);
+                    command.Parameters.AddWithValue("@Id_foto", id_foto);
                     command.Parameters.AddWithValue("@foto", foto);
                     try
                     {
@@ -73,12 +73,12 @@ namespace Proyecto.Controladores.BBDD
             }
         }
 
-        public DataTable consultaRuta(string id_foto)
+        public bool existeFoto(string ruta)
         {
             // Cadena de conexión a la base de datos
             string connectionString = ConnectionDB.construirCadenaConexión();
             // Query para obtener los jugadores
-            string query = "SELECT foto FROM Imagenes where Id_Foto = @Id";
+            string query = "SELECT foto FROM Imagenes where foto = @ruta";
 
             // Crear una tabla para almacenar los resultados
             DataTable dataTable = new DataTable();
@@ -92,7 +92,7 @@ namespace Proyecto.Controladores.BBDD
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     // Agregar parámetros y sus valores
-                    command.Parameters.AddWithValue("@Id", id_foto);
+                    command.Parameters.AddWithValue("@ruta", ruta);
                     try
                     {
                         // Ejecutar la consulta de inserción
@@ -105,18 +105,18 @@ namespace Proyecto.Controladores.BBDD
                             adapter.Fill(dataTable);
                         }
                         connection.Close();
+                        
                     }
                     catch (Exception ex)
                     {
                         MessageBox.Show($"Error al insertar el registro: {ex.Message}");
                         connection.Close();
+                        return false;
                     }
                     // Crear un adaptador de datos
                 }
             }
-
-            return dataTable;
-
+            return true;
         }
     }
 }

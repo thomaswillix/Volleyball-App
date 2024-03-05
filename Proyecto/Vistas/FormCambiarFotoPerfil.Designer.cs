@@ -35,13 +35,13 @@
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.databaseDataSet = new Proyecto.DatabaseDataSet();
             this.imagenesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.databaseDataSet = new Proyecto.DatabaseDataSet();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.imagenesTableAdapter = new Proyecto.DatabaseDataSetTableAdapters.ImagenesTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagenesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -62,6 +62,7 @@
             this.button1.TabIndex = 1;
             this.button1.Text = "Seleccionar Imagen";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -93,19 +94,19 @@
             this.comboBox1.Size = new System.Drawing.Size(143, 21);
             this.comboBox1.TabIndex = 3;
             // 
-            // openFileDialog1
+            // imagenesBindingSource
             // 
-            this.openFileDialog1.FileName = "openFileDialog1";
+            this.imagenesBindingSource.DataMember = "Imagenes";
+            this.imagenesBindingSource.DataSource = this.databaseDataSet;
             // 
             // databaseDataSet
             // 
             this.databaseDataSet.DataSetName = "DatabaseDataSet";
             this.databaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // imagenesBindingSource
+            // openFileDialog1
             // 
-            this.imagenesBindingSource.DataMember = "Imagenes";
-            this.imagenesBindingSource.DataSource = this.databaseDataSet;
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // imagenesTableAdapter
             // 
@@ -129,8 +130,8 @@
             this.Text = "FormCambiarFotoPerfil";
             this.Load += new System.EventHandler(this.FormCambiarFotoPerfil_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagenesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
