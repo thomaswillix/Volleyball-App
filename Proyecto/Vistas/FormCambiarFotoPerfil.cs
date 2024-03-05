@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,6 +22,7 @@ namespace Proyecto.Vistas
         {
             // TODO: esta línea de código carga datos en la tabla 'databaseDataSet.Imagenes' Puede moverla o quitarla según sea necesario.
             this.imagenesTableAdapter.Fill(this.databaseDataSet.Imagenes);
+
 
         }
     }
