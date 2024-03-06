@@ -3,7 +3,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
-namespace Proyecto.Controladores.BBDD
+namespace Proyecto.Controladores
 {
     public class ImagenDAO
     {
@@ -37,13 +37,13 @@ namespace Proyecto.Controladores.BBDD
         }
 
         // Modificado: Ahora los parámetros son pasados como argumentos
-        public void insertarImagenes(string usuario, string foto)
+        public void actualizarImagenes(string usuario, string foto)
         {
             // Cadena de conexión a la base de datos
             // Ver método construirCadenaConexión más arriba
             string connectionString = ConnectionDB.construirCadenaConexión();
             // Query de inserción
-            string query = "INSERT INTO Imagenes (usuario, foto) VALUES (@usuario, @foto)";
+            string query = "Update Imagenes set foto = @foto where usuario = @usuario";
 
             // Crear la conexión
             using (SqlConnection connection = new SqlConnection(connectionString))
