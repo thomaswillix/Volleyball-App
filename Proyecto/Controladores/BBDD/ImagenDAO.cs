@@ -33,6 +33,41 @@ namespace Proyecto.Controladores
             }
 
             return dataTable;
+        }
+        public string obtenerImagen(string usu)
+        {
+            // Cadena de conexión a la base de datos
+            string connectionString = ConnectionDB.construirCadenaConexión();
+            // Query para obtener las imagenes
+            string query = "SELECT imagen FROM Imagenes where usuario = @usu";
+
+            // Crear la conexión
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                // Abrir la conexión
+
+                connection.Open();
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    // Agregar parámetros y sus valores
+                    command.Parameters.AddWithValue("@usu", usu);
+                    try
+                    {
+                        // Ejecutar la consulta de inserción
+                        int registrosAfectados = command.ExecuteNonQuery();
+                        MessageBox.Show($"Se encontró el archivo. Registros afectados: {registrosAfectados}");
+                        connection.Close();
+                        return true;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Error al insertar el registro: {ex.Message}");
+                        connection.Close();
+                        return false;
+                    }
+                    // Crear un adaptador de datos
+                }
+            }
 
         }
 
@@ -111,9 +146,6 @@ namespace Proyecto.Controladores
             string connectionString = ConnectionDB.construirCadenaConexión();
             // Query para obtener los jugadores
             string query = "SELECT foto FROM Imagenes where foto = @ruta";
-
-            // Crear una tabla para almacenar los resultados
-            DataTable dataTable = new DataTable();
 
             // Crear la conexión
             using (SqlConnection connection = new SqlConnection(connectionString))

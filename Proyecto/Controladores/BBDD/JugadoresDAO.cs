@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace Proyecto.Controladores
 {
-    public class PersistenciaJugadores
+    public class JugadoresDAO
     {
 
         public DataTable obtenerJugadores()

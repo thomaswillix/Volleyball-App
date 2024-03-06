@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Proyecto;
+﻿using Proyecto.Controladores;
 using Proyecto.Modelo;
 using Proyecto.Vistas;
+using System;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace Proyecto
 {
@@ -24,6 +18,9 @@ namespace Proyecto
         {
             string nom = Usuario.u.Nombre.ToString();
             bienv.Text += " " + nom;
+            ImagenDAO imagenDAO = new ImagenDAO();
+            imagenDAO.obtenerImagen(nom);
+
             switch (nom)
             {
                 case "Bruno":
@@ -34,7 +31,7 @@ namespace Proyecto
                     break;
             }
         }
-        private void Principal_FormClosing(object sender,FormClosingEventArgs e)
+        private void Principal_FormClosing(object sender, FormClosingEventArgs e)
         {
             Usuario.u = null;
         }
@@ -47,7 +44,7 @@ namespace Proyecto
 
         private void label1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void label1_Click_1(object sender, EventArgs e)
@@ -73,7 +70,7 @@ namespace Proyecto
 
         private void pfp_Click(object sender, EventArgs e)
         {
-            VistaPerfil vistaPerfil =  new VistaPerfil();
+            VistaPerfil vistaPerfil = new VistaPerfil();
             vistaPerfil.ShowDialog();
         }
     }
