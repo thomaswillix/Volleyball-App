@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Proyecto.Controladores;
+﻿using Proyecto.Controladores;
 using Proyecto.Modelo;
+using System;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace Proyecto.Vistas
 {
@@ -25,21 +19,10 @@ namespace Proyecto.Vistas
             ControladorJugadoresXML.cargarJugadoresXML();
             vistaNormal();
             string nom = Usuario.u.Nombre.ToString();
-            switch (nom)
-            {
-                case "Bruno":
-                    pfp.BackgroundImage = Image.FromFile("../Pics/Bruno.jpeg");
-                    break;
-                case "Natalia":
-                    pfp.BackgroundImage = Image.FromFile("../Pics/Natalia.jpg");
-                    break;
-                case "Ze":
-                    pfp.BackgroundImage = Image.FromFile("../Pics/Ze.jpeg");
-                    break;
-                case "Renan":
-                    pfp.BackgroundImage = Image.FromFile("../Pics/Renan.jpeg");
-                    break;
-            }
+            ImagenDAO imagenDAO = new ImagenDAO();
+            Image imagen = Image.FromFile(imagenDAO.obtenerImagen(nom));
+
+            pfp.BackgroundImage = imagen;
         }
 
         public void rellenarCampos()
@@ -90,7 +73,7 @@ namespace Proyecto.Vistas
             textBox2.Show();
             dateTimePicker1.Show();
             btCancel.Show();
-            btSave.Show(); 
+            btSave.Show();
             btEdit.Hide();
         }
 
@@ -100,7 +83,7 @@ namespace Proyecto.Vistas
         private void btEdit_Click(object sender, EventArgs e)
         {
             vistaEditar();
-            
+
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -120,9 +103,9 @@ namespace Proyecto.Vistas
 
         private void btSave_Click(object sender, EventArgs e)
         {
-            if (Usuario.u.EsJugador) 
+            if (Usuario.u.EsJugador)
             {
-                
+
             }
         }
 
@@ -130,6 +113,7 @@ namespace Proyecto.Vistas
         {
             FormCambiarFotoPerfil cambiarFoto = new FormCambiarFotoPerfil();
             cambiarFoto.Show();
+            this.Refresh();
         }
     }
 }

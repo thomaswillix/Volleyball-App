@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using Proyecto.Controladores;
 using Proyecto.Modelo;
 using Proyecto.Vistas;
+using System;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace Proyecto
 {
@@ -22,23 +17,18 @@ namespace Proyecto
 
         private void Principal_Load(object sender, EventArgs e)
         {
-            
+
             string nom = Usuario.u.Nombre.ToString();
             bienv.Text += " " + nom;
-            switch (nom)
-            {
-                case "Ze":
-                    pfp.BackgroundImage = Image.FromFile("../Pics/Ze.jpeg");
-                    break;
-                case "Renan":
-                    pfp.BackgroundImage = Image.FromFile("../Pics/Renan.jpeg");
-                    break;
-            }
+            ImagenDAO imagenDAO = new ImagenDAO();
+            Image imagen = Image.FromFile(imagenDAO.obtenerImagen(nom));
+
+            pfp.BackgroundImage = imagen;
             loopBackgroud();
         }
-        private void Principal_FormClosing(object sender,FormClosingEventArgs e)
+        private void Principal_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Usuario.u = null;            
+            Usuario.u = null;
         }
 
         private void modificaciónToolStripMenuItem_Click(object sender, EventArgs e)
@@ -53,7 +43,7 @@ namespace Proyecto
 
         private void botonCancelar_Click(object sender, EventArgs e)
         {
-            this.Close();                        
+            this.Close();
         }
 
 
@@ -61,6 +51,7 @@ namespace Proyecto
         {
             VistaPerfil vistaPerfil = new VistaPerfil();
             vistaPerfil.ShowDialog();
+            this.Refresh();
         }
 
         private void jugadoresXML_Click(object sender, EventArgs e)
@@ -82,7 +73,7 @@ namespace Proyecto
 
         private void partidoJSON_Click(object sender, EventArgs e)
         {
-            FormNuevoPartido nuevoP =  new FormNuevoPartido();
+            FormNuevoPartido nuevoP = new FormNuevoPartido();
             nuevoP.ShowDialog();
         }
 
