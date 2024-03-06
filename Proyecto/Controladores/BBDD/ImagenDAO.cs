@@ -71,6 +71,39 @@ namespace Proyecto.Controladores
                 }
             }
         }
+        public void insertarUsuario(string usuario)
+        {
+            // Cadena de conexión a la base de datos
+            // Ver método construirCadenaConexión más arriba
+            string connectionString = ConnectionDB.construirCadenaConexión();
+            // Query de inserción
+            string query = "INSERT INTO Imagenes (usuario) VALUES (@usuario)";
+
+            // Crear la conexión
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                // Abrir la conexión
+                connection.Open();
+                // Crear un objeto SqlCommand con la consulta y la conexión
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    // Agregar parámetros y sus valores
+                    command.Parameters.AddWithValue("@usuario", usuario);
+                    try
+                    {
+                        // Ejecutar la consulta de inserción
+                        int registrosAfectados = command.ExecuteNonQuery();
+                        MessageBox.Show($"Se insertó correctamente el registro. Registros afectados: {registrosAfectados}");
+                        connection.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Error al insertar el registro: {ex.Message}");
+                        connection.Close();
+                    }
+                }
+            }
+        }
 
         public bool existeFoto(string ruta)
         {
@@ -97,14 +130,8 @@ namespace Proyecto.Controladores
                         // Ejecutar la consulta de inserción
                         int registrosAfectados = command.ExecuteNonQuery();
                         MessageBox.Show($"Se encontró el archivo. Registros afectados: {registrosAfectados}");
-                        using (SqlDataAdapter adapter = new SqlDataAdapter(query, connection))
-                        {
-
-                            // Llenar la tabla con los resultados de la consulta
-                            adapter.Fill(dataTable);
-                        }
                         connection.Close();
-
+                        return true;
                     }
                     catch (Exception ex)
                     {
@@ -115,7 +142,6 @@ namespace Proyecto.Controladores
                     // Crear un adaptador de datos
                 }
             }
-            return true;
         }
         public bool existeUsu(string usu)
         {
@@ -136,20 +162,14 @@ namespace Proyecto.Controladores
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     // Agregar parámetros y sus valores
-                    command.Parameters.AddWithValue("@usu", usu);
+                    command.Parameters.AddWithValue("usu", SqlDbType.VarChar).Value = usu;
                     try
                     {
                         // Ejecutar la consulta de inserción
                         int registrosAfectados = command.ExecuteNonQuery();
                         MessageBox.Show($"Se encontró el archivo. Registros afectados: {registrosAfectados}");
-                        using (SqlDataAdapter adapter = new SqlDataAdapter(query, connection))
-                        {
-
-                            // Llenar la tabla con los resultados de la consulta
-                            adapter.Fill(dataTable);
-                        }
                         connection.Close();
-
+                        return true;
                     }
                     catch (Exception ex)
                     {
@@ -157,10 +177,8 @@ namespace Proyecto.Controladores
                         connection.Close();
                         return false;
                     }
-                    // Crear un adaptador de datos
                 }
             }
-            return true;
         }
 
         public int numeroRegistros()

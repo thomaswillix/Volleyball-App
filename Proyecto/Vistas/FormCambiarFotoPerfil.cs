@@ -11,14 +11,12 @@ namespace Proyecto.Vistas
         public FormCambiarFotoPerfil()
         {
             InitializeComponent();
-            openFileDialog1.Title = "Change icon";
-            openFileDialog1.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png";
+            openFileDialog1.Title = "Change logo image";
+            openFileDialog1.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.png) | *.jpg; *.jpeg; *.jpe; *.png";
         }
 
         private void FormCambiarFotoPerfil_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'databaseDataSet.Imagenes' Puede moverla o quitarla según sea necesario.
-            this.imagenesTableAdapter.Fill(this.databaseDataSet.Imagenes);
             progressBar1.Hide();
         }
 
@@ -49,11 +47,6 @@ namespace Proyecto.Vistas
                 try
                 {
                     Image newLogo = Image.FromFile(openFileDialog1.FileName);
-                    ImagenDAO imagenes = new ImagenDAO();
-                    if (!imagenes.existeUsu(Usuario.u.Nombre))
-                    {
-                        imagenes.actualizarImagenes(Usuario.u.Nombre, openFileDialog1.FileName);
-                    }
                     pictureBox1.Image = newLogo;
                     pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
                 }
@@ -61,6 +54,16 @@ namespace Proyecto.Vistas
                 {
                     Console.WriteLine("Archivo no encontrado");
                 }
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ImagenDAO imagenes = new ImagenDAO();
+
+            if (imagenes.existeUsu(Usuario.u.Nombre))
+            {
+                imagenes.actualizarImagenes(Usuario.u.Nombre, openFileDialog1.FileName);
             }
         }
     }
