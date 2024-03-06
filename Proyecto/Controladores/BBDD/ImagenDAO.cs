@@ -39,36 +39,25 @@ namespace Proyecto.Controladores
             // Cadena de conexión a la base de datos
             string connectionString = ConnectionDB.construirCadenaConexión();
             // Query para obtener las imagenes
-            string query = "SELECT imagen FROM Imagenes where usuario = @usu";
+            string query = "SELECT foto FROM Imagenes where usuario = @usu";
 
-            // Crear la conexión
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            string sReturnString = null;
+            using (SqlConnection connection = new SqlConnection(connectionString)) //Access database
             {
-                // Abrir la conexión
-
                 connection.Open();
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    // Agregar parámetros y sus valores
                     command.Parameters.AddWithValue("@usu", usu);
-                    try
-                    {
-                        // Ejecutar la consulta de inserción
-                        int registrosAfectados = command.ExecuteNonQuery();
-                        MessageBox.Show($"Se encontró el archivo. Registros afectados: {registrosAfectados}");
-                        connection.Close();
-                        return true;
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show($"Error al insertar el registro: {ex.Message}");
-                        connection.Close();
-                        return false;
-                    }
-                    // Crear un adaptador de datos
-                }
-            }
 
+                    SqlDataReader reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        sReturnString = (string)reader.GetValue(0);
+                        break;
+                    }
+                }
+                return sReturnString;
+            }
         }
 
         // Modificado: Ahora los parámetros son pasados como argumentos

@@ -19,17 +19,10 @@ namespace Proyecto
             string nom = Usuario.u.Nombre.ToString();
             bienv.Text += " " + nom;
             ImagenDAO imagenDAO = new ImagenDAO();
-            imagenDAO.obtenerImagen(nom);
+            Image imagen = Image.FromFile(imagenDAO.obtenerImagen(nom));
 
-            switch (nom)
-            {
-                case "Bruno":
-                    pfp.BackgroundImage = Image.FromFile("../Pics/Bruno.jpeg");
-                    break;
-                case "Natalia":
-                    pfp.BackgroundImage = Image.FromFile("../Pics/Natalia.jpg");
-                    break;
-            }
+            pfp.BackgroundImage = imagen;
+
         }
         private void Principal_FormClosing(object sender, FormClosingEventArgs e)
         {

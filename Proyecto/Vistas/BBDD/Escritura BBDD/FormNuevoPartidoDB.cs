@@ -7,7 +7,7 @@ namespace Proyecto.Vistas
 {
     public partial class FormNuevoPartidoDB : Form
     {
-        PersistenciaJugadores jugadores = new PersistenciaJugadores();
+        JugadoresDAO jugadores = new JugadoresDAO();
         EquiposDAO equipos = new EquiposDAO();
 
         public FormNuevoPartidoDB()

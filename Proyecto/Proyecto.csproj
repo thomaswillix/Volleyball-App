@@ -127,10 +127,10 @@
     <Compile Include="Vistas\Archivos\LecturaArchivos\FormListaJugadores.Designer.cs">
       <DependentUpon>FormListaJugadores.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\FormCambiarFotoPerfil.cs">
+    <Compile Include="Vistas\BBDD\Update\FormCambiarFotoPerfil.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistas\FormCambiarFotoPerfil.Designer.cs">
+    <Compile Include="Vistas\BBDD\Update\FormCambiarFotoPerfil.Designer.cs">
       <DependentUpon>FormCambiarFotoPerfil.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\FormLogin.cs">
@@ -198,7 +198,7 @@
     <EmbeddedResource Include="Vistas\Archivos\LecturaArchivos\FormListaJugadores.resx">
       <DependentUpon>FormListaJugadores.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\FormCambiarFotoPerfil.resx">
+    <EmbeddedResource Include="Vistas\BBDD\Update\FormCambiarFotoPerfil.resx">
       <DependentUpon>FormCambiarFotoPerfil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\FormLogin.resx">
