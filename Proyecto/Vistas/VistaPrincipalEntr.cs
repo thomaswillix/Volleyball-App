@@ -51,7 +51,6 @@ namespace Proyecto
         {
             VistaPerfil vistaPerfil = new VistaPerfil();
             vistaPerfil.ShowDialog();
-            this.Refresh();
         }
 
         private void jugadoresXML_Click(object sender, EventArgs e)

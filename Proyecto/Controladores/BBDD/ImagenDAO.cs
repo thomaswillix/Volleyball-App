@@ -84,12 +84,12 @@ namespace Proyecto.Controladores
                     {
                         // Ejecutar la consulta de inserción
                         int registrosAfectados = command.ExecuteNonQuery();
-                        MessageBox.Show($"Se insertó correctamente el registro. Registros afectados: {registrosAfectados}");
+                        MessageBox.Show($"Se actualizó correctamente la foto de perfil en la base de datos, vuelva a iniciar sesión para ver los cambios");
                         connection.Close();
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show($"Error al insertar el registro: {ex.Message}");
+                        MessageBox.Show($"Error al actualizar la foto de perfil");
                         connection.Close();
                     }
                 }
@@ -150,17 +150,16 @@ namespace Proyecto.Controladores
                     {
                         // Ejecutar la consulta de inserción
                         int registrosAfectados = command.ExecuteNonQuery();
-                        MessageBox.Show($"Se encontró el archivo. Registros afectados: {registrosAfectados}");
+                        MessageBox.Show($"Se encontró la foto");
                         connection.Close();
                         return true;
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show($"Error al insertar el registro: {ex.Message}");
+                        MessageBox.Show($"Error al buscar la foto: {ex.Message}");
                         connection.Close();
                         return false;
                     }
-                    // Crear un adaptador de datos
                 }
             }
         }
@@ -188,13 +187,13 @@ namespace Proyecto.Controladores
                     {
                         // Ejecutar la consulta de inserción
                         int registrosAfectados = command.ExecuteNonQuery();
-                        MessageBox.Show($"Se encontró el archivo. Registros afectados: {registrosAfectados}");
+                        MessageBox.Show($"Se encontró el usuario.");
                         connection.Close();
                         return true;
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show($"Error al insertar el registro: {ex.Message}");
+                        MessageBox.Show($"Error de búsqueda");
                         connection.Close();
                         return false;
                     }

@@ -113,7 +113,7 @@ namespace Proyecto.Vistas
         {
             FormCambiarFotoPerfil cambiarFoto = new FormCambiarFotoPerfil();
             cambiarFoto.Show();
-            this.Refresh();
         }
+
     }
 }
