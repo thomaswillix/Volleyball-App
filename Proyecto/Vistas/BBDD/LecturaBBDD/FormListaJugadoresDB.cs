@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Proyecto.Controladores;
+using System;
 using System.Windows.Forms;
 
 namespace Proyecto.Vistas
@@ -24,6 +25,14 @@ namespace Proyecto.Vistas
 
         private void elim_Click(object sender, EventArgs e)
         {
+            int rowIndex = dataGridView2.CurrentCell.RowIndex;
+            string nomCami = dataGridView2.Rows[rowIndex].Cells[4].Value.ToString();
+
+            MessageBox.Show(nomCami);
+
+            JugadoresDAO db = new JugadoresDAO();
+            db.eliminarJugador(nomCami);
+            dataGridView2.Rows.RemoveAt(rowIndex);
         }
     }
 }

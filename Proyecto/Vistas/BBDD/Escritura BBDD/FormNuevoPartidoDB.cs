@@ -35,7 +35,7 @@ namespace Proyecto.Vistas
             {
                 aniadirPartido();
                 vaciarCampos();
-                MessageBox.Show("Proyecto añadido al repositorio de Proyectos");
+                MessageBox.Show("Partido añadido a la base de datos de partidos");
 
             }
             else

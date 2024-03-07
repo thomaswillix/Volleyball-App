@@ -33,15 +33,13 @@ namespace Proyecto.Controladores
             }
             return dataTable;
         }
-        public bool eliminarJugador(String nomCami)
+        public bool eliminarJugador(string nomCami)
         {
             // Cadena de conexión a la base de datos
             string connectionString = ConnectionDB.construirCadenaConexión();
             // Query para obtener los jugadores
-            string query = "Delete * FROM Jugadores where nombre_camiseta = @nomCami";
+            string query = "Delete FROM Jugadores where nombre_camiseta = @nomCami";
 
-            // Crear una tabla para almacenar los resultados
-            DataTable dataTable = new DataTable();
 
             // Crear la conexión
             using (SqlConnection connection = new SqlConnection(connectionString))

@@ -15,7 +15,13 @@ namespace Proyecto.Vistas
 
         private void elim_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(dataGridView1.SelectedCells.ToString().Trim());
+            int rowIndex = dataGridView1.CurrentCell.RowIndex;
+            rowIndex += 1;
+            MessageBox.Show(rowIndex.ToString());
+
+            PartidosDAO db = new PartidosDAO();
+            db.eliminarPartido(rowIndex);
+            dataGridView1.Rows.RemoveAt(rowIndex);
         }
 
         private void botonCancelar_Click(object sender, EventArgs e)

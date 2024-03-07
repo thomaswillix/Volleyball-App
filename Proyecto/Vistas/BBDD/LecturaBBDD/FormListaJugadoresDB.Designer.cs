@@ -46,6 +46,7 @@
             this.databaseDataSet = new Proyecto.DatabaseDataSet();
             this.jugadoresTableAdapter = new Proyecto.DatabaseDataSetTableAdapters.JugadoresTableAdapter();
             this.jugadorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.elim = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jugadoresBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).BeginInit();
@@ -179,11 +180,22 @@
             // 
             this.jugadorBindingSource.DataSource = typeof(Jugador);
             // 
+            // elim
+            // 
+            this.elim.Location = new System.Drawing.Point(37, 112);
+            this.elim.Name = "elim";
+            this.elim.Size = new System.Drawing.Size(61, 21);
+            this.elim.TabIndex = 38;
+            this.elim.Text = "Eliminar";
+            this.elim.UseVisualStyleBackColor = true;
+            this.elim.Click += new System.EventHandler(this.elim_Click);
+            // 
             // FormListaJugadoresDB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1238, 551);
+            this.Controls.Add(this.elim);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.botonCancelar);
             this.Controls.Add(this.titulo);
@@ -217,5 +229,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn sexoDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechanacimientoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn equipoIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button elim;
     }
 }

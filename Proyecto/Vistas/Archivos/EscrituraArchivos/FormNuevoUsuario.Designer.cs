@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormNuevoUsuario));
             this.pass = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.clave = new System.Windows.Forms.Label();
@@ -41,7 +42,7 @@
             // 
             this.pass.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pass.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pass.Location = new System.Drawing.Point(142, 59);
+            this.pass.Location = new System.Drawing.Point(120, 130);
             this.pass.MaximumSize = new System.Drawing.Size(300, 52);
             this.pass.MinimumSize = new System.Drawing.Size(75, 13);
             this.pass.Name = "pass";
@@ -60,10 +61,10 @@
             // 
             this.clave.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.clave.AutoSize = true;
-            this.clave.BackColor = System.Drawing.Color.Transparent;
+            this.clave.BackColor = System.Drawing.Color.White;
             this.clave.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.clave.ForeColor = System.Drawing.SystemColors.Window;
-            this.clave.Location = new System.Drawing.Point(15, 63);
+            this.clave.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.clave.Location = new System.Drawing.Point(39, 133);
             this.clave.MaximumSize = new System.Drawing.Size(140, 40);
             this.clave.MinimumSize = new System.Drawing.Size(35, 10);
             this.clave.Name = "clave";
@@ -75,7 +76,7 @@
             // 
             this.user.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.user.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.user.Location = new System.Drawing.Point(142, 26);
+            this.user.Location = new System.Drawing.Point(120, 60);
             this.user.MaximumSize = new System.Drawing.Size(300, 52);
             this.user.MinimumSize = new System.Drawing.Size(75, 13);
             this.user.Name = "user";
@@ -86,10 +87,10 @@
             // 
             this.usuario.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.usuario.AutoSize = true;
-            this.usuario.BackColor = System.Drawing.Color.Transparent;
+            this.usuario.BackColor = System.Drawing.Color.White;
             this.usuario.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.usuario.ForeColor = System.Drawing.SystemColors.Window;
-            this.usuario.Location = new System.Drawing.Point(15, 29);
+            this.usuario.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.usuario.Location = new System.Drawing.Point(-7, 63);
             this.usuario.MaximumSize = new System.Drawing.Size(140, 40);
             this.usuario.MinimumSize = new System.Drawing.Size(35, 10);
             this.usuario.Name = "usuario";
@@ -102,7 +103,7 @@
             this.cancel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.cancel.Location = new System.Drawing.Point(57, 104);
+            this.cancel.Location = new System.Drawing.Point(42, 195);
             this.cancel.MaximumSize = new System.Drawing.Size(150, 50);
             this.cancel.MinimumSize = new System.Drawing.Size(37, 12);
             this.cancel.Name = "cancel";
@@ -117,7 +118,7 @@
             this.accept.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.accept.Cursor = System.Windows.Forms.Cursors.Hand;
             this.accept.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.accept.Location = new System.Drawing.Point(169, 104);
+            this.accept.Location = new System.Drawing.Point(178, 195);
             this.accept.MaximumSize = new System.Drawing.Size(150, 50);
             this.accept.MinimumSize = new System.Drawing.Size(37, 12);
             this.accept.Name = "accept";
@@ -131,7 +132,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(321, 173);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(298, 244);
             this.Controls.Add(this.pass);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.clave);
@@ -139,8 +142,10 @@
             this.Controls.Add(this.usuario);
             this.Controls.Add(this.cancel);
             this.Controls.Add(this.accept);
+            this.DoubleBuffered = true;
             this.Name = "FormNuevoUsuario";
             this.Text = "FormNuevoUsuario";
+            this.Load += new System.EventHandler(this.FormNuevoUsuario_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

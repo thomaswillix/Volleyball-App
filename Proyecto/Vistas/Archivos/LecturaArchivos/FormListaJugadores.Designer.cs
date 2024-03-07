@@ -50,6 +50,7 @@
             this.botonCancelar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botonCancelar.BackgroundImage")));
             this.botonCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.botonCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.botonCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.botonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botonCancelar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -64,6 +65,7 @@
             // ordenarNombre
             // 
             this.ordenarNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ordenarNombre.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.ordenarNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ordenarNombre.Location = new System.Drawing.Point(5, 211);
             this.ordenarNombre.Name = "ordenarNombre";
@@ -165,12 +167,14 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // VistaListaJugadores
+            // FormListaJugadores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.CancelButton = this.botonCancelar;
             this.ClientSize = new System.Drawing.Size(834, 481);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
@@ -184,7 +188,7 @@
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(850, 520);
             this.MinimumSize = new System.Drawing.Size(825, 520);
-            this.Name = "VistaListaJugadores";
+            this.Name = "FormListaJugadores";
             this.Text = "Lista de jugadores";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ListaJugadores_FormClosing);
             this.Load += new System.EventHandler(this.FrmEmpleados_Load);

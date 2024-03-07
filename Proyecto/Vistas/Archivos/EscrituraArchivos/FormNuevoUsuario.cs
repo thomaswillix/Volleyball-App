@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using Proyecto.Controladores;
 using Proyecto.Modelo;
-using Proyecto.Controladores;
+using System;
+using System.Collections.Generic;
+using System.Windows.Forms;
 
 namespace Proyecto.Vistas
 {
@@ -78,6 +72,11 @@ namespace Proyecto.Vistas
                 ControladorUsuariosBin.cargarUsuariosBin();
                 MessageBox.Show("Usuario registrado con éxito.");
             }*/
+        }
+
+        private void FormNuevoUsuario_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
