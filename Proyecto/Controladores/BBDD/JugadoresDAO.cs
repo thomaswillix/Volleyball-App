@@ -31,9 +31,44 @@ namespace Proyecto.Controladores
                 }
                 connection.Close();
             }
-
             return dataTable;
+        }
+        public bool eliminarJugador(String nomCami)
+        {
+            // Cadena de conexión a la base de datos
+            string connectionString = ConnectionDB.construirCadenaConexión();
+            // Query para obtener los jugadores
+            string query = "Delete * FROM Jugadores where nombre_camiseta = @nomCami";
 
+            // Crear una tabla para almacenar los resultados
+            DataTable dataTable = new DataTable();
+
+            // Crear la conexión
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                // Abrir la conexión
+                connection.Open();
+                // Crear un objeto SqlCommand con la consulta y la conexión
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@nomCami", nomCami);
+
+                    try
+                    {
+                        // Ejecutar la consulta de inserción
+                        int registrosAfectados = command.ExecuteNonQuery();
+                        MessageBox.Show($"Se eliminó correctamente el jugador. Registros afectados: {registrosAfectados}");
+                        connection.Close();
+                        return true;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Error al eliminar el jugador: {ex.Message}");
+                        connection.Close();
+                    }
+                }
+            }
+            return false;
         }
 
         // Modificado: Ahora los parámetros son pasados como argumentos
@@ -66,12 +101,12 @@ namespace Proyecto.Controladores
                     {
                         // Ejecutar la consulta de inserción
                         int registrosAfectados = command.ExecuteNonQuery();
-                        MessageBox.Show($"Se insertó correctamente el registro. Registros afectados: {registrosAfectados}");
+                        MessageBox.Show($"Se insertó correctamente el jugador. Registros afectados: {registrosAfectados}");
                         connection.Close();
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show($"Error al insertar el registro: {ex.Message}");
+                        MessageBox.Show($"Error al insertar el jugador: {ex.Message}");
                         connection.Close();
                     }
                 }
@@ -83,7 +118,7 @@ namespace Proyecto.Controladores
             // Cadena de conexión a la base de datos
             string connectionString = ConnectionDB.construirCadenaConexión();
             // Query para obtener los datos específicos
-            string query = "SELECT nombre, apellidos, posicion, numero_camiseta FROM Jugadoresw where EquipoID = @CodEquipo";
+            string query = "SELECT nombre, apellidos, posicion, numero_camiseta FROM Jugadores where EquipoID = @CodEquipo";
 
             dataGridView.Columns.Clear();
             dataGridView.Columns.Add("Nombre", "nombre");

@@ -58,7 +58,6 @@ namespace Proyecto.Controladores
                     try
                     {
                         int registrosAfectados = command.ExecuteNonQuery();
-                        MessageBox.Show($"Registros afectados: {registrosAfectados}");
                         connection.Close();
                     }
                     catch (Exception ex)

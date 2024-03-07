@@ -1,12 +1,8 @@
-﻿using System;
+﻿using Proyecto.Modelo;
+using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Xml.Serialization;
-using Proyecto.Modelo;
 
 namespace Proyecto.Controladores
 {
@@ -27,9 +23,8 @@ namespace Proyecto.Controladores
                     serializer.Serialize(writer, listaJugadores, namespaces);
                 }
             }
-            catch (Exception e)
+            catch (Exception)
             {
-
             }
         }
 

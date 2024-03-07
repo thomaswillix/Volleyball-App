@@ -54,7 +54,7 @@
             // 
             // botonCancelar
             // 
-            this.botonCancelar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.botonCancelar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.botonCancelar.BackColor = System.Drawing.Color.Transparent;
             this.botonCancelar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botonCancelar.BackgroundImage")));
             this.botonCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -62,7 +62,7 @@
             this.botonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botonCancelar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.botonCancelar.Location = new System.Drawing.Point(317, 427);
+            this.botonCancelar.Location = new System.Drawing.Point(568, 469);
             this.botonCancelar.Name = "botonCancelar";
             this.botonCancelar.Size = new System.Drawing.Size(80, 70);
             this.botonCancelar.TabIndex = 32;
@@ -72,12 +72,12 @@
             // 
             // titulo
             // 
-            this.titulo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.titulo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.titulo.AutoSize = true;
             this.titulo.BackColor = System.Drawing.Color.Transparent;
             this.titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titulo.ForeColor = System.Drawing.Color.Black;
-            this.titulo.Location = new System.Drawing.Point(256, 9);
+            this.titulo.Location = new System.Drawing.Point(507, 9);
             this.titulo.Name = "titulo";
             this.titulo.Size = new System.Drawing.Size(207, 39);
             this.titulo.TabIndex = 29;
@@ -86,6 +86,7 @@
             // dataGridView2
             // 
             this.dataGridView2.AllowUserToOrderColumns = true;
+            this.dataGridView2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGridView2.AutoGenerateColumns = false;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -99,9 +100,10 @@
             this.fechanacimientoDataGridViewTextBoxColumn,
             this.equipoIDDataGridViewTextBoxColumn});
             this.dataGridView2.DataSource = this.jugadoresBindingSource;
-            this.dataGridView2.Location = new System.Drawing.Point(31, 62);
+            this.dataGridView2.Location = new System.Drawing.Point(142, 68);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(633, 359);
+            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView2.Size = new System.Drawing.Size(938, 380);
             this.dataGridView2.TabIndex = 37;
             // 
             // idJugadorDataGridViewTextBoxColumn
@@ -181,7 +183,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(737, 509);
+            this.ClientSize = new System.Drawing.Size(1238, 551);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.botonCancelar);
             this.Controls.Add(this.titulo);

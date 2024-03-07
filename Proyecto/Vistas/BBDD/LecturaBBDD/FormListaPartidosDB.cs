@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Proyecto.Controladores;
+﻿using Proyecto.Controladores;
+using System;
 using System.Windows.Forms;
 
 namespace Proyecto.Vistas
@@ -17,7 +10,17 @@ namespace Proyecto.Vistas
         {
             InitializeComponent();
             PartidosDAO db = new PartidosDAO();
-            dataGridView1.DataSource =  db.obtenerPartidos();
+            dataGridView1.DataSource = db.obtenerPartidos();
+        }
+
+        private void elim_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(dataGridView1.SelectedCells.ToString().Trim());
+        }
+
+        private void botonCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

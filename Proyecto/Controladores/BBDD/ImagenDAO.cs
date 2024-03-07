@@ -87,7 +87,7 @@ namespace Proyecto.Controladores
                         MessageBox.Show($"Se actualizó correctamente la foto de perfil en la base de datos, vuelva a iniciar sesión para ver los cambios");
                         connection.Close();
                     }
-                    catch (Exception ex)
+                    catch (Exception)
                     {
                         MessageBox.Show($"Error al actualizar la foto de perfil");
                         connection.Close();
@@ -191,7 +191,7 @@ namespace Proyecto.Controladores
                         connection.Close();
                         return true;
                     }
-                    catch (Exception ex)
+                    catch (Exception)
                     {
                         MessageBox.Show($"Error de búsqueda");
                         connection.Close();

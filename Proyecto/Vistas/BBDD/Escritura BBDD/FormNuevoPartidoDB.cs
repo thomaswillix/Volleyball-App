@@ -21,12 +21,12 @@ namespace Proyecto.Vistas
             int idL = equipos.obtenerId(equipoL.Text);
 
             jugadores.cargarDatosEspecificosDataGridView(dataGridView1, idL);
+            mismoJugador();
         }
 
         private void FormNuevoPartidoDB_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'databaseDataSet.Equipos' Puede moverla o quitarla según sea necesario.
-            this.equiposTableAdapter.Fill(this.databaseDataSet.Equipos);
+            label4.Hide();
         }
 
         private void btProgr_Click(object sender, EventArgs e)
@@ -90,15 +90,28 @@ namespace Proyecto.Vistas
             int idV = equipos.obtenerId(equipoV.Text);
             int idL = equipos.obtenerId(equipoL.Text);
 
+
             PartidosDAO db = new PartidosDAO();
             db.insertarPartido(idV, idL, fechaPart.Value);
+        }
+        private void mismoJugador()
+        {
+            if (equipoV.Text == equipoL.Text)
+            {
+                label4.Show();
+            }
+            else
+            {
+                label4.Hide();
+            }
         }
 
         private void equipoV_SelectedIndexChanged(object sender, EventArgs e)
         {
             int idV = equipos.obtenerId(equipoV.Text);
 
-            jugadores.cargarDatosEspecificosDataGridView(dataGridView1, idV);
+            jugadores.cargarDatosEspecificosDataGridView(dataGridView2, idV);
+            mismoJugador();
         }
     }
 }

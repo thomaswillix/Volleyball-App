@@ -1,12 +1,8 @@
-﻿using System;
+﻿using Proyecto.Modelo;
+using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Runtime.Serialization.Formatters.Binary;
-using Proyecto.Modelo;
 
 namespace Proyecto.Controladores
 {
@@ -23,8 +19,8 @@ namespace Proyecto.Controladores
                 listaUsuarios = (List<Usuario>)deserializer.Deserialize(OpenFileStream);
                 OpenFileStream.Close();
             }
-            catch (Exception e)
-            {   
+            catch (Exception)
+            {
             }
         }
 
@@ -39,7 +35,7 @@ namespace Proyecto.Controladores
                 return true;
 
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return false;
             }

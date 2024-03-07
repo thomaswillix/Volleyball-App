@@ -38,14 +38,18 @@
             this.equipoL = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.escudo = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.equipoV = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.jugadorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.escudo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jugadorBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -125,28 +129,6 @@
             this.label2.TabIndex = 47;
             this.label2.Text = "Equipo Visitante";
             // 
-            // panel2
-            // 
-            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel2.AutoScroll = true;
-            this.panel2.AutoSize = true;
-            this.panel2.Location = new System.Drawing.Point(28, 153);
-            this.panel2.MinimumSize = new System.Drawing.Size(456, 199);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(456, 266);
-            this.panel2.TabIndex = 48;
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel1.AutoScroll = true;
-            this.panel1.AutoSize = true;
-            this.panel1.Location = new System.Drawing.Point(528, 153);
-            this.panel1.MinimumSize = new System.Drawing.Size(456, 199);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(456, 266);
-            this.panel1.TabIndex = 49;
-            // 
             // escudo
             // 
             this.escudo.AccessibleDescription = "";
@@ -207,7 +189,27 @@
     " un entrenamiento amistoso";
             this.label4.Visible = false;
             // 
-            // NuevoPartido
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(133, 167);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(237, 215);
+            this.dataGridView1.TabIndex = 53;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(613, 167);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(237, 215);
+            this.dataGridView2.TabIndex = 54;
+            // 
+            // jugadorBindingSource
+            // 
+            this.jugadorBindingSource.DataSource = typeof(Jugador);
+            // 
+            // FormNuevoPartido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -215,11 +217,11 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1014, 561);
+            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.escudo);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.equipoV);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.equipoL);
@@ -232,12 +234,15 @@
             this.MaximumSize = new System.Drawing.Size(1030, 600);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(1030, 600);
-            this.Name = "NuevoPartido";
+            this.Name = "FormNuevoPartido";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Programar partido";
             this.Load += new System.EventHandler(this.NuevoPartido_Load);
             ((System.ComponentModel.ISupportInitialize)(this.escudo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jugadorBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -252,11 +257,12 @@
         private System.Windows.Forms.ComboBox equipoL;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox escudo;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ComboBox equipoV;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.BindingSource jugadorBindingSource;
     }
 }

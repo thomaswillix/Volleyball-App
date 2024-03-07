@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
-using System.IO;
 using System.Windows.Forms;
 
 namespace Proyecto.Controladores
@@ -60,12 +59,12 @@ namespace Proyecto.Controladores
                     // Agregar parámetros y sus valores
                     command.Parameters.AddWithValue("@EquipoVisitanteID", equipoVisitante);
                     command.Parameters.AddWithValue("@EquipoLocalID", equipoLocal);
-                    command.Parameters.AddWithValue("@Apellidos", fechaPartido);
+                    command.Parameters.AddWithValue("@fecha_partido", fechaPartido);
                     try
                     {
                         // Ejecutar la consulta de inserción
                         int registrosAfectados = command.ExecuteNonQuery();
-                        MessageBox.Show($"Se insertó correctamente el registro. Registros afectados: {registrosAfectados}");
+                        MessageBox.Show($"Se insertó correctamente el partido. Registros afectados: {registrosAfectados}");
                         connection.Close();
                     }
                     catch (Exception ex)

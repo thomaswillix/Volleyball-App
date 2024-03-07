@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using Proyecto.Controladores;
 using Proyecto.Modelo;
-using Proyecto.Controladores;
+using System;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace Proyecto.Vistas
 {
@@ -24,8 +18,8 @@ namespace Proyecto.Vistas
 
         private bool validar()
         {
-            
-            if (fechaPart.Value<fechaActual || String.IsNullOrEmpty(equipoL.Text) || String.IsNullOrEmpty(equipoV.Text))
+
+            if (fechaPart.Value < fechaActual || String.IsNullOrEmpty(equipoL.Text) || String.IsNullOrEmpty(equipoV.Text))
             {
                 return false;
             }
@@ -33,7 +27,8 @@ namespace Proyecto.Vistas
         }
         private void camposIncorrectos()
         {
-            if (fechaPart.Value < fechaActual) {
+            if (fechaPart.Value < fechaActual)
+            {
                 MessageBox.Show("La fecha del partido no puede ser anterior a la fecha actual");
                 fechaPart.CalendarTitleBackColor = Color.Red;
             }
@@ -91,7 +86,7 @@ namespace Proyecto.Vistas
 
         private void mismoEquipo()
         {
-            if(equipoV.SelectedIndex == equipoL.SelectedIndex)
+            if (equipoV.SelectedIndex == equipoL.SelectedIndex)
             {
                 label4.Visible = true;
             }

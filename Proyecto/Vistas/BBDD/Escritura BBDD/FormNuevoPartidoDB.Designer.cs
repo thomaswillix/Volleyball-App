@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormNuevoPartidoDB));
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -42,17 +41,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.databaseDataSet = new Proyecto.DatabaseDataSet();
-            this.equiposBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.equiposTableAdapter = new Proyecto.DatabaseDataSetTableAdapters.EquiposTableAdapter();
-            this.equiposBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.escudo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.equiposBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.equiposBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // label4
@@ -103,9 +95,12 @@
             // 
             // equipoV
             // 
-            this.equipoV.DataSource = this.equiposBindingSource1;
-            this.equipoV.DisplayMember = "nombre";
             this.equipoV.FormattingEnabled = true;
+            this.equipoV.Items.AddRange(new object[] {
+            "Club Voleibol Móstoles",
+            "CUV Alcorcón",
+            "CV Getafe",
+            "CV LAS ROZAS"});
             this.equipoV.Location = new System.Drawing.Point(696, 85);
             this.equipoV.Name = "equipoV";
             this.equipoV.Size = new System.Drawing.Size(121, 21);
@@ -124,10 +119,12 @@
             // 
             // equipoL
             // 
-            this.equipoL.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.equiposBindingSource, "nombre", true));
-            this.equipoL.DataSource = this.equiposBindingSource;
-            this.equipoL.DisplayMember = "nombre";
             this.equipoL.FormattingEnabled = true;
+            this.equipoL.Items.AddRange(new object[] {
+            "Club Voleibol Móstoles",
+            "CUV Alcorcón",
+            "CV Getafe",
+            "CV LAS ROZAS"});
             this.equipoL.Location = new System.Drawing.Point(199, 85);
             this.equipoL.Name = "equipoL";
             this.equipoL.Size = new System.Drawing.Size(121, 21);
@@ -190,25 +187,6 @@
             this.dataGridView2.Size = new System.Drawing.Size(374, 244);
             this.dataGridView2.TabIndex = 66;
             // 
-            // databaseDataSet
-            // 
-            this.databaseDataSet.DataSetName = "DatabaseDataSet";
-            this.databaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // equiposBindingSource
-            // 
-            this.equiposBindingSource.DataMember = "Equipos";
-            this.equiposBindingSource.DataSource = this.databaseDataSet;
-            // 
-            // equiposTableAdapter
-            // 
-            this.equiposTableAdapter.ClearBeforeFill = true;
-            // 
-            // equiposBindingSource1
-            // 
-            this.equiposBindingSource1.DataMember = "Equipos";
-            this.equiposBindingSource1.DataSource = this.databaseDataSet;
-            // 
             // FormNuevoPartidoDB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -237,9 +215,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.escudo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.equiposBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.equiposBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -259,9 +234,5 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private DatabaseDataSet databaseDataSet;
-        private System.Windows.Forms.BindingSource equiposBindingSource;
-        private DatabaseDataSetTableAdapters.EquiposTableAdapter equiposTableAdapter;
-        private System.Windows.Forms.BindingSource equiposBindingSource1;
     }
 }

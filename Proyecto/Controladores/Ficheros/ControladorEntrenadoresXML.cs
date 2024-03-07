@@ -1,11 +1,8 @@
-﻿using System;
+﻿using Proyecto.Modelo;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Serialization;
-using Proyecto.Modelo;
 using System.IO;
+using System.Xml.Serialization;
 
 
 namespace Proyecto.Controladores
@@ -28,7 +25,7 @@ namespace Proyecto.Controladores
                     serializer.Serialize(writer, listaEntrenadores, namespaces);
                 }
             }
-            catch (Exception e)
+            catch (Exception)
             {
 
             }
@@ -55,14 +52,14 @@ namespace Proyecto.Controladores
         {
             Equipo eq;
             DateTime d;
-            Entrenador   e;
+            Entrenador e;
             eq = new Equipo("Selección Masc Brasileña");
             d = new DateTime(1960, 7, 19, 0, 0, 0);
             e = new Entrenador("Renan", "Dal Zotto", d, eq);
             listaEntrenadores.Add(e);
             d = new DateTime(1954, 7, 31, 0, 0, 0);
             eq = new Equipo("Selección Fem Brasileña");
-            e = new Entrenador("José Roberto", "Lages Gimarães",d ,eq);
+            e = new Entrenador("José Roberto", "Lages Gimarães", d, eq);
             listaEntrenadores.Add(e);
         }
     }
