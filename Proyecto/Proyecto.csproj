@@ -111,6 +111,12 @@
     <Compile Include="Modelo\Jugador.cs" />
     <Compile Include="Modelo\Partido.cs" />
     <Compile Include="Modelo\Usuario.cs" />
+    <Compile Include="Vistas\BBDD\Escritura BBDD\FormNuevoJugadorDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\BBDD\Escritura BBDD\FormNuevoJugadorDB.Designer.cs">
+      <DependentUpon>FormNuevoJugadorDB.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\BBDD\Escritura BBDD\FormNuevoPartidoDB.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -197,6 +203,9 @@
     <Compile Include="Vistas\VistaPrincipalEntr.Designer.cs">
       <DependentUpon>VistaPrincipalEntr.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Vistas\BBDD\Escritura BBDD\FormNuevoJugadorDB.resx">
+      <DependentUpon>FormNuevoJugadorDB.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\BBDD\Escritura BBDD\FormNuevoPartidoDB.resx">
       <DependentUpon>FormNuevoPartidoDB.cs</DependentUpon>
     </EmbeddedResource>

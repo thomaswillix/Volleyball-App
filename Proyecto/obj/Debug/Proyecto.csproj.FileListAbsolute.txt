@@ -155,3 +155,4 @@ C:\Users\thoma\Source\Repos\thomaswillix\Volleyball-App\Proyecto\obj\Debug\AxInt
 C:\Users\thoma\Source\Repos\thomaswillix\Volleyball-App\Proyecto\obj\Debug\Proyecto.csproj.ResolveComReference.cache
 C:\Users\thoma\Source\Repos\thomaswillix\Volleyball-App\Proyecto\obj\Debug\Proyecto.Vistas.FormCambiarFotoPerfil.resources
 C:\Users\thoma\Source\Repos\thomaswillix\Volleyball-App\Proyecto\obj\Debug\Proyecto.Vistas.FormVistaEquipo.resources
+C:\Users\thoma\Source\Repos\thomaswillix\Volleyball-App\Proyecto\obj\Debug\Proyecto.Vistas.FormNuevoJugadorDB.resources

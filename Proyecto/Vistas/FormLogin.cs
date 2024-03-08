@@ -1,18 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Proyecto;
-using System.IO;
-using System.Xml.Serialization;
+﻿using Proyecto.Controladores;
 using Proyecto.Modelo;
 using Proyecto.Vistas;
-using Proyecto.Controladores;
+using System;
+using System.Windows.Forms;
 
 namespace Proyecto
 {
@@ -33,8 +23,8 @@ namespace Proyecto
         private void button1_Click(object sender, System.EventArgs e)
         {
 
-        } 
-        
+        }
+
         private void button2_Click(object sender, System.EventArgs e)
         {
             cuadroUsu.Clear();
@@ -53,8 +43,6 @@ namespace Proyecto
         //Acción que se realiza al iniciar la aplicación
         private void Login_Load(object sender, System.EventArgs e)
         {
-            ControladorUsuariosBin.crearUsuarios();
-            ControladorUsuariosBin.escribirUsuariosBin();
             ControladorUsuariosBin.cargarUsuariosBin();
         }
         /* Método en el que se determina la siguiente ventana que se abrirá y
