@@ -31,16 +31,6 @@ namespace Proyecto
             Usuario.u = null;
         }
 
-        private void modificaciónToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            // Vista de Modificación de Jugadores
-        }
-
-        private void modificaciónToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            // Vista de Modificación de Partidos
-        }
-
         private void botonCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -92,6 +82,11 @@ namespace Proyecto
             axWindowsMediaPlayer1.Ctlcontrols.play();
         }
 
+        private void añadirBaseDeDatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormNuevoJugadorDB nuevoJugadorDB = new FormNuevoJugadorDB();
+            nuevoJugadorDB.ShowDialog();
+        }
     }
 
 }

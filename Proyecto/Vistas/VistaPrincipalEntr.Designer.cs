@@ -34,7 +34,6 @@
             this.empleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.altaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.añadirBaseDeDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modificaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.proyectosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.altaToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.partidoBBDD = new System.Windows.Forms.ToolStripMenuItem();
@@ -69,8 +68,7 @@
             // 
             this.empleadosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.altaToolStripMenuItem1,
-            this.añadirBaseDeDatosToolStripMenuItem,
-            this.modificaciónToolStripMenuItem});
+            this.añadirBaseDeDatosToolStripMenuItem});
             this.empleadosToolStripMenuItem.Name = "empleadosToolStripMenuItem";
             this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
             this.empleadosToolStripMenuItem.Text = "Jugadores";
@@ -87,13 +85,7 @@
             this.añadirBaseDeDatosToolStripMenuItem.Name = "añadirBaseDeDatosToolStripMenuItem";
             this.añadirBaseDeDatosToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
             this.añadirBaseDeDatosToolStripMenuItem.Text = "Añadir (Base de Datos)";
-            // 
-            // modificaciónToolStripMenuItem
-            // 
-            this.modificaciónToolStripMenuItem.Name = "modificaciónToolStripMenuItem";
-            this.modificaciónToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
-            this.modificaciónToolStripMenuItem.Text = "Modificación";
-            this.modificaciónToolStripMenuItem.Click += new System.EventHandler(this.modificaciónToolStripMenuItem_Click);
+            this.añadirBaseDeDatosToolStripMenuItem.Click += new System.EventHandler(this.añadirBaseDeDatosToolStripMenuItem_Click);
             // 
             // proyectosToolStripMenuItem
             // 
@@ -282,7 +274,6 @@
         private System.Windows.Forms.ToolStripMenuItem partidoBBDD;
         private System.Windows.Forms.ToolStripMenuItem empleadosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem altaToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem modificaciónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem añadirBaseDeDatosToolStripMenuItem;
         private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
     }

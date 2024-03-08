@@ -80,7 +80,7 @@
             this.fechanacimientoDataGridViewTextBoxColumn,
             this.equipoIDDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.jugadoresBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 55);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 78);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(944, 226);
@@ -147,7 +147,7 @@
             this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.Info;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 22);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(169, 27);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(133, 50);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
             // label1
@@ -169,7 +169,7 @@
             this.botonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botonCancelar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.botonCancelar.Location = new System.Drawing.Point(442, 298);
+            this.botonCancelar.Location = new System.Drawing.Point(435, 321);
             this.botonCancelar.Name = "botonCancelar";
             this.botonCancelar.Size = new System.Drawing.Size(80, 70);
             this.botonCancelar.TabIndex = 21;
@@ -182,7 +182,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(981, 390);
+            this.ClientSize = new System.Drawing.Size(967, 390);
             this.Controls.Add(this.botonCancelar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.flowLayoutPanel1);
