@@ -209,7 +209,7 @@
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormNuevoPartidoDB";
-            this.Text = "FormNuevoPartidoDB";
+            this.Text = "Nuevo partido";
             this.Load += new System.EventHandler(this.FormNuevoPartidoDB_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.escudo)).EndInit();

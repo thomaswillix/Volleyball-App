@@ -13,11 +13,6 @@ namespace Proyecto.Vistas
             dataGridView1.DataSource = db.obtenerPartidos();
         }
 
-        private void elim_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void botonCancelar_Click(object sender, EventArgs e)
         {
             this.Close();

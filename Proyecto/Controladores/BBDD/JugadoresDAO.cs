@@ -33,6 +33,39 @@ namespace Proyecto.Controladores
             }
             return dataTable;
         }
+        public string[] obtenerEquipo(int id)
+        {
+            // Cadena de conexión a la base de datos
+            string connectionString = ConnectionDB.construirCadenaConexión();
+            // Query para obtener los jugadores
+            string query = "SELECT e.nombre, e.DivisionID FROM Jugadores j join Equipos e on EquipoID = idEquipo where idJugador = @id";
+
+            string[] datos = new string[2];
+
+            // Crear la conexión
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@id", id);
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            // Agregar una nueva fila al DataGridView con el código y el nombre del proyecto
+                            datos[0] = Convert.ToString(reader.GetValue(0));
+                            datos[1] = Convert.ToString(reader.GetValue(1));
+                            break;
+                        }
+                    }
+                    return datos;
+                }
+            }
+        }
+
         public bool eliminarJugador(string nomCami)
         {
             // Cadena de conexión a la base de datos

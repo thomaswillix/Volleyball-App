@@ -45,8 +45,9 @@
             this.jugadoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.databaseDataSet = new Proyecto.DatabaseDataSet();
             this.jugadoresTableAdapter = new Proyecto.DatabaseDataSetTableAdapters.JugadoresTableAdapter();
-            this.jugadorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.elim = new System.Windows.Forms.Button();
+            this.jugadorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jugadoresBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).BeginInit();
@@ -63,7 +64,7 @@
             this.botonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botonCancelar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.botonCancelar.Location = new System.Drawing.Point(568, 469);
+            this.botonCancelar.Location = new System.Drawing.Point(440, 464);
             this.botonCancelar.Name = "botonCancelar";
             this.botonCancelar.Size = new System.Drawing.Size(80, 70);
             this.botonCancelar.TabIndex = 32;
@@ -75,10 +76,10 @@
             // 
             this.titulo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.titulo.AutoSize = true;
-            this.titulo.BackColor = System.Drawing.Color.Transparent;
+            this.titulo.BackColor = System.Drawing.Color.White;
             this.titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titulo.ForeColor = System.Drawing.Color.Black;
-            this.titulo.Location = new System.Drawing.Point(507, 9);
+            this.titulo.Location = new System.Drawing.Point(370, 61);
             this.titulo.Name = "titulo";
             this.titulo.Size = new System.Drawing.Size(207, 39);
             this.titulo.TabIndex = 29;
@@ -101,10 +102,10 @@
             this.fechanacimientoDataGridViewTextBoxColumn,
             this.equipoIDDataGridViewTextBoxColumn});
             this.dataGridView2.DataSource = this.jugadoresBindingSource;
-            this.dataGridView2.Location = new System.Drawing.Point(142, 68);
+            this.dataGridView2.Location = new System.Drawing.Point(14, 134);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView2.Size = new System.Drawing.Size(938, 380);
+            this.dataGridView2.Size = new System.Drawing.Size(940, 299);
             this.dataGridView2.TabIndex = 37;
             // 
             // idJugadorDataGridViewTextBoxColumn
@@ -176,32 +177,49 @@
             // 
             this.jugadoresTableAdapter.ClearBeforeFill = true;
             // 
+            // elim
+            // 
+            this.elim.BackColor = System.Drawing.Color.Red;
+            this.elim.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.elim.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.elim.Location = new System.Drawing.Point(12, 98);
+            this.elim.Name = "elim";
+            this.elim.Size = new System.Drawing.Size(80, 31);
+            this.elim.TabIndex = 38;
+            this.elim.Text = "Eliminar";
+            this.elim.UseVisualStyleBackColor = false;
+            this.elim.Click += new System.EventHandler(this.elim_Click);
+            // 
             // jugadorBindingSource
             // 
             this.jugadorBindingSource.DataSource = typeof(Jugador);
             // 
-            // elim
+            // label1
             // 
-            this.elim.Location = new System.Drawing.Point(37, 112);
-            this.elim.Name = "elim";
-            this.elim.Size = new System.Drawing.Size(61, 21);
-            this.elim.TabIndex = 38;
-            this.elim.Text = "Eliminar";
-            this.elim.UseVisualStyleBackColor = true;
-            this.elim.Click += new System.EventHandler(this.elim_Click);
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.IndianRed;
+            this.label1.Location = new System.Drawing.Point(98, 107);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(213, 13);
+            this.label1.TabIndex = 39;
+            this.label1.Text = "Selecciona un jugador para poder eliminarlo";
             // 
             // FormListaJugadoresDB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1238, 551);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(964, 573);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.elim);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.botonCancelar);
             this.Controls.Add(this.titulo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormListaJugadoresDB";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormListaJugadoresDB";
+            this.Text = "Lista de Jugadores";
             this.Load += new System.EventHandler(this.FormListaJugadoresDB_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.jugadoresBindingSource)).EndInit();
@@ -230,5 +248,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn fechanacimientoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn equipoIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button elim;
+        private System.Windows.Forms.Label label1;
     }
 }

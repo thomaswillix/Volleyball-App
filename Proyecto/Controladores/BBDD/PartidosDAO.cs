@@ -14,10 +14,7 @@ namespace Proyecto.Controladores
             string connectionString = ConnectionDB.construirCadenaConexión();
             // Query para obtener los partidos
             string query =
-                "SELECT Equipos.nombre as Local, (SELECT nombre " +
-                "FROM Equipos join Partidos on idEquipo = EquipoVisitanteID " +
-                "WHERE EquipoLocalID = 2) as Visitante, Partidos.fecha_partido as 'Fecha del Partido' " +
-                "FROM Equipos join Partidos on idEquipo = EquipoLocalID";
+                "SELECT * FROM Partidos ";
 
             // Crear una tabla para almacenar los resultados
             DataTable dataTable = new DataTable();

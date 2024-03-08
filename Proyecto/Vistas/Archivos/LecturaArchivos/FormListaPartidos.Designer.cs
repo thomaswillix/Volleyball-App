@@ -74,7 +74,7 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
             // 
-            // ConsultarConvocatorias
+            // FormListaPartidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -83,11 +83,12 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.botonCancelar);
             this.Controls.Add(this.titulo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(800, 500);
             this.MinimumSize = new System.Drawing.Size(800, 500);
-            this.Name = "ConsultarConvocatorias";
+            this.Name = "FormListaPartidos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ConsultarConvocatorias";
+            this.Text = "Consultar Convocatorias";
             this.Load += new System.EventHandler(this.ConsultarConvocatorias_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

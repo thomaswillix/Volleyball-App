@@ -65,5 +65,11 @@ namespace Proyecto
             VistaPerfil vistaPerfil = new VistaPerfil();
             vistaPerfil.ShowDialog();
         }
+
+        private void equipoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormVistaEquipo vistaEquipo = new FormVistaEquipo();
+            vistaEquipo.ShowDialog();
+        }
     }
 }

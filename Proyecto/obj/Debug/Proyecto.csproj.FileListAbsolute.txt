@@ -154,3 +154,4 @@ C:\Users\thoma\Source\Repos\thomaswillix\Volleyball-App\Proyecto\obj\Debug\Inter
 C:\Users\thoma\Source\Repos\thomaswillix\Volleyball-App\Proyecto\obj\Debug\AxInterop.WMPLib.dll
 C:\Users\thoma\Source\Repos\thomaswillix\Volleyball-App\Proyecto\obj\Debug\Proyecto.csproj.ResolveComReference.cache
 C:\Users\thoma\Source\Repos\thomaswillix\Volleyball-App\Proyecto\obj\Debug\Proyecto.Vistas.FormCambiarFotoPerfil.resources
+C:\Users\thoma\Source\Repos\thomaswillix\Volleyball-App\Proyecto\obj\Debug\Proyecto.Vistas.FormVistaEquipo.resources

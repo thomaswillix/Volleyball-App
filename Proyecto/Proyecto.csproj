@@ -51,7 +51,9 @@
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
     </Reference>
@@ -127,6 +129,12 @@
     <Compile Include="Vistas\Archivos\LecturaArchivos\FormListaJugadores.Designer.cs">
       <DependentUpon>FormListaJugadores.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\BBDD\LecturaBBDD\FormVistaEquipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\BBDD\LecturaBBDD\FormVistaEquipo.Designer.cs">
+      <DependentUpon>FormVistaEquipo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\BBDD\Update\FormCambiarFotoPerfil.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -197,6 +205,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Archivos\LecturaArchivos\FormListaJugadores.resx">
       <DependentUpon>FormListaJugadores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\BBDD\LecturaBBDD\FormVistaEquipo.resx">
+      <DependentUpon>FormVistaEquipo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\BBDD\Update\FormCambiarFotoPerfil.resx">
       <DependentUpon>FormCambiarFotoPerfil.cs</DependentUpon>
